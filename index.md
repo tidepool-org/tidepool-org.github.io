@@ -16,7 +16,7 @@ Sign up for blip and use it! Give us feedback.
 
 ###Manual QA
 
-Sometimes, the best way to test it to just bang on it. Create an account and use blip. Track data, look at the results. Look for edge cases where data points are missing. Compare your data to the information displayed by blip. There should be nothing missing, nothing extra, and all the data you see should be accurate. 
+Sometimes, the best way to test a product is to bang on it. First, create an account to use blip. Track data, look at the results. Look for edge cases where data points are missing. Compare your data to the information displayed by blip. There should be nothing missing, nothing extra, and all the data you see should be accurate. 
 
 If you find something wrong, tell us. If you find something confusing, tell us. If you don't find something you expected to find, tell us. We want all our software to be easy to use and to make information really clear. 
 
