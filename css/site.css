@@ -554,6 +554,7 @@ p, ul, ol, dd, pre {
 
 pre, code {
 	font: 14px Monaco, monospace;
+	color: #99aaaa;
 	line-height: 22px;
 }
 
@@ -920,20 +921,28 @@ ul.sf-menu li li li.sfHover ul {
 	margin: 0;
 }
 
-.entry-content h1,
-.entry-content h2 {
+.entry-content h1 {
 	font-size: 40px;
 	color: #617CFF;
 	margin: 0 0 1em;
-	max-width: 540px;
+	max-width: 740px;
+	line-height: 1.2em;
+}
+
+.entry-content h2 {
+	font-size: 30px;
+	color: #617CFF;
+	margin: 0 0 1em;
+	max-width: 740px;
 	line-height: 1.2em;
 }
 
 .entry-content h3 {
-	font-size: 30px;
+	font-size: 24px;
+	font-style: italic;
 	color: #617CFF;
 	margin: 0 0 1em;
-	max-width: 540px;
+	max-width: 740px;
 	line-height: 1.2em;
 }
 
@@ -941,7 +950,7 @@ ul.sf-menu li li li.sfHover ul {
 	color: #617CFF;
 	font-size: 24px;
 	margin: 0 0 1em;
-	max-width: 540px;
+	max-width: 740px;
 }
 
 .entry-content p,
@@ -949,7 +958,7 @@ ul.sf-menu li li li.sfHover ul {
 	font-family: 'gt_walsheim_light', Arial, "Helvetica Neue", Helvetica, sans-serif;;
 	font-size: 20px;
 	color: #271845;
-	max-width: 540px;
+	max-width: 740px;
 	line-height: 1.5em;
 }
 
@@ -1880,7 +1889,7 @@ img.aligncenter {
 #page-background-container {
 	position: absolute;
 	top: 320px;
-	left: 50%;
+	left: 65%;
 	margin: 0 0 0 172px;
 }
 
