@@ -976,6 +976,30 @@ color: #99aaaa;
 font-style: italic;
 }
 
+.TOC {
+	position: fixed;
+	left: 20px;
+	top: 150px;
+	width: 220px;
+	background-color: #eeeeee;
+	padding: 6px;
+}
+
+.TOC h2 {
+	color: #000000;
+	font-size: 16px;
+	margin-bottom: 0;
+}
+
+.TOC li {
+	font-size: 14px;
+	list-style-type: none;
+	margin-left: -20px;
+}
+
+.TOC a {
+}
+
 .entry-utility {
 	clear: both;
 	letter-spacing: 1px;
