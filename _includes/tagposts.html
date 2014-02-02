@@ -1,0 +1,9 @@
+    {% for tag in site.tags %}
+      {% capture currtag %}{{ tag | first }}{% endcapture %}
+      <h2>{{ tag | first }}</h2>
+      <ul>
+      {% for post in site.tags[currtag] reversed %}
+        {% include {{post_formatter}} %}
+      {% endfor %}
+      </ul>
+    {% endfor %}

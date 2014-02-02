@@ -970,6 +970,12 @@ ul.sf-menu li li li.sfHover ul {
 	margin: 0 0 22px 0;
 }
 
+.entry-content span.namingnote {
+font-size: smaller;
+color: #99aaaa;
+font-style: italic;
+}
+
 .entry-utility {
 	clear: both;
 	letter-spacing: 1px;
