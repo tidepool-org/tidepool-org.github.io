@@ -33,6 +33,7 @@ We are very careful to keep the two separate.
 
 We are also very careful not to leak which of our users might be patients. Patient data is stored under an encrypted name, and that name is only stored in an account's privately encrypted metadata. It is not possible to tell by looking at our user database which of our users are patients. Conversely, given access to a database of medical information, even a Tidepool employee can't tell which patient it belongs to.
 
+For a detailed explanation of data organization, please see the [Server Data Organization](ServerDataOrganization.html) page. This document just sketches out the big picture.
 
 ## Accounts and login
 That account has a unique number in the Tidepool system that never changes. The user can associate that with an arbitrary list of email addresses. We also have a slot for a unique user name, which may simply be an email address. User name and email addresses are completely under the user's control.
@@ -44,10 +45,24 @@ The user database is deliberately very spare, for two reasons:
 * We intend that the userdata database design and implementation will almost never change once we get it stable. As the userdata is central to access to the entire Tidepool platform, changes to it will have a tendency to destabilize multiple systems.
 * The user database cannot be encrypted on a per-user basis (because we need to be able to find users and do things like password reset). Consequently, it is more secure to move most userdata into a separate metadata system.
 
+Consequently, the user database only has the necessary fields for logging in, plus a private ID and hash that are used to store and encrypt the user's private metadata.
 
 ## User Metadata and Groups
+
+All other user information is either stored by or stored through the user metadata system. This system stores information under an opaque ID, and is encrypted with a different hash for every user. This ID and hash never leave Tidepool's private network. Metadata, in turn, also maintains different per-user ID/hash pairs so that each portion of user data that is encrypted has a different key.
 
 ## Patient Data
 Identifiable medical information (messages, device IDs, etc) will be similarly encoded.
 
 Medical data that has been stripped of identifiable information, on the other hand, is encrypted only in the aggregate (not per-patient). For example, readings from a blood glucose monitor are not identifiable, so they are stored so that anonymized information can be aggregated and used in future research.
+
+## Encryption
+
+When we use encryption, we use industry-standard algorithms that have been tested, with key lengths that are considered adequate even under modern understanding of the potential weaknesses of industry-standard encryption. 
+
+Every encryption system in Tidepool uses a long "deploy salt" string that ensures that even someone who steals the keys in the user database would not be able to decrypt the patient data without this additional deploy key (which is not stored in the database -- it's an environment variable set up during the deployment).
+
+Furthermore, Tidepool's hard disks are set up using a RAID array, which means that we have multiple redundant copies of all of the information on the disks. Any disk that fails can be replaced without any loss of information.
+
+Each individual disk is encrypted at the volume with a random key that is setup during installation -- and not even Tidepool knows the key. We essentially treat individual disks as ephemeral. If one were to be physically stolen or recycled to someone who tried to read it, no one would be capable of decrypting the information on it.
+
