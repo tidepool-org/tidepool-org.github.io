@@ -8,7 +8,7 @@ published: true
 
 ##Use it
 
-If you're a person with type 1 diabetes, please help test our apps and our platform. We'd love your feedback on user experience and functionality. Since our application and platform are still under development, DO NOT USE OUR APPLICATIONS TO MAKE THERAPY ADJUSTMENTS.
+If you're a person with type 1 diabetes, please help test our apps and our platform. We'd love your feedback on user experience and functionality. Since our applications and platform are still under development, DO NOT USE OUR APPLICATIONS TO MAKE THERAPY ADJUSTMENTS.
 
 If you'd like to learn more about about how you can participate in an IRB-approved pilot study, please sign up to our mailing lists for [blip](http://tidepool.org/blip) and [Nutshell](http://tidepool.org/Nutshell).
 
