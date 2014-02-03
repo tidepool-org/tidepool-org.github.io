@@ -19,10 +19,11 @@ When a request arrives, the router looks up its path and attempts to match it to
 
 ###Example:
 * The 'message-api' server starts up at internal IP address 20.10.10.10:5050 and registers itself with hakken.
-* The router is set up to know that requests for the path ```/message``` go to "message-api".
+* The router (styx) is set up to know that requests for the path ```/message``` go to "message-api".
+* Styx also has a local cache of the information from hakken (called a watch), which hakken automatically updates whenever anything changes.
 * The client requests ```POST https://api.tidepool.io/message/send```
 * Router receives request, looks up ```/message```, and finds the service called "message-api"
-* A request to hakken with "message-api" returns the IP address and port number ```20.10.10.10:5050```.
+* Styx uses its local connection with hakken to look up "message-api" and fetch the IP address and port number ```20.10.10.10:5050```.
 * The original IP and the ```/message``` part are stripped from the message, and the request is forwarded (behind the firewall) as ```https://20.10.10.10:5050/send```
 
 
@@ -60,9 +61,9 @@ Medical data that has been stripped of identifiable information, on the other ha
 
 When we use encryption, we use industry-standard algorithms that have been tested, with key lengths that are considered adequate even under modern understanding of the potential weaknesses of industry-standard encryption. 
 
-Every encryption system in Tidepool uses a long "deploy salt" string that ensures that even someone who steals the keys in the user database would not be able to decrypt the patient data without this additional deploy key (which is not stored in the database -- it's an environment variable set up during the deployment).
+Each encryption system in Tidepool uses a unique long "deploy salt" string that ensures that even someone who steals the keys in the user database would not be able to decrypt the patient data without this additional deploy key (which is not stored in the database -- it's an environment variable set up during the deployment).
 
-Furthermore, Tidepool's hard disks are set up using a RAID array, which means that we have multiple redundant copies of all of the information on the disks. Any disk that fails can be replaced without any loss of information.
+Furthermore, Tidepool's data is stored using a database with multiple live replicas, which means that we have multiple redundant copies of all of the information. Any one of the replica sets that fails can be replaced without any loss of information.
 
 Each individual disk is encrypted at the volume with a random key that is setup during installation -- and not even Tidepool knows the key. We essentially treat individual disks as ephemeral. If one were to be physically stolen or recycled to someone who tried to read it, no one would be capable of decrypting the information on it.
 
