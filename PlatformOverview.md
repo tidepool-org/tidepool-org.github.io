@@ -47,21 +47,3 @@ Having isolated, small components makes it a lot easier to write test systems th
 
 Please note that testing is something that improves over time. The developer who wrote the code is both the best person to write some tests (because presumably the dev knows the code) and the worst (because any blind spots in the code are likely to be duplicated in the tests). 
 
-# High-level Structure
-
-## Process structure, routing, and discovery
-
-Each individual component of the Tidepool Platform is a nodejs application that manages some list of URLs and HTTP verbs. For example, the message API handles a URL called "send", among others. These node applications are deployed on physical servers. Each server has one or more "slots" for applications. The servers and slots are managed by a system we call shio. We can deploy a given node application on multiple slots if necessary to support scaling.
-
-A system called hakken operates as a discovery system. Hakken maintains a list of services and their locations in the system. It supports multiple instances of a given service, and hakken itself can be deployed multiple times. This level of redundancy allows us to build a system that can survive the loss of any individual component.
-
-External requests from applications on the internet come in to the system through the router, which is known as styx. The router is the only application that has an externally-accessible IP and internet address (api.tidepool.io). The router maintains a mapping of URL paths to particular process names.
-
-When a request arrives, the router looks up its path and attempts to match it to a service name. When a match is found, it looks up the service name using hakken and routes the request to an instance of the appropriate node server, rewriting the url along the way.
-
-Example:
-* Client requests ```POST https://api.tidepool.io/message/send```
-* Router receives request, looks up "message", and finds the service called "message-api"
-* A request to hakken with "message-api" returns an internal IP address a.b.c.d and port number p.
-* The request is rewritten and forwarded to that IP and port as ```https://a.b.c.d:p/send```
-

@@ -19,6 +19,8 @@ We're beginning to organize the documentation and the projects in a way we hope 
 
 The [Platform Overview](PlatformOverview.html) tries to explain our technical vision in the near term, with heavy emphasis on the things we're implementing right now. 
 
+The [Server Architecture](ServerArchitecture.html) page tells how the many moving parts of our server system fit together. 
+
 The [Server Data Organization](ServerDataOrganization.html) page explains how the various bits of server data is organized and how they relate to each other. It also has a set of use cases we try to keep in mind, but they're still sparse. They'll someday get a page of their own.
 
 The [Tidepool Component List](TidepoolComponents.html) goes through a list of active repositories and summarizes what they're for and how they fit together. 
