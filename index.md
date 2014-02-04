@@ -17,6 +17,8 @@ We're a nonprofit organization doing everything in the open. Open source, open b
 
 We're beginning to organize the documentation and the projects in a way we hope other people will be able to find useful. 
 
+[Use Cases](UseCases.html) is a high-level list of use cases we're attempting to solve for. It needs more work, and it needs to be backed up with greater detail.
+
 The [Platform Overview](PlatformOverview.html) tries to explain our technical vision in the near term, with heavy emphasis on the things we're implementing right now. 
 
 The [Server Architecture](ServerArchitecture.html) page tells how the many moving parts of our server system fit together. 
