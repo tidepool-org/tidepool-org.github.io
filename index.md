@@ -17,7 +17,7 @@ We're a nonprofit organization doing everything in the open. Open source, open b
 
 We're beginning to organize the documentation and the projects in a way we hope other people will be able to find useful. 
 
-The docs that developers will spend their most time with are located in the [Tidepool Component List](TidepoolComponents.html), which documents the active repositories and how they fit together.
+The docs that developers will spend most of their time with are located in the [Tidepool Component List](TidepoolComponents.html), which documents the active repositories and how they fit together.
 
 If this is your first time getting exposed to Tidepool, however, we recommend reading through the following pages first.
 
