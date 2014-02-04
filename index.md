@@ -17,6 +17,10 @@ We're a nonprofit organization doing everything in the open. Open source, open b
 
 We're beginning to organize the documentation and the projects in a way we hope other people will be able to find useful. 
 
+The docs that developers will spend most of their time with are located in the [Tidepool Component List](TidepoolComponents.html), which documents the active repositories and how they fit together.
+
+If this is your first time getting exposed to Tidepool, however, we recommend reading through the following pages first.
+
 [Use Cases](UseCases.html) is a high-level list of use cases we're attempting to solve for. It needs more work, and it needs to be backed up with greater detail.
 
 The [Platform Overview](PlatformOverview.html) tries to explain our technical vision in the near term, with heavy emphasis on the things we're implementing right now. 
@@ -24,8 +28,6 @@ The [Platform Overview](PlatformOverview.html) tries to explain our technical vi
 The [Server Architecture](ServerArchitecture.html) page tells how the many moving parts of our server system fit together. 
 
 The [Server Data Organization](ServerDataOrganization.html) page explains how the various bits of server data is organized and how they relate to each other. It also has a set of use cases we try to keep in mind, but they're still sparse. They'll someday get a page of their own.
-
-The [Tidepool Component List](TidepoolComponents.html) goes through a list of active repositories and summarizes what they're for and how they fit together. 
 
 # This documentation site
 All of this is a work in progress. If you find something particularly confusing, please feel free to [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues) with suggestions on how it could be clearer. Even better, if you think you can make it better, fork the [repository for this documentation site](https://github.com/tidepool-org/tidepool-org.github.io) and file a pull request for improvements. 
