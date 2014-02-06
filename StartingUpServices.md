@@ -1,3 +1,9 @@
+---
+layout: apilist
+title: Tidepool Components
+published: true
+---
+
 Starting up the platform locally requires a number of different pieces to make everything work.  
 
 1. You will first need to start up Mongo, a single Mongo is sufficient.
