@@ -36,6 +36,8 @@ We are also very careful not to leak which of our users might be patients. Patie
 
 For a detailed explanation of data organization, please see the [Server Data Organization](ServerDataOrganization.html) page. This document just sketches out the big picture.
 
+![Data Architecture]({{ site.url }}/images/architecture/DataArchitecture.jpg)
+
 ## Accounts and login
 That account has a unique number in the Tidepool system that never changes. The user can associate that with an arbitrary list of email addresses. We also have a slot for a unique user name, which may simply be an email address. User name and email addresses are completely under the user's control.
 
