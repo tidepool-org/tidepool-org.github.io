@@ -49,15 +49,18 @@ Fields in this data structure include:
 
 ## User Metadata
 
-This is further information about the user. The key field is the user-api private.meta.id value. The value of the field is a block of json, encrypted with private.meta.hash plus a deploy-specific salt value. 
+This is further information about the user. The main field (called value) is the user-api private.meta.id value. The value of the field is a block of json, encrypted with private.meta.hash plus a deploy-specific salt value. 
+
+The field is divided into named compartments called "collections". The intent is that someday collections will each be able to have a schema that can control what members they can have.
 
 Metadata fields include:
 
 * **metaid** -- Unique, semipermanent, server-only -- the key field in the database. Stored in user-api as private.meta.id.
-* **value** -- An object, consisting of a block of json that has been stringized and encrypted with userapi/private.meta.hash (plus salt). Fields in this object include:
-  * **fullname** -- User-supplied, required, editable -- The full name of the user, as the user wishes to be known to others. Would be used in things like "Full Name wants to invite you to join..."
-  * **shortname** -- User-supplied, required, editable -- the short form of the name, used in things like UIs. The short name would be displayed on a summary of a chat message. (Length limited?)
-  * **publicbio** -- User-supplied, optional, editable -- A block of text (limited to 500 characters) that is displayed on the "about you" section of your profile.
+* **value** -- An object, consisting of a block of json that has been stringized and encrypted with userapi/private.meta.hash (plus salt). Top-level fields in this object are collections; each collection is itself an object with a specified format:
+  * **profile** -- Tidepool-defined, required -- Contains the profile collection.
+    * **fullname** -- User-supplied, required, editable -- The full name of the user, as the user wishes to be known to others. Would be used in things like "Full Name wants to invite you to join..."
+    * **shortname** -- User-supplied, required, editable -- the short form of the name, used in things like UIs. The short name would be displayed on a summary of a chat message. (Length limited?)
+    * **publicbio** -- User-supplied, optional, editable -- A block of text (limited to 500 characters) that is displayed on the "about you" section of your profile.
   * **groups** -- server-only; all groups are optional, but the groups object itself must exist even if empty -- An object containing members, each of which is a group ID. Specific members are:
     * **team** -- This is the group of users who participate in the message traffic about you. Messages posted to this group are attached to your user data.
     * **uploaders** -- This is a group of users who also have the right to upload data to this account. The account holder always has this right so this field is only needed if multiple people have upload rights.
