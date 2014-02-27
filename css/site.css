@@ -580,8 +580,22 @@ tr {
 	border-bottom: 1px solid #ccc;
 }
 
-th, td {
+th {
 	padding: .7em 1.25em;
+	font-weight: bold;
+	font-size: 14pt;
+	background-color: #dddddd;
+}
+
+td {
+	padding: .7em 1.25em;
+	min-width: 150px;
+	font-size: 13pt;
+	font-family: 'gt_walsheim_light';
+}
+
+td:first-child {
+	font-weight: bold;
 }
 
 hr {
@@ -964,6 +978,7 @@ ul.sf-menu li li li.sfHover ul {
 
 .entry-content table {
 	margin-left: 1px;
+	max-width: 740px;
 }
 
 .entry-content embed {
