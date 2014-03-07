@@ -4,14 +4,14 @@ title: Tidepool Project
 published: true
 ---
 
-#About the Tidepool Project
+#Tidepool Developer Portal
 
-We are building an internet application platform and series of applications to help reduce the burden of managing Type 1 Diabetes. See [our web site](http://tidepool.org) for lots and lots of information about the project.
+We are building an internet application platform and series of applications to help reduce the burden of managing Type 1 Diabetes. We're a nonprofit organization doing everything in the open. Open source, open business, and we need lots of help.
 
+This is a microsite for helping to guide and manage the open source nature of our work. Its intended audience is software developers who are interested in helping us continuously improve the way we serve the Type 1 Diabetes community.
 
-#How you can help
+This is a work in progress. If you find something particularly confusing, please feel free to [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues) with suggestions on how it could be clearer.
 
-We're a nonprofit organization doing everything in the open. Open source, open business, and we need lots of help. [This document](HowToHelp.html) will give you a pretty detailed overview of the sorts of ways people can help. 
 
 #Technical Documentation
 
