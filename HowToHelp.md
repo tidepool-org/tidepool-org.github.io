@@ -35,7 +35,7 @@ It's pretty much a given that we don't have enough documentation. Can you help w
 * Offer editorial fixes on anything we've published, from web pages to user docs to application docs.
 * Work on improving this site.
 
-To help with documentation, the easiest way for us is if you submit pull requests through github for documentation improvements. Failing that, you can submit git issues with small edits. If you believe larger changes are needed and you're not sure how to do that through GitHub, please contact us and we'll try to find a mutually acceptable solution.
+To help with documentation, the easiest way for us is if you fork the [repository for this documentation site](https://github.com/tidepool-org/tidepool-org.github.io) and file a pull request. The site is using GitHub pages with Jekyll as the page generator. See README.md in the repository for how to get started; if you’re comfortable with git and a text editor, it’s pretty easy. If you're not comfortable with issuing pull requests, or just have a small edit, please [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues). If you believe larger changes are needed and you're not sure how to do that through GitHub, please contact us and we'll try to find a mutually acceptable solution.
 
 ##Code it
 ###Code maintenance
@@ -63,11 +63,4 @@ _Things you can do:_
 * Features -- if you think we need a feature, a pull request is one way to propose it, especially for small features. But you're also encouraged and welcome to contact us about it before you do the work. Sometimes we have reasons why we don't or can't do things that might seem obvious to you. Or we may have conflicting work underway. A really good way to handle feature work is to create an issue on GitHub *before* you do the work, and let us know you intend to work on it. That way we can know it's coming and let you know if we see a conflict.
 * Refactoring -- restructuring of code to make it more maintainable or testable is often really useful. If you decide to take on something like this, it would usually be wise to check with us beforehand. Refactorings can generate a lot of code conflict that can make them hard to accept. Also, when you refactor, please try not to add any features when you do. The same tests that ran before the refactoring should run after it as well.
 
-#How to reach us
 
-## Email
-
-We intend to but have not yet set up mailing lists for development. When we do, we'll put the information here.
-
-## IRC
-Since our team spans the globe, there's nearly always someone in the #tidepool IRC channel on freenode.net. Feel free to pop in there and engage with us.
