@@ -35,7 +35,7 @@ It's pretty much a given that we don't have enough documentation. Can you help w
 * Offer editorial fixes on anything we've published, from web pages to user docs to application docs.
 * Work on improving this site.
 
-To help with documentation, the easiest way for us is if you submit pull requests through github for documentation improvements. Failing that, you can submit git issues with small edits. If you believe larger changes are needed and you're not sure how to do that through GitHub, please contact us and we'll try to find a mutually acceptable solution.
+To help with documentation, the easiest way for us is if you fork the [repository for this documentation site](https://github.com/tidepool-org/tidepool-org.github.io) and file a pull request. The site is using GitHub pages with Jekyll as the page generator. See README.md in the repository for how to get started; if you’re comfortable with git and a text editor, it’s pretty easy. If you're not comfortable with issuing pull requests, or just have a small edit, please [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues). If you believe larger changes are needed and you're not sure how to do that through GitHub, please contact us and we'll try to find a mutually acceptable solution.
 
 ##Code it
 ###Code maintenance

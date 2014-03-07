@@ -29,7 +29,3 @@ The [Server Architecture](ServerArchitecture.html) page tells how the many movin
 
 The [Server Data Organization](ServerDataOrganization.html) page explains how the various bits of server data is organized and how they relate to each other. It also has a set of use cases we try to keep in mind, but they're still sparse. They'll someday get a page of their own.
 
-# This documentation site
-All of this is a work in progress. If you find something particularly confusing, please feel free to [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues) with suggestions on how it could be clearer. Even better, if you think you can make it better, fork the [repository for this documentation site](https://github.com/tidepool-org/tidepool-org.github.io) and file a pull request for improvements. 
-
-The site is using GitHub pages with Jekyll as the page generator. See README.md in the repository for how to get started. If you're comfortable with git and a text editor, it's pretty easy.
