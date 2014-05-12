@@ -26,6 +26,7 @@ Are you technically inclined with good attention to detail? Help with the testin
 Check out the repository and run the tests. Look at the test scripts, look for uncovered conditions, and write tests to check them. Submit pull requests. If you find bugs, write up the bugs and submit pull requests with code that validates the bug. If you want to fix the bug, a pull request that fixes the bug will also be appreciated!
 
 ##Doc it
+
 ###Documentation
 
 It's pretty much a given that we don't have enough documentation. Can you help with writing it? The kinds of things we need help with include:
@@ -38,6 +39,7 @@ It's pretty much a given that we don't have enough documentation. Can you help w
 To help with documentation, the easiest way for us is if you fork the [repository for this documentation site](https://github.com/tidepool-org/tidepool-org.github.io) and file a pull request. The site is using GitHub pages with Jekyll as the page generator. See README.md in the repository for how to get started; if you’re comfortable with git and a text editor, it’s pretty easy. If you're not comfortable with issuing pull requests, or just have a small edit, please [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues). If you believe larger changes are needed and you're not sure how to do that through GitHub, please contact us and we'll try to find a mutually acceptable solution.
 
 ##Code it
+
 ###Code maintenance
 
 We need help at all levels. 
