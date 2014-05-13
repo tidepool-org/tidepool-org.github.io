@@ -189,10 +189,12 @@ dl {
 
 dt {
 	font-weight: bold;
+	font-size: larger;
 }
 
 dd {
 	margin-bottom: 18px;
+	margin-left: 2em;
 }
 
 b, strong {

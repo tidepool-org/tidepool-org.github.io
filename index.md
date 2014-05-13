@@ -23,6 +23,8 @@ Once you're done with all that reading, you're ready to dive into the code! Visi
 
 To get the stack running on your own machine, see the [Starting Services](StartingUpServices.html) page.
 
+If you're looking for reference info, check out [our references page](References.html).
+
 ## Communicating with the team
 
 Since our team spans the globe, there's nearly always someone in the #tidepool IRC channel on freenode.net. Feel free to pop in there and engage with us.

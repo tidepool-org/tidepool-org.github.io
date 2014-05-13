@@ -1,6 +1,6 @@
 ---
 layout: defaults
-title: Tidepool Components
+title: Starting Up Services
 published: true
 ---
 
