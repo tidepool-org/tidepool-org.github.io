@@ -36,3 +36,10 @@ This page is for holding useful links.
 
 * [React](http://facebook.github.io/react/)
 * [bows (logging)](https://github.com/latentflip/bows)
+
+###Documentation systems
+
+* [Github pages](https://pages.github.com/)
+* [Jekyll site generator](http://jekyllrb.com/docs/home/)
+* [Kramdown markdown syntax](http://kramdown.gettalong.org/syntax.html)
+
