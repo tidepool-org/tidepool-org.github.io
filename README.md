@@ -9,4 +9,4 @@ Then do ```gem install bundle``` from within this repository.
 
 To render the site, do ```bundle exec jekyll server --watch```, then visit http://localhost:4000 in your browser. 
 
-While that's running, you can then edit the site, save the result, and reload the web page to see it on your local site. 
+While that's running, you can then edit the site, save the result, and reload the web page to see it on your local site.

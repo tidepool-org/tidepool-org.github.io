@@ -21,6 +21,8 @@ This is a work in progress. If you find something particularly confusing, please
 
 Once you're done with all that reading, you're ready to dive into the code! Visit the [Tidepool components](TidepoolComponents.html) page to see the active repositories and how they fit together.
 
+To get the stack running on your own machine, see the [Starting Services](StartingUpServices.html) page.
+
 ## Communicating with the team
 
 Since our team spans the globe, there's nearly always someone in the #tidepool IRC channel on freenode.net. Feel free to pop in there and engage with us.
