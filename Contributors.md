@@ -24,7 +24,7 @@ If you are working on your own behalf would like to submit a pull request (and a
 
 Please make sure that one of Tidepool's employees (see below) sees it and adds you to the list.
 
-If your contributions are on behalf of a company or you need to get your company's permission to contribute, please have your company fill out the [corporate CLA](TidepoolCorporateCLA.pdf) and submit it to us. (NOTE -- that link is broken while we wait to get the actual CLA.)
+If your contributions are on behalf of a company or you need to get your company's permission to contribute, please have your company fill out the form and submit it to us. A post on github is not sufficient in this case.
 
 ##Committers
 
