@@ -16,9 +16,17 @@ We generally track bugs in [the issues list of Tidepool's "hub" repository](http
 
 Starting up the platform locally requires a number of different pieces to make everything work.  
 
-The easiest thing to do is to clone the [tools repository](https://github.com/tidepool-org/tools) and run ```get_current_tidepool_repos.sh```. (Apologies to Windows users; none of us in Tidepool are, so our scripts are built around bash.)
+The easiest thing to do is to clone the [tools repository](https://github.com/tidepool-org/tools) and run ```get_current_tidepool_repos.sh```. (Apologies to Windows users; none of us in Tidepool are, so our scripts are built around bash.) ```get_current_tidepool_repos.sh``` will clone the other necessary Tidepool repositories alongside the tools repository.
 
 You will also need to install [mongo](http://www.mongodb.org/) and have ```mongod``` available on your path.
+
+After you've complete these steps, you can start up everything with the following command:
+
+```
+$ . tools/runservers
+```
+
+See the comments at the top of the `runservers` file for more information on using it.
 
 ##The details
 
