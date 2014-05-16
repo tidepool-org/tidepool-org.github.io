@@ -26,6 +26,8 @@ After you've complete these steps, you can start up everything with the followin
 $ . tools/runservers
 ```
 
+See the comments at the top of the `runservers` file for more information on using it.
+
 ##The details
 
 If you want to do it the hard way:
