@@ -994,9 +994,8 @@ font-style: italic;
 }
 
 .TOC {
-	position: fixed;
-	left: 20px;
-	top: 150px;
+	position: absolute;
+	left: -237px;
 	width: 220px;
 	background-color: #eeeeee;
 	padding: 6px;
