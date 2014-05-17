@@ -16,15 +16,23 @@ We generally track bugs in [the issues list of Tidepool's "hub" repository](http
 
 Starting up the platform locally requires a number of different pieces to make everything work.  
 
-The easiest thing to do is to clone the [tools repository](https://github.com/tidepool-org/tools) and run ```get_current_tidepool_repos.sh```. (Apologies to Windows users; none of us in Tidepool are, so our scripts are built around bash.) ```get_current_tidepool_repos.sh``` will clone the other necessary Tidepool repositories alongside the tools repository.
+##Prerequisites
 
-You will also need to install [mongo](http://www.mongodb.org/) and have ```mongod``` available on your path.
+You need a command line development environment; you need a bash-compatible shell and git, npm, bower, node, and mongod installed and on your path.
 
-After you've complete these steps, you can start up everything with the following command:
+Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a mac, you'll need to install XCode, and the XCode command line tools. 
+
+##Installing everything
+
+The easiest thing to do is to clone the [tools repository](https://github.com/tidepool-org/tools) and run ```get_current_tidepool_repos.sh```. (Apologies to Windows users; none of us in Tidepool are, so our scripts are built around bash.) ```get_current_tidepool_repos.sh``` will clone the other necessary Tidepool repositories alongside the tools repository. It also checks to make sure you have the requirements installed.
+
+After you've completed these steps, you can start up everything with the following command:
 
 ```
 $ . tools/runservers
 ```
+
+Please note that runservers is NOT a bash script -- it needs to be run with "." (aka "source"). This is why it is not marked as executable. 
 
 See the comments at the top of the `runservers` file for more information on using it.
 
