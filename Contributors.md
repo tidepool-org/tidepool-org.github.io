@@ -14,6 +14,7 @@ Below are the GitHub names of people who have signed Tidepool CLAs. These are th
  ---- | --------------
 amargherio | [Agreed in user-api#42](https://github.com/tidepool-org/user-api/pull/42)
 trhodeos | [Agreed in tideline#48](https://github.com/tidepool-org/tideline/pull/48)
+yrrebnarg | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
 
 ##Making Contributions
 
