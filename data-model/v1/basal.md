@@ -4,16 +4,42 @@ Basal events represent a basal dosing over time.  At a high level they are a tim
 
 To this end, each basal event should completely encapsulate the full story of basal delivery for the pump.  You will notice that a temp overriding a scheduled basal actually contains the scheduled basal as a "suppressed" field on the temp basal event.  Similarly, the "previous" basal rate can optionally (but should always) be included.  Tidepool is able to use this previous field to verify the current state of the basal data before effecting the change.
 
-There are two general types of basal events that tidepool understands:
+There are three general types of basal events that tidepool understands:
 
+* injected
 * scheduled
 * temp
 
 Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](../v1.md)
 
+### Injected
+
+This represents an injection of a long-acting insulin.
+
+``` json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "value": total_number_of_units_injected,
+  "duration": number_of_milliseconds_this_injection_is_expected_to_last,
+  "time": see_common_fields,
+  "insulin": name_of_insulin_used,
+  "deviceId": see_common_fields,
+  "source": see_common_fields
+}
+```
+
+The fields generally follow the same semantics as other basal events, except
+
+1. ` duration` represents an indication of how long the insulin should last.  With insulin delivered by a pump, this can be overridden by a change in the rate.  With an injection, a new injection will be completely additive to what is currently in the body.  So, handling of injections should be additive with other injections and other forms of delivering insulin.
+
+2. `value` it is worth it to note that the value is the total number of units injected, rather than the amount per hour as is the case with the other basal types
+
+3. `insulin` is a field that exists to provide an indication of what type of insulin was injected.  For example, levemir, lantus, etc.  It is our hope that this can be used to generate an appoximation of the rate at which the insulin should affect the PwD.
+
 ### Scheduled
 
-This is a "scheduled" basal, it is a basal dosing that is operating according to the schedule built in to the pump.  This event indicates that the given basal rate should have happened if the schedule were to be performed and should always be emitted *even if a temp basal is in effect*.
+This is a "scheduled" basal, it is a basal dosing that is operating according to the schedule built in to the pump.
 
 ``` json
 {
