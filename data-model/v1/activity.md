@@ -1,7 +1,6 @@
-# Acticity
+# Activity
 
-Acticity is ......
-
+Activity is intended to track any excercise acitivity
 
 ``` json
 {
