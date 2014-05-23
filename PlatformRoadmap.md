@@ -20,17 +20,17 @@ It is these ends that drive the prioritization and sequencing of the items in th
 
 ##Our technical goals
 
-These are the high level technical goals that are informed by our corporate goals. The order in which they're listed is more about order of implementation than it is about importance.
+These are the high level technical goals that are informed by our company goals. The order in which they're listed is about organization more than priority. Note that these are the high level goals; details are later in the document.
 
-* *Complete the Blip feature set.*  Our initial implementation of Blip, currently undergoing its first medical trial, is lacking a few important features that will have to exist before we make it available to a larger population.
-* *Build a "Universal Uploader".* We believe that extracting data from third party sites that have already processed and filtered it is the wrong way to solve this problem. We want to build interfaces that will allow Tidepool's platform to extract data directly from devices like pumps and CGMs. We intend to do this by working directly with the manufacturers of these devices.
+* *Complete the Blip feature set.*  Our initial implementation of Blip, currently undergoing its first medical trial, is lacking a few important features that will have to exist before we make it available to a larger population. For a general outline, see below. For specific details on exactly what we're working on, please visit [our Blip Trello board](https://trello.com/b/GPadCYvP/blip).
+* *Build a "Universal Uploader".* We believe that extracting data from third party sites that have already processed and filtered it is the wrong way to collect data. We want to build interfaces that will allow Tidepool's platform to extract data directly from devices like pumps and CGMs. We intend to do this by working directly with the manufacturers of these devices.
 * *Continue to extend the Tidepool platform for third party uses.* Tidepool hopes to become a central clearinghouse for data related to diabetes -- not just device data, but all the data that has an effect on blood sugar. Exercise, etc. We also believe that we promote the best possible outcomes by being open about the entire platform, and by hosting anyone's data who wants to give it to us. 
 * *Build a world-class quality system.* We recognize that the work we're doing directly affects people's health. We must be very, very confident in the code we write and how we deploy it. But the traditional approach to life-safety software development uses a "design-first" approach that attempts to specify every requirement in advance. It's been shown time and again that that approach leads to massive cost overruns and explodes the size of development teams and the time required to build a solution. At Tidepool, we believe that we can show the world how to build great, high-quality software with a small team in an agile way. To prove it, we will need a concerted approach to how we manage all elements of quality -- from documentation to testing. 
-* *Get an FDA 510k submission ready by end of year.* In order to put anything Tidepool builds into the hands of end users, we must get FDA approval for it. All of the above is necessary to get to this step. 
+* *Get an FDA submission ready by end of year.* In order to put anything Tidepool builds into the hands of end users, we must get FDA approval for it. All of the above is necessary to get to this step. 
 
 ##Steps to get there:
 
-Below are the major areas we are working towards to achieve the goals set out above. There is some sequence to this list of steps, but we will certainly not follow this sequence exactly. There are too many variables and too many people working at once to impose too much control over sequencing.
+Below are the major areas we are working towards to achieve the goals set out above. There is some sequence to this list of steps, but we will certainly not follow this sequence exactly. There are too many variables and people to impose significant control over sequencing.
 
 ###Provide a full spectrum of standard platform capabilities
 
@@ -69,7 +69,7 @@ We need to follow security best practices and defend our systems against attacks
 
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
   * Add password quality rules so people can't create bad passwords. 
-  * Allow downloading all of someone's data in one action (result should be human-readable).
+  * Allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer).
   * Allow upload of one of these data blobs to recreate an individual's data. (This is lower priority than making sure people can download their data.)
   * Complete the features involved in allowing someone to delete their own account and all associated data.
   * Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data.
@@ -93,11 +93,11 @@ The data storage system currently in use in Blip is a custom framework designed 
 
   * Create HTTP API for ingestion of data to the unified form. This will support upload of as little as a single point at a time (to support cloud-connected devices) as well as block uploads.
   * Create simple query system for first pass data extraction for Blip.
-  * Create migration tools from existing data to new format.
-  * Convert our uploaders to be able to use the new format or the old format on a per-account basis.
-  * Convert Blip to use the new query system or the old query system on a per-account basis.
+  * Implement new access API that can use either format
+  * Adjust blip to operate using the new access API
+  * Convert our uploaders to use the new format.
   * Migrate existing accounts from old to new.
-  * Once all accounts are converted, remove old code.
+  * Remove conversion logic from the access API.
 
 ####Further development:
 
