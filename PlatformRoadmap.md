@@ -58,7 +58,7 @@ These features are aimed at allowing us to support third parties -- people who w
 
   * Create API token system so we can let other apps use the platform.
   * Support OAuth2 and provide a platform login page so we can let users control which apps use the platform.
-  * Support these things on the devel API so that app developers can build against a dummy API without real customer data in it.
+  * Support these things on a sandboxed version of our API so that app developers can build against a dummy API without real customer data. Provide some test accounts or test account generators so that people can experiment without creating lots of bogus data in our production database.
   * Version our API in the Accepts: header (makes the platform more predictable for third parties and makes it so that we can improve it without immediately obsoleting existing systems that depend on it).
   * Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
   * Further work on automation -- what we do, how we do it (tools, etc). This has to do with builds and testing.
