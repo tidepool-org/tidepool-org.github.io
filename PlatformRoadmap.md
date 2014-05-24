@@ -69,7 +69,7 @@ We need to follow security best practices and defend our systems against attacks
 
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
   * Add password quality rules so people can't create bad passwords. 
-  * Allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer).
+  * Allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer -- for example, a zip of JSON files).
   * Allow upload of one of these data blobs to recreate an individual's data. (This is lower priority than making sure people can download their data.)
   * Complete the features involved in allowing someone to delete their own account and all associated data.
   * Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data.
