@@ -20,12 +20,12 @@ It is these ends that drive the prioritization and sequencing of the items in th
 
 ##Our technical goals
 
-These are the high level technical goals that are informed by our company goals. The order in which they're listed is about organization more than priority. Note that these are the high level goals; details are later in the document.
+These are the high level technical goals that are informed by our company goals. The order in which they're listed is definitely not the order in which they will be implemented. Note that these are the high level goals; details are later in the document.
 
 * *Complete the Blip feature set.*  Our initial implementation of Blip, currently undergoing its first medical trial, is lacking a few important features that will have to exist before we make it available to a larger population. For a general outline, see below. For specific details on exactly what we're working on, please visit [our Blip Trello board](https://trello.com/b/GPadCYvP/blip).
 * *Build a "Universal Uploader".* We believe that extracting data from third party sites that have already processed and filtered it is the wrong way to collect data. We want to build interfaces that will allow Tidepool's platform to extract data directly from devices like pumps and CGMs. We intend to do this by working directly with the manufacturers of these devices.
-* *Continue to extend the Tidepool platform for third party uses.* Tidepool hopes to become a central clearinghouse for data related to diabetes -- not just device data, but all the data that has an effect on blood sugar. Exercise, etc. We also believe that we promote the best possible outcomes by being open about the entire platform, and by hosting anyone's data who wants to give it to us. 
-* *Build a world-class quality system.* We recognize that the work we're doing directly affects people's health. We must be very, very confident in the code we write and how we deploy it. But the traditional approach to life-safety software development uses a "design-first" approach that attempts to specify every requirement in advance. It's been shown time and again that that approach leads to massive cost overruns and explodes the size of development teams and the time required to build a solution. At Tidepool, we believe that we can show the world how to build great, high-quality software with a small team in an agile way. To prove it, we will need a concerted approach to how we manage all elements of quality -- from documentation to testing. 
+* *Continue to extend the Tidepool platform for third party uses.* Tidepool intends to be a hosting provider for data related to diabetes -- not just device data, but all the data that has an effect on blood sugar. Exercise, etc. We also believe that we promote the best possible outcomes by being open about the entire platform, and by hosting data for anyone who chooses to work with us. 
+* *Build a world-class quality system.* We recognize that the work we're doing directly affects people's health. We must be very, very confident in the code we write and how we deploy it. But the traditional approach to life-safety software development uses a "design-first" approach that attempts to specify every requirement in advance. It's been shown time and again that that approach leads to massive cost overruns and explodes the size of development teams and the time required to build a solution. At Tidepool, we believe that we can show the world how to build great, high-quality software with a small team in an agile way. To prove it, we will need a concerted approach to how we manage all elements of quality -- from documentation to testing to verification to validation to requirements traceability. 
 * *Get an FDA submission ready by end of year.* In order to put anything Tidepool builds into the hands of end users, we must get FDA approval for it. All of the above is necessary to get to this step. 
 
 ##Steps to get there:
@@ -40,7 +40,7 @@ Descriptions here will usually be terse -- fuller explanations of what they mean
 
 ####For our own needs:
 
-These are features that we need to support Blip in the next few months.
+These are API features that we need in order to support Blip in the next few months.
 
   * Allow creation of multiple data sets per account, and transfer of ownership between accounts so that we can support test data, alternate data sets, and transfer of data from one owner to another (for example, when a child grows up).
   * Send emails so we can do signup confirmation, lost password transactions, and simple notifications.
@@ -50,7 +50,7 @@ These are features that we need to support Blip in the next few months.
     * User confirmation
 
   * Develop an "undergoing maintenance" page that we can quickly failover to if there are technical problems.
-  * Develop framework that allows partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities would give us more control.
+  * Develop a framework that allows partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities would give us more control.
 
 ####To support third parties:
 
@@ -63,9 +63,9 @@ These features are aimed at allowing us to support third parties -- people who w
   * Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
   * Further work on automation -- what we do, how we do it (tools, etc). This has to do with builds and testing.
 
-####For privacy / security / patient-owns-the-data:
+####For privacy / security / data stewardship:
 
-We need to follow security best practices and defend our systems against attacks and poor programming. We also believe strongly that people should own their own data and need to finish the work that will allow people to control their data.
+We need to follow security best practices and defend our systems against attacks and poor programming. We also believe strongly that people own their own data and need to finish the work that will allow people to control their data.
 
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
   * Add password quality rules so people can't create bad passwords. 
@@ -104,7 +104,7 @@ The data storage system currently in use in Blip is a custom framework designed 
   * Build tool for adjusting timestamps and time zones on blocks of data (possibly extend query system to support it). Make sure it's tracked in the provenance system.
     * Requires UI design and lots of testing, plus frontend and backend coding and probably several iterations.
   * Develop ability to query data provenance information for auditing.
-  * Design and build a notification system that allows apps to subscribe to changes based on stored queries. It should support both connected and disconnected notifications (so, for example, someone could set an alert to send an email if the most recent BG reading goes below 50). 
+  * Design and build a notification system that allows apps to subscribe to changes based on stored queries. It should support both connected and disconnected notifications (so, for example, someone could set an alert to send a message if the most recent BG reading goes below 50). 
 
 
 ###Universal Uploader
@@ -137,7 +137,7 @@ As discussed above, we need to be very serious about testing and measurement of 
 ###Additional support for third parties like OSS devs and NightScout users
 
   * Extract commonalities for standard API modules. Where do we repeat ourselves and how can we do less of it?
-  * Decide on platform support and automation strategy (something other than shell scripts?)
+  * Decide on development platform support (how much do we support Windows, for example?) and automation strategy (something other than shell scripts?)
 
 ###EHR Integration
 
