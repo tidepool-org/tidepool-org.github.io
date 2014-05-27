@@ -36,7 +36,7 @@ Below are the major areas we are working towards to achieve the goals set out ab
 
 Our platform needs to be a world-class, documented, secure, tested framework of capabilities for storing and retrieving diabetes data. Certain things are required from anything that wants to call itself a platform.
 
-Descriptions here will usually be terse -- fuller explanations of what they mean can usually be found in github or our trello boards; if you want to know more about something and can't find it here, ask us in our IRC channel and someone will help you find the right place.
+Descriptions here will usually be terse -- fuller explanations of what they mean can usually be found in github or our trello boards; if you want to know more about something and can't find it here, ask us in our IRC channel and someone will help you find the right place. For all these links, see [the main page](http://tidepool-org.github.io/).
 
 ####For our own needs:
 
@@ -102,7 +102,7 @@ The data storage system currently in use in Blip is a custom framework designed 
 ####Further development:
 
   * Build tool for adjusting timestamps and time zones on blocks of data (possibly extend query system to support it). Make sure it's tracked in the provenance system.
-    * Requires UI design and lots of testing, plus frontend and backend coding and probably several iterations.
+    * It likely requires UI design and prototyping and lots of user testing, plus frontend and backend coding and probably several iterations.
   * Develop ability to query data provenance information for auditing.
   * Design and build a notification system that allows apps to subscribe to changes based on stored queries. It should support both connected and disconnected notifications (so, for example, someone could set an alert to send a message if the most recent BG reading goes below 50). 
 
@@ -141,7 +141,7 @@ As discussed above, we need to be very serious about testing and measurement of 
 
 ###EHR Integration
 
-For proper acceptance of Blip in clinics, we will have to provide a safe and effective means for the clinic's EHR systems to talk to Blip and Tidepool. It will not be feasible for Tidepool to do the integration work here -- what we can do is offer a set of features to make it as easy as possible for EHR systems to work with us. We are working on a set of user requirements for this. Roughly, though:
+For proper acceptance of Blip in clinics, we will have to provide a safe and effective means for the clinic's EHR systems to talk to Blip and Tidepool. It will not be feasible for Tidepool to do the integration work here -- what we can do is offer a set of features to make it as easy as possible for EHR systems and clinical IT departments to work with us. We are working on a set of user requirements for this. Roughly, though:
 
   * Allow patients to issue tokens to their providers for EHR integration. Tokens allow EHR systems to link to a specific patient's data without individual login
   * Require data package to identify user for messages and logging
