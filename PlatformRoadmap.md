@@ -4,7 +4,7 @@ title: Tidepool Platform Roadmap
 published: true
 ---
 
-This document was last edited at the end of May, 2014.
+This document was last edited at the beginning of June, 2014.
 
 #Platform Roadmap
 
@@ -22,11 +22,10 @@ It is these ends that drive the prioritization and sequencing of the items in th
 
 These are the high level technical goals that are informed by our company goals. The order in which they're listed is definitely not the order in which they will be implemented. Note that these are the high level goals; details are later in the document.
 
-* *Complete the Blip feature set.*  Our initial implementation of Blip, currently undergoing its first medical trial, is lacking a few important features that will have to exist before we make it available to a larger population. For a general outline, see below. For specific details on exactly what we're working on, please visit [our Blip Trello board](https://trello.com/b/GPadCYvP/blip).
+* *Make Blip's feature set commercially viable.*  Our initial implementation of Blip, currently undergoing its first medical trial, is lacking a few important features that will have to exist before we can make it available to a larger population. For a general outline, see below. For specific details on exactly what we're working on, please visit [our Blip Trello board](https://trello.com/b/GPadCYvP/blip). That board will be continually updated to reflect our current status and intentions.
 * *Build a "Universal Uploader".* We believe that extracting data from third party sites that have already processed and filtered it is the wrong way to collect data. We want to build interfaces that will allow Tidepool's platform to extract data directly from devices like pumps and CGMs. We intend to do this by working directly with the manufacturers of these devices.
-* *Continue to extend the Tidepool platform for third party uses.* Tidepool intends to be a hosting provider for data related to diabetes -- not just device data, but all the data that has an effect on blood sugar. Exercise, etc. We also believe that we promote the best possible outcomes by being open about the entire platform, and by hosting data for anyone who chooses to work with us. 
+* *Continue to extend the Tidepool platform for third party uses.* Tidepool intends to be a hosting provider for data related to diabetes -- not just device data, but all the data that has an effect on blood sugar or insulin dosing decisions (exercise, food intake, etc). We also believe that we promote the best possible outcomes by being open about the entire platform, and by hosting data for anyone who chooses to work with us. 
 * *Build a world-class quality system.* We recognize that the work we're doing directly affects people's health. We must be very, very confident in the code we write and how we deploy it. But the traditional approach to life-safety software development uses a "design-first" approach that attempts to specify every requirement in advance. It's been shown time and again that that approach leads to massive cost overruns and explodes the size of development teams and the time required to build a solution. At Tidepool, we believe that we can show the world how to build great, high-quality software with a small team in an agile way. To prove it, we will need a concerted approach to how we manage all elements of quality -- from documentation to testing to verification to validation to requirements traceability. 
-* *Get an FDA submission ready by end of year.* In order to put anything Tidepool builds into the hands of end users, we must get FDA approval for it. All of the above is necessary to get to this step. 
 
 ##Steps to get there:
 
