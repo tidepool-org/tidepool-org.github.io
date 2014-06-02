@@ -19,7 +19,7 @@ This represents an injection of a long-acting insulin.
 ``` json
 {
   "type": "basal",
-  "deliveryType": "scheduled",
+  "deliveryType": "injected",
   "value": total_number_of_units_injected,
   "duration": number_of_milliseconds_this_injection_is_expected_to_last,
   "time": see_common_fields,
@@ -35,7 +35,7 @@ The fields generally follow the same semantics as other basal events, except
 
 2. `value` it is worth it to note that the value is the total number of units injected, rather than the amount per hour as is the case with the other basal types
 
-3. `insulin` is a field that exists to provide an indication of what type of insulin was injected.  For example, levemir, lantus, etc.  It is our hope that this can be used to generate an appoximation of the rate at which the insulin should affect the PwD.
+3. `insulin` is a field that exists to provide an indication of what type of insulin was injected.  For example, levemir, lantus, etc.  There is a registry of possible values for this field, submitting a value that is not in this registry will cause the event to be rejected.  It is our hope that this can be used to generate an appoximation of the rate at which the insulin should affect the PwD.
 
 ### Scheduled
 
@@ -46,13 +46,13 @@ This is a "scheduled" basal, it is a basal dosing that is operating according to
   "type": "basal",
   "deliveryType": "scheduled",
   "scheduleName": name_of_schedule_from_settings,
-  "value": number_of_units_per_hour,
+  "rate": number_of_units_per_hour,
   "duration": number_of_milliseconds_this_basal_rate_will_be_in_effect,
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields,
   "previous": the_basal_event_that_would_have_been_previously_received,
-  "suppressed": [ basal_events_not_being_delivered_because_this_one_is_active, ... ]
+  "suppressed": basal_events_not_being_delivered_because_this_one_is_active
 }
 ```
 
@@ -61,9 +61,9 @@ There are 3 fields worth further explanation here:
 1. `duration`: This is advisory, meaning that it is used in order to provide a "TTL" (or Time To Live) on the basal rate.  We need a TTL on basal rates in order to limit the basal in the case that the pump were to be immediately destroyed and never be able to deliver another message.  Without the TTL, we wouldn't actually be able to tell the difference between the case that (a) someone is on a fixed basal rate and never generates events from their pump from (b) a pump that is destroyed and will never give us information again.  
     If we receive another which terminates this basal early, Tidepool will update the `duration` field to represent the actual duration and will store a new `expectedDuration` field to represent the original duration that was given.
 
-2. `previous`: This is the previous basal rate that was in effect by the pump before it changed.  This field is used by our systems to verify that we have a continuous stream of basal rate changes.  If this does not line up with what we believe to be the previously active basal, we will annotate the previously active basal with such information before instantiating the received event as the current basal rate.
+2. `previous`: This is the previous basal rate that was in effect by the pump before it changed.  It should be the complete event as it was emitted to us minus the `previous` field.  This field is used by our systems to verify that we have a continuous stream of basal rate changes.  If this does not line up with what we believe to be the previously active basal, we will annotate the previously active basal with such information before instantiating the received event as the current basal rate.
 
-3. `suppressed`: If this scheduled basal is causing some other basal rate to not be delivered, that basal rate (or rates) should be included in the array of suppressed basals.  We do not expect scheduled basals to override other basals, so in the vast majority of cases, this will probably be empty or non-existant, but we include it here because the system can accept it if it makes sense for the pump to generate it.
+3. `suppressed`: If this scheduled basal is causing some other basal rate to not be delivered, that basal rate should be included in the array of suppressed basals.  This should be another basal event minus the `previous` field.  We do not expect scheduled basals to override other basals, so in the vast majority of cases, this will probably be empty or non-existant, but we include it here because the system can accept it if it makes sense for the pump to generate it.  Note that a suppressed basal also has a suppressed field, so if there is a sequence of suppressions happening, that would be represented as a set of chained suppressed events.
 
 ### Temp
 
@@ -73,14 +73,14 @@ Temp basals are much the same as scheduled basals:
 {
   "type": "basal",
   "deliveryType": "temp",
-  "value": number_of_units_per_hour,
+  "rate": number_of_units_per_hour,
   "percent": floating_point_percentage_of_suppressed_basal_that_should_be_delivered
   "duration": number_of_milliseconds_the_temporary_basal_will_be_in_effect,
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields,
   "previous": the_basal_event_that_would_have_been_previously_received,
-  "suppressed": [ basal_events_not_being_delivered_because_this_one_is_active, ... ]
+  "suppressed": basal_events_not_being_delivered_because_this_one_is_active
 }
 ```
 

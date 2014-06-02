@@ -1,6 +1,6 @@
 # Settings
 
-A settings object represents the settings of a pump.  This is separate from deviceMeta events because, we decided to make it separate.  A settings object sent into our API looks like
+A settings object represents the settings of a pump.  A settings object sent into our API looks like
 
 ```
 {

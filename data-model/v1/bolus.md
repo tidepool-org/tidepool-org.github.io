@@ -18,7 +18,7 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
 {
   "type": "bolus",
   "subType": "normal",
-  "value": number_of_units,
+  "normal": number_of_units,
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields
@@ -31,7 +31,7 @@ It is followed up with a "completion" event that looks the exact same as the abo
 {
   "type": "bolus",
   "subType": "normal",
-  "value": number_of_units,
+  "normal": number_of_units,
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields,
@@ -82,7 +82,7 @@ A "dual/square" bolus is a bolus that starts out with a normal bolus and then co
 {
   "type": "bolus",
   "subType": "dual/square",
-  "value": number_of_units,
+  "normal": number_of_units,
   "extended": number_of_units_for_extended_delivery,
   "duration": milliseconds_over_which_the_extended_portion_should_be_delivered,
   "time": see_common_fields,
@@ -97,7 +97,7 @@ It is followed up with a "completion" event that looks the exact same as the com
 {
   "type": "bolus",
   "subType": "normal",
-  "value": number_of_units
+  "normal": number_of_units
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields,

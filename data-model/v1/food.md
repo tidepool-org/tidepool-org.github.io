@@ -12,7 +12,7 @@ A food event looks like
   "protein": grams_of_protein,
   "fat": grams_of_fat,
   "location": location_of_meal,
-  "name": name_of_meal,
+  "name": name_of_food,
   "source": see_common_fields
 }
 ```
