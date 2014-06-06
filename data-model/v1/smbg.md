@@ -1,6 +1,6 @@
 # SMBG
 
-SMBG represents blood glucose from a finger prick or other "self-monitoring" mehod.  These events are point-in-time and look like
+SMBG represents blood glucose from a finger prick or other "self-monitoring" method.  These events are point-in-time and look like
 
 
 ``` json
