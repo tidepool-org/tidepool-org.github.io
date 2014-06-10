@@ -22,8 +22,8 @@ This represents an injection of a long-acting insulin.
   "deliveryType": "injected",
   "value": total_number_of_units_injected,
   "duration": number_of_milliseconds_this_injection_is_expected_to_last,
-  "time": see_common_fields,
   "insulin": name_of_insulin_used,
+  "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields
 }
@@ -36,6 +36,8 @@ The fields generally follow the same semantics as other basal events, except
 2. `value` it is worth it to note that the value is the total number of units injected, rather than the amount per hour as is the case with the other basal types
 
 3. `insulin` is a field that exists to provide an indication of what type of insulin was injected.  For example, levemir, lantus, etc.  There is a registry of possible values for this field, submitting a value that is not in this registry will cause the event to be rejected.  It is our hope that this can be used to generate an appoximation of the rate at which the insulin should affect the PwD.
+
+4. `previous` is not specified.  This is because an injection is always additive to whatever other basal activity is going on.
 
 ### Scheduled
 
