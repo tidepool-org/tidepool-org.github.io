@@ -1,9 +1,14 @@
+---
+layout: defaults
+title: CBG V1
+published: true
+---
 # CBG
 
 CBG represents blood glucose from a continuous glucose monitor.  These events are point-in-time and look like
 
 
-``` json
+~~~json
 {
   "type": "cbg",
   "value": bg_value_from_cgm,
@@ -12,4 +17,4 @@ CBG represents blood glucose from a continuous glucose monitor.  These events ar
   "deviceId": see_common_fields,
   "source": see_common_fields
 }
-```
+~~~
