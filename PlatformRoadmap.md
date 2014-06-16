@@ -4,19 +4,31 @@ title: Tidepool Platform Roadmap
 published: true
 ---
 
-This document was last edited at the beginning of June, 2014.
+This document was last edited at the end of June, 2014.
 
 #Platform Roadmap
 
-This is an attempt to document the general direction Tidepool is moving with respect to the development of our platform. 
+This document lays out a roadmap of Tidepool's general technical focus for our platform the next several months. It is not a product design document, and specifically does not cover the design or development of our user-facing features within apps such as Blip.
 
 ##Overview
 
-Tidepool's team is small. We are constrained by our available resources, and we are also constrained by various external factors. Our primary goal is to have the maximum possible positive impact on people who have Type 1 Diabetes. We believe that for the duration of 2014, that means that we should concentrate on getting our first bit of software into the hands of real users. That, in turn, means making it useful AND making it so that we can apply for FDA approval as soon as possible. 
+Tidepool's team is small. We are constrained by our available resources, and we are also constrained by various external factors. Our primary, long-term goal is to have the maximum possible positive impact on people who have Type 1 Diabetes. We believe that means that we should concentrate on getting our first bit of software into the hands of real users. 
 
-Blip, in turn, depends on having a robust, HIPAA-compliant backend built, tested, deployed, and capable of being FDA-approved. 
+
+From a corporate point of view, this means that we must:
+  1. Get usability feedback from clinicians and patients and iterate so Blip is ready for primetime.
+  1. Create a user-friendly uploader that gets device data into Tidepool's cloud.
+  1. Build a platform to host data so we can sell hosting services.
+  1. Implement a quality system that satisfies FDA requirements.
+  1. Submit for (and then receive) FDA approval.
+
+Our very aggressive goal is to submit a 510k application to FDA by the end of 2014.
+
+As mentioned above, this document does not consider the design and development of user interfaces. It is focused on getting a useful, robust, HIPAA-compliant backend built, tested, deployed, and capable of being FDA-approved. 
 
 It is these ends that drive the prioritization and sequencing of the items in this document.
+
+Items marked with *@@* are lower priority given our current company priorities. Some of these (at least the ones not tied to Tidepool's deployment) might be good candidates for third party contributors to consider working on, as it's less likely that Tidepool's developers will be working on them soon. These items are marked with *@@3*.
 
 ##Our technical goals
 
@@ -35,71 +47,69 @@ Below are the major areas we are working towards to achieve the goals set out ab
 
 Our platform needs to be a world-class, documented, secure, tested framework of capabilities for storing and retrieving diabetes data. Certain things are required from anything that wants to call itself a platform.
 
-Descriptions here will usually be terse -- fuller explanations of what they mean can usually be found in github or our trello boards; if you want to know more about something and can't find it here, ask us in our IRC channel and someone will help you find the right place. For all these links, see [the main page](http://tidepool-org.github.io/).
+Descriptions here will usually be terse -- fuller explanations of what they mean can usually be found in GitHub or our Trello boards; if you want to know more about something and can't find it here, ask us in our IRC channel and someone will help you find the right place. For all these links, see [the main page](http://tidepool-org.github.io/).
 
 ####For our own needs:
 
 These are API features that we need in order to support Blip in the next few months.
 
-  * Allow creation of multiple data sets per account, and transfer of ownership between accounts so that we can support test data, alternate data sets, and transfer of data from one owner to another (for example, when a child grows up).
+  * Provide robust account management tools and resolve the question of how accounts are managed long term. This means solving the problems of data ownership (and specifically enable parents to manage data for multiple children with diabetes, or for themselves and a child).
   * Send emails so we can do signup confirmation, lost password transactions, and simple notifications.
   * Implement features for:
     * Invitations
     * Password recovery
     * User confirmation
 
-  * Develop an "undergoing maintenance" page that we can quickly failover to if there are technical problems.
-  * Develop a framework that allows partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities would give us more control.
+  * *@@* Develop an "undergoing maintenance" page that we can quickly failover to if there are technical problems so that users understand why things are failing. 
+  * *@@* Develop a framework that better allows for partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities (such as the ability to direct a certain percentage of users to a given deployment) would give us more control.
 
 ####To support third parties:
 
-These features are aimed at allowing us to support third parties -- people who want to use Tidepool's platform as a backend, or open source people who want to stand up their own versions of Tidepool's APIs. 
+These features are aimed at allowing us to support third parties -- people who want to use Tidepool's platform as a backend to their own applications, or open source people who want to stand up their own versions of Tidepool's APIs. 
 
   * Create API token system so we can let other apps use the platform.
   * Support OAuth2 and provide a platform login page so we can let users control which apps use the platform.
-  * Support these things on a sandboxed version of our API so that app developers can build against a dummy API without real customer data. Provide some test accounts or test account generators so that people can experiment without creating lots of bogus data in our production database.
+  * *@@* Support these things on a third-party-accessible sandboxed version of our API so that app developers can build against a dummy API without real customer data. Provide some test accounts or test account generators so that people can experiment without creating lots of bogus data in our production database.
   * Version our API in the Accepts: header (makes the platform more predictable for third parties and makes it so that we can improve it without immediately obsoleting existing systems that depend on it).
-  * Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
-  * Further work on automation -- what we do, how we do it (tools, etc). This has to do with builds and testing.
+  * *@@3* Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
+  * *@@* Further work on automation -- what we do, how we do it (tools, etc). This has to do with builds and testing.
 
 ####For privacy / security / data stewardship:
 
 We need to follow security best practices and defend our systems against attacks and poor programming. We also believe strongly that people own their own data and need to finish the work that will allow people to control their data.
 
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
-  * Add password quality rules so people can't create bad passwords. 
+  * Add password quality rules so people can't create unsafe passwords. 
   * Allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer -- for example, a zip of JSON files).
-  * Allow upload of one of these data blobs to recreate an individual's data. (This is lower priority than making sure people can download their data.)
-  * Complete the features involved in allowing someone to delete their own account and all associated data.
-  * Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data.
-    * Requires ability to play back a log and feed it into the db.
-
+  * *@@3* Allow upload of one of these data blobs to recreate an individual's data.
+  * *@@* Complete the features involved in allowing someone to delete their own account and all associated data.
+  * *@@* Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data. (Requires ability to play back a log and feed it into the db.)
 
 
 ###Update data storage system
 
-The data storage system currently in use in Blip is a custom framework designed to support Blip, but it's not a general purpose system that allows multiple types of data to be stored together and used in different ways by different apps. Our goal is a unified storage model that integrates a wide range of data types. There is a separate document that is being developed on the data formats. There will be another on query languages.
+The data storage system currently in use in Blip is a custom framework designed to support Blip, but it's not yet a general purpose system that allows multiple types of data to be stored together and used in different ways by different apps. Our goal is a unified storage model that integrates a wide range of data types. There is a separate document that is being developed on the data formats. There will be another on query languages.
 
 ####First:
 
   * Design and document our unified data storage model:
-    * What is the data storage model? Define data schemas, data formats, and hierarchy of data.
+    * What is the data storage model? Define data schemas, data formats, and hierarchy of data. *June 2014: this is available [here](http://tidepool.org/data-model/v1.html)*
     * How do we handle queries? We probably need a small query language. Design something that can start small and be extended.
-    * How do we do notifications based on those queries?
+    * How will we do notifications based on those queries? (In this case, "notifications" means a mechanism for software systems to be notified when items in the database are changed according to certain conditions.)
     * How is data provenance tracked? How are modifications to data expressed?
 
 ####For Blip:
 
-  * Create HTTP API for ingestion of data to the unified form. This will support upload of as little as a single point at a time (to support cloud-connected devices) as well as block uploads.
-  * Create simple query system for first pass data extraction for Blip.
-  * Implement new access API that can use either format
-  * Adjust blip to operate using the new access API
+  * Create HTTP API for ingestion of data to the unified form. This will support upload of as little as a single point at a time (to support cloud-connected devices) as well as block uploads. *June 2014: we have the first version of this deployed and working on our development server.*
+  * Provide a simple query system to deliver the data that Blip currently uses.
+  * Adapt Blip to use both data models.
   * Convert our uploaders to use the new format.
   * Migrate existing accounts from old to new.
   * Remove conversion logic from the access API.
 
 ####Further development:
 
+  * Create a structure for a more general query system that will work not only for Blip but for a variety of needs.
   * Build tool for adjusting timestamps and time zones on blocks of data (possibly extend query system to support it). Make sure it's tracked in the provenance system.
     * It likely requires UI design and prototyping and lots of user testing, plus frontend and backend coding and probably several iterations.
   * Develop ability to query data provenance information for auditing.
@@ -110,14 +120,14 @@ The data storage system currently in use in Blip is a custom framework designed 
 
   * Build a general-purpose technology for downloading data from a USB serial device.
     * Probably browser-based.
+    * *June 2014: we have a proof-of-concept Chrome app that works with Dexcom CGMs and has some Asante support code as well.*
 
   * Build a simulation device that can act like a pump or CGM and use that to build and test the integration.
-  * Acquire or build a serial USB protocol analyzer for monitoring serial comms between a device and the PC.
   * Implement protocol plugin for each of the devices for which we have specifications:
     * Asante
     * ...
 
-  * Implement app that can use a usb/bluetooth converter to upload data from a Dexcom.
+  * *@@3* Implement app that can use a usb/bluetooth converter to upload data from a Dexcom.
 
 ###Step up test coverage, documentation and process
 
@@ -133,8 +143,9 @@ As discussed above, we need to be very serious about testing and measurement of 
   * Create model for how we do user requirements and how we tie them to Trello and GitHub.
   * Get further documentation set up and figure out how to make sure it's current and correct (probably auto-generate from our code -- but look into the recent Heroku schema-based approach). 
 
-###Additional support for third parties like OSS devs and NightScout users
+###Improve quality of tooling and the structure of our code
 
+  * Make things easier for development and deployment (doing so also makes our systems more accessible to third party devs)
   * Extract commonalities for standard API modules. Where do we repeat ourselves and how can we do less of it?
   * Decide on development platform support (how much do we support Windows, for example?) and automation strategy (something other than shell scripts?)
 

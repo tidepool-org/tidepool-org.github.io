@@ -15,9 +15,10 @@ This is a work in progress. If you find something particularly confusing, please
 ## Getting started
 
 1. Read about [ways you can help](HowToHelp.html).
-2. Read through the [use cases](UseCases.html) we're trying to solve for.
-3. Read about the [technical vision](PlatformOverview.html) that informs our software architecture.
-4. Read about our [server architecture](ServerArchitecture.html) and [server data model](ServerDataOrganization.html). These pages tell how the many moving parts of our server system fit together, and how the various bits of server data is organized.
+1. Read through the [use cases](UseCases.html) we're trying to solve for.
+1. Read about the [technical vision](PlatformOverview.html) that informs our software architecture.
+1. Read about our [server architecture](ServerArchitecture.html) and [server data model](ServerDataOrganization.html). These pages tell how the many moving parts of our server system fit together, and how the various bits of server data is organized. These documents do not talk about the medical data specifically; they're more about the user data and metadata.
+1. Read our [data formats](data-model/v1.html) documentation to understand what medical data we can track and how it's organized. 
 
 Once you're done with all that reading, you're ready to dive into the code! Visit the [Tidepool components](TidepoolComponents.html) page to see the active repositories and how they fit together.
 
