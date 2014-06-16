@@ -1,3 +1,8 @@
+---
+layout: defaults
+title: DeviceMeta V1
+published: true
+---
 # DeviceMeta
 
 DeviceMeta events are a catch-all for metadata about whatever device is currently being used.  We expect the domain of deviceMeta events to expand regularly as we want to track more and more things about the device-proper.
@@ -14,7 +19,7 @@ Current DeviceMeta events are
 A status event is used to represent the status of a pump.  Specifically, this is used to indicate when the pump is suspended/resumed for any reason (user suspend, low glucose suspend, etc).  A status event looks like
 
 
-``` json
+~~~json
 {
   "type": "deviceMeta",
   "subType": "status",
@@ -25,11 +30,12 @@ A status event is used to represent the status of a pump.  Specifically, this is
   "source": see_common_fields,
   "previous": previously_active_status_event
 }
-```
+~~~
 
 `status` is the new status, it can be "suspended" or "resumed".
 
-`reason` is an indication of why the status was changed.  It can be 
+`reason` is an indication of why the status was changed.  It can be:
+
 * For suspended status
     * "manual" - the user manually suspended the pump
     * "low_glucose" - the pump automatically suspended due to low blood glucose
@@ -44,7 +50,7 @@ If the status from the `previous` field does not match the currently known statu
 
 A calibration event represents a calibration of a CGM.  It looks like
 
-``` json
+~~~json
 {
   "type": "deviceMeta",
   "subType": "calibration",
@@ -53,5 +59,5 @@ A calibration event represents a calibration of a CGM.  It looks like
   "deviceId": see_common_fields,
   "source": see_common_fields
 }
-```
+~~~
 

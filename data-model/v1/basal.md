@@ -1,3 +1,8 @@
+---
+layout: defaults
+title: Basals V1
+published: true
+---
 # Basals
 
 Basal events represent a basal dosing over time.  At a high level they are a timestamp for when the dosing started, an amount of insulin given in units/h, and a duration in milliseconds.  The stream of basals represents all of the changes in basal rate over a given timespan.  Each basal rate change event that is received indicates that the previous state has completed and the new state represented by the event received is now active.
@@ -10,13 +15,13 @@ There are three general types of basal events that tidepool understands:
 * scheduled
 * temp
 
-Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](../v1.md)
+Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](../v1.html)
 
 ### Injected
 
 This represents an injection of a long-acting insulin.
 
-``` json
+~~~json
 {
   "type": "basal",
   "deliveryType": "injected",
@@ -27,7 +32,7 @@ This represents an injection of a long-acting insulin.
   "deviceId": see_common_fields,
   "source": see_common_fields
 }
-```
+~~~
 
 The fields generally follow the same semantics as other basal events, except
 
@@ -43,7 +48,7 @@ The fields generally follow the same semantics as other basal events, except
 
 This is a "scheduled" basal, it is a basal dosing that is operating according to the schedule built in to the pump.
 
-``` json
+~~~json
 {
   "type": "basal",
   "deliveryType": "scheduled",
@@ -56,7 +61,7 @@ This is a "scheduled" basal, it is a basal dosing that is operating according to
   "previous": the_basal_event_that_would_have_been_previously_received,
   "suppressed": basal_events_not_being_delivered_because_this_one_is_active
 }
-```
+~~~
 
 There are 3 fields worth further explanation here:
 
@@ -71,20 +76,20 @@ There are 3 fields worth further explanation here:
 
 Temp basals are much the same as scheduled basals:
 
-``` json
-{
-  "type": "basal",
-  "deliveryType": "temp",
-  "rate": number_of_units_per_hour,
-  "percent": floating_point_percentage_of_suppressed_basal_that_should_be_delivered
-  "duration": number_of_milliseconds_the_temporary_basal_will_be_in_effect,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "source": see_common_fields,
-  "previous": the_basal_event_that_would_have_been_previously_received,
-  "suppressed": basal_events_not_being_delivered_because_this_one_is_active
-}
-```
+~~~json
+    {
+      "type": "basal",
+      "deliveryType": "temp",
+      "rate": number_of_units_per_hour,
+      "percent": floating_point_percentage_of_suppressed_basal_that_should_be_delivered
+      "duration": number_of_milliseconds_the_temporary_basal_will_be_in_effect,
+      "time": see_common_fields,
+      "deviceId": see_common_fields,
+      "source": see_common_fields,
+      "previous": the_basal_event_that_would_have_been_previously_received,
+      "suppressed": basal_events_not_being_delivered_because_this_one_is_active
+    }
+~~~
 
 These fields are basically the same as those from a scheduled basal, except for the introduction of the `percent` field.  If `percent` is provided and `value` is null, our systems will compute the value to be the given percentage of the the value of the first supressed event.
 
