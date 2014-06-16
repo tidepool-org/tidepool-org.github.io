@@ -155,7 +155,7 @@ As discussed above, we need to be very serious about testing and measurement of 
 
 ###EHR Integration
 
-For proper acceptance of Blip in clinics, we will have to provide a safe and effective means for the clinic's EHR systems to talk to Blip and Tidepool. It will not be feasible for Tidepool to do the integration work here -- what we can do is offer a set of features to make it as easy as possible for EHR systems and clinical IT departments to work with us. We are working on a set of user requirements for this. Roughly, though:
+*@@* For proper acceptance of Blip in clinics, we will have to provide a safe and effective means for the clinic's EHR systems to talk to Blip and Tidepool. It will not be feasible for Tidepool to do the integration work here -- what we can do is offer a set of features to make it as easy as possible for EHR systems and clinical IT departments to work with us. We are working on a set of user requirements for this. Roughly, though:
 
   * Allow patients to issue tokens to their providers for EHR integration. Tokens allow EHR systems to link to a specific patient's data without individual login
   * Require data package to identify user for messages and logging
