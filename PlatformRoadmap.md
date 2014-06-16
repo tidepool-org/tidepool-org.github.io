@@ -78,6 +78,10 @@ These features are aimed at allowing us to support third parties -- people who w
 
 We need to follow security best practices and defend our systems against attacks and poor programming. We also believe strongly that people own their own data and need to finish the work that will allow people to control their data.
 
+  * Provide standalone endpoints for managing things that are central to the platform should be common across multiple apps:
+    * Login (this is the point of OAuth support)
+    * User profile management (including invitations, editing contact information and password recovery)
+    * Uploading data
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
   * Add password quality rules so people can't create unsafe passwords. 
   * Allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer -- for example, a zip of JSON files).
