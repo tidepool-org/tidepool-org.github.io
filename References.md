@@ -10,6 +10,9 @@ This page is for holding useful links.
 
 ##Tidepool-internal Links
 
+[Tidepool Data Formats](data-model/v1.html)
+: Defines the data structures we store and how they're organized.
+
 [Tidepool components](TidepoolComponents.html)
 : Contains the active list of Tidepool components and repositories.
 

@@ -963,9 +963,9 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .entry-content h4 {
-	color: #617CFF;
+	color: #B287F3;
 	font-size: 24px;
-	margin: 0 0 1em;
+	margin: 0 0 0.5em 0.5em;
 	max-width: 740px;
 }
 
@@ -1937,6 +1937,7 @@ img.aligncenter {
 	top: 320px;
 	left: 65%;
 	margin: 0 0 0 172px;
+	visibility: hidden;	/* hiding this because it seems over the top in a technical page */
 }
 
 	#page-background-container img {
