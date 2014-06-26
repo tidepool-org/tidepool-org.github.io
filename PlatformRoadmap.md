@@ -16,13 +16,14 @@ Tidepool's team is small. We are constrained by our available resources, and we 
 
 
 From a corporate point of view, this means that we must:
+
   1. Get usability feedback from clinicians and patients and iterate so Blip is ready for primetime.
   1. Create a user-friendly uploader that gets device data into Tidepool's cloud.
   1. Build a platform to host data so we can sell hosting services.
   1. Implement a quality system that satisfies FDA requirements.
   1. Submit for (and then receive) FDA approval.
 
-Our very aggressive goal is to submit a 510k application to FDA by the end of 2014.
+Our very aggressive goal is to submit the appropriate application to the FDA by the end of 2014. 
 
 As mentioned above, this document does not consider the design and development of user interfaces. It is focused on getting a useful, robust, HIPAA-compliant backend built, tested, deployed, and capable of being FDA-approved. 
 
@@ -53,19 +54,19 @@ Descriptions here will usually be terse -- fuller explanations of what they mean
 
 These are API features that we need in order to support Blip in the next few months.
 
-  * Provide robust account management tools and resolve the question of how accounts are managed long term. This means solving the problems of data ownership (and specifically enable parents to manage data for multiple children with diabetes, or for themselves and a child).
+  * Provide a set of account management tools and address the question of how accounts are managed. This means addressing the problems of data ownership (and specifically enable parents to manage data for multiple children with diabetes, or for themselves and a child).
   * Send emails so we can do signup confirmation, lost password transactions, and simple notifications.
   * Implement features for:
     * Invitations
     * Password recovery
-    * User confirmation
+    * User email confirmation
 
   * *@@* Develop an "undergoing maintenance" page that we can quickly failover to if there are technical problems so that users understand why things are failing. 
   * *@@* Develop a framework that better allows for partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities (such as the ability to direct a certain percentage of users to a given deployment) would give us more control.
 
-####To support third parties:
+####Make our apps into "third party" apps:
 
-These features are aimed at allowing us to support third parties -- people who want to use Tidepool's platform as a backend to their own applications, or open source people who want to stand up their own versions of Tidepool's APIs. 
+These features are aimed at allowing us to support third parties -- people who want to use Tidepool's platform as a backend to their own applications, or open source people who want to stand up their own versions of Tidepool's APIs. Tidepool's client apps will not be privileged in their access to security information. This is not required for commercialization but it is next in line.
 
   * Create API token system so we can let other apps use the platform.
   * Support OAuth2 and provide a platform login page so we can let users control which apps use the platform.
@@ -76,10 +77,11 @@ These features are aimed at allowing us to support third parties -- people who w
 
 ####For privacy / security / data stewardship:
 
-We need to follow security best practices and defend our systems against attacks and poor programming. We also believe strongly that people own their own data and need to finish the work that will allow people to control their data.
+We believe strongly that people own their own data and need to finish the work that will allow people to control their data. We need to follow security best practices and defend our systems against attacks and poor programming. 
 
   * Provide standalone endpoints for managing things that are central to the platform should be common across multiple apps:
     * Login (this is the point of OAuth support)
+    * Signup
     * User profile management (including invitations, editing contact information and password recovery)
     * Uploading data
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
@@ -94,7 +96,7 @@ We need to follow security best practices and defend our systems against attacks
 
 The data storage system currently in use in Blip is a custom framework designed to support Blip, but it's not yet a general purpose system that allows multiple types of data to be stored together and used in different ways by different apps. Our goal is a unified storage model that integrates a wide range of data types. There is a separate document that is being developed on the data formats. There will be another on query languages.
 
-####First:
+####Architectural thinking we need to do first:
 
   * Design and document our unified data storage model:
     * What is the data storage model? Define data schemas, data formats, and hierarchy of data. *June 2014: this is available [here](http://tidepool.org/data-model/v1.html)*
@@ -102,22 +104,23 @@ The data storage system currently in use in Blip is a custom framework designed 
     * How will we do notifications based on those queries? (In this case, "notifications" means a mechanism for software systems to be notified when items in the database are changed according to certain conditions.)
     * How is data provenance tracked? How are modifications to data expressed?
 
-####For Blip:
+####Implementation to enable Blip to use the new capabilities:
 
   * Create HTTP API for ingestion of data to the unified form. This will support upload of as little as a single point at a time (to support cloud-connected devices) as well as block uploads. *June 2014: we have the first version of this deployed and working on our development server.*
-  * Provide a simple query system to deliver the data that Blip currently uses.
+  * Provide a simple query system to deliver the data that Blip currently uses (for example, querying a restricted date range to speed up Blip response time).
   * Adapt Blip to use both data models.
   * Convert our uploaders to use the new format.
   * Migrate existing accounts from old to new.
   * Remove conversion logic from the access API.
+  * Develop ability to query data provenance information for auditing.
 
-####Further development:
+####Implementation that enables future needs:
 
   * Create a structure for a more general query system that will work not only for Blip but for a variety of needs.
-  * Build tool for adjusting timestamps and time zones on blocks of data (possibly extend query system to support it). Make sure it's tracked in the provenance system.
+  * Design tool for adjusting timestamps and time zones on blocks of data
+  * *@@* Build tool for adjusting timestamps and time zones on blocks of data (possibly extend query system to support it). Make sure it's tracked in the provenance system.
     * It likely requires UI design and prototyping and lots of user testing, plus frontend and backend coding and probably several iterations.
-  * Develop ability to query data provenance information for auditing.
-  * Design and build a notification system that allows apps to subscribe to changes based on stored queries. It should support both connected and disconnected notifications (so, for example, someone could set an alert to send a message if the most recent BG reading goes below 50). 
+  * Design and build a notification system that allows apps to subscribe to changes based on stored queries. It should support both connected and disconnected notifications (so, for example, someone could set an alert to notify an app when new data is uploaded to an account). 
 
 
 ###Universal Uploader
@@ -126,44 +129,40 @@ The data storage system currently in use in Blip is a custom framework designed 
     * Probably browser-based.
     * *June 2014: we have a proof-of-concept Chrome app that works with Dexcom CGMs and has some Asante support code as well.*
 
-  * Build a simulation device that can act like a pump or CGM and use that to build and test the integration.
+  * *@@3* Build a simulation device that can act like a pump or CGM and use that to build and test the integration.
   * Implement protocol plugin for each of the devices for which we have specifications:
     * Asante
     * ...
 
-  * *@@3* Implement app that can use a usb/bluetooth converter to upload data from a Dexcom.
+  * *@@3* Implement mobile app that can use a usb/bluetooth converter to upload data from a device in real time.
 
 ###Step up test coverage, documentation and process
 
-As discussed above, we need to be very serious about testing and measurement of that testing. We should resist pointless testing but should be confident in our test strategy and effectiveness of our coverage. We should also have documented policies of situations where new tests *must* be written.
+As discussed above, we need to be very serious about testing and measurement of that testing. We should resist pointless testing but should be confident in our test strategy and effectiveness of our coverage. We should also have documented policies of situations where new tests *must* be written. If we end up going all the way to an FDA application, our test suites must be suitably robust.
 
-  * Get amoeba covered by tests.
-  * Drastically increase the number of tests in our deployed backend APIs.
-  * Create better test suites for the whatever-client modules.
-  * Get all active backend repositories covered by Travis-CI.
-  * Start using code coverage tools to measure code coverage -- how do we decide when we have "enough"? Hook that up to everything after Travis.
-  * Start analyzing our dependencies and their code coverage; decide how to manage them in a way we can track.
+  * Drastically increase the number of tests in our deployed backend APIs; basically, each API and support library should have a suite of tests that is reasonably likely to catch regressions if code is edited.
+  * Get all active backend repositories covered by Travis-CI so that tests run automatically on every checkin.
+  * Start using code coverage tools to measure code coverage. Develop some rules of thumb to decide when we have "enough"? Hook that up to everything after Travis so that we have measurements.
+  * Start analyzing our dependencies and their testing coverage; decide how to manage them in a way we can track. Minimize dependencies and stabilize versions.
   * Re-engage on our test strategies for the frontend. Automated end-to-end testing is probably not the most effective use of our resources. How can we do this better?
-  * Create model for how we do user requirements and how we tie them to Trello and GitHub.
-  * Get further documentation set up and figure out how to make sure it's current and correct (probably auto-generate from our code -- but look into the recent Heroku schema-based approach). 
+  * Create and document our model for how we do user requirements and how we tie them to Trello and GitHub.
+  * Get further documentation set up and figure out how to make sure it's current and correct. The right way to do it is to find a way to integrate the documentation into the code so that it can be generated directly from the code. 
+  * Create and publish a set of auditable metrics suitable for use by FDA and others.
 
 ###Improve quality of tooling and the structure of our code
 
-  * Make things easier for development and deployment (doing so also makes our systems more accessible to third party devs)
-  * Extract commonalities for standard API modules. Where do we repeat ourselves and how can we do less of it?
-  * Decide on development platform support (how much do we support Windows, for example?) and automation strategy (something other than shell scripts?)
+In general, we should continually be trying to make our code easier to write, build, test, and deploy. This helps us, and it also helps others to help us. Specifically:
+
+  * Work on tooling for development and deployment. Make it easier to get set up, to run our stack, and to debug and test.
+  * Extract and centralize common code. Where do we repeat ourselves and how can we do less of it?
+  * Explain our platform and automation strategy and then enhance it. Make it clear what we support and what we don't. 
 
 ###EHR Integration
 
 *@@* For proper acceptance of Blip in clinics, we will have to provide a safe and effective means for the clinic's EHR systems to talk to Blip and Tidepool. It will not be feasible for Tidepool to do the integration work here -- what we can do is offer a set of features to make it as easy as possible for EHR systems and clinical IT departments to work with us. We are working on a set of user requirements for this. Roughly, though:
 
-  * Allow patients to issue tokens to their providers for EHR integration. Tokens allow EHR systems to link to a specific patient's data without individual login
-  * Require data package to identify user for messages and logging
-  * Allow EHR deep links to individual messages that go straight to a particular time in a data stream
-  * Define mechanism for supporting backlinks into EHR for posting notifications
-
-
-
-
-
-
+  * Develop a specification and roadmap for EHR integration and make it available to EHR providers for their review and commentary.
+  * Issue API token to EHR provider and require its use on all EHR transactions. 
+  * Allow patients to issue tokens to their providers for EHR integration. Tokens allow EHR systems to link to a specific patient's data without individual login. Make it as easy as possible for the EHR systems to associate their patient records to ours.
+  * Provide ways to create deep links within Tidepool applications that go straight to a particular time in a data stream.
+  * Define mechanism for supporting backlinks into EHR for posting notifications to the EHR system.
