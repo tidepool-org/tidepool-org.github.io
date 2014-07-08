@@ -70,6 +70,11 @@ These features are aimed at allowing us to support third parties -- people who w
 
   * Create API token system so we can let other apps use the platform.
   * Support OAuth2 and provide a platform login page so we can let users control which apps use the platform.
+  * Support a fairly fine-grained permissions model that allows people to control access to their data in several ways: 
+    * Permit readonly access to all or portions of data for use in therapy or support.
+    * Permit others to upload data for them -- either individuals (parents, for example) or through third-party APIs or apps.
+    * Permit researchers to use their data.
+    * Permit device vendors to use device-specific data.
   * *@@* Support these things on a third-party-accessible sandboxed version of our API so that app developers can build against a dummy API without real customer data. Provide some test accounts or test account generators so that people can experiment without creating lots of bogus data in our production database.
   * Version our API in the Accepts: header (makes the platform more predictable for third parties and makes it so that we can improve it without immediately obsoleting existing systems that depend on it).
   * *@@3* Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
