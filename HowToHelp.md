@@ -29,9 +29,9 @@ Check out the repository and run the tests. Look at the test scripts, look for u
 
 ###Documentation
 
-It's pretty much a given that we don't have enough documentation. Can you help with writing it? The kinds of things we need help with include:
+It's pretty much a given that we'll never have enough documentation. Can you help with writing it? The kinds of things we need help with include:
 
-* Short, high-quality user documentation, with pictures, on how to get started with blip
+* Short, high-quality, web-based user documentation, with pictures, on how to get started with blip
 * Help us write a set of FAQs
 * Offer editorial fixes on anything we've published, from web pages to user docs to application docs.
 * Work on improving this site.
@@ -46,10 +46,10 @@ We need help at all levels.
 
 _Things to know before you start:_
 
-* Please read our architecture and design documents.
+* Please read our architecture and design documents. They're all linked from [here](index.html).
 * Please read and follow our style guide.
 * It's useful to read the issues list for the repositories you're interested in -- it may give you ideas for things to work on, or indicate work that's already underway.
-* We work in Javascript and prefer to keep it that way. We're not interested at the moment in alternative implementations or languages. 
+* We work in JavaScript for the client and in JavaScript and Go for the server. We're probably not interested in alternative language implementations.
 * We're willing to take small fixes from anyone. Big changes will need to come from people we know and trust. Best way to get to be one of those people is to make some small fixes first.
 * In general, communications is key. You can work on things without telling us in advance, but a heads up may help us to help you help us.
 * A pull request is the start of a discussion. Please don't get upset if we ask for additional changes after a review. We do that internally too.
