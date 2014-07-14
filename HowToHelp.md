@@ -65,4 +65,8 @@ _Things you can do:_
 * Features -- if you think we need a feature, a pull request is one way to propose it, especially for small features. But you're also encouraged and welcome to contact us about it before you do the work. Sometimes we have reasons why we don't or can't do things that might seem obvious to you. Or we may have conflicting work underway. A really good way to handle feature work is to create an issue on GitHub *before* you do the work, and let us know you intend to work on it. That way we can know it's coming and let you know if we see a conflict.
 * Refactoring -- restructuring of code to make it more maintainable or testable is often really useful. If you decide to take on something like this, it would usually be wise to check with us beforehand. Refactorings can generate a lot of code conflict that can make them hard to accept. Also, when you refactor, please try not to add any features when you do. The same tests that ran before the refactoring should run after it as well.
 
+_Specific projects_
 
+Updated 14 July 2014
+
+Please see [the blog post](http://tidepool.org/2014/07/11/how-can-i-help/).
