@@ -9,17 +9,35 @@ Bolus events represent a one-time dose of fast-acting insulin.  Even though a bo
 
 There are multiple types of boluses that the tidepool platform can handle.
 
+* injected
 * normal
 * square
 * dual/square
 
 Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](../v1.html)
 
-## Normal
+## Injected
 
-A "normal" bolus is a one-time dose of insulin that is all delivered as quickly as the pump is willing/able.  It is the simplest type of bolus, is composed of two events:
+An "injected" bolus is a bolus that was delivered via injection.  It is a single, point-in-time event:
 
 ~~~json
+{
+  "type": "bolus",
+  "subType": "injected",
+  "value": number_of_units_injected,
+  "insulin": name_of_insulin_used,
+  "time": see_common_fields,
+  "deviceId": see_common_fields,
+  "source": see_common_fields
+}
+~~~
+
+
+## Normal
+
+A "normal" bolus is a one-time dose of insulin that is all delivered as quickly as the pump is willing/able.  It is the simplest type of bolus, composed of two events:
+
+~~~json 
 {
   "type": "bolus",
   "subType": "normal",
@@ -32,7 +50,7 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
 
 It is followed up with a "completion" event that looks the exact same as the above event, but has a `previous` field in it:
 
-~~~json
+~~~json 
 {
   "type": "bolus",
   "subType": "normal",
@@ -44,7 +62,7 @@ It is followed up with a "completion" event that looks the exact same as the abo
 }
 ~~~
 
-The `previous` field should be the exact same (including timestamp) as the original bolus event received.  If the value of the "completion" event is different from the value of the "start" event.  Our systems will store the value from the "start" event in the `expectedValue` field and update the `value` field to be the value from the "completion" event.
+The `previous` field should be the exact same (including timestamp) as the original bolus event received.  If `normal` of the "completion" event is different from `normal` of the "start" event, we will store the `normal` from the "start" event in the `expectedNormal` field and update the `normal` field to be the value from the "completion" event.
 
 ## Square
 
@@ -77,7 +95,7 @@ It is followed up with a "completion" event that looks the exact same as the abo
 }
 ~~~
 
-Along with the caveat about `value` from the "normal" bolus above (except it is applied to the `extended field` here), if the `duration` of the "start" and "completion" events differ, we will store the "start" duration as `expectedDuration` and the "completion" duration as `duration`.
+The caveat about `normal` from the "normal" bolus above also applies, except it is applied to the `extended` field.  If the `duration` of the "start" and "completion" events differ, we will store the "start" duration as `expectedDuration` and the "completion" duration as `duration`.
 
 ## Dual/Square
 
