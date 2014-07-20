@@ -21,7 +21,7 @@ Right now it's just an example file to be filled in.
 
 ## Migration and Deployment
 
-Product input will be vetted by product team. New ideas will be captured on a Trello board (see [Tidepool's Trello boards](#tidepools-trello-boards) as an "idea."
+Product input will be vetted by product team. New ideas will be captured on a Trello board (see [Tidepool's Trello boards](#tidepools-trello-boards)) as an "idea."
 Potential sources: Users, community, employees, or contributors
 Types of input: Data quality, feature suggestion, general question, usabilty, broken functionality (for prioritization, see [Bug Triage and Management](#bug-triage-and-management)
 
