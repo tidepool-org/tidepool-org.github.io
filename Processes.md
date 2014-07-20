@@ -14,8 +14,9 @@ to be read by Tidepool employees, by open source contributors, and by regulators
 Table of contents:
 
 * [Migration and Deployment](#migration-and-deployment)
-* [Bug Triage and Management](#bug-triage-and-management)
 * [Tidepool's Trello Boards](#tidepools-trello-boards)
+* [Bug Triage and Management](#bug-triage-and-management)
+
 
 
 ## Migration and Deployment
@@ -29,6 +30,15 @@ Types of input: Data quality, feature suggestion, general question, usabilty, br
 * Before moving a Trello card onto “On Staging; Needs Testing”, make sure it includes instructions on how to test if it’s not self-explanatory.
 
 * Before a pull request moves to production, it must have a Trello Card representing it that includes the link to the pull request. This PR must be tested and the tester must acknowledge test completion and approval on the Trello card.
+
+
+## Tidepool's Trello Boards
+
+* [Blip](https://trello.com/b/GPadCYvP/blip) - This board is actively used by Tidepool's development team to manage front-end work in progress.
+* [Blip Product Backlog](https://trello.com/b/iKydvoiJ/blip-product-backlog) - This board stores all feature suggestions (we call them "ideas") for Blip. The list of "Force-Ranked" ideas have been prioritized for future development.
+* [Open Source Tasks](https://trello.com/b/uTNKzwka/open-source-tasks) - This board lists all the ideas that are ripe for the open source pickens. Contributions are welcome! Each card will point to the relevant GitHub repository and include a "developer buddy" - that's a Tidepool employee who will be your primary point of contact as you develop this feature.
+* [Platform](https://trello.com/b/xLF1XmeQ/platform) - This board is actively used by Tidepool's development team to manage backend work in progress. 
+
 
 
 ## Bug Triage and Management
@@ -65,9 +75,3 @@ P4 issues are essentially on the backlog, but available for being worked if they
 
 
 
-## Tidepool's Trello Boards
-
-* [Blip](https://trello.com/b/GPadCYvP/blip) - This board is actively used by Tidepool's development team to manage front-end work in progress.
-* [Blip Product Backlog](https://trello.com/b/iKydvoiJ/blip-product-backlog) - This board stores all feature suggestions (we call them "ideas") for Blip. The list of "Force-Ranked" ideas have been prioritized for future development.
-* [Open Source Tasks](https://trello.com/b/uTNKzwka/open-source-tasks) - This board lists all the ideas that are ripe for the open source pickens. Contributions are welcome! Each card will point to the relevant GitHub repository and include a "developer buddy" - that's a Tidepool employee who will be your primary point of contact as you develop this feature.
-* [Platform](https://trello.com/b/xLF1XmeQ/platform) - This board is actively used by Tidepool's development team to manage backend work in progress. 
