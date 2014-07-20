@@ -17,7 +17,6 @@ Table of contents:
 * [Bug Triage and Management](#bug-triage-and-management)
 * [Tidepool's Trello Boards](#tidepools-trello-boards)
 
-Right now it's just an example file to be filled in.
 
 ## Migration and Deployment
 
