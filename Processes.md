@@ -47,31 +47,40 @@ Tidepool follows a developer-specific method of bug triage. In this practice, th
 
 
 ### Prioritization
+
 #### P1. Drop Everything
+
 A P1 issue needs to be addressed immediately, ahead of anything else other than P1 issues. The kinds of things that qualify to be P1 are:
-* Primary service down: This is when the app or a part of the app becomes unavailable. We drop everything and address the issue.
+
+* Primary service down: This is when the app or a part of the app becomes unavailable. The appropriate team members drop everything and address the issue.
 * Data quality issue: This is where a user will see health data that is inaccurate or can be misleading.
 * Urgent business issue: This is when there are critical business issues related to time-sensitive matters.
 The developer who owns the issue will stop what they’re working on to address the issue.
 
 #### P2. Important
+
 A P2 issue is important and it needs to be handled soon. P2 issues are subject to adjustment in priority, especially relative to each other, but for the most part, P2 issues will be handled before P3 issues. Things that qualify as P2 include:
+
 * Expected functionality is not working and it affects existing users or something of importance to the business.
 * An issue that is less important to Tidepool but has some time-critical component where its value drops if we don’t do it on time.
 * An issue that enables other important work.
 * An issue that can be addressed with a patch or workaround for the time being; in this case, the patch might be P2 but the long-term fix could be P3.
 
 #### P3. As Time Permits
+
 P3 issues are items that are due for development but take a back seat to urgent or important issues. Examples are:
+
 * Product ideas that will improve the speed or usability of poorly performing features. 
 * Bugs that do not affect critical functionality -- cosmetic or minor functional bugs.
-* Features that are required for commercialization but not critical or enabling.
+* Features that are required for commercialization but are not critical or enabling.
 
-#### P4. Some Day
-P4 issues are essentially on the backlog, but available for being worked if they happen to fall out of other work or fit between other, more urgent tasks. Examples are: 
+#### P4. Someday
+
+P4 issues are essentially on the backlog, but available for being worked on if they happen to fall out of other work or fit between other, more urgent tasks. Examples are: 
+
 * Product ideas to improve existing features that already work reasonably well.
 * Product ideas that add brand new features. 
 * Visual issues not affecting functionality.
 
-
+Note that issues can change in priority over time.
 
