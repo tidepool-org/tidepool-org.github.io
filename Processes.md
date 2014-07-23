@@ -45,6 +45,16 @@ Types of input: Data quality, feature suggestion, general question, usabilty, br
 
 Tidepool follows a developer-specific method of bug triage. In this practice, the issue is escalated to the developer most likely to have developed the code where the bug exists. If there is ambiguity, it starts with the developer who created the most visible front end component affected and they determine whether it needs to be handed off (presumably to a backend developer).
 
+### Process
+
+#### P1 Issues
+1. Create a Trello card on the active board ([Blip](https://trello.com/b/GPadCYvP/blip) or [Platform](https://trello.com/b/xLF1XmeQ/platform)). For a P2 - P4 issue, put the card on the Blip backlog board.
+2. Immediately file in Github as an issue for bug tracking.
+
+#### P2, P3, P4 Issues
+1. Create a Trello card on the [Blip Product Backlog](https://trello.com/b/iKydvoiJ/blip-product-backlog) board under "Untriaged Bugs".
+2. We triage this list at least weekly. After triage, a bug should be moved to the proper board ([Blip](https://trello.com/b/GPadCYvP/blip), [Platform](https://trello.com/b/xLF1XmeQ/platform), or a [Blip Product Backlog](https://trello.com/b/iKydvoiJ/blip-product-backlog)) and force-ranked accordingly.
+3. After triage, the developer who owns the bug should create an issue for the bug in the appropriate GitHub repo.
 
 ### Prioritization
 
