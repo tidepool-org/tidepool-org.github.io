@@ -55,7 +55,7 @@ It may be followed by a "completion" event that looks almost the same as the abo
 
 ~~~json 
 {
-  "type": "completed_bolus",
+  "type": "bolus",
   "subType": "normal",
   "normal": number_of_units,
   "time": see_common_fields,
