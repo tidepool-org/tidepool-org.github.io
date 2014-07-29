@@ -5,7 +5,7 @@ published: true
 ---
 # Boluses
 
-Bolus events represent a one-time dose of fast-acting insulin.  Even though a bolus is one-time, it is not immediate.  Pumps generally deliver a bolus over the course of minutes/tens of seconds.  It is possible that it is interrupted and it is important to know what was actually delivered.  For that reason, a bolus is actually a multi-event process.  One to indicate the start and subsequent events to indicate completion.
+Bolus events represent a one-time dose of fast-acting insulin.  Even though a bolus is one-time, it is not immediate.  Pumps generally deliver a bolus over the course of minutes/tens of seconds.  It is possible that it is interrupted and it is important to know what was actually delivered.  For that reason, a bolus can be a multi-event process. One event indicates the start and subsequent events indicate completion.
 
 There are multiple types of boluses that the tidepool platform can handle.
 
@@ -48,7 +48,10 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
 }
 ~~~
 
-It is followed up with a "completion" event that looks the exact same as the above event, but has a `previous` field in it:
+It may be followed by a "completion" event that looks almost the same as the above event, but has:
+
+* A different timestamp
+* A `previous` field
 
 ~~~json 
 {
@@ -62,7 +65,7 @@ It is followed up with a "completion" event that looks the exact same as the abo
 }
 ~~~
 
-The `previous` field should be the exact same (including timestamp) as the original bolus event received.  If `normal` of the "completion" event is different from `normal` of the "start" event, we will store the `normal` from the "start" event in the `expectedNormal` field and update the `normal` field to be the value from the "completion" event.
+The `previous` field should be an exact copy (including timestamp) of the original bolus event received.  If `normal` of the "completion" event is different from the `normal` of the "start" event, we will store the `normal` from the "start" event in the `expectedNormal` field of the original event, and update the `normal` field to be the value from the "completion" event.
 
 ## Square
 
