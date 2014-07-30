@@ -48,7 +48,7 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
 }
 ~~~
 
-It may be followed by a "completion" event that looks almost the same as the above event, but has:
+It may be followed by a "completion" event that looks almost the same as the above event, but has
 
 * A different timestamp
 * A `previous` field

@@ -44,7 +44,7 @@ A status event is used to represent the status of a pump.  Specifically, this is
     * "manual" - the user manually resumed the pump
     * "automatic" - the pump resumed on its own
 
-If the status from the `previous` field does not exist in the Tidepool platform, the previous status object will be annotated and saved along with the current event.
+If the status from the `previous` field does not exist in the Tidepool platform, the object provided in the previous field will be annotated and saved along with the current event.
 
 ## Calibration
 
