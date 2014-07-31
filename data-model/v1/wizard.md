@@ -40,3 +40,6 @@ Wizard events are point-in-time and look like
     ~~~
 * `bolus` is the bolus event that resulted from the wizard.  This field is used in much the same way as the `previous` field in other events: it can be either the full object or the id of an object that has already been submitted.  It is expected that the bolus event is generated and submitted separately from the wizard because bolus events have their own lifecycle.  The order of when the events are submitted does not matter as the bolus value simply gets converted into an id and stored.
 
+## Storage/Output format
+
+The storage and output format of wizard events is a straight mirror of the input format with one exception.  The `bolus` field will always be the id of the bolus event that this wizard event would have generated.  Note that the id is not guaranteed to exist, as the wizard event could be sent before the bolus event.

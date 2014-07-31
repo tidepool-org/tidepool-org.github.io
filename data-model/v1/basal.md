@@ -44,6 +44,10 @@ The fields generally follow the same semantics as other basal events, except
 
 4. `previous` is not specified.  This is because an injection is always additive to whatever other basal activity is going on.
 
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+
 ### Scheduled
 
 This is a "scheduled" basal, it is a basal dosing that is operating according to the schedule built in to the pump.
@@ -72,6 +76,211 @@ There are 3 fields worth further explanation here:
 
 3. `suppressed`: If this scheduled basal is causing some other basal rate to not be delivered, that basal rate should be included in the array of suppressed basals.  This should be another basal event minus the `previous` field.  We do not expect scheduled basals to override other basals, so in the vast majority of cases, this will probably be empty or non-existant, but we include it here because the system can accept it if it makes sense for the pump to generate it.  Note that a suppressed basal also has a suppressed field, so if there is a sequence of suppressions happening, that would be represented as a set of chained suppressed events.
 
+#### Example: Submitting a series of scheduled basals
+
+We start with a basal with no previous
+
+~~~json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 0.7,
+  "duration": 10800000,
+  "time": "2014-01-01T00:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example"
+}
+~~~
+
+Then, we submit another basal with a previous
+
+~~~json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 1.0,
+  "duration": 3600000,
+  "time": "2014-01-01T03:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example",
+  "previous": {
+    "type": "basal",
+    "deliveryType": "scheduled",
+    "scheduleName": "Program 1",
+    "rate": 0.7,
+    "duration": 10800000,
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "1234",
+    "source": "example"
+  }
+}
+~~~
+
+This will result in the Tidepool platform storing
+
+~~~json
+[{
+    "type": "basal",
+    "deliveryType": "scheduled",
+    "scheduleName": "Program 1",
+    "rate": 0.7,
+    "duration": 10800000,
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "1234",
+    "source": "example"
+},{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 1.0,
+  "duration": 3600000,
+  "time": "2014-01-01T03:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example"
+}]
+~~~
+
+#### Example: Submitting scheduled basals that skip an event
+
+We start with a basal with no previous
+
+~~~json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 0.7,
+  "duration": 10800000,
+  "time": "2014-01-01T00:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example"
+}
+~~~
+
+Then, we submit another basal with a previous
+
+~~~json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 2.0,
+  "duration": 7200000,
+  "time": "2014-01-01T04:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example",
+  "previous": {
+    "type": "basal",
+    "deliveryType": "scheduled",
+    "scheduleName": "Program 1",
+    "rate": 1.0,
+    "duration": 3600000,
+    "time": "2014-01-01T03:00:00.000Z",
+    "deviceId": "1234",
+    "source": "example"
+  }
+}
+~~~
+
+This will result in the Tidepool platform storing
+
+~~~json
+[{
+    "type": "basal",
+    "deliveryType": "scheduled",
+    "scheduleName": "Program 1",
+    "rate": 0.7,
+    "duration": 10800000,
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "1234",
+    "source": "example",
+    "annotations": [{ "code": "basal/mismatched-series" }]
+},{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 2.0,
+  "duration": 7200000,
+  "time": "2014-01-01T04:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example"
+}]
+~~~
+
+Note that this does *NOT* store the event from the previous, it instead simply marks the previous as "mismatched" and moves on.
+
+
+#### Example: Submitting scheduled basals that overlap with a previous event
+
+We start with a basal with no previous
+
+~~~json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 1",
+  "rate": 0.7,
+  "duration": 10800000,
+  "time": "2014-01-01T00:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example"
+}
+~~~
+
+Then, we submit another basal with a previous
+
+~~~json
+{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 2",
+  "rate": 0.8,
+  "duration":7 14400000,
+  "time": "2014-01-01T02:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example",
+  "previous": {
+    "type": "basal",
+    "deliveryType": "scheduled",
+    "scheduleName": "Program 1",
+    "rate": 0.7,
+    "duration": 10800000,
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "1234",
+    "source": "example"
+  }
+}
+~~~
+
+This will result in the Tidepool platform storing
+
+~~~json
+[{
+    "type": "basal",
+    "deliveryType": "scheduled",
+    "scheduleName": "Program 1",
+    "rate": 0.7,
+    "duration": 7200000,
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "1234",
+    "source": "example"
+},{
+  "type": "basal",
+  "deliveryType": "scheduled",
+  "scheduleName": "Program 2",
+  "rate": 0.8,
+  "duration": 14400000,
+  "time": "2014-01-01T02:00:00.000Z",
+  "deviceId": "1234",
+  "source": "example"
+}]
+~~~
+
+Note that the duration on the initial basal event was updated to reflect the actual duration before the basal rate was changed.  Also, note that there is no annotation on the event, because the previous event lined up.
+
+
 ### Temp
 
 Temp basals are much the same as scheduled basals:
@@ -94,3 +303,7 @@ Temp basals are much the same as scheduled basals:
 These fields are basically the same as those from a scheduled basal, except for the introduction of the `percent` field.  If `percent` is provided and `value` is null, our systems will compute the value to be the given percentage of the the value of the first supressed event.
 
 With temps, it is relatively common that the previous field is the exact same as the first element of the suppressed field.
+
+#### Storage/Output Format
+
+The storage and output format of temp basals is essentially the fields defined above with the same adjustments as described for scheduled events.  That is, if a subsequent scheduled event, S, comes in before the stated duration of a temp basal, T, is completed, and S has a `previous` field equivalent to T, the duration of the temp T will be updated to reflect the time at which S entered the platform.

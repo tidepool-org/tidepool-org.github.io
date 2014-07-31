@@ -130,3 +130,7 @@ Where:
 * `target` is the target glucose that the wizard/calculator should attempt to achieve
 * `range` is the range of "acceptable" values around the target
 * `start` is the millisecond offset from midnight that day, representing when the setting should take effect
+
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed

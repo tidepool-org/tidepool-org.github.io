@@ -21,7 +21,7 @@ We document our known annotations below, but we do not limit the set of annotati
 
 ### Generic
 
-There are no "generic" annotations at this time.  But, we will likely find that there are a set of interesting phenomenon that are applicable across devices that we would like a single annotation for.  One example might be for blood glucose readings that are outside of the effective range of the meter.
+* `basal/mismatched-series` happens when the API receives an basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
 
 ### Carelink
 
