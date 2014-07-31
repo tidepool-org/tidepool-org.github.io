@@ -15,6 +15,7 @@ Wizard events are point-in-time and look like
   "recommended": number_of_units_recommended,
   "bgInput": bg_as_input_into_wizard,
   "carbInput": carbohydrates_as_input_into_wizard_in_mg,
+  "activeInsulin": units_of_insulin_on_board,
   "payload": see_below,
   "time": see_common_fields,
   "deviceId": see_common_fields,
@@ -26,6 +27,7 @@ Wizard events are point-in-time and look like
 * `recommended` is the number of units of insulin that the wizard recommended that the PwD inject.
 * `bgInput` the blood glucose value input into the wizard.
 * `carbInput` the carbohydrate value (mg) input into the wizard, note that this is not necessarily an indication of carbohydrates that were actually consumed.  It is, instead, an indication of carbohydrates that the PwD entered into their pump.
+* `activeInsulin` the units of insulin current in suspension inside of the PwD.  Often also referred to as "insulin on board".
 * `payload` is an object of arbitrary fields that will be stored alongside the wizard event.  An example of things that might be stored is:
     ~~~json
         {
