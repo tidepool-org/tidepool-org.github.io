@@ -18,7 +18,7 @@ Starting up the platform locally requires a number of different pieces to make e
 
 ##Prerequisites
 
-You need a command line development environment; you need a bash-compatible shell and git, npm, bower, node, and mongod installed and on your path to support JavaScript, and the Go language installed for supporting Go. 
+You need a command line development environment; you need a bash-compatible shell and git, bzr, npm, bower, node, grunt, mocha, and mongod installed and on your path to support JavaScript, and the Go language installed for supporting Go. 
 
 Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a mac, you'll need to install XCode, and the XCode command line tools. 
 
