@@ -12,7 +12,7 @@ Notes events are point-in-time and look like:
 ~~~json
 {
   "type": "note",
-  "subtype": "annotation", "external", "device"
+  "subtype": "external", "device"
   "short_text": short_text_of_note,
   "text": text_of_note,
   "reference": event_to_which_this_note_refers,
@@ -27,4 +27,4 @@ Note that both the text and short_text fields will be sanitized before display. 
 
 The reference field can be either the id of a record to which the note should be attached, or the ID value of a record as retrieved from the database. The reference can be any type of record, including another note. 
 
-(NOTE for further discussion: It's probably the case that the referenced record should have a backlink to the note so that when rendering, we can add annotations to the items.)
+The referenced record will have an indication that it is a target of at least one note. This will be a field that is added to the record called has_note with a value of true. The existence of this flag indicates that a search for associated notes is appropriate. It could be used to show a note icon without incurring a search for the text of the note until the user demands it.
