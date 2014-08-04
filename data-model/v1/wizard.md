@@ -12,10 +12,16 @@ Wizard events are point-in-time and look like
 ~~~json
 {
   "type": "wizard",
-  "recommended": number_of_units_recommended,
+  "recommended": {
+    "carb": number_of_units_to_cover_carbs,
+    "correction": number_of_units_to_cover_correction
+  },
   "bgInput": bg_as_input_into_wizard,
   "carbInput": carbohydrates_as_input_into_wizard_in_mg,
-  "activeInsulin": units_of_insulin_on_board,
+  "insulinOnBoard": units_of_insulin_on_board,
+  "insulinCarbRatio": number_of_mg_carbs_covered_by_unit_insulin,
+  "insulinSensitivity": number_of_bgs_covered_by_unit_insulin,
+  "bgTarget": complex_object_representing_target_bg,
   "payload": see_below,
   "time": see_common_fields,
   "deviceId": see_common_fields,
@@ -24,10 +30,14 @@ Wizard events are point-in-time and look like
 }
 ~~~
 
-* `recommended` is the number of units of insulin that the wizard recommended that the PwD inject.
-* `bgInput` the blood glucose value input into the wizard.
-* `carbInput` the carbohydrate value (mg) input into the wizard, note that this is not necessarily an indication of carbohydrates that were actually consumed.  It is, instead, an indication of carbohydrates that the PwD entered into their pump.
-* `activeInsulin` the units of insulin current in suspension inside of the PwD.  Often also referred to as "insulin on board".
+* `recommended.carb` is the number of units of insulin that the wizard recommended to cover carbohydrate intake.
+* `recommended.correction` is the number of units of insulin that the wizard recommended to attempt to bring the PwD down to their target BG.
+* `bgInput` is the blood glucose value input into the wizard.  This is converted to mmol/l based on a `units` field.
+* `carbInput` is the carbohydrate value (mg) input into the wizard, note that this is not necessarily an indication of carbohydrates that were actually consumed.  It is, instead, an indication of carbohydrates that the PwD entered into their pump.
+* `insulinOnBoard` is the units of insulin currently in suspension inside of the PwD.  Metaphorically speaking, this can be thought of as how many little yellow school buses with Mrs. Frizzle and company are floating around learning about the PwD's anatomy.
+* `insulinCarbRatio` is the number of mg of carbohydrates that one unit of insulin is expected to cover
+* `insulinSensitivity` is the amount that one unit of insulin is expected to decrease blood glucose.  This is converted to mmol/l based on a `units` field.
+* `bgTarget` is the complex representation of the target blood glucose.  It can be  varying schemas that should align with the schemas in the [settings object](./settings.html)
 * `payload` is an object of arbitrary fields that will be stored alongside the wizard event.  An example of things that might be stored is:
     ~~~json
         {

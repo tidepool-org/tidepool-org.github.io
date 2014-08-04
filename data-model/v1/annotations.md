@@ -5,15 +5,23 @@ published: true
 ---
 # Annotations
 
-Annotations are attached to any type of event to indicate that there might be something odd about the event.  
+Any event can have an `annotations` field.  Annotations are attached to indicate that there might be something odd about the event, usually something that affects the allowable interpretations of the data in the event.
 
-An annotation is a free-form object except for one restriction: it must have a "code" field.  For example
+The `annotations` field is physically an array of annotation objects, but semantically it is a set.  There should never be two elements in the array with the same `code`.
+
+An annotation object has one required field, `code`, and can have any number of other fields.  For example
 
 ~~~json
     { "code": "carelink/basal/temp-percent-create-scheduled" }
 ~~~
 
-The annotations field is a set of annotation objects.  Where equality for the set is determined by equivalent codes.
+is valid.  Also
+
+~~~json
+    { "code": "cbg/below-testable-threshold", "threshold": 40 }
+~~~
+
+Could also be valid.  That is, the idea is that the annotation can optionally provide some information that helps when explaining what went wrong.  The fabricated example above would be for a CBG reading that ends up below 40 but the CGM can only read down to 40.  If there were another CGM that could read down to 25, then that CGM would set the threshold value to 25 instead of 40.
 
 We document our known annotations below, but we do not limit the set of annotations to what is documented below.  If you are integrating with the Tidepool platform and run into something that is not currently accounted for by the annotations listed below, please make something up and provide a pull request against this documentation.
 
