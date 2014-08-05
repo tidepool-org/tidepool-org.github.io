@@ -110,7 +110,6 @@ Where:
       { "target": 100, "low": 80, "high": 120, "start": 0 },
       { "target": 110, "low": 80, "high": 140, "start": 1800000 },
       ...
-      
     ]
 ~~~
 
@@ -120,13 +119,22 @@ Where:
       { "target": 100, "range": 20, "start": 0 },
       { "target": 110, "range": 30, "start": 1800000 },
       ...
-      
     ]
 ~~~
+
+#### Target + High
+~~~json
+    [
+      { "target": 100, "high": 120, "start": 0 },
+      { "target": 110, "high": 140, "start": 1800000 },
+      ...
+    ]
+~~~
+
 Where:
 
 * `low` is the defined low blood glucose
-* `high` is the defined high blood glucose
+* `high` is the defined high blood glucose, often used as a threshold by the pump to determine if a correction dose of insulin should be delivered
 * `target` is the target glucose that the wizard/calculator should attempt to achieve
 * `range` is the range of "acceptable" values around the target
 * `start` is the millisecond offset from midnight that day, representing when the setting should take effect

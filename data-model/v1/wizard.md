@@ -34,10 +34,10 @@ Wizard events are point-in-time and look like
 * `recommended.correction` is the number of units of insulin that the wizard recommended to attempt to bring the PwD down to their target BG.
 * `bgInput` is the blood glucose value input into the wizard.  This is converted to mmol/l based on a `units` field.
 * `carbInput` is the carbohydrate value (mg) input into the wizard, note that this is not necessarily an indication of carbohydrates that were actually consumed.  It is, instead, an indication of carbohydrates that the PwD entered into their pump.
-* `insulinOnBoard` is the units of insulin currently in suspension inside of the PwD.  Metaphorically speaking, this can be thought of as how many little yellow school buses with Mrs. Frizzle and company are floating around learning about the PwD's anatomy.
+* `insulinOnBoard` is the units of insulin currently in suspension inside of the PwD.  Metaphorically speaking, this can be thought of as how many little yellow school buses with Mrs. Frizzle and kids are floating around learning about the PwD's anatomy.
 * `insulinCarbRatio` is the number of mg of carbohydrates that one unit of insulin is expected to cover
 * `insulinSensitivity` is the amount that one unit of insulin is expected to decrease blood glucose.  This is converted to mmol/l based on a `units` field.
-* `bgTarget` is the complex representation of the target blood glucose.  It can be  varying schemas that should align with the schemas in the [settings object](./settings.html)
+* `bgTarget` is the complex representation of the target blood glucose.  It can be  varying schemas that should align with the schemas in the [settings object](./settings.html) except there is no `start` field.
 * `payload` is an object of arbitrary fields that will be stored alongside the wizard event.  An example of things that might be stored is:
     ~~~json
         {
