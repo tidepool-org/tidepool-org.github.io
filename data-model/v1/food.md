@@ -28,3 +28,6 @@ A food event looks like
 
 Other nutrients can also be tracked with `food` events.  They should just be added with the name of the nutrient ("sodium", "potassium", "vitamin d", etc.) and stored with the "standard" unit of measure (as defined by the US FDA) for that nutrient (mg for sodium, IU for vitamin-d, etc).
 
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed

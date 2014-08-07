@@ -18,3 +18,8 @@ CBG represents blood glucose from a continuous glucose monitor.  These events ar
   "source": see_common_fields
 }
 ~~~
+
+
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed

@@ -44,7 +44,150 @@ A status event is used to represent the status of a pump.  Specifically, this is
     * "manual" - the user manually resumed the pump
     * "automatic" - the pump resumed on its own
 
-If the status from the `previous` field does not exist in the Tidepool platform, the previous status object will be annotated and saved along with the current event.
+If the status from the `previous` field does not exist in the Tidepool platform, the object provided in the previous field will be annotated and saved along with the current event.
+
+### Storage/Output Format
+
+The storage and output format for status events is essentially a mirror except the `previous` field will not actually be stored.  Instead, it is used simply as a verification mechanism.
+
+#### Example: Event submitted with previous that exists
+
+If you were to first emit the event
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "status",
+  "status": "resumed",
+  "reason": "manual",
+  "time": "2014-01-01T00:00:00.000Z",
+  "deviceId": "123",
+  "source": "example"
+}
+~~~
+
+And then emit
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "status",
+  "status": "suspended",
+  "reason": "manual",
+  "time": "2014-01-01T01:00:00.000Z",
+  "deviceId": "123",
+  "source": "example",
+  "previous": {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "resumed",
+    "reason": "manual",
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  }
+}
+~~~
+
+The tidepool platform will store and allow you to retrieve
+
+~~~json
+[
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "resumed",
+    "reason": "manual",
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  },
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "suspended",
+    "reason": "manual",
+    "time": "2014-01-01T01:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  }
+]
+~~~
+
+#### Example: Event submitted with previous that does *NOT* exist
+
+If you were to first emit the event
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "status",
+  "status": "resumed",
+  "reason": "manual",
+  "time": "2014-01-01T00:00:00.000Z",
+  "deviceId": "123",
+  "source": "example"
+}
+~~~
+
+And then emit
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "status",
+  "status": "resumed",
+  "reason": "manual",
+  "time": "2014-01-01T02:00:00.000Z",
+  "deviceId": "123",
+  "source": "example",
+  "previous": {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "suspended",
+    "reason": "manual",
+    "time": "2014-01-01T01:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  }
+}
+~~~
+
+The tidepool platform will store and allow you to retrieve
+
+~~~json
+[
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "resumed",
+    "reason": "manual",
+    "time": "2014-01-01T00:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  },
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "suspended",
+    "reason": "manual",
+    "time": "2014-01-01T01:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  }
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "resumed",
+    "reason": "manual",
+    "time": "2014-01-01T02:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+  }
+]
+~~~
+
+That is, it will *generate* the previous event as if it had been originall sent in.
 
 ## Calibration
 
@@ -61,3 +204,6 @@ A calibration event represents a calibration of a CGM.  It looks like
 }
 ~~~
 
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
