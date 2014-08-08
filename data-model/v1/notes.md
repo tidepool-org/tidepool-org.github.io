@@ -56,10 +56,12 @@ the thread. All of the notes in the discussion would have the same value for the
 
 ## Identity
 
-Notes are always associated with the user whose account they apply to. Members of 
-someone's care team may also have permission to create notes. In the case where a note 
-is coming from another user, the `creatorId` field must be set to the userId of the 
-account that created the note.
+Notes are always associated with the user whose account they apply to. 
+
+Members of someone's care team may also have permission to create notes. In the
+case where a note is coming from another user, the `creatorId` field must be
+set to the userId of the account that created the note. If `creatorId` is missing,
+it means that the owner of the account created the note.
 
 ## Source
 
