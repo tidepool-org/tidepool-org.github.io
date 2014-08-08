@@ -93,8 +93,9 @@ Where:
 
 ### bgTarget
 
-`bgTarget`: The target blood glucose values represented as the high and low threshold.  Note that some pumps internally represent this as a target with a +/-, we are choosing to standarding on the high/low representation so settings should be converted to the high and low values of the target range before emission to the Tidepool platform.
+`bgTarget`: The target blood glucose values represented as one of three ways.  Note that some pumps internally represent this as a target with a +/-, we are choosing to standarding on the high/low representation so settings should be converted to the high and low values of the target range before emission to the Tidepool platform.
 
+#### High/Low
 ~~~json
     [
       { "low": 100, "high": 120, "start": 0 },
@@ -103,8 +104,41 @@ Where:
     ]
 ~~~
 
+#### Target + High/Low
+~~~json
+    [
+      { "target": 100, "low": 80, "high": 120, "start": 0 },
+      { "target": 110, "low": 80, "high": 140, "start": 1800000 },
+      ...
+    ]
+~~~
+
+#### Target + Range
+~~~json
+    [
+      { "target": 100, "range": 20, "start": 0 },
+      { "target": 110, "range": 30, "start": 1800000 },
+      ...
+    ]
+~~~
+
+#### Target + High
+~~~json
+    [
+      { "target": 100, "high": 120, "start": 0 },
+      { "target": 110, "high": 140, "start": 1800000 },
+      ...
+    ]
+~~~
+
 Where:
 
-* `low` is the target low blood glucose
-* `high` is the target high blood glucose
+* `low` is the defined low blood glucose
+* `high` is the defined high blood glucose, often used as a threshold by the pump to determine if a correction dose of insulin should be delivered
+* `target` is the target glucose that the wizard/calculator should attempt to achieve
+* `range` is the range of "acceptable" values around the target
 * `start` is the millisecond offset from midnight that day, representing when the setting should take effect
+
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed

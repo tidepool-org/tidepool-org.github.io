@@ -17,3 +17,8 @@ SMBG represents blood glucose from a finger prick or other "self-monitoring" met
   "source": see_common_fields
 }
 ~~~
+
+
+## Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
