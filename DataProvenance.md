@@ -12,7 +12,7 @@ _Provenance: a record of ownership of a work of art or an antique, used as a gui
 
 In the last 14 years, our friend Eric has moved 14 times. Having moved so often, he sometimes has a problem remembering his old addresses. Probably once every 6 months, he'll come across some government form or other thing that asks for an old address. He spends the next few minutes racking his brain, trying to figure out what it could be, and usually either he gives up or the requirement is waived.
 
-It would be handy if everytime he updated his address on the USPS website, for example, it would keep track of when he did the update and allow me access to all of the address changes that he's done. Then, whenever he needs it, he could just pull that up and know what address he lived in at any given time. He'd have a complete "audit trail" for all of his address changes.  Or, said in the fancy words of the title of this page, he could understand the "provenance" of his address.
+It would be handy if everytime he updated his address on the USPS website, for example, it would keep track of when he did the update and allow him access to all of the address changes that he's done. Then, whenever he needs it, he could just pull that up and know what address he lived in at any given time. He'd have a complete "audit trail" for all of his address changes.  Or, said in the fancy words of the title of this page, he could understand the "provenance" of his address.
 
 At Tidepool, we care about the provenance of your data.  Changes to data in the system can happen and when they happen, you should be empowered to know 
 
@@ -145,7 +145,7 @@ Did you notice the new field in the second event?
 
 * `"modifiedTime": "2014-08-05T16:11:00.991Z"` - the time that the modification happened.  This would mean that we modified our event around 4pm UTC on August 5th.
 
-So, we now have two events stored in the Tidepool Platform.  When we show you the data, we only show you the one with the newest "_version".  But, if you ever run into the issue described above where you don't know what's up with your data, you can rest assured that the Tidepool Platform has all copies of your data safely stored away.  So, in this new utopian world, you can deal with the above situation by:
+So, we now have two events stored in the Tidepool Platform.  When we show you the data, we only show you the one with the newest "_version".  But, if you ever run into the issue described above where you don't know what's up with your data, you can rest assured that the Tidepool Platform has all copies of your data safely stored away.  So, in this new utopian world, here's how you can deal with the above situation:
 
 1. Ask the platform for the history of the odd data points
 2. Notice that one of them was modified
