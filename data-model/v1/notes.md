@@ -5,9 +5,9 @@ published: true
 ---
 # Notes
 
-Notes represent textual notations that are made to add information to the data stream. They can exist only at a point in time, or they can refer to an existing item in the data stream. That existing item can also be another note, so it is possible to construct a threaded discussion within the data stream.
+Notes represent textual notations that are made to add information to the data stream. They can exist at a specific point in time, or they can refer to an existing item in the data stream. That existing item can also be another note; it is therefore possible to construct a threaded discussion within the data stream.
 
-Notes events look like:
+Note events look like:
 
 ~~~json
 {
@@ -34,10 +34,10 @@ when the note is rendered.
 `createdTime` is the time that this record was originally created, and `modifiedTime` 
 is added when a note is changed (see [Data Provenance](DataProvenance.html)).
 
-If a note references another data item, the note's `time` should be set to equal
-the `time` of the referenced item. This is so a time-based query will find these
-records. If the time that should be rendered is different from this time, then
-the `displayTime` field may be added.
+If a note references another data item, the note's `time` will be automatically
+set to equal the `time` of the referenced item. This is so a time-based query
+will find these records. If the time that should be rendered is different from
+this time, then the `displayTime` field may be added.
 
 All times are in UTC.
 
@@ -49,19 +49,18 @@ retrieved from the database. (See the discussion of the `previous` field in [the
 bolus reference](/data-model/v1/bolus.html#normal).) The `reference` field can
 refer to any type of record, including another note.
 
-A threaded discussion would consist of having each note in the thread
+A threaded discussion should consist of having each note in the thread
 reference its parent note, with `displayTime` set to the time of each comment in
-the thread. All of the notes in the discussion would have the same value for the
-`time` field.
+the thread. All of the notes in the discussion will have the same value for the
+`time` field (because the system enforces that).
 
 ## Identity
 
 Notes are always associated with the user whose account they apply to. 
 
 Members of someone's care team may also have permission to create notes. In the
-case where a note is coming from another user, the `creatorId` field must be
-set to the userId of the account that created the note. If `creatorId` is missing,
-it means that the owner of the account created the note.
+case where a note is coming from another user, the `creatorId` field should be
+set to the userId of the account that created the note. Otherwise, `creatorId` should be the ID of the owner of the account.
 
 ## Source
 
@@ -69,7 +68,7 @@ If a note is coming from a device that also records other data types, the `sourc
 `deviceId` should be the same ones used for the other data.
 
 If a note is coming from an independent source such as an add-on app, `source` should
-be the name of the app, and `deviceId` should be a version identifier for the app.
+identify the software that is doing the upload, and `deviceId` should identify the hardware the information is coming from.
 
 ## Text
 
