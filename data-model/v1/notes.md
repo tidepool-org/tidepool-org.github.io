@@ -80,6 +80,8 @@ truncating the text field. This field exists primarily to allow cases where
 structured notes (say, annotations by a device) may want to control the content
 of the shorter display.
 
+It is difficult to specify a 'safe' value for the length of shortText without overly constraining the UI designs. However, 20 characters is a reasonable guess. 
+
 Note that both the `text` and `shortText` fields will be sanitized / escaped
 before display, so it is best not to include any attempt at markup. We may
 someday permit certain kinds of markup (for emphasis, links, etc) but for now
