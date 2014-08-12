@@ -15,7 +15,7 @@ So, if it is impossible to eliminate the risk of losing data, why even bother?  
 
 ### Replicated database
 
-Our database is 3-way replicated in a master-slave fashion.  This means that when something is added or changed in our database it is rapidly replicated to 2 other servers that house the exact same data.  If the master node goes down, your data is still available from one of the other replicas.
+Our database is 3-way replicated in a master-slave fashion.  This means that when something is added or changed in our database it is rapidly replicated to 2 other servers that house the exact same data.  If the master node goes down, your data is still available from one of the other replicas.  If one of the slaves goes down, we can bring up a new slave and it will re-replicate in a matter of hours.
 
 ### Nightly backups
 
@@ -23,7 +23,7 @@ We maintain nightly backups of data stored in our databases.  In the unlikely ev
 
 ### Known Risk Factors
 
-Given the above countermeasures, we do have a number of known failure scenarios that could cause prolonged downtime or lack of access to data.  These are
+Even given the systems described, there are some failure scenarios that could cause prolonged downtime or lack of access to data.  These are
 
 #### Data Center Loss
 
