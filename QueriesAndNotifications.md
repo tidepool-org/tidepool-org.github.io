@@ -4,7 +4,7 @@ title: Tidepool Query Language and Notifications system
 published: true
 ---
 
-This document was created by Kent Quirk and last edited in mid-July, 2014.
+This document was created by Kent Quirk and last edited in mid-August, 2014.
 
 #Background
 
@@ -42,25 +42,25 @@ I started by sketching out some use cases and attempting to write down sensible 
 
 A few notes when reading the examples:
 
-* TYPE controls the row types returned by the query; FIELDS returns the fields within the rows. WHERE applies other constraints. 
+* TYPE controls the row types returned by the query; COLUMNS returns the elements within the rows. WHERE applies other constraints. 
 
-* By having a TYPE clause rather than specifying the record type as part of the WHERE clause, it becomes easier to check for correctness and to specify the type-specific fields as part of the fields clause. This is an example of not mimicking SQL.
+* By having a TYPE clause rather than specifying the record type as part of the WHERE clause, it becomes easier to check for correctness and to specify the type-specific fields as part of the columns clause. This is an example of not mimicking SQL.
 
 * It's useful to look at examples of plausible queries first as that can inform the definition of the JSON-based query language.
 
-* ALL CAPS are keywords, Initial Caps are functions provided by the language, lowercase are variables or fields.
+* ALL CAPS are keywords, Initial Caps are functions provided by the language, lowercase are variables, fields, or columns.
 
 
 #Example use cases and the queries for them
 
 ## Simple use cases
 
-* Fetch all fields in all records for CBG, SMBG, basal, bolus, and notes for the last two weeks to present it all on one graph.
+* Fetch all values in all records for CBG, SMBG, basal, bolus, and notes for the last two weeks to present it all on one graph.
 
 ~~~
     QUERY
       TYPE IN cbg, smbg, basal, bolus, notes
-      // Omitting a FIELDS spec implies all fields
+      // Omitting a COLUMNS spec implies all of them
       WHERE Age(time) < Weeks(2)
 ~~~
 
@@ -69,7 +69,7 @@ A few notes when reading the examples:
 ~~~
     QUERY
       TYPE IN cbg
-      FIELDS time, value
+      COLUMNS time, value
       WHERE Age(time) < Days(90)
 ~~~
 
@@ -78,7 +78,7 @@ A few notes when reading the examples:
 ~~~
     QUERY
       TYPE IN cbg
-      FIELDS Date(time), value
+      COLUMNS Date(time), value
 ~~~
 
 * Show the single most recent SMBG value and the time it was taken.
@@ -86,7 +86,7 @@ A few notes when reading the examples:
 ~~~
     QUERY
         TYPE=smbg
-        FIELDS time, value, trend
+        COLUMNS time, value, trend
         SORT BY time REVERSED
         LIMIT 1
 ~~~
@@ -96,16 +96,16 @@ A few notes when reading the examples:
 ~~~
     QUERY
         TYPE IN smbg, cbg
-        FIELDS time, value*18.01559 AS bg
-        WHERE bg > 200 and Month(time) = Month(Now()) And Year(time) == Year(Now())
+        COLUMNS time, value*18.01559 AS bg
+        WHERE bg > 200 AND Month(time) = Month(Now()) AND Year(time) == Year(Now())
 ~~~
 
-* Find all boluses of at least 10 units within the last quarter, whether they're normal or extended. Because fields default to Null if not present, we need to compare to Null to get valid results.
+* Find all boluses of at least 10 units within the last quarter, whether they're normal or extended. Because columns default to Null if not present, we need to compare to Null to get valid results.
 
 ~~~
     QUERY
         TYPE IN bolus
-        FIELDS time, If(Null(normal), 0, normal) AS n,
+        COLUMNS time, If(Null(normal), 0, normal) AS n,
             If(Null(extended), 0, extended) AS e, n + e AS totalbolus
         WHERE totalbolus > 10 AND Age() < Days(90)
 ~~~
@@ -119,7 +119,7 @@ A few notes when reading the examples:
 ~~~
     QUERY
         TYPE IN cbg, smbg
-        FIELDS Min(bg), Max(bg)
+        COLUMNS Min(bg), Max(bg)
         WHERE Date(time) == Today()
 ~~~
 
@@ -128,7 +128,7 @@ A few notes when reading the examples:
 ~~~
     QUERY
         TYPE IN cbg, smbg
-        FIELDS (Avg(bg) + 46.7) / 28.7
+        COLUMNS (Avg(bg) + 46.7) / 28.7
         WHERE Age() < Days(90)
 ~~~
 
@@ -137,7 +137,7 @@ A few notes when reading the examples:
 ~~~
     QUERY
         TYPE IN cbg
-        FIELDS 
+        COLUMNS 
             IF(bg < 60, "Low", IF(bg > 180, "High", "In Range")) AS reading, 
             Count() AS count
         SORT BY reading
@@ -149,12 +149,12 @@ A few notes when reading the examples:
 ~~~
     LET q1 = QUERY
         TYPE IN settings
-        FIELDS time AS starttime, maxbolus, time + Duration() AS endtime
+        COLUMNS time AS starttime, maxbolus, time + Duration() AS endtime
         WHERE Age(starttime) < Days(90)
 
     QUERY IN q1
         TYPE IN bolus
-        FIELDS *
+        COLUMNS *
         WHERE time BETWEEN q.starttime, q.endtime
         AND q.maxbolus - units < 1.0
 ~~~
@@ -168,16 +168,16 @@ A few notes when reading the examples:
         // this query finds the transitions
         TYPE IS cbg
         SORT BY time
-        FIELDS time, bg, Previous(bg) AS lastbg
+        COLUMNS time, bg, Previous(bg) AS lastbg
         WHERE lastbg >= 50 AND bg < 50 OR lastbg < 50 and bg >= 50
 
     QUERY IN q1
         // and this query finds the durations by looking at the up transitions
-        FIELDS time, bg, time - Previous(time) AS duration
+        COLUMNS time, bg, time - Previous(time) AS duration
         WHERE bg > 50 AND duration > Minutes(30)
 
     FILTER IN q2
-        FIELDS time, bg
+        COLUMNS time, bg
 ~~~
 
 
@@ -195,7 +195,7 @@ I can't even think of a plausible solution to this that doesn't require self-joi
 
     QUERY
         TYPE IN smbg, cbg
-        FIELDS subject.birthdate AS bday, time AS ts, bg
+        COLUMNS subject.birthdate AS bday, time AS ts, bg
         WHERE bg > 300 AND Month(ts) == Month(bday) AND Day(ts) == Day(bday)
 ~~~
 
@@ -219,7 +219,7 @@ I can't even think of a plausible solution to this that doesn't require self-joi
 
 * Comments are anything beginning with // up to the next newline. Comments are treated as whitespace.
 
-* Case is ignored; nothing is case-sensitive. By convention, keywords are in CAPS and Functions() are in titlecase, and field names are lowercase. But all of that is completely optional.
+* Case is ignored; nothing is case-sensitive. By convention, keywords are in CAPS and Functions() are in titlecase, and field and column names are lowercase. But all of that is completely optional.
 
 * Strings can be contained within single quotes ('), double quotes ("), or triple-quotes (''' or """); strings do not require quotes unless they contain whitespace, start with a digit, or contain a non-alphanumeric character. Strings may not contain a newline and there is no escape character. All of these are equivalent:
   * ```hello```
@@ -228,7 +228,7 @@ I can't even think of a plausible solution to this that doesn't require self-joi
   * ```'''hello'''```
   * ```"""hello"""```
 
-* There are a small number of keywords. These cannot be used as field names and will not be used as function names.
+* There are a small number of keywords. These cannot be used as field or column names and will not be used as function names.
 
 * Functions are names followed by an argument list in parentheses. Function names must start with a letter and can contain alphanumerics, plus underscore.
 
@@ -246,7 +246,7 @@ The metaquery identifies the set of accounts to whom the query applies.
 
 For user tokens, the only accounts that the query can apply to are those accounts where the user has either root privilege or view privilege. If the metaquery is not specified, then the query is applied only to the account data for whom the token has root privilege.
 
-If the metaquery is specified, it must omit the TYPE qualifier and use field names found in the metadata (to be more completely specified at a future time).
+If the metaquery is specified, it must omit the TYPE qualifier and use column names found in the metadata (to be more completely specified at a future time).
 
 Examples:
 
@@ -259,7 +259,7 @@ Examples:
 
 For research tokens, only the fields accessible to the researcher can be selected against (for example, user name is probably not accessible). Note that some fields may be accessible for some users who have explicitly consented, but not for other users. In these circumstances, a constraint that specifies a restricted field will only ever return users who have authorized that restricted field, even if the result of the constraint would otherwise be true. It is as if every metaquery contains an implied constraint of "authorized(myToken) AND..." before each WHERE clause.
 
-The QUERY following the METAQUERY is executed for each user selected and the results are aggregated. If the METAQUERY is named, the FIELDS clause may include metaquery fields.
+The QUERY following the METAQUERY is executed for each user selected and the results are aggregated. If the METAQUERY is named, the COLUMNS clause may include metaquery fields.
 
 
 ## Query
@@ -282,32 +282,42 @@ The type clause identifies the types of records that will be used in the query; 
 
 The typelist is a comma-separated list of types.
 
-### FIELDS clause
+### COLUMNS clause
 
-    FIELDS fieldlist
+    COLUMNS columnlist
 
-    fieldlist: [type.]fieldname (AS alias), ...
-    fieldlist: fieldexpression AS alias, ...
+    columnlist: [type.]fieldname (AS alias), ...
+    columnlist: columnexpression AS alias, ...
 
-The FIELDS clause identifies the set of fields that will be returned by the query. The fieldnames must be fields within the set of types specified by the typelist. If the fieldname is ambiguous then it may be preceded by the type name and a dot (.). The fieldname will be used as the key in the output JSON; an alias may be specified to change the key value.
+The COLUMNS clause identifies the set of columns that will be returned by the
+query. The fieldnames must be fields within the set of types specified by the
+typelist. If the fieldname is ambiguous then it may be preceded by the type name
+and a dot (.). The fieldname will be used as the key in the output JSON; an
+alias may be specified to change the key value.
 
 Instead of fieldname, an expression can be used that can specify operations on fieldnames; for example, ```Month(time) as month```.
 
 ### SORT clause
 
-    SORT BY field [REVERSED][, ...]
+    SORT BY column [comparator][REVERSED][, ...]
 
 The SORT clause controls how the output of the query is ordered. 
 
-The SORT clause is run before any LIMIT clause or OFFSET clause is calculated, and before any windowed operations are run (Previous, Next).
+The SORT clause is run before any LIMIT clause or OFFSET clause is calculated,
+and before any windowed operations are run (Previous, Next).
 
-If not specified, the sort order is not guaranteed, and the same query may return different results from run to run.
+If not specified, the sort order is not guaranteed, and the same query may return
+different results from run to run.
+
+Comparator is the name of a comparison function. We currently expect to offer 
+comparators for Numeric, Alpha, and Date values -- perhaps more. If a comparator is 
+not provided, a best guess is made for the column type. 
 
 ### GROUP BY clause
 
-    GROUP BY field[, ...]
+    GROUP BY columns[, ...]
 
-GROUP BY generates a single row for each distinct value of the GROUP BY fields. Aggregation operations (Min, Max, Average, Sum, Count) apply only to the collection of rows with this value. If the data says:
+GROUP BY generates a single row for each distinct value of the GROUP BY columnss. Aggregation operations (Min, Max, Average, Sum, Count) apply only to the collection of rows with this value. If the data says:
 
     x   y
     -   -
@@ -320,7 +330,7 @@ GROUP BY generates a single row for each distinct value of the GROUP BY fields. 
 
 And the query contains:
 
-    FIELDS x, Count() AS count, Sum() AS sum SORT BY x GROUP BY x
+    COLUMNS x, Count() AS count, Sum() AS sum SORT BY x GROUP BY x
 
 The result will be:
 
@@ -408,16 +418,16 @@ functions default to Now() if ts is not specified?
 
 ## Implementation order
 
-First, design a JSON-based query structure that will be the output of the query language. It needs data structures to accommodate the full set of query language capabilities. 
+First, design a JSON-based query structure that will be the output of the query language. It needs data structures to accommodate the full set of query language capabilities. Please see [the query implementation spec](QueryImplementation.html).
 
 Next, implement the evaluation engine for a subset of the JSON structure; it should be able to do the following:
 
 * Single data account only; metaqueries are not supported.
 * TYPE clause
-* FIELDS clause for named fields but not expressions, aliases
-* SORT BY single named field
+* COLUMNS clause for named columns but not expressions, aliases
+* SORT BY single named column
 * LIMIT and OFFSET
-* WHERE for simple expressions based only on field values in the current row 
+* WHERE for simple expressions based only on values in the current row 
 * Date/time functions and basic expression evaluation
 * No GROUP, no window or aggregation functions
 
@@ -437,7 +447,7 @@ running it
 
 Next features should be based on actual need, but likely ordering is:
 
-* SORT BY multiple fields
+* SORT BY multiple columns
 * Calculated columns -- functions and expressions in column definitions
 * Functions and expressions in the WHERE clause based on calculated columns
 * Metaqueries across multiple users
