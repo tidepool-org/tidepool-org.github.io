@@ -6,6 +6,8 @@ published: true
 
 #Tidepool Developer Portal
 
+This is Tidepool's developer microsite. If you are looking for our company web site, please visit [tidepool.org](https://tidepool.org).
+
 We are building an internet application platform and series of applications to help reduce the burden of managing Type 1 Diabetes. We're a nonprofit organization doing everything in the open. Open source, open business, and we need lots of help.
 
 This is a microsite for helping to guide and manage the open source nature of our work. Its intended audience is software developers who are interested in helping us continuously improve the way we serve the Type 1 Diabetes community.
