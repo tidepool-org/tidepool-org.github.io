@@ -28,7 +28,7 @@ To get the stack running on your own machine, see the [Starting Services](Starti
 
 If you're looking for reference info, check out [our references page](References.html).
 
-If you want to contribute work back to us (and we hope you do!), you need to sign a Contributor's License Agreement (CLA). See [the Contributors page](Contributors.html) for more info.
+If you want to contribute work back to us (and we hope you do!), you need to agree to our Volunteer/Contributor License Agreement (VCLA). See [the Contributors page](Contributors.html) for more info.
 
 ## Communicating with the team
 
