@@ -236,7 +236,7 @@ I can't even think of a plausible solution to this that doesn't require self-joi
 
 * True and False are accepted as boolean values.
 
-* A timestamp expressed in ISO 8601 format (YYYY-MM-DDTHH:MM:SS with optional timezone)] is parsed as a datetime object and converted to the internal format. If you want a timestamp to be a string, use quotes.
+* A timestamp expressed in ISO 8601 format (YYYY-MM-DDTHH:MM:SS with optional timezone -- if no timezone is specified it's assumed to be UTC) is parsed as a datetime object and converted to the internal format. If you want a timestamp to be a string, use quotes.
 
 * Operators are traditional; some operators have multiple forms (& or AND, for example). Both = and == are accepted for conditional equality.
 
@@ -257,7 +257,7 @@ Examples:
         WHERE userid IS "12d7bc90fa"
 
 
-For research tokens, only the fields accessible to the researcher can be selected against (for example, user name is probably not accessible). Note that some fields may be accessible for some users who have explicitly consented, but not for other users. In these circumstances, a constraint that specifies a restricted field will only ever return users who have authorized that restricted field, even if the result of the constraint would otherwise be true. It is as if every metaquery contains an implied constraint of "authorized(myToken) OR..." before each WHERE clause.
+For research tokens, only the fields accessible to the researcher can be selected against (for example, user name is probably not accessible). Note that some fields may be accessible for some users who have explicitly consented, but not for other users. In these circumstances, a constraint that specifies a restricted field will only ever return users who have authorized that restricted field, even if the result of the constraint would otherwise be true. It is as if every metaquery contains an implied constraint of "authorized(myToken) AND..." before each WHERE clause.
 
 The QUERY following the METAQUERY is executed for each user selected and the results are aggregated. If the METAQUERY is named, the FIELDS clause may include metaquery fields.
 
@@ -459,6 +459,6 @@ Notifications work like this:
 
 * The query is scheduled to run every nSeconds seconds (not guaranteed -- under heavy load, the query time may lengthen).
 * If the query returns no data, nothing happens. If it returns data, the first record of the result is evaluated. If it differs from the previous first record, the NotifyFunction is called with the arguments specified. (The Notify functions will support templates that can fill in values from the query results.)
-* Supported NotifyFunctions are likely to be SendSMS, PostURL, GetURL, and SendEmail.
+* Supported NotifyFunctions are likely to be SendSMS, PostURL, GetURL, and SendEmail. The query system doesn't yet specify the exact behavior of these functions, but they can return an error code if the attempt fails. For non-fatal errors, the query system will attempt to retry the NotifyFunction call using exponential backoff. If the same query is retriggered before the previous one succeeds, further attempts will be abandoned (there can be only one active instance of a given query). 
 * Notify queries will run against the token they were submitted with, and will consume query resources accordingly. If query resources expire (if the query is using resources at a faster rate than they regenerate) the query will not be run until the resources are available again. This will have the effect of slowing down the query repeat rate.
 
