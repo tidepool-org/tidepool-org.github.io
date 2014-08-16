@@ -4,11 +4,22 @@ title: Tidepool Project Contributors
 published: true
 ---
 
-#Tidepool Project Contributors
+##Making Contributions
+
+We really appreciate your interest in Tidepool, and your help in improving our products, so we want you to understand what will be done with the contributions that you make. In order to make contributions or volunteer as a tester, UI designer or in any other way, you'll need to agree to our [Volunteer/Contributor License Agreement](TidepoolVCLA.pdf). This license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose**.
+
+If you are working on your own behalf and would like to submit a GitHub pull request (and are not already on the Contributor's list below), please post on GitHub -- either in the issue that addresses your pull request or the pull request itself -- the following text:
+
+> I agree to the terms of Tidepool Project's Volunteer/Contributor License Agreement v1.0
+> as it exists at http://tidepool-org.github.io/TidepoolVCLA.pdf on <TODAY'S DATE>.
+
+Please make sure that one of Tidepool's employees (see below) sees it and adds you to the list below.
+
+If your contributions are on behalf of a company or you need to get your company's permission to contribute, please follow the instructions in the [VCLA](TidepoolVCLA.pdf).
 
 ##Contributors
 
-Below are the GitHub names of people who have signed Tidepool CLAs. These are the non-Tidepool employees from whom Tidepool can accept pull requests.
+Below are the GitHub names of people who have agreed to Tidepool VCLA via GitHub pull request comments. These are the non-Tidepool employees from whom Tidepool can accept pull requests. Other VCLAs that have been agreed to on paper or via email are not listed here.
 
  User | Agreement link
  ---- | --------------
@@ -16,17 +27,6 @@ amargherio | [Agreed in user-api#42](https://github.com/tidepool-org/user-api/pu
 andersp | [Agreed in blip#121](https://github.com/tidepool-org/blip/pull/121)
 trhodeos | [Agreed in tideline#48](https://github.com/tidepool-org/tideline/pull/48)
 yrrebnarg | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
-
-##Making Contributions
-
-If you are working on your own behalf would like to submit a pull request (and are not on this list), you must agree to [our CLA](TidepoolCLA.pdf) and you will be added to the list. To agree, please post on GitHub -- either in the issue that addresses your pull request or the pull request itself -- the following text:
-
-> I agree to the terms of Tidepool Project's Contributor License Agreement
-> as it exists at http://tidepool-org.github.io/TidepoolCLA.pdf on <TODAY'S DATE>.
-
-Please make sure that one of Tidepool's employees (see below) sees it and adds you to the list.
-
-If your contributions are on behalf of a company or you need to get your company's permission to contribute, please have your company fill out the form and submit it to us. A post on github is not sufficient in this case.
 
 ##Committers
 
