@@ -8,7 +8,7 @@ Activity is intended to track any excercise acitivity
   "subType": your_type_here
   "duration": minutes_you_where_active
   "intensity": optional_freeform_intensity_indicator
-  "location" : optinal_location
+  "location" : optional_location
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields
