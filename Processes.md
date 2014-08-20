@@ -100,5 +100,5 @@ Note that issues can change in priority over time.
   * Low urgency bugs will be stored in the Trello backlog “Untriaged Bugs” list. Untriaged bugs will be prioritized and selected for inclusion in sprints.
 * Whenever a developer is addressing a bug, she should take 30 minutes to think how to make a test for it.
 * If the test requires significant effort, the developer will escalate it back to the team during a standup indicating that the size/complexity of addressing the bug has increased. This may result in that bug fix being re-slotted in a future sprint.
-* All manual test scripts will be stored in a test repository (repo creation in progress).
+* All manual test scripts will be stored in [the test repository](https://github.com/tidepool-org/testing).
 
