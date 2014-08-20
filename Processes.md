@@ -49,8 +49,7 @@ Tidepool follows a developer-specific method of bug triage. In this practice, th
 ### Process
 
 #### P1 Issues
-1. Create a Trello card on the active board ([Blip](https://trello.com/b/GPadCYvP/blip) or [Platform](https://trello.com/b/xLF1XmeQ/platform)). (For a P2 - P4 issue, put the card on the Blip backlog board.
-2. Immediately file in Github as an issue for bug tracking.)
+1. Create a Trello card on the active board ([Blip](https://trello.com/b/GPadCYvP/blip) or [Platform](https://trello.com/b/xLF1XmeQ/platform)).
 
 #### P2, P3, P4 Issues
 1. Create a Trello card on the [Blip Product Backlog](https://trello.com/b/iKydvoiJ/blip-product-backlog) board under "Untriaged Bugs".
