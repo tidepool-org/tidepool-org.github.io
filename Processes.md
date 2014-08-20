@@ -16,6 +16,7 @@ Table of contents:
 * [Migration and Deployment](#migration-and-deployment)
 * [Tidepool's Trello Boards](#tidepools-trello-boards)
 * [Bug Triage and Management](#bug-triage-and-management)
+* [Testing Practices] (#testing-practices)
 
 
 
@@ -100,5 +101,5 @@ Note that issues can change in priority over time.
   * Low urgency bugs will be stored in the Trello backlog “Untriaged Bugs” list. Untriaged bugs will be prioritized and selected for inclusion in sprints.
 * Whenever a developer is addressing a bug, she should take 30 minutes to think how to make a test for it and then implement that test.
 * If the test requires refactoring (major code change), the developer will escalate it back to the team during a sprint scrum indicating that the size/complexity of addressing the bug has increased and this should be re-slotted in a future sprint.
-
+* All tests will be stored in a test repository (repo creation in progress).
 
