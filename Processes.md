@@ -99,7 +99,7 @@ Note that issues can change in priority over time.
 * Bugs are ingested through support@tidepool.org or in GitHub issues. Any bug reported will end up in Trello. 
   * High urgency bugs will be worked on and deployed immediately. The deployment will be captured in a Trello card. 
   * Low urgency bugs will be stored in the Trello backlog “Untriaged Bugs” list. Untriaged bugs will be prioritized and selected for inclusion in sprints.
-* Whenever a developer is addressing a bug, she should take 30 minutes to think how to make a test for it and then implement that test.
-* If the test requires refactoring (major code change), the developer will escalate it back to the team during a sprint scrum indicating that the size/complexity of addressing the bug has increased and this should be re-slotted in a future sprint.
-* All tests will be stored in a test repository (repo creation in progress).
+* Whenever a developer is addressing a bug, she should take 30 minutes to think how to make a test for it.
+* If the test requires significant effort, the developer will escalate it back to the team during a standup indicating that the size/complexity of addressing the bug has increased. This may result in that bug fix being re-slotted in a future sprint.
+* All manual test scripts will be stored in a test repository (repo creation in progress).
 
