@@ -857,7 +857,6 @@ ul.sf-menu li li li.sfHover ul {
 	font-size: 40px;
 	color: #333333;
 	margin: 0 0 1em;
-	max-width: 740px;
 	line-height: 1.2em;
 }
 
@@ -865,7 +864,6 @@ ul.sf-menu li li li.sfHover ul {
 	font-size: 30px;
 	color: #2843C7;
 	margin: 0 0 1em;
-	max-width: 740px;
 	line-height: 1.2em;
 }
 
@@ -874,7 +872,6 @@ ul.sf-menu li li li.sfHover ul {
 	font-style: italic;
 	color: #FF8D79;
 	margin: 0 0 1em;
-	max-width: 740px;
 	line-height: 1.2em;
 }
 
@@ -882,17 +879,14 @@ ul.sf-menu li li li.sfHover ul {
 	color: #A1A3A6;
 	font-size: 18px;
 	margin: 0 0 0.5em;
-	max-width: 740px;
 }
 
 .entry-content p,
 .entry-content li {
-	max-width: 740px;
 }
 
 .entry-content table {
 	margin-left: 1px;
-	max-width: 740px;
 }
 
 .entry-content embed {
@@ -1791,7 +1785,7 @@ img.aligncenter {
 /* ================= TIDEPOOL ================= */
 
 .global-width {
-	width: 870px;
+	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
 }
