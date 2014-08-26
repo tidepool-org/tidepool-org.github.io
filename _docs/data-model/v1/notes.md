@@ -28,11 +28,11 @@ Note events look like:
 ## Times
 
 Notes can have several different time fields. The standard `time` field is the time
-that the note should appear in the data stream, and is normally the time displayed 
-when the note is rendered. 
+that the note should appear in the data stream, and is normally the time displayed
+when the note is rendered.
 
-`createdTime` is the time that this record was originally created, and `modifiedTime` 
-is added when a note is changed (see [Data Provenance](DataProvenance.html)).
+`createdTime` is the time that this record was originally created, and `modifiedTime`
+is added when a note is changed (see [Data Provenance](/data-provenance)).
 
 If a note references another data item, the note's `time` will be automatically
 set to equal the `time` of the referenced item. This is so a time-based query
@@ -46,7 +46,7 @@ All times are in UTC.
 The `reference` field is optional. If present, it can be either the contents of
 a record to which the note should be attached, or the ID value of a record as
 retrieved from the database. (See the discussion of the `previous` field in [the
-bolus reference](/data-model/v1/bolus.html#normal).) The `reference` field can
+bolus reference](../bolus#normal).) The `reference` field can
 refer to any type of record, including another note.
 
 A threaded discussion should consist of having each note in the thread
@@ -56,7 +56,7 @@ the thread. All of the notes in the discussion will have the same value for the
 
 ## Identity
 
-Notes are always associated with the user whose account they apply to. 
+Notes are always associated with the user whose account they apply to.
 
 Members of someone's care team may also have permission to create notes. In the
 case where a note is coming from another user, the `creatorId` field should be
@@ -80,7 +80,7 @@ truncating the text field. This field exists primarily to allow cases where
 structured notes (say, annotations by a device) may want to control the content
 of the shorter display.
 
-It is difficult to specify a 'safe' value for the length of shortText without overly constraining the UI designs. However, 20 characters is a reasonable guess. 
+It is difficult to specify a 'safe' value for the length of shortText without overly constraining the UI designs. However, 20 characters is a reasonable guess.
 
 Note that both the `text` and `shortText` fields will be sanitized / escaped
 before display, so it is best not to include any attempt at markup. We may

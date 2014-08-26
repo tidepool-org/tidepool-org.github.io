@@ -10,7 +10,7 @@ Welcome to the technical side of Tidepool!
 
 If you have questions, you can email us, or join us in the #tidepool IRC channel on freenode.net.
 
-We generally track bugs in [the issues list of Tidepool's "hub" repository](https://github.com/tidepool-org/hub/issues?state=open). 
+We generally track bugs in [the issues list of Tidepool's "hub" repository](https://github.com/tidepool-org/hub/issues?state=open).
 
 ##Quickstart
 
@@ -18,9 +18,9 @@ Starting up the platform locally requires a number of different pieces to make e
 
 ##Prerequisites
 
-You need a command line development environment; you need a bash-compatible shell and git, bzr, npm, bower, node, grunt, mocha, and mongod installed and on your path to support JavaScript, and the Go language installed for supporting Go. 
+You need a command line development environment; you need a bash-compatible shell and git, bzr, npm, bower, node, grunt, mocha, and mongod installed and on your path to support JavaScript, and the Go language installed for supporting Go.
 
-Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a mac, you'll need to install XCode, and the XCode command line tools. 
+Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a mac, you'll need to install XCode, and the XCode command line tools.
 
 ##Installing everything
 
@@ -32,7 +32,7 @@ After you've completed these steps, you can start up everything with the followi
 $ . tools/runservers
 ```
 
-Please note that runservers is NOT a bash script -- it needs to be run with "." (aka "source"). This is why it is not marked as executable. 
+Please note that runservers is NOT a bash script -- it needs to be run with "." (aka "source"). This is why it is not marked as executable.
 
 See the comments at the top of the `runservers` file for more information on using it.
 
@@ -41,7 +41,7 @@ See the comments at the top of the `runservers` file for more information on usi
 If you want to do it the hard way:
 
 * You will first need to start up Mongo; a single Mongo is sufficient.
-* Next you should start up a [hakken](http://tidepool-org.github.io/TidepoolComponents.html#hakken) coordinator.  Remember the port that you have it listening on.  An example config for this service might be:
+* Next you should start up a [hakken](/tidepool-components#hakken) coordinator.  Remember the port that you have it listening on.  An example config for this service might be:
 
     ```
     DISCOVERY_HOST=localhost:8000

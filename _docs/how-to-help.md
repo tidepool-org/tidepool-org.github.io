@@ -5,7 +5,7 @@ published: true
 ---
 #How you can help
 
-**Thanks in advance!** We really appreciate your interest in helping out the Tidepool Project. We've listed lots of possibilities below. If you'd like to volunteer or contribute, please read our [Volunteer/Contributor License Agreement](TidepoolVCLA.pdf). The license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose.**
+**Thanks in advance!** We really appreciate your interest in helping out the Tidepool Project. We've listed lots of possibilities below. If you'd like to volunteer or contribute, please read our [Volunteer/Contributor License Agreement](/files/tidepool-vcla.pdf). The license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose.**
 
 ##Use it
 
@@ -17,9 +17,9 @@ If you'd like to learn more about about how you can participate in an IRB-approv
 
 ###Manual QA
 
-Sometimes, the best way to test a product is to bang on it. First, create an account to use blip. Track data, look at the results. Look for edge cases where data points are missing. Compare your data to the information displayed by blip. There should be nothing missing, nothing extra, and all the data you see should be accurate. 
+Sometimes, the best way to test a product is to bang on it. First, create an account to use blip. Track data, look at the results. Look for edge cases where data points are missing. Compare your data to the information displayed by blip. There should be nothing missing, nothing extra, and all the data you see should be accurate.
 
-If you find something wrong, tell us. If you find something confusing, tell us. If you don't find something you expected to find, tell us. We want all our software to be easy to use and to make information really clear. 
+If you find something wrong, tell us. If you find something confusing, tell us. If you don't find something you expected to find, tell us. We want all our software to be easy to use and to make information really clear.
 
 ###Technical QA
 
@@ -44,11 +44,11 @@ To help with documentation, the easiest way for us is if you fork the [repositor
 
 ###Code maintenance
 
-We need help at all levels. 
+We need help at all levels.
 
 _Things to know before you start:_
 
-* Please read our architecture and design documents. They're all linked from [here](index.html).
+* Please read our architecture and design documents. They're all linked from [here](/).
 * Please read and follow our style guide.
 * It's useful to read the issues list for the repositories you're interested in -- it may give you ideas for things to work on, or indicate work that's already underway.
 * We work in JavaScript for the client and in JavaScript and Go for the server. We're probably not interested in alternative language implementations.
@@ -60,10 +60,10 @@ _Things to know before you start:_
 
 _Things you can do:_
 
-* Pick an open bug and fix it; submit a pull request with the fix. If it's big, please check with us before you start so we know you're working on it and what your time frame will be. 
+* Pick an open bug and fix it; submit a pull request with the fix. If it's big, please check with us before you start so we know you're working on it and what your time frame will be.
 * Pick one of our repositories and study it. If you see ways to improve them, feel free to make the changes and submit a pull request, or to submit issues for the kinds of changes you'd like to see. Obviously, implementation is more useful than suggestion.
 * Write unit tests. We can never have too many tests, as long as they're not redundant. Time spent exercising code we already have makes it easier to change that code. Help us push code coverage to 100% in each module!
-* Small code improvements, code documentation, testability, making something more idiomatic, pulling out common code -- all of these are useful. Please submit pull requests, and keep them focused. 
+* Small code improvements, code documentation, testability, making something more idiomatic, pulling out common code -- all of these are useful. Please submit pull requests, and keep them focused.
 * Features -- if you think we need a feature, a pull request is one way to propose it, especially for small features. But you're also encouraged and welcome to contact us about it before you do the work. Sometimes we have reasons why we don't or can't do things that might seem obvious to you. Or we may have conflicting work underway. A really good way to handle feature work is to create an issue on GitHub *before* you do the work, and let us know you intend to work on it. That way we can know it's coming and let you know if we see a conflict.
 * Refactoring -- restructuring of code to make it more maintainable or testable is often really useful. If you decide to take on something like this, it would usually be wise to check with us beforehand. Refactorings can generate a lot of code conflict that can make them hard to accept. Also, when you refactor, please try not to add any features when you do. The same tests that ran before the refactoring should run after it as well.
 

@@ -15,7 +15,7 @@ There are three general types of basal events that tidepool understands:
 * scheduled
 * temp
 
-Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](../v1.html)
+Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](..)
 
 ### Injected
 

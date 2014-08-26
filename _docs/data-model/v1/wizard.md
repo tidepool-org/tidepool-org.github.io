@@ -37,19 +37,21 @@ Wizard events are point-in-time and look like
 * `insulinOnBoard` is the units of insulin currently in suspension inside of the PwD.  Metaphorically speaking, this can be thought of as how many little yellow school buses with Mrs. Frizzle and kids are floating around learning about the PwD's anatomy.
 * `insulinCarbRatio` is the number of mg of carbohydrates that one unit of insulin is expected to cover
 * `insulinSensitivity` is the amount that one unit of insulin is expected to decrease blood glucose.  This is converted to mmol/l based on a `units` field.
-* `bgTarget` is the complex representation of the target blood glucose.  It can be  varying schemas that should align with the schemas in the [settings object](./settings.html) except there is no `start` field.
+* `bgTarget` is the complex representation of the target blood glucose.  It can be  varying schemas that should align with the schemas in the [settings object](../settings) except there is no `start` field.
 * `payload` is an object of arbitrary fields that will be stored alongside the wizard event.  An example of things that might be stored is:
-    ~~~json
-        {
-          "targetLow": ...,
-          "targetHigh": ...,
-          "carbRatio": ...,
-          "insulinSensitivity": ...,
-          "correctionEstimate": ...,
-          "foodEstimate": ...,
-          "activeInsulin": ...
-        }
-    ~~~
+
+~~~json
+{
+  "targetLow": ...,
+  "targetHigh": ...,
+  "carbRatio": ...,
+  "insulinSensitivity": ...,
+  "correctionEstimate": ...,
+  "foodEstimate": ...,
+  "activeInsulin": ...
+}
+~~~
+
 * `bolus` is the bolus event that resulted from the wizard.  This field is used in much the same way as the `previous` field in other events: it can be either the full object or the id of an object that has already been submitted.  It is expected that the bolus event is generated and submitted separately from the wizard because bolus events have their own lifecycle.  The order of when the events are submitted does not matter as the bolus value simply gets converted into an id and stored.
 
 ## Storage/Output format

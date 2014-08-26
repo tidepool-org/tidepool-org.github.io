@@ -1,1 +1,11 @@
 markdown: kramdown
+kramdown:
+  input: GFM
+collections:
+  docs:
+    output: true
+    permalink: /:path/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
