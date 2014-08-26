@@ -6,8 +6,6 @@
   <title> {% if page.title %} {{ page.title }} | {% endif %} Tidepool Project </title>
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/site.css" />
-  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/styles/github.min.css">
-  <link rel="stylesheet" href="/css/code.css" />
 </head>
 <body class="page page-template-default">
 
@@ -15,7 +13,7 @@
     <header id="header">
         <div id="header-inner" class="clearfix global-width">
             <div id="branding">
-                <h1 id="blog-title"><a href="http://tidepool-org.github.io/" title="Tidepool" rel="home">Tidepool</a></h1>
+                <h1 id="blog-title"><a href="http://tidepool.org/" title="Tidepool" rel="home">Tidepool</a></h1>
             </div><!--  #branding -->
             <div id="access" class="clearfix">
             </div>
@@ -29,8 +27,13 @@
             <div id="content" class="clearfix">
               <div class="post page type-page hentry clearfix">
                 <div class="entry-content">
+
+  {% include components_toc.html %}
+
 <div class="full-width">
     {{ content }}
+
+    {% include components_list.html %}
 </div></div>
               </div>
             </div>
@@ -40,7 +43,5 @@
     </div>
 
 </div> <!-- wrapper #hfeed -->
-<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.2/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

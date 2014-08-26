@@ -1,0 +1,23 @@
+code, pre {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 14px;
+  border-radius: 3px;
+}
+
+/* Inline code */
+code {
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  color: #333333;
+  background-color: rgba(0,0,0,0.04);
+}
+
+/* Code blocks */
+pre > code,
+.hljs {
+  padding: 16px;
+  line-height: 20px;
+}
