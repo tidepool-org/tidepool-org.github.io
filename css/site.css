@@ -135,6 +135,10 @@ b, strong {
 	font-weight: bold;
 }
 
+em {
+	font-style: italic;
+}
+
 blockquote {
 	margin: 0 3em;
 }
@@ -495,8 +499,6 @@ blockquote {
 table {
 	border: 1px solid #ccc;
 	border-width: 1px 1px 0 1px;
-	font-size: 13px;
-	line-height: 18px;
 	margin: 0 0 22px 0;
 	text-align: left;
 }
@@ -519,7 +521,6 @@ th {
 td {
 	padding: .7em 1.25em;
 	min-width: 150px;
-	font-size: 13pt;
 }
 
 td:first-child {
