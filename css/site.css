@@ -936,7 +936,7 @@ ul.sf-menu li li li.sfHover ul {
 
 .entry-content h1 {
 	font-size: 40px;
-	color: #617CFF;
+	color: #333333;
 	margin: 0 0 1em;
 	max-width: 740px;
 	line-height: 1.2em;
@@ -944,7 +944,7 @@ ul.sf-menu li li li.sfHover ul {
 
 .entry-content h2 {
 	font-size: 30px;
-	color: #617CFF;
+	color: #2843C7;
 	margin: 0 0 1em;
 	max-width: 740px;
 	line-height: 1.2em;
@@ -953,14 +953,14 @@ ul.sf-menu li li li.sfHover ul {
 .entry-content h3 {
 	font-size: 24px;
 	font-style: italic;
-	color: #617CFF;
+	color: #FF8D79;
 	margin: 0 0 1em;
 	max-width: 740px;
 	line-height: 1.2em;
 }
 
 .entry-content h4 {
-	color: #B287F3;
+	color: #A1A3A6;
 	font-size: 24px;
 	margin: 0 0 0.5em 0.5em;
 	max-width: 740px;
