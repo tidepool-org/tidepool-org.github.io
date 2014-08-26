@@ -30,11 +30,11 @@ When a request arrives, the router looks up its path and attempts to match it to
 ## Users and Patients
 Every person using Tidepool's platform needs to have a user account. Some users are patients. Patients have patient data. In other words, all users have accounts -- only some people have medical data.
 
-We are very careful to keep the two separate. 
+We are very careful to keep the two separate.
 
 We are also very careful not to leak which of our users might be patients. Patient data is stored under an encrypted name, and that name is only stored in an account's privately encrypted metadata. It is not possible to tell by looking at our user database which of our users are patients. Conversely, given access to a database of medical information, even a Tidepool employee can't tell which patient it belongs to.
 
-For a detailed explanation of data organization, please see the [Server Data Organization](ServerDataOrganization.html) page. This document just sketches out the big picture.
+For a detailed explanation of data organization, please see the [Server Data Organization](/server-data-organization) page. This document just sketches out the big picture.
 
 ![Data Architecture]({{ site.url }}/images/architecture/DataArchitecture.jpg)
 
@@ -61,11 +61,10 @@ Medical data that has been stripped of identifiable information, on the other ha
 
 ## Encryption
 
-When we use encryption, we use industry-standard algorithms that have been tested, with key lengths that are considered adequate even under modern understanding of the potential weaknesses of industry-standard encryption. 
+When we use encryption, we use industry-standard algorithms that have been tested, with key lengths that are considered adequate even under modern understanding of the potential weaknesses of industry-standard encryption.
 
 Each encryption system in Tidepool uses a unique long "deploy salt" string that ensures that even someone who steals the keys in the user database would not be able to decrypt the patient data without this additional deploy key (which is not stored in the database -- it's an environment variable set up during the deployment).
 
 Furthermore, Tidepool's data is stored using a database with multiple live replicas, which means that we have multiple redundant copies of all of the information. Any one of the replica sets that fails can be replaced without any loss of information.
 
 Each individual disk is encrypted at the volume with a random key that is setup during installation -- and not even Tidepool knows the key. We essentially treat individual disks as ephemeral. If one were to be physically stolen or recycled to someone who tried to read it, no one would be capable of decrypting the information on it.
-

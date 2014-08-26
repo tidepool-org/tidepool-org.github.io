@@ -14,7 +14,7 @@ There are multiple types of boluses that the tidepool platform can handle.
 * square
 * dual/square
 
-Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](../v1.html)
+Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](..)
 
 ## Injected
 
@@ -40,7 +40,7 @@ The storage and output format for this datum is exactly what was initially inges
 
 A "normal" bolus is a one-time dose of insulin that is all delivered as quickly as the pump is willing/able.  It is the simplest type of bolus, composed of two events:
 
-~~~json 
+~~~json
 {
   "type": "bolus",
   "subType": "normal",
@@ -56,7 +56,7 @@ It may be followed by a "completion" event that looks almost the same as the abo
 * A different timestamp
 * A `previous` field
 
-~~~json 
+~~~json
 {
   "type": "bolus",
   "subType": "normal",

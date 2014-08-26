@@ -1,7 +1,6 @@
 markdown: kramdown
 kramdown:
   input: GFM
-permalink: /:title/
 collections:
   docs:
     output: true
