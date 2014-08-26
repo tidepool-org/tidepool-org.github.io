@@ -27,16 +27,13 @@
             <div id="content" class="clearfix">
               <div class="post page type-page hentry clearfix">
                 <div class="entry-content">
-  <div class="TOC">
-    {% capture post_formatter %}title_only.html{% endcapture %}
-    {% include tagposts.html %}
-  </div>
+
+  {% include components_toc.html %}
 
 <div class="full-width">
     {{ content }}
 
-    {% capture post_formatter %}full_repo.html{% endcapture %}
-    {% include tagposts.html %}
+    {% include components_list.html %}
 </div></div>
               </div>
             </div>

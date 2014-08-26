@@ -1,5 +1,5 @@
 ---
-layout: apilist
+layout: components
 title: Tidepool Components
 published: true
 ---

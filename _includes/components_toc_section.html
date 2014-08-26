@@ -1,0 +1,5 @@
+<ul>
+{% for component in include.components %}
+  <li><a href="#{{ component.github_name }}">{{ component.headline }}</a></li>
+{% endfor %}
+</ul>
