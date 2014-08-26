@@ -1,4 +1,4 @@
-/*   
+/*
 Theme Name: Tidepool
 Theme URI: http://tidepool.org/
 Description: A custom theme built by hand for Tidepool by futureprüf.
@@ -11,12 +11,12 @@ Tags:
 
 /* ================= RESET BROWSER DEFAULTS ================= */
 
-html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
-p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
-img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em,
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, figure, figcaption, hgroup, 
+article, aside, canvas, details, figure, figcaption, hgroup,
 menu, footer, header, nav, section, summary, time, mark, audio, video {
 	margin: 0;
 	padding: 0;
@@ -64,77 +64,11 @@ img {
 
 /* ================= TYPOGRAPHY ================= */
 
-@font-face {
-    font-family: 'gt_walsheim_light';
-    src: url('../fonts/gt-walsheim-light-web.eot');
-    src: url('../fonts/gt-walsheim-light-web.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gt-walsheim-light-web.woff') format('woff'),
-         url('../fonts/gt-walsheim-light-web.ttf') format('truetype'),
-         url('../fonts/gt-walsheim-light-web.svg#gt_walsheim_light') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gt_walsheim_light_oblique';
-    src: url('../fonts/gt-walsheim-light-oblique-web.eot');
-    src: url('../fonts/gt-walsheim-light-oblique-web.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gt-walsheim-light-oblique-web.woff') format('woff'),
-         url('../fonts/gt-walsheim-light-oblique-web.ttf') format('truetype'),
-         url('../fonts/gt-walsheim-light-oblique-web.svg#gt_walsheim_light_oblique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gt_walsheim_medium';
-    src: url('../fonts/gt-walsheim-medium-web.eot');
-    src: url('../fonts/gt-walsheim-medium-web.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gt-walsheim-medium-web.woff') format('woff'),
-         url('../fonts/gt-walsheim-medium-web.ttf') format('truetype'),
-         url('../fonts/gt-walsheim-medium-web.svg#gt_walsheim_medium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gt_walsheim_medium_oblique';
-    src: url('../fonts/gt-walsheim-medium-oblique-web.eot');
-    src: url('../fonts/gt-walsheim-medium-oblique-web.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gt-walsheim-medium-oblique-web.woff') format('woff'),
-         url('../fonts/gt-walsheim-medium-oblique-web.ttf') format('truetype'),
-         url('../fonts/gt-walsheim-medium-oblique-web.svg#gt_walsheim_medium_oblique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gt_walsheim_regular';
-    src: url('../fonts/gt-walsheim-web.eot');
-    src: url('../fonts/gt-walsheim-web.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gt-walsheim-web.woff') format('woff'),
-         url('../fonts/gt-walsheim-web.ttf') format('truetype'),
-         url('../fonts/gt-walsheim-web.svg#gt_walsheim_regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'gt_walsheim_regular_oblique';
-    src: url('../fonts/gt-walsheim-regular-oblique-web.eot');
-    src: url('../fonts/gt-walsheim-regular-oblique-web.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/gt-walsheim-regular-oblique-web.woff') format('woff'),
-         url('../fonts/gt-walsheim-regular-oblique-web.ttf') format('truetype'),
-         url('../fonts/gt-walsheim-regular-oblique-web.svg#gt_walsheim_regular_oblique') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
 body, input, textarea {
-	color: #000;
-	font-size: 15px;
-	line-height: 24px;
-	font-family: 'gt_walsheim_regular';
+	color: #333;
+	font-size: 16px;
+	line-height: 1.6;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 /* Headings
@@ -199,12 +133,6 @@ dd {
 
 b, strong {
 	font-weight: normal;
-	font-family: 'gt_walsheim_regular';
-}
-
-cite, em, i {
-	font-family: 'gt_walsheim_light_oblique';
-	color: #617CFF;
 }
 
 blockquote {
@@ -414,11 +342,11 @@ body {
 }
 
 
-/* -------------------------------------------------------------- 
-   
+/* --------------------------------------------------------------
+
    Default styles for Images
-  
--------------------------------------------------------------- */   
+
+-------------------------------------------------------------- */
 .entry-content .wp-post-image {
 	margin: 0 0 20px;
 }
@@ -562,7 +490,6 @@ pre, code {
 
 blockquote {
 	color: #A1A3A6;
-	font-family: 'gt_walsheim_light_oblique';
 }
 
 table {
@@ -593,7 +520,6 @@ td {
 	padding: .7em 1.25em;
 	min-width: 150px;
 	font-size: 13pt;
-	font-family: 'gt_walsheim_light';
 }
 
 td:first-child {
@@ -612,17 +538,15 @@ hr {
 	color: #ccc;
 }
 
-a:link {
-	color: #271845;
-}
-
-a:visited {
-	color: #271845;
+a {
+	color: #617CFF;
+	text-decoration: none;
 }
 
 a:active,
+a:focus,
 a:hover {
-	color: #617CFF;
+	text-decoration: underline;
 }
 
 
@@ -846,10 +770,6 @@ ul.sf-menu li li li.sfHover ul {
 	margin: 0 0 48px 0;
 }
 
-.attachment .page-title {
-	font-family: 'gt_walsheim_light_oblique';
-}
-
 .page-title a {
 	color: #A1A3A6;
 	text-decoration: none;
@@ -858,10 +778,6 @@ ul.sf-menu li li li.sfHover ul {
 .page-title a:active,
 .page-title a:hover {
 	color: #FF8D79;
-}
-
-.page-title span {
-	font-family: 'gt_walsheim_light_oblique';
 }
 
 .page-title .meta-nav {
@@ -939,48 +855,38 @@ ul.sf-menu li li li.sfHover ul {
 
 .entry-content h1 {
 	font-size: 40px;
-	color: #617CFF;
+	color: #333333;
 	margin: 0 0 1em;
-	max-width: 740px;
 	line-height: 1.2em;
 }
 
 .entry-content h2 {
 	font-size: 30px;
-	color: #617CFF;
+	color: #2843C7;
 	margin: 0 0 1em;
-	max-width: 740px;
 	line-height: 1.2em;
 }
 
 .entry-content h3 {
 	font-size: 24px;
 	font-style: italic;
-	color: #617CFF;
+	color: #DA25A7;
 	margin: 0 0 1em;
-	max-width: 740px;
 	line-height: 1.2em;
 }
 
 .entry-content h4 {
-	color: #B287F3;
-	font-size: 24px;
-	margin: 0 0 0.5em 0.5em;
-	max-width: 740px;
+	color: #A1A3A6;
+	font-size: 18px;
+	margin: 0 0 0.5em;
 }
 
 .entry-content p,
 .entry-content li {
-	font-family: 'gt_walsheim_light', Arial, "Helvetica Neue", Helvetica, sans-serif;;
-	font-size: 20px;
-	color: #271845;
-	max-width: 740px;
-	line-height: 1.5em;
 }
 
 .entry-content table {
 	margin-left: 1px;
-	max-width: 740px;
 }
 
 .entry-content embed {
@@ -1013,7 +919,11 @@ font-style: italic;
 	margin-left: -20px;
 }
 
-.TOC a {
+.TOC a,
+.TOC a:hover,
+.TOC a:focus,
+.TOC a:active {
+	color: #333;
 }
 
 .entry-utility {
@@ -1028,7 +938,6 @@ font-style: italic;
 
 .entry-utility a {
 	color: #A1A3A6;
-	font-family: 'gt_walsheim_light_oblique';
 	text-decoration: none;
 }
 
@@ -1127,7 +1036,6 @@ li.content-column {
 
 .navigation a {
 	color: #A1A3A6;
-	font-family: 'gt_walsheim_light_oblique';
 	text-decoration: none;
 }
 
@@ -1261,7 +1169,6 @@ li.content-column {
 
 #comments-list .comment-meta a {
 	color: #A1A3A6;
-	font-family: 'gt_walsheim_light_oblique';
 	text-decoration: none;
 }
 
@@ -1278,7 +1185,6 @@ li.content-column {
 
 .comment-reply-link a {
 	color: #A1A3A6;
-	font-family: 'gt_walsheim_light_oblique';
 	text-decoration: none;
 }
 
@@ -1370,10 +1276,6 @@ li.content-column {
 	margin: 0;
 }
 
-#form-allowed-tags span {
-	font-family: 'gt_walsheim_light_oblique';
-}
-
 #form-allowed-tags code {
 	font-size: 11px;
 	line-height: normal;
@@ -1411,7 +1313,7 @@ li.content-column {
 -------------------------------------------------------------- */
 
 .aside {
-	width: 300px;	
+	width: 300px;
 }
 
 
@@ -1600,7 +1502,6 @@ li.content-column {
 	font-family: Georgia,serif;
 	font-weight: normal;
 	font-size: 17px;
-	font-family: 'gt_walsheim_light_oblique';
 	padding: 0 0 7px 0;
 	text-transform: none;
 }
@@ -1669,17 +1570,17 @@ li.content-column {
 		font-weight: normal;
 		margin: 0 0 12px;
 	}
-	
+
 		#footer .footer-column h3 a:link,
 		#footer .footer-column h3 a:visited {
 			color: #617CFF;
 			text-decoration: none;
 		}
-		
+
 		#footer .footer-column h3 a:hover {
 			color: #FF8D79;
 		}
-	
+
 	#footer .footer-column ul {
 		margin: 0;
 		padding: 0;
@@ -1687,7 +1588,7 @@ li.content-column {
 	}
 
 #menu-footer-social-menu {}
-	
+
 	#menu-footer-social-menu li {
 		width: 26px;
 		height: 26px;
@@ -1695,7 +1596,7 @@ li.content-column {
 		text-indent: -9999px;
 		margin: 0 12px 0 0;
 	}
-	
+
 		#menu-footer-social-menu li a {
 			width: 100%;
 			height: 100%;
@@ -1705,22 +1606,22 @@ li.content-column {
 			transition: all 0.2s linear;
 			-webkit-transition: all 0.2s linear;
 		}
-		
+
 		#menu-footer-social-menu li a:hover {
 			opacity: 1.0;
 			-webkit-opacity: 1.0;
 		}
-	
+
 #menu-item-258 {}
-	
+
 	#menu-item-258 a {
 		background: url('../images/icon-twitter.svg') no-repeat;
 	}
-	
+
 	#menu-item-259 a {
 		background: url('../images/icon-google_plus.svg') no-repeat;
 	}
-	
+
 	#menu-item-260 a {
 		background: url('../images/icon-facebook.svg') no-repeat;
 	}
@@ -1739,12 +1640,12 @@ li.content-column {
 	#siteinfo a:active,
 	#siteinfo a:hover {
 	}
-	
-/* -------------------------------------------------------------- 
-   
+
+/* --------------------------------------------------------------
+
    Default plugin styles for Thematic
-  
--------------------------------------------------------------- */  
+
+-------------------------------------------------------------- */
 
 /* =Ajax Edit Comments
 -------------------------------------------------------------- */
@@ -1812,21 +1713,21 @@ img#wpstats {
 
 
 
-/* -------------------------------------------------------------- 
-   
+/* --------------------------------------------------------------
+
    Default styles for Images
-   
+
    I've duplicated these styles here from images.css in
    order to get Thematic through the auto-checker at the
    official WordPress Themes directory.
-   
+
    When the directory can hunt though css files linked
    through @import the styles below will no longer be
    necessary and will be removed.
-   
+
    Cheers. --Ian Stewart
-  
--------------------------------------------------------------- */   
+
+-------------------------------------------------------------- */
 
 .entry-content img {
     height:auto;
@@ -1884,7 +1785,7 @@ img.aligncenter {
 /* ================= TIDEPOOL ================= */
 
 .global-width {
-	width: 870px;
+	max-width: 800px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -1901,14 +1802,14 @@ img.aligncenter {
 		position: relative;
 		z-index: 1;
 	}
-	
+
 	#page-content-header h3 {
 		color: #FFF;
 		width: 70%;
 		font-size: 48px;
 		line-height: 1.1em;
 	}
-	
+
 	#page-content-header-icon-container {
 		width: 172px;
 		height: 172px;
@@ -1917,7 +1818,7 @@ img.aligncenter {
 		right: 0;
 		z-index: 999;
 	}
-	
+
 	#page-content-header-background {
 		z-index: 0;
 		left: 60%;
@@ -1926,7 +1827,7 @@ img.aligncenter {
     position: absolute;
     top: 50%;
 	}
-	
+
 			#page-content-header-background img {
 				max-width: none;
 			}
@@ -1976,7 +1877,7 @@ img.aligncenter {
 		width: 100%;
 		position: relative;
 	}
-	
+
 	#slideshow li .slide-background {
 		margin: -560px 0 0 0;
 		position: absolute;
@@ -1984,13 +1885,13 @@ img.aligncenter {
 		left: 60%;
 		max-width: none;
 	}
-	
+
 	#slideshow li .slide-inner {
 		padding: 48px 0 24px 0;
 		position: relative;
 		z-index: 1;
 	}
-	
+
 		#slideshow li h3 {
 			color: #FFF;
 			font-size: 36px;
@@ -1998,13 +1899,13 @@ img.aligncenter {
 			width: 60%;
 			margin: 0 0 1em;
 		}
-		
+
 			#slideshow li h3 a:link,
 			#slideshow li h3 a:visited {
 				color: #FFF;
 				text-decoration: none;
 			}
-		
+
 		#slideshow li p {
 			color: #FFF;
 			font-size: 24px;
@@ -2018,12 +1919,12 @@ img.aligncenter {
 }
 
 	#slideshow-home-module-pager-inner {}
-		
+
 		#pager {
 			padding: 12px 0;
 			text-align: center;
 		}
-		
+
 			#pager a:link,
 			#pager a:visited {
 				display: inline-block;
@@ -2041,7 +1942,7 @@ img.aligncenter {
 				transition: all 0.2s linear;
 				-webkit-transition: all 0.2s linear;
 			}
-			
+
 			#pager a:hover,
 			#pager a.cycle-pager-active {
 				opacity: 1.0;
@@ -2078,27 +1979,27 @@ img.aligncenter {
 		transition: all 0.2s linear;
 		-webkit-transition: all 0.2s linear;
 	}
-	
+
 	#promo_blocks-home li:hover {
 		opacity: 0.5;
 	}
-	
+
 	#promo_blocks-home li img {
 		width: 120px;
 	}
-	
+
 	#promo_blocks-home li h3 {
 		color: #617CFF;
 		font-size: 24px;
 	}
-	
+
 	#promo_blocks-home li h3 a:link,
 	#promo_blocks-home li h3 a:visited {
 		color: #617CFF;
 		font-size: 24px;
 		text-decoration: none;
 	}
-	
+
 	#promo_blocks-home li .promo_block-content {}
 
 .menu-home-page-menu-container {
@@ -2115,16 +2016,16 @@ img.aligncenter {
 		font-size: 20px;
 		line-height: 64px;
 	}
-	
+
 		#menu-home-page-menu li {
 			height: 64px;
 			border-top: 1px dotted #FFF;
 		}
-		
+
 		#menu-home-page-menu li:first-child {
 			border: none;
 		}
-	
+
 			#menu-home-page-menu li a:link,
 			#menu-home-page-menu li a:visited {
 				background: #FF8D79;
@@ -2140,12 +2041,12 @@ img.aligncenter {
 				-o-transition: all 200ms linear;
 				transition: all 200ms linear;
 			}
-			
+
 			#menu-home-page-menu li a:hover {
 				color: #FF8D79;
 				background: #FFC6BC;
 			}
-			
+
 /* TEAM */
 
 #team-members {
@@ -2201,21 +2102,20 @@ img.aligncenter {
 	border-bottom: #CBCDCE solid 1px;
 	margin: 0 0 48px;
 }
-	
+
 	.faqs {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
-		
+
 		.faqs li.faq {
 			margin: 0 0 48px;
 		}
-		
+
 			.faqs li.faq h3 {
 				font-size: 20px;
 				line-height: 1.5em;
-				font-family: 'gt_walsheim_regular';
 			}
 
 .module-navigation-categories {
@@ -2238,20 +2138,20 @@ img.aligncenter {
 		padding: 12px;
 		list-style: none;
 	}
-	
+
 		.navigation-categories li {
 			font-size: 14px;
 			line-height: 1.8em;
 			margin: 6px 0;
 		}
-	
+
 			.navigation-categories li a:link,
 			.navigation-categories li a:visited {
 				display: block;
 				color: #A1A3A6;
 				text-decoration: none;
 			}
-			
+
 			.navigation-categories li a:hover {
 				color: #617CFF;
 			}
@@ -2259,13 +2159,13 @@ img.aligncenter {
 /* JOBS */
 
 #block-jobs {}
-	
+
 	#jobs {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
-	
+
 		#jobs li.job {
 			margin: 0 0 48px;
 			padding: 0 0 48px;
@@ -2275,28 +2175,28 @@ img.aligncenter {
 /* PARTNERS */
 
 #block-partners {}
-	
+
 	#partners {
 		margin: 0;
 		padding: 0;
 		list-style: none;
 	}
-	
+
 		#partners li.partner {
 			margin: 0 0 48px;
 		}
-		
+
 			#partners li.partner h3 {
 				color: #617CFF;
 				margin: 0;
 			}
-				
+
 				#partners li.partner h3 a:link,
 				#partners li.partner h3 a:visited {
 					text-decoration: none;
 					color: #617CFF;
 				}
-				
+
 /* MAILCHIMP */
 
 .mc_embed_signup {
@@ -2346,7 +2246,7 @@ img.aligncenter {
 	height: 30px;
 	line-height: 30px;
 	-webkit-appearance: none;
-	-webkit-border-radius: 0; 
+	-webkit-border-radius: 0;
 	border-radius: 0;
 	padding: 0;
 }
@@ -2389,7 +2289,7 @@ img.aligncenter {
 	line-height: 30px;
 	padding: 0 0 0 12px;
 	-webkit-appearance: none;
-	-webkit-border-radius: 0; 
+	-webkit-border-radius: 0;
 	border-radius: 0;
 }
 
@@ -2416,7 +2316,7 @@ img.aligncenter {
 }
 
 .mc_embed_signup .asterisk {}
-.mc_embed_signup .mc-field-group .asterisk {}        
+.mc_embed_signup .mc-field-group .asterisk {}
 .mc_embed_signup .clear { clear: both; }
 
 .mc_embed_signup .mc-field-group.input-group ul {margin:0; padding:5px 0; list-style:none;}
@@ -2563,11 +2463,11 @@ body {
 /*		Tablet Layout: 768px. */
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-	
+
 	.trigger-navigation-main {
 		display: block;
 	}
-	
+
 	#access .menu {
 		background: #FFF;
 		height: 100%;
@@ -2576,48 +2476,48 @@ body {
 		right: -240px;
 		top: 0;
 		width: 200px;
-		z-index: 9999;	
+		z-index: 9999;
 	}
-	
+
 	#menu-main {
 		left: 0;
 		line-height: 30px;
 		text-align: left;
 		width: 200px;
 	}
-	
+
 	#menu-item-637 {
 		display: block;
 	}
-	
+
 	.sf-menu a, .sf-menu a:visited {
 		color: #271845;
 		padding: 3px 0;
 	}
-	
+
 	.sf-menu a,
 	.sf-menu a:visited,
 	.sf-menu ul li a {
 		padding: 3px 0;
 	}
-	
+
 	.sf-menu a:hover {
 		color: #FF8D79;
 	}
-	
+
 	.sf-menu ul {
 		position: static;
 		margin: 0 0 0 12px;
 	}
-	
+
 	.sf-menu li {
 		width: 100%;
 	}
-	
+
 	.sf-menu ul a {
 		background: none;
 	}
-	
+
 	.sf-menu .current-menu-item a,
 	.sf-menu .current-menu-parent a,
 	.sf-menu .current-menu-ancestor a,
@@ -2648,17 +2548,17 @@ body {
 	.sf-menu .current_page_parent li.current-menu-item a {
 		color: #FF8D79;
 	}
-	
+
 	#branding {
 		margin: 0;
 	}
-	
+
 	#post-105,
 	.menu-home-page-menu-container {
 		width: auto;
 		float: none;
 	}
-	
+
 	.global-width {
 		width: 708px;
 	}
@@ -2666,58 +2566,58 @@ body {
 	#promo_blocks-home {
 		padding: 0;
 	}
-	
+
 	#footer .footer-column {
 		margin: 0 50px 0 0;
 	}
-	
+
 	#menu-home-page-menu {
 		width: 160px;
 	}
-	
+
 	.entry-content p, .entry-content li {
 		max-width: none;
 	}
-	
+
 	#post-105 {
 		float: left;
 		width: 460px;
 	}
-	
+
 	#slideshow li {
 		padding: 24px 0 12px;
 	}
-	
+
 	#slideshow li h3 {
 		font-size: 30px;
 		line-height: 1.2em;
 	}
-	
+
 	#slideshow li p {
 		font-size: 18px;
 	}
-	
+
 	#page-background-container {
 		opacity: 0.12;
 	}
-	
+
 	#page-content-header-icon-container {
 		bottom: -36px;
 	}
-	
+
 	.team-member-image {
 		width: 200px;
 	}
-	
+
 	.team-member-body {
 		width: 488px;
 	}
-	
+
 	.module-navigation-categories,
 	.aside {
 		width: 168px;
 	}
-	
+
 }
 
 
@@ -2725,7 +2625,7 @@ body {
 /*		Mobile Layout: 320px. */
 
 @media only screen and (max-width: 767px) {
-	
+
 	.global-width {
 		width: 300px;
 	}
@@ -2733,11 +2633,11 @@ body {
 	#promo_blocks-home {
 		padding: 0;
 	}
-	
+
 	.trigger-navigation-main {
 		display: block;
 	}
-	
+
 	#access .menu {
 		background: #FFF;
 		height: 100%;
@@ -2746,48 +2646,48 @@ body {
 		right: -240px;
 		top: 0;
 		width: 200px;
-		z-index: 9999;	
+		z-index: 9999;
 	}
-	
+
 	#menu-main {
 		left: 0;
 		line-height: 30px;
 		text-align: left;
 		width: 200px;
 	}
-	
+
 	#menu-item-637 {
 		display: block;
 	}
-	
+
 	.sf-menu a, .sf-menu a:visited {
 		color: #271845;
 		padding: 3px 0;
 	}
-	
+
 	.sf-menu a,
 	.sf-menu a:visited,
 	.sf-menu ul li a {
 		padding: 3px 0;
 	}
-	
+
 	.sf-menu a:hover {
 		color: #FF8D79;
 	}
-	
+
 	.sf-menu ul {
 		position: static;
 		margin: 0 0 0 12px;
 	}
-	
+
 	.sf-menu li {
 		width: 100%;
 	}
-	
+
 	.sf-menu ul a {
 		background: none;
 	}
-	
+
 	.sf-menu .current-menu-item a,
 	.sf-menu .current-menu-parent a,
 	.sf-menu .current-menu-ancestor a,
@@ -2818,27 +2718,27 @@ body {
 	.sf-menu .current_page_parent li.current-menu-item a {
 		color: #FF8D79;
 	}
-	
+
 	#branding {
 		margin: 0;
 	}
-	
+
 	#post-105,
 	.menu-home-page-menu-container {
 		width: auto;
 		float: none;
 	}
-	
+
 	#footer .footer-column {
 		margin: 0 24px 0 0;
 		width: 124px;
 		min-height: 112px;
 	}
-	
+
 	.mc_embed_signup {
 		width: 300px;
 	}
-	
+
 	#main {
 		padding-bottom: 440px;
 	}
@@ -2847,42 +2747,42 @@ body {
 	  height: 440px;
 	  margin-top: -440px;
 	}
-	
+
 	.mc_embed_signup .mc-field-group {
 		width: 216px;
 	}
-	
+
 	#mc_embed_signup-products.mc_embed_signup .mc-field-group {
 		width: 168px;
 	}
-	
+
 	.mc_embed_signup .mc-field-group input {
 		width: 204px;
 	}
-	
+
 	#mc_embed_signup-products.mc_embed_signup .mc-field-group input {
 		width: 156px;
 	}
-	
+
 	#mc_embed_signup-products {
 		width: 252px;
 	}
-	
+
 	#mc_embed_signup-products.mc_embed_signup .mc-field-group-first-name,
 	#mc_embed_signup-products.mc_embed_signup .mc-field-group-last-name {
 		width: 124px;
 	}
-	
+
 	#mc_embed_signup-products.mc_embed_signup .mc-field-group-first-name input,
 	#mc_embed_signup-products.mc_embed_signup .mc-field-group-last-name input {
 		width: 112px;
 	}
-	
+
 	#page-content-header h3 {
 		width: auto;
 		font-size: 30px;
 	}
-	
+
 	#page-content-header-icon-container {
 		bottom: -40px;
 		height: 80px;
@@ -2891,16 +2791,16 @@ body {
 		width: 80px;
 		z-index: 999;
 	}
-	
+
 	#page-background-container {
 		opacity: 0.12;
 	}
-	
+
 	.team-member-image,
 	.team-member-body {
-		
+
 	}
-	
+
 	.block-faqs,
 	.blog #container,
 	.single #container,
@@ -2909,20 +2809,20 @@ body {
 		width: auto;
 		float: none;
 	}
-	
+
 	.team-member-image {
 		width: auto;
 		max-width: 100%;
 		margin: 0;
 		height: auto;
 	}
-	
+
 	.module-navigation-categories {
 		margin: 0 0 24px;
 	}
-	
-	
-	
+
+
+
 }
 
 
@@ -2930,7 +2830,7 @@ body {
 /*		Wide Mobile Layout: 480px. */
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
-	
+
 	.global-width {
 		width: 460px;
 	}
@@ -2938,26 +2838,26 @@ body {
 	#promo_blocks-home {
 		padding: 0;
 	}
-	
+
 	#footer .footer-column {
 		margin: 0 90px 0 0;
 		width: 140px;
 	}
-	
+
 }
 
 
 /*	Retina media query.
-	Overrides styles for devices with a 
+	Overrides styles for devices with a
 	device-pixel-ratio of 2+, such as iPhone 4.
 -----------------------------------------------    */
 
-@media 
+@media
 	only screen and (-webkit-min-device-pixel-ratio: 2),
 	only screen and (min-device-pixel-ratio: 2) {
-	
+
 	body {
-	
+
 	}
-	
+
 }
