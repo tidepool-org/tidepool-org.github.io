@@ -221,20 +221,50 @@ Response:
 
 ### Create Care Team
 
+  Create a new care team (we need to see if only the careteam crator can do this or also an admin)
+
+  ```
+  Set permissions for either admin or view only.
+  ```
+
+
 ### Get Care Teams
 
+  Get list of care teams i own or am a member of including my own care team.
+
 ### Get members
+  Get members for a care team,
 
 ### Send member invitation
 
-### Get Send invitations
+  Dont think we need this, how is this different from create care team. Was this meant for re-sending invitations?
+
+### Get Sent invitations
+
+  Get a list of sent pending invitations
 
 ### Cancel invitation
 
+  Removes an invitation. This can happend before of after it being dismissed by not after it being approved.
+
+### Dismiss invitation
+
+  Sets a dismissed flag in invitation so that the users that recieved then invitation does not see it again.
+
 ### Get received invitations
+
+  Get list of received invitations for a given user.
 
 ### Accept invitation
 
+  An invitation gets accepted and a care team is created, then invitation gets deleted.
+
 ### Change member permissions
 
+  Change a members permissions (we need to see if only the careteam crator can do this or also an admin)
+
 ### Remove member
+
+  Remove a member from a careteam. (we need to see if only the careteam crator can do this or also an admin)
+
+  A member can always remove himself from a care team.
