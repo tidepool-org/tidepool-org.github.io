@@ -4,7 +4,7 @@ title: Tidepool Query Language and Notifications system
 published: true
 ---
 
-This document was created by Kent Quirk and last edited in mid-August, 2014.
+This document was created by Kent Quirk and last edited in late August, 2014.
 
 #Background
 

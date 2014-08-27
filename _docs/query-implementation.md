@@ -4,13 +4,13 @@ title: Tidepool Query Implementation specification
 published: true
 ---
 
-This document was created by Kent Quirk and last edited in mid-July, 2014.
+This document was created by Kent Quirk and last edited in late August, 2014.
 
 # Query Implementation Spec
 
 # Introduction
 
-This document attempts to spec out the framework on which we will implement TQL, the [Tidepool Query language](QueriesAndNotifications.html). 
+This document attempts to spec out the framework on which we will implement TQL, the [Tidepool Query language](queries-and-notifications). 
 
 It is a simple endpoint that implements a basic JSON-based query system intended to be able to express TQL queries.
 
