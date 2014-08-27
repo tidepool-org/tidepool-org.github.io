@@ -4,7 +4,7 @@
     - headline: The Blip application
       purpose: The client side implementation of Blip.
       github_name: blip
-      description: Under active development
+      description: Under active development. A system for integrating and analyzing diabetes data from a wide variety of sources, all in one place.
 
     - headline: Message app
       purpose: A browser-based, mobile-friendly message application
@@ -16,7 +16,7 @@
       github_name: tideline
       description: This is where the visualization code lies. Be sure to look at its README file and Wiki; there's a lot of information in there.
 
-    - headline: Routing
+    - headline: API wrapper library
       github_name: platform-client
       naming_note:
       purpose: Centralizes access to the tidepool servers from a client app
@@ -42,13 +42,19 @@
       purpose: "Managing a list of servers and processes to assign to those servers."
       description: 'Shio operates by combining "deployable tarballs" with "config tarballs" and running the application. Shio has two main concepts: servers and slots. Servers are the physical machines that you deploy to. Slots are deployment slots that exist on servers for deployment. You can have multiple different slots on the same server and deploy different things to that one server.'
 
+    - headline: Metrics tracking
+      github_name: highwater
+      naming_note: The highwater mark is a metric about tides.
+      purpose: To anonymize and isolate metrics tracking
+      description: Acts as an interface to a third-party metrics system so that we can ensure that no personally-identifiable information (PII) leaks out of the Tidepool servers and into third party sites like our metrics site. It also allows us to change metrics companies without a lot of pain.
+
 - title: Medical Data Storage
   components:
 
     - headline: Data Upload
-      purpose: Manages uploads of health data through sandcastle
+      purpose: Manages uploads of health data. 
       github_name: jellyfish
-      description: Under active development
+      description: Under active development. Defines and enforces the format of the data that is uploaded to the Tidepool system. The data formats are documented in the <a href="../data-model/v1">Data Model Pages</a>.
 
     - headline: Authorization client and server
       github_name: gatekeeper
@@ -73,19 +79,9 @@
       github_name: sundial
       description: Intended to create a central place for managing time formats, timezone management, and the like. Under active development.
 
-    - headline: Wrapper for easy access to user API
-      purpose: Server-side npm package providing functions and middleware for easily using the user-api.
-      github_name: user-api-client
-      description: Under active development
-
-    - headline: Wrapper for easy access to message API
-      purpose: Server-side npm package providing functions and middleware for easily using the message-api.
-      github_name: message-api-client
-      description: Under active development
-
     - github_name: tools
       headline: Tools to help in Tidepool development
-      purpose: General repository of useful but not critical things.
+      purpose: General repository of useful things.
       description: This repository contains runservers, which is a script to help get all the important bits of the tidepool platform running locally.
 
 - title: User data storage
@@ -95,7 +91,13 @@
       github_name: user-api
       apiary_name: tidepooluserapi
       purpose: "User login and session management"
-      description: The Tidepool User API is used to manage the user login information and pretty much nothing else. (Temporarily, it also manages sessions, but that will change.) It manages authentication and the most basic user information necessary for logging in.
+      description: The Tidepool User API is used to manage the user login information and pretty much nothing else. (Temporarily, it also manages sessions, but that will change.) It manages authentication and the most basic user information necessary for logging in. This library is written in JavaScript and will soon be replaced by shoreline.
+
+    - headline: User Login and ID
+      github_name: shoreline
+      purpose: "User login and session management"
+      naming_note: The shoreline is the place where users encounter a tidepool.
+      description: The Tidepool User API is used to manage the user login information and pretty much nothing else. (Temporarily, it also manages sessions, but that will change.) It manages authentication and the most basic user information necessary for logging in. This is written in Go and will soon replace user-api.
 
     - headline: User Metadata
       purpose: Tracking user metadata with per-user encryption.
@@ -123,3 +125,14 @@
       naming_note: An armada is a group of ships.
       apiary_name: tidepoolarmada
       description: This API is being deprecated in favor of gatekeeper.
+
+    - headline: Wrapper for easy access to user API
+      purpose: Server-side npm package providing functions and middleware for easily using the user-api.
+      github_name: user-api-client
+      description: Under active development
+
+    - headline: Wrapper for easy access to message API
+      purpose: Server-side npm package providing functions and middleware for easily using the message-api.
+      github_name: message-api-client
+      description: Under active development
+
