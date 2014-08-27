@@ -4,7 +4,11 @@ title: Tidepool Query Language and Notifications system
 published: true
 ---
 
-This document was created by Kent Quirk and last edited in late August, 2014.
+This document was created by Kent Quirk and last edited in late August, 2014. It is a work in progress.
+
+#Current Status
+
+As of 26 Aug 2014, we have a sample [implementation](../query-implementation) of a Go-based TQL parser that can parse correctly-formatted queries, but doesn't do well with poorly-formatted stuff. It doesn't yet generate the TQL JSON, but that's the next step. 
 
 #Background
 
