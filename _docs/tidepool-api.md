@@ -232,8 +232,16 @@ Response:
 
   Get list of care teams i own or am a member of including my own care team.
 
+### Edit care team
+
+  edit care team full name, diagnosed date, birthday, and info.
+
 ### Get members
   Get members for a care team,
+
+### Delete care team
+
+  Set a flag on care team object and its data that marks the object for deletion and removes it from care team view. (Who would be alowed to do this?)
 
 ### Send member invitation
 
