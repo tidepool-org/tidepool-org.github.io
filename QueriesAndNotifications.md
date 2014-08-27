@@ -87,7 +87,7 @@ A few notes when reading the examples:
     QUERY
         TYPE=smbg
         COLUMNS time, value, trend
-        SORT BY time REVERSED
+        SORT BY time AS Timestamp REVERSED
         LIMIT 1
 ~~~
 
@@ -161,14 +161,14 @@ A few notes when reading the examples:
 
 
 
-* Find all the dates in the last 30 days when all BG readings were lower than 50 for more than 30 minutes. 
+ * Find all the readings in the last 30 days for periods when all BG readings were lower than 50 for more than 30 minutes. 
 
 ~~~
     LET q1 = QUERY
         // this query finds the transitions
         TYPE IS cbg
-        SORT BY time
         COLUMNS time, bg, Previous(bg) AS lastbg
+        SORT BY time
         WHERE lastbg >= 50 AND bg < 50 OR lastbg < 50 and bg >= 50
 
     QUERY IN q1
@@ -178,6 +178,27 @@ A few notes when reading the examples:
 
     FILTER IN q2
         COLUMNS time, bg
+~~~
+
+* Just like the previous query, but only list the individual dates when it happened. 
+
+~~~
+    LET q1 = QUERY
+        // this query finds the transitions
+        TYPE IS cbg
+        COLUMNS time, bg, Previous(bg) AS lastbg
+        SORT BY time
+        WHERE lastbg >= 50 AND bg < 50 OR lastbg < 50 and bg >= 50
+
+    QUERY IN q1
+        // and this query finds the durations by looking at the up transitions
+        COLUMNS time, bg, time - Previous(time) AS duration
+        WHERE bg > 50 AND duration > Minutes(30)
+
+    FILTER IN q2
+        COLUMNS Date(time) as date
+        SORT BY date
+        UNIQUE
 ~~~
 
 
@@ -286,8 +307,8 @@ The typelist is a comma-separated list of types.
 
     COLUMNS columnlist
 
-    columnlist: [type.]fieldname (AS alias), ...
-    columnlist: columnexpression AS alias, ...
+    columnlist: [type.]fieldname (AS alias) HIDDEN, ...
+    columnlist: columnexpression AS alias HIDDEN, ...
 
 The COLUMNS clause identifies the set of columns that will be returned by the
 query. The fieldnames must be fields within the set of types specified by the
@@ -297,9 +318,13 @@ alias may be specified to change the key value.
 
 Instead of fieldname, an expression can be used that can specify operations on fieldnames; for example, ```Month(time) as month```.
 
+If HIDDEN is specified on a column, the column is not included in the output of
+the query. This is useful to allow columns to be used in calculations without
+cluttering the output. 
+
 ### SORT clause
 
-    SORT BY column [comparator][REVERSED][, ...]
+    SORT BY column [AS comparator][REVERSED][, ...]
 
 The SORT clause controls how the output of the query is ordered. 
 
@@ -309,9 +334,14 @@ and before any windowed operations are run (Previous, Next).
 If not specified, the sort order is not guaranteed, and the same query may return
 different results from run to run.
 
-Comparator is the name of a comparison function. We currently expect to offer 
-comparators for Numeric, Alpha, and Date values -- perhaps more. If a comparator is 
-not provided, a best guess is made for the column type. 
+Comparator is the name of a comparison function. We currently expect to offer
+comparators for Numeric, Alpha, Time, and Date values -- perhaps more. If a
+comparator is  not provided, a best guess is made for the column type.
+
+### UNIQUE clause
+
+The UNIQUE clause eliminates duplicate rows after a sort. This is useful when
+a query might end up in duplicate results. 
 
 ### GROUP BY clause
 
@@ -382,7 +412,7 @@ the c-like operators. Parentheses and evaluation order will be standard.
     * / % 
     + -
     AND OR NOT XOR 
-    BETWEEN
+    BETWEEN MOD 
 
 
 ## Functions
@@ -471,4 +501,6 @@ Notifications work like this:
 * If the query returns no data, nothing happens. If it returns data, the first record of the result is evaluated. If it differs from the previous first record, the NotifyFunction is called with the arguments specified. (The Notify functions will support templates that can fill in values from the query results.)
 * Supported NotifyFunctions are likely to be SendSMS, PostURL, GetURL, and SendEmail. The query system doesn't yet specify the exact behavior of these functions, but they can return an error code if the attempt fails. For non-fatal errors, the query system will attempt to retry the NotifyFunction call using exponential backoff. If the same query is retriggered before the previous one succeeds, further attempts will be abandoned (there can be only one active instance of a given query). 
 * Notify queries will run against the token they were submitted with, and will consume query resources accordingly. If query resources expire (if the query is using resources at a faster rate than they regenerate) the query will not be run until the resources are available again. This will have the effect of slowing down the query repeat rate.
+* The Notify query returns data that includes a notification code and information on the current state of request throttling. The notification code can be used to cancel a notification (there will either need to be a separate API call for querying / cancelling active notifications, or additional keywords in the language). 
+
 
