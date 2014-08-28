@@ -1,38 +1,6 @@
-# Tidepool API Guide
+# Tidepool API Guide (work in progress)
 
 All requests URLs in this documentation are relative to `https://api.tidepool.io` (ex: `GET /auth/user` means `GET https://api.tidepool.io/auth/user`).
-
-Table of contents:
-
-- [Auth](#auth)
-    - [Login](#login)
-    - [Refresh token](#refresh-token)
-    - [Logout](#logout)
-- [User](#user)
-    - [Get current user](#get-current-user)
-    - [Sign up](#sign-up)
-    - [Update current user](#update-current-user)
-    - [Change password](#change-password)
-    - [Forgot password](#forgot-password)
-- [Health data](#health-data)
-    - [Get data](#get-data)
-    - [Post data](#post-data)
-- [Notes](#notes)
-    - [Get notes](#get-notes)
-    - [Add note](#add-note)
-    - [Edit note](#edit-note)
-    - [Get thread](#get-thread)
-- [Care Team](#care-team)
-    - [Create Care Team](#create-care-team)
-    - [Get Care Teams](#get-care-teams)
-    - [Get members](#get-members)
-    - [Send member invitation](#send-member-invitation)
-    - [Get sent invitations](#get-pending-invitations)
-    - [Cancel invitation](#cancel-invitation)
-    - [Get received invitations](#get-received-invitations)
-    - [Accept invitation](#accept-invitation)
-    - [Change member permissions](#change-member-permissions)
-    - [Remove member](#remove-member)
 
 ## Auth
 
@@ -122,14 +90,16 @@ Note: Logging out with a token that has already expired will yield the same resu
 
 ## User
 
-### Get current user
+### Get user
+
+Defaults to current user
 
 There are two parts to the "user object", **account** and **profile** information.
 
 First, fetch the logged-in user's **account** information with:
 
 ```
-GET /auth/user
+GET /auth/user/:userid
 x-tidepool-session-token: <token>
 ```
 
@@ -185,7 +155,9 @@ Response:
 
 [Create account, update profile]
 
-### Update current user
+### Update user
+
+Defaults to current user
 
 [Update account, update profile]
 
@@ -217,59 +189,69 @@ Response:
 
 ### Get thread
 
-## Care Team
+## Groups
 
-### Create Care Team
-
-  Create a new care team (we need to see if only the careteam crator can do this or also an admin)
-
-  ```
-  Set permissions for either admin or view only.
-  ```
-
-
-### Get Care Teams
+### Get Groups
 
   Get list of care teams i own or am a member of including my own care team.
 
-### Edit care team
+  ```
+  GET /groups/:userId(optional)
+  x-tidepool-session-token: <token>
+  ```
 
-  edit care team full name, diagnosed date, birthday, and info.
+  Maybe see [Get User/s]
+
+### Create group
+
+  Creates a group. In the background this is done by adding data attribute to your profile or creating a dummy account. Userid defaults to user for token. When creating a dummy account you want to the user creating the account to be added as a admin or owner of the group.
+
+  ```
+  POST /groups/:userId
+
+  x-tidepool-session-token: <token>
+  ```
+
+### Edit group
+
+  See [Update user](#update-user).
+
+
+### Delete group
+
+  See [Delete User] for deleteing own user id.
+
+  See how to handle deletion of dummy accounts that:
+    Havent been claimed. i.e. are only data account
+    Have only 1 admin that is you.
+    Have multiple admins.
+
+
+  Set a flag on care team object and its data that marks the object for deletion and removes it from care team view. (Who would be alowed to do this?).
+
+## Group Members
 
 ### Get members
-  Get members for a care team,
+  Get members for a group.
 
-### Delete care team
+  ```
+  GET /groups/:userid/members/:memberUserId(optional)
 
-  Set a flag on care team object and its data that marks the object for deletion and removes it from care team view. (Who would be alowed to do this?)
-
-### Send member invitation
-
-  Dont think we need this, how is this different from create care team. Was this meant for re-sending invitations?
-
-### Get Sent invitations
-
-  Get a list of sent pending invitations
-
-### Cancel invitation
-
-  Removes an invitation. This can happend before of after it being dismissed by not after it being approved.
-
-### Dismiss invitation
-
-  Sets a dismissed flag in invitation so that the users that recieved then invitation does not see it again.
-
-### Get received invitations
-
-  Get list of received invitations for a given user.
-
-### Accept invitation
-
-  An invitation gets accepted and a care team is created, then invitation gets deleted.
+  x-tidepool-session-token: <token>
+  ```
 
 ### Change member permissions
 
   Change a members permissions (we need to see if only the careteam crator can do this or also an admin)
+
+  ```
+  POST /groups/:userid/members/:memberUserId
+
+  x-tidepool-session-token: <token>
+  body: {
+    "permision": "admin" //or view_only
+  }
+  ```
 
 ### Remove member
 
@@ -277,46 +259,177 @@ Response:
 
   A member can always remove himself from a care team.
 
-### Trasactions
-
-  This section is meant to describe what transactions are and how to use them.
-
-  A transction id for example in links generated by the system. A transation id is passed to the client application which can then query the transaction api to get the state and metadata for the transaction.
-
-#### Get Transaction
-
-  Get a transaction.
-
-  Transcation types: Invitation, Password Reset and Confirm Email.
-  Response:
-
   ```
-  200 OK
+  DELETE /groups/:userid/members/:memberUserId
+
+  x-tidepool-session-token: <token>
   ```
 
-  ```javascript
-  {
-    "type": "Invitation",
-    "invitee": "name@mail.com",
+## Member Invitations
+
+### Send member invitation
+
+  Send invitation to add a new member to a care team you are an admin of.
+
+  ```
+  POST /groups/:userid/invite
+
+  x-tidepool-session-token: <token>
+  body: {
+    "email": "personToInvite@email.com",
+    "permision": "admin" //or view_only
   }
   ```
 
-  Or if member exists
-  ```javascript
-  {
-    "type": "Invitation",
-    "invitee": {} // user object,
+### Get Sent invitations
+
+  Get sent invitation for a group you own or are and amin of.
+
+  ```
+  GET /groups/:userid/invited
+
+  x-tidepool-session-token: <token>
+  ```
+
+### Cancel Sent invitation
+
+  Removes an invitation. This can happend before or after it being dismissed but not after it being approved. Requires admin privilieges.
+
+  ```
+  DELETE /groups/:userid/invited/:inviteId
+
+  x-tidepool-session-token: <token>
+  ```
+### Get received invitations
+
+  Get list of received invitations for logged in user.
+
+  ```
+  GET /user/invites
+
+  x-tidepool-session-token: <token>
+  ```
+### Dismiss invitation
+
+  Sets a dismissed flag in the invitation so that the users that received the invitation does not see it again. The user that sent it still sees it.
+
+  ```
+  POST /user/invites/:invitationId/dismiss
+
+  x-tidepool-session-token: <token>
+  ```
+
+### Accept invitation
+
+  ```
+  POST /user/invites/:invitationId/accept
+  ```
+  An invitation gets accepted and a care team is created, then invitation gets deleted.
+
+
+# Ideally we (api consumers) would deal with member invitation and confirmations is the way invitations are handeled by the backend.
+
+## Confirmations
+
+This section is meant to describe what confirmations are and how to use them.
+
+A transction id for example in links generated by the system. A transation id is passed to the client application which can then query the transaction api to get the state and metadata for the transaction.
+
+Transcation types: careteam_invitation, password_reset and email_confirmation.
+
+Sample data format:
+
+```javascript
+{
+  // Confirmation id
+  "id": "abcd098",
+
+  // Destination of confirmation can be:
+  // an existing user...
+  "userid": "123",
+  // OR an email address
+  "userEmail": "msmith@example.com",
+
+  // Origin of confirmation
+  // (optional, only if different from destination)
+  "createdBy": "456",
+
+  // Confirmation type
+  // snake_case naming convention?
+  "type": "careteam_invitation",
+
+  // Confirmation status
+  // Possible values: pending, confirmed, failed, expired
+  // Note that this is the only field that can change
+  // (along with "modifiedOn" of course)
+  "status": "pending",
+
+  // Confirmation key
+  // The only thing public, sent via email?
+  "key": "slj39jng921nquirtey=",
+
+  // Confirmation lifecyle (used to expire or for analytics)
+  "createdOn": "2014-01-31T12:23:32Z",
+  "modifiedOn": "2014-02-14T09:00:25Z",
+
+  // Error object when status is "failed"?
+  "error": {
+    "name": "EmailDeliveryFailure",
+    "message": "Could not deliver email to provided address"
   }
-  ```
+}
+```
 
-  Response:
+## Data accounts
 
-  ```
-  401 ERROR
-  ```
+Create data account for myself (user `123`):
 
-  ```javascript
-  {
-    "message": "Invitation expired"
-  }
-  ```
+Update my profile (or account) object, from this:
+
+```javascript
+var account = {
+	"userid": "123",
+    "username": "msmith@example.com",
+    "password": "secret"
+};
+var profile = {
+	"fullName": "Mary Smith"
+};
+```
+
+to this:
+
+```javascript
+var account = {
+	"userid": "123",
+    "username": "msmith@example.com",
+    "password": "secret"
+};
+var profile = {
+	"fullName": "Mary Smith",
+    "isDataAccount": true
+};
+```
+
+Create a data account for my daughter:
+
+Need create new "dummy account" (user `456`, no password).
+
+First create dummy user and profile. We need to figure out how user `123` becomes an owner for dummy account `456`. Ideally would happend in one call, to avoid risks of a ghosts account.
+
+Would having Root access to the acconut mean that i can delte the acount. If have root and account was login.
+
+
+```javascript
+var account = {
+	"userid": "456",
+    "username": "generated6534"
+};
+var profile = {
+	"fullName": "Elisabeth Smith",
+    "isDataAccount": true
+};
+```
+
+(User `123`, me, has `admin` permissions (maybe root permisons too?) to user `456`, my daughter.)
+Removal of last admin would also require account deletion.
