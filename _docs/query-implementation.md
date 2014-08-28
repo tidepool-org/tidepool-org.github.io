@@ -50,7 +50,7 @@ Each object has `column` which is the name of the column, and may also provide
 `comparator` as the name of the comparator and `reversed` to invert the sense of
 the comparator.
 
-Groupby names a list of columns to group by after sorting.
+Groupby names a list of columns to group by after sorting. Aggregation functions are applied for each grouping.
 
 ### limit and offset
 Limit and offset take numeric values for the limit of rows to be returned and the offset of the starting row. Offset defaults to 0. If not specified, limit may be limited by the constraints of the authentication token being used.
@@ -59,14 +59,14 @@ Limit and offset take numeric values for the limit of rows to be returned and th
     QUERY
         TYPE IN cbg
         COLUMNS time, value*18.01559 AS bg
-        WHERE bg > 200 and Month(time) = Month(Now()) And Year(time) == Year(Now())
+        WHERE bg > 200 AND Month(time) = Month(Now()) AND Year(time) == Year(Now())
 ````
 
 
 ````json
 {
     "types": [{
-        "type": "cbg",
+        "name": "cbg",
         "columns": [
             { "k": "time", "v": { "field": "time"}},
             { 
