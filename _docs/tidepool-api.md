@@ -1,3 +1,9 @@
+---
+layout: defaults
+title: Tidepool API Guidebook
+published: true
+---
+
 # Tidepool API Guide (work in progress)
 
 All requests URLs in this documentation are relative to `https://api.tidepool.io` (ex: `GET /auth/user` means `GET https://api.tidepool.io/auth/user`).
@@ -191,79 +197,164 @@ Defaults to current user
 
 ## Groups
 
-### Get Groups
+A better name for Groups would be "Permissions", but for historical reasons they're called groups. 
 
-  Get list of care teams i own or am a member of including my own care team.
+### Overview
 
-  ```
-  GET /groups/:userId(optional)
-  x-tidepool-session-token: <token>
-  ```
+The "gatekeeper" project provides the mechanism by which Tidepool manages permissions between users.
 
-  Maybe see [Get User/s]
+A user's "groups" are the set of accounts for which the user has some permission.
 
-### Create group
+The permissions currently available are:
 
-  Creates a group. In the background this is done by adding data attribute to your profile or creating a dummy account. Userid defaults to user for token. When creating a dummy account you want to the user creating the account to be added as a admin or owner of the group.
+* **view** -- If B has view permission on account A, B can see all of A's data and metadata but does not have the ability to change it.
+* **upload** -- If B has upload permission, B can add new data to A's account, which implies that B can also read enough information to determine the date and time of A's last upload.
+* **note** -- If B has note permission, B can read the notes records in A's account and can create new notes in that account, as well as edit the notes that B has created.
+* **edit** -- If B has edit permission, B is allowed to change A's data and metadata, but does not have the ability to delete it.
+* **administer** -- If B has administer permission, B can delete the account, change metadata, and change permissions. 
+* **root** -- Root can do anything; account A is presumed to have all permissions on itself. No one except A can have root on account A.
 
-  ```
-  POST /groups/:userId
+### Example
+Let's make this more real with an example:
 
-  x-tidepool-session-token: <token>
-  ```
+Alice is 10. She has diabetes. She has an account on Tidepool.
 
-### Edit group
-
-  See [Update user](#update-user).
-
-
-### Delete group
-
-  See [Delete User] for deleteing own user id.
-
-  See how to handle deletion of dummy accounts that:
-    Havent been claimed. i.e. are only data account
-    Have only 1 admin that is you.
-    Have multiple admins.
+Bob is Alice's dad. Carol is Alice's doctor. Dave is Alice's teacher, and Ellen is Alice's aunt, where Alice goes after school every day.
 
 
-  Set a flag on care team object and its data that marks the object for deletion and removes it from care team view. (Who would be alowed to do this?).
+It's Alice's account, so she (and only she) has root.
+Dad has total control over the account (has every possible permission).
+The doctor can view, upload, and make notes.
+The teacher can make notes but not see any data.
+Alice's aunt provides care but not management.
 
-## Group Members
+Here's the permissions table:
 
-### Get members
-  Get members for a group.
+ permission| Alice | Bob | Carol | Dave | Ellen
+- | - | - | - | - | -
+view | |X|X| |
+upload | |X|X| |X
+note | |X|X|X|X
+edit | |X| | | 
+administer | |X| | | 
+root | X | | | | 
 
-  ```
-  GET /groups/:userid/members/:memberUserId(optional)
+If Alice asks "who can access my data?", she gets back the equivalent of:
 
-  x-tidepool-session-token: <token>
-  ```
+  Alice: root
+  Bob: view, upload, note, edit, administer
+  Carol: view, upload, note
+  Dave: note
+  Ellen: upload, note
 
-### Change member permissions
+If Bob asks "which groups am I in?", he gets back:
 
-  Change a members permissions (we need to see if only the careteam crator can do this or also an admin)
+  Alice: view, upload, note, edit, administer
 
-  ```
-  POST /groups/:userid/members/:memberUserId
+If Carol asks "which groups am I in?", she might get back:
 
-  x-tidepool-session-token: <token>
-  body: {
-    "permision": "admin" //or view_only
+  Alice: view, upload, note
+  Susie: view, upload, note
+  Michael: view
+
+The gatekeeper API is at the /access endpoint on Tidepool servers. Here's the list of things you can do with gatekeeper:
+
+### Which groups am I in?
+
+
+This really means "whose user data can I access, and what permissions do I have for each of them?"
+
+```
+GET /access/groups/:userId
+x-tidepool-session-token: <token>
+```
+
+The userId must be your own, or someone for whom you have "administrative" permission.
+
+The response to this request would look something like this:
+
+```javascript
+{
+  "123": {
+    "root": {}
+  },
+  "456": {
+    "note": {}
   }
+  "789": {
+    "view": {}
+    "note": {}
+    "upload": {}
+  }
+}
+```
+
+### Who can access my data?
+
+This generates the list of userids that have access to your data, and which permissions they have.
+
+```
+GET /access/:groupId
+x-tidepool-session-token: <token>
+```
+
+The groupId here is your userId, or someone for whom you have administrative permission. The response to this request would look something like this:
+
+```javascript
+{
+  "123": {
+    "root": {}
+  },
+  "456": {
+    "view": {}
+  }
+}
+```
+
+### What permissions does user X have on user Y?
+
+This call checks a specific pair of users. The request is only valid if  the userID making the request has administrative permission on one of the accounts in the pair.
+
+```
+GET /access/:groupId/:userid
+x-tidepool-session-token: <token>
+```
+
+The "groupId" belongs to the user whose data is being accessed, and the userId belongs to the user who may have permissions. The response to this request would look something like this:
+
+```javascript
+{
+    "note": {}
+    "view": {}
+}
+```
+
+### Set a user's permissions
+
+  This gives a user a specific set of permissions to access your data.
+
   ```
-
-### Remove member
-
-  Remove a member from a careteam. (we need to see if only the careteam crator can do this or also an admin)
-
-  A member can always remove himself from a care team.
-
-  ```
-  DELETE /groups/:userid/members/:memberUserId
-
+  POST /access/:groupId/:userId
   x-tidepool-session-token: <token>
   ```
+
+  The groupId is the user being modified, and the userId is the user getting the permission. If permissions are being added, the user making the request must have administrative permission on the user being modified. If permissions are being dropped, the user with the permission is allowed to drop it (it's OK to say you don't want to be able to see someone's data). 
+
+  Body is a block of permissions that looks like this:
+
+    ````
+    {
+        "note": {}
+        "view": {}
+    }
+    ````
+
+  The permissions block *replaces* the set of permissions for that user. There is no separate call to add or remove a permission -- you must first read the existing permissions and then change them.
+
+  Note that each permission has an empty object to define its existence; this is to support the idea of more granular permissions later (for example, the "view" permission could support the concept of specific subsets of data to be viewed).
+
+  If a permission is not listed, the permission is not granted. 
+
 
 ## Member Invitations
 
@@ -277,13 +368,13 @@ Defaults to current user
   x-tidepool-session-token: <token>
   body: {
     "email": "personToInvite@email.com",
-    "permision": "admin" //or view_only
+    "permission": "admin" //or view_only
   }
   ```
 
 ### Get Sent invitations
 
-  Get sent invitation for a group you own or are and amin of.
+  Get sent invitation for a group you own or are an admin of.
 
   ```
   GET /groups/:userid/invited
@@ -293,7 +384,7 @@ Defaults to current user
 
 ### Cancel Sent invitation
 
-  Removes an invitation. This can happend before or after it being dismissed but not after it being approved. Requires admin privilieges.
+  Removes a pending invitation (one that has not yet been accepted by the recipient). This can happen before or after it being dismissed but not after it being approved. Requires admin privilieges.
 
   ```
   DELETE /groups/:userid/invited/:inviteId
