@@ -195,6 +195,29 @@ Response:
 200 OK
 ```
 
+```javascript
+messages: [
+ {
+    parentmessage : null,
+    userid: '777',
+    user: { "fullName": "Mary Smith" }, //users public profile
+    groupid: '777',
+    timestamp: '2013-11-28T23:07:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'In three words I can sum up everything I have learned about life: it goes on.'
+  },
+  {
+    parentmessage:null,
+    user: { "fullName": "Bob Smith" }, //users public profile
+    userid: '112',
+    groupid: '777',
+    timestamp: '2013-11-29T23:05:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'Second message.'
+  }
+]
+```
+
 
 ### Add note
 
