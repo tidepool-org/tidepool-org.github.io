@@ -293,7 +293,7 @@ The permissions currently available are:
 * **upload** -- If B has upload permission, B can add new data to A's account, which implies that B can also read enough information to determine the date and time of A's last upload.
 * **note** -- If B has note permission, B can read the notes records in A's account and can create new notes in that account, as well as edit the notes that B has created.
 * **edit** -- If B has edit permission, B is allowed to change A's data and metadata, but does not have the ability to delete it.
-* **administer** -- If B has administer permission, B can delete the account, change metadata, and change permissions. 
+* **administer** -- If B has administer permission, B can delete the account, change metadata, and change invite permissions. 
 * **root** -- Root can do anything; account A is presumed to have all permissions on itself. No one except A can have root on account A.
 
 ### Example
