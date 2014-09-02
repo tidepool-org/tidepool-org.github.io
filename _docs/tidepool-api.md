@@ -121,14 +121,7 @@ Response:
   "username": "mary@example.com",
   "emails": [
     "mary@example.com"
-  ],
-  "userhash": "5b11bb9da396133d527ee6db",
-  "private": {
-    "meta": {
-      "id": "3619e1628a",
-      "hash": "f6f40eeda7ce22ad5fa2032a"
-    }
-  }
+  ]
 }
 ```
 
