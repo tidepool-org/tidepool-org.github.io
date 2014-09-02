@@ -208,11 +208,11 @@ A user's "groups" are the set of accounts for which the user has some permission
 The permissions currently available are:
 
 * **view** -- If B has view permission on account A, B can see all of A's data and metadata but does not have the ability to change it.
-* **upload** -- If B has upload permission, B can add new data to A's account, which implies that B can also read enough information to determine the date and time of A's last upload.
+* **upload** -- If B has upload permission, B can add new data to A's account. This implies that B can also read enough information to determine the date and time of A's last upload.
 * **note** -- If B has note permission, B can read the notes records in A's account and can create new notes in that account, as well as edit the notes that B has created.
 * **edit** -- If B has edit permission, B is allowed to change A's data and metadata, but does not have the ability to delete it.
-* **administer** -- If B has administer permission, B can delete the account, change metadata, and change permissions. 
-* **root** -- Root can do anything; account A is presumed to have all permissions on itself. No one except A can have root on account A.
+* **admin** -- If B has admin permission, B can delete the account, change metadata, and change permissions. 
+* **root** -- Root can do anything; account A always has root on itself. No one except A can have root on account A. (Root doesn't actually exist as a permission bit in the database -- it's just returned from the API as if it does). 
 
 ### Example
 Let's make this more real with an example:
@@ -223,10 +223,10 @@ Bob is Alice's dad. Carol is Alice's doctor. Dave is Alice's teacher, and Ellen 
 
 
 It's Alice's account, so she (and only she) has root.
-Dad has total control over the account (has every possible permission).
-The doctor can view, upload, and make notes.
-The teacher can make notes but not see any data.
-Alice's aunt provides care but not management.
+Bob, the dad, has total control over the account (has every possible permission).
+Carol, the doctor, can view, upload, and make notes.
+Dave, the teacher, can make notes but not see any data.
+Ellen, Alice's aunt, provides care but not management.
 
 Here's the permissions table:
 
@@ -236,20 +236,20 @@ view | |X|X| |
 upload | |X|X| |X
 note | |X|X|X|X
 edit | |X| | | 
-administer | |X| | | 
+admin | |X| | | 
 root | X | | | | 
 
 If Alice asks "who can access my data?", she gets back the equivalent of:
 
   Alice: root
-  Bob: view, upload, note, edit, administer
+  Bob: view, upload, note, edit, admin
   Carol: view, upload, note
   Dave: note
   Ellen: upload, note
 
 If Bob asks "which groups am I in?", he gets back:
 
-  Alice: view, upload, note, edit, administer
+  Alice: view, upload, note, edit, admin
 
 If Carol asks "which groups am I in?", she might get back:
 
@@ -257,19 +257,18 @@ If Carol asks "which groups am I in?", she might get back:
   Susie: view, upload, note
   Michael: view
 
-The gatekeeper API is at the /access endpoint on Tidepool servers. Here's the list of things you can do with gatekeeper:
+(Where Susie and Michael are other clients of hers.) The gatekeeper API is at the ```/access``` endpoint on Tidepool servers. Here's the list of things you can do with gatekeeper:
 
-### Which groups am I in?
+### Which groups is a user in?
 
-
-This really means "whose user data can I access, and what permissions do I have for each of them?"
+This really means "whose data can a user access, and what permissions exist for each of them?"
 
 ```
 GET /access/groups/:userId
 x-tidepool-session-token: <token>
 ```
 
-The userId must be your own, or someone for whom you have "administrative" permission.
+The userId must be user belonging to the session token, or someone for whom that user has admin permission. If not, a 403 will be returned.
 
 The response to this request would look something like this:
 
@@ -289,16 +288,16 @@ The response to this request would look something like this:
 }
 ```
 
-### Who can access my data?
+### Who can access a given user's data?
 
-This generates the list of userids that have access to your data, and which permissions they have.
+This generates the list of userids that have access to the specified user's data, and which permissions they have.
 
 ```
 GET /access/:groupId
 x-tidepool-session-token: <token>
 ```
 
-The groupId here is your userId, or someone for whom you have administrative permission. The response to this request would look something like this:
+The groupId here is the userId belonging to the session token, or someone for whom that user has admin permission. The response to this request would look something like this:
 
 ```javascript
 {
@@ -311,9 +310,9 @@ The groupId here is your userId, or someone for whom you have administrative per
 }
 ```
 
-### What permissions does user X have on user Y?
+### What permissions does userid have for groupid?
 
-This call checks a specific pair of users. The request is only valid if  the userID making the request has administrative permission on one of the accounts in the pair.
+This call checks a specific pair of users. The request is only valid if the session token making the request has admin permission on groupid, or if it is userid.
 
 ```
 GET /access/:groupId/:userid
@@ -331,14 +330,14 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
 
 ### Set a user's permissions
 
-  This gives a user a specific set of permissions to access your data.
+  This gives a user a specific set of permissions to access data.
 
   ```
   POST /access/:groupId/:userId
   x-tidepool-session-token: <token>
   ```
 
-  The groupId is the user being modified, and the userId is the user getting the permission. If permissions are being added, the user making the request must have administrative permission on the user being modified. If permissions are being dropped, the user with the permission is allowed to drop it (it's OK to say you don't want to be able to see someone's data). 
+  The groupId must be the user being modified, and the userId must be the user getting the permission. If permissions are being added, the user making the request (the user in the session token) must have admin permission on the group being modified. If permissions are being dropped, the user with the permission is allowed to drop it (in other words, it's OK to say you don't want to be able to see someone's data). 
 
   Body is a block of permissions that looks like this:
 
@@ -349,7 +348,7 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
     }
     ````
 
-  The permissions block *replaces* the set of permissions for that user. There is no separate call to add or remove a permission -- you must first read the existing permissions and then change them.
+  If the call succeeds, the permissions block *replaces* the set of permissions for that user. There is no separate call to add or remove a permission -- you must first read the existing permissions and then change them.
 
   Note that each permission has an empty object to define its existence; this is to support the idea of more granular permissions later (for example, the "view" permission could support the concept of specific subsets of data to be viewed).
 
@@ -503,6 +502,38 @@ var profile = {
 ```
 
 Create a data account for my daughter:
+
+```
+POST /user/createChild/:userid
+```
+
+Creates a child data account that is managed by the account :userid. For client-side uses, :userid must be the account owned by the token.
+
+Body of post is:
+```javascript
+{
+  "username": "any_unique_username",
+  "password": "apassword",
+  "emails": [list_of_emails]
+  "fullName": "Jane Smith"
+}
+```
+
+The fullName field and username are both required. The username can be any valid username; the call will be rejected if the username is not unique. The password may be omitted or blank. If so, the account will be given a random password and it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank.
+
+If validation fails, a 400 error is returned with an explanation of the error in the body.
+
+If all validation passes, the new account is created and the caller's account is given all access rights to it (view, edit, note, admin, upload). The return body contains the user data for the new account:
+
+```javascript
+{
+  "username": "username",
+  "emails": [list_of_emails]
+  "fullName": "Jane Smith"
+  "userid": "abc123"
+}
+```
+
 
 Need create new "dummy account" (user `456`, no password).
 
