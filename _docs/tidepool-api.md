@@ -121,14 +121,7 @@ Response:
   "username": "mary@example.com",
   "emails": [
     "mary@example.com"
-  ],
-  "userhash": "5b11bb9da396133d527ee6db",
-  "private": {
-    "meta": {
-      "id": "3619e1628a",
-      "hash": "f6f40eeda7ce22ad5fa2032a"
-    }
-  }
+  ]
 }
 ```
 
@@ -189,6 +182,95 @@ Defaults to current user
 
 ### Get notes
 
+Top level notes (i.e. no comments) within an optional date range
+
+```
+GET /message/notes/:groupid?starttime&endtime
+x-tidepool-session-token: <token>
+```
+
+Response:
+
+```
+200 OK
+```
+
+```javascript
+messages: [
+ {
+    id: '123',
+    parentmessage : null,
+    userid: '777',
+    user: { "fullName": "Mary Smith" }, //users public profile
+    groupid: '777',
+    timestamp: '2013-11-28T23:07:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'In three words I can sum up everything I have learned about life: it goes on.'
+  },
+  {
+    id: '456',
+    parentmessage:null,
+    user: { "fullName": "Bob Smith" }, //users public profile
+    userid: '112',
+    groupid: '777',
+    timestamp: '2013-11-29T23:05:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'Second message.'
+  }
+]
+```
+
+### Get messages
+
+All messages within an optional date range
+
+```
+GET /message/all/:groupid?starttime&endtime
+x-tidepool-session-token: <token>
+```
+
+Response:
+
+```
+200 OK
+```
+
+```javascript
+messages: [
+ {
+    id: '123',
+    parentmessage : null,
+    userid: '777',
+    user: { "fullName": "Mary Smith" }, //users public profile
+    groupid: '777',
+    timestamp: '2013-11-28T23:07:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'In three words I can sum up everything I have learned about life: it goes on.'
+  },
+  {
+    id: '456',
+    parentmessage:'123',
+    user: { "fullName": "Bob Smith" },
+    userid: '112',
+    groupid: '777',
+    timestamp: '2013-11-29T23:05:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'A comment.'
+  },
+  {
+    id: '789',
+    parentmessage: null,
+    user: { "fullName": "Bob Smith" },
+    userid: '112',
+    groupid: '777',
+    timestamp: '2013-11-29T23:05:40+00:00',
+    createdtime: '2013-11-28T23:07:40+00:00',
+    messagetext: 'A new message.'
+  }
+]
+```
+
+
 ### Add note
 
 ### Edit note
@@ -211,7 +293,7 @@ The permissions currently available are:
 * **upload** -- If B has upload permission, B can add new data to A's account. This implies that B can also read enough information to determine the date and time of A's last upload.
 * **note** -- If B has note permission, B can read the notes records in A's account and can create new notes in that account, as well as edit the notes that B has created.
 * **edit** -- If B has edit permission, B is allowed to change A's data and metadata, but does not have the ability to delete it.
-* **admin** -- If B has admin permission, B can delete the account, change metadata, and change permissions. 
+* **admin** -- If B has admin permission, B can delete the account, change metadata, and change all permissions. 
 * **root** -- Root can do anything; account A always has root on itself. No one except A can have root on account A. (Root doesn't actually exist as a permission bit in the database -- it's just returned from the API as if it does). 
 
 ### Example
@@ -341,12 +423,12 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
 
   Body is a block of permissions that looks like this:
 
-    ````
-    {
-        "note": {}
-        "view": {}
-    }
-    ````
+ ```javascript
+ {
+     "note": {}
+     "view": {}
+ }
+ ```
 
   If the call succeeds, the permissions block *replaces* the set of permissions for that user. There is no separate call to add or remove a permission -- you must first read the existing permissions and then change them.
 
