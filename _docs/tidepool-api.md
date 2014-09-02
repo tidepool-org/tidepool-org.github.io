@@ -182,6 +182,20 @@ Defaults to current user
 
 ### Get notes
 
+Top level notes (i.e. no comments) within an optional date range
+
+```
+GET /message/notes/:groupid?starttime&endtime
+x-tidepool-session-token: <token>
+```
+
+Response:
+
+```
+200 OK
+```
+
+
 ### Add note
 
 ### Edit note
