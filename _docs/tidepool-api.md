@@ -335,12 +335,12 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
 
   Body is a block of permissions that looks like this:
 
-    ````
+    ```
     {
         "note": {}
         "view": {}
     }
-    ````
+    ```
 
   The permissions block *replaces* the set of permissions for that user. There is no separate call to add or remove a permission -- you must first read the existing permissions and then change them.
 
