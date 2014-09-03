@@ -26,6 +26,7 @@ A status event is used to represent the status of a pump.  Specifically, this is
   "status": suspended_or_resumed,
   "reason": indication_of_why
   "time": see_common_fields,
+  "duration": max_duration_of_status_if_known,
   "deviceId": see_common_fields,
   "source": see_common_fields,
   "previous": previously_active_status_event
@@ -44,7 +45,11 @@ A status event is used to represent the status of a pump.  Specifically, this is
     * "manual" - the user manually resumed the pump
     * "automatic" - the pump resumed on its own
 
-If the status from the `previous` field does not exist in the Tidepool platform, the object provided in the previous field will be annotated and saved along with the current event.
+Status events come in tuples delivered over time.  The first event in the tuple must be a non "resumed" status, subsequent statuses can be any other status change until a "resumed" status is received.  The "resumed" event closes the tuple.  As each event in the tuple is received the system will update the duration of the previous event in the tuple according to the differences in the timestamps.
+
+Also, the final status event in an incomplete tuple will be annotated as such.  When the tuple is complete, the server will remove the annotation.
+
+If the status from the `previous` field does not exist in the Tidepool platform, then the event will start a new status tuple.  If it is a resume event and the event specified by `previous` does not exist, the resume event will be ignored.
 
 ### Storage/Output Format
 
@@ -58,7 +63,7 @@ If you were to first emit the event
 {
   "type": "deviceMeta",
   "subType": "status",
-  "status": "resumed",
+  "status": "suspended",
   "reason": "manual",
   "time": "2014-01-01T00:00:00.000Z",
   "deviceId": "123",
@@ -66,21 +71,38 @@ If you were to first emit the event
 }
 ~~~
 
-And then emit
+At this point, the tidepool platform will store and allow you to retrieve
+
+~~~json
+[
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "suspended",
+    "reason": "manual",
+    "time": "2014-01-01T01:00:00.000Z",
+    "deviceId": "123",
+    "source": "example"
+    "annotations": [{ "code": "status/incomplete-tuple" }]
+  }
+]
+~~~
+
+If you then emit
 
 ~~~json
 {
   "type": "deviceMeta",
   "subType": "status",
-  "status": "suspended",
+  "status": "resumed",
   "reason": "manual",
-  "time": "2014-01-01T01:00:00.000Z",
+  "time": "2014-01-01T01:30:00.000Z",
   "deviceId": "123",
   "source": "example",
   "previous": {
     "type": "deviceMeta",
     "subType": "status",
-    "status": "resumed",
+    "status": "suspended",
     "reason": "manual",
     "time": "2014-01-01T00:00:00.000Z",
     "deviceId": "123",
@@ -96,18 +118,10 @@ The tidepool platform will store and allow you to retrieve
   {
     "type": "deviceMeta",
     "subType": "status",
-    "status": "resumed",
-    "reason": "manual",
-    "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "123",
-    "source": "example"
-  },
-  {
-    "type": "deviceMeta",
-    "subType": "status",
     "status": "suspended",
     "reason": "manual",
     "time": "2014-01-01T01:00:00.000Z",
+    "duration": 1800000,
     "deviceId": "123",
     "source": "example"
   }
@@ -122,7 +136,7 @@ If you were to first emit the event
 {
   "type": "deviceMeta",
   "subType": "status",
-  "status": "resumed",
+  "status": "suspended",
   "reason": "manual",
   "time": "2014-01-01T00:00:00.000Z",
   "deviceId": "123",
@@ -160,34 +174,17 @@ The tidepool platform will store and allow you to retrieve
   {
     "type": "deviceMeta",
     "subType": "status",
-    "status": "resumed",
+    "status": "suspended",
     "reason": "manual",
     "time": "2014-01-01T00:00:00.000Z",
     "deviceId": "123",
-    "source": "example"
-  },
-  {
-    "type": "deviceMeta",
-    "subType": "status",
-    "status": "suspended",
-    "reason": "manual",
-    "time": "2014-01-01T01:00:00.000Z",
-    "deviceId": "123",
-    "source": "example"
-  }
-  {
-    "type": "deviceMeta",
-    "subType": "status",
-    "status": "resumed",
-    "reason": "manual",
-    "time": "2014-01-01T02:00:00.000Z",
-    "deviceId": "123",
-    "source": "example"
+    "source": "example",
+    "annotations": [{ "code": "status/incomplete-tuple" }]
   }
 ]
 ~~~
 
-That is, it will *generate* the previous event as if it had been originall sent in.
+That is, it will *ignore* the resumed event with an unknown previous.
 
 ## Calibration
 
