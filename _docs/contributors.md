@@ -8,7 +8,7 @@ published: true
 
 We really appreciate your interest in Tidepool, and your help in improving our products, so we want you to understand what will be done with the contributions that you make. In order to make contributions or volunteer as a tester, UI designer or in any other way, you'll need to agree to our [Volunteer/Contributor License Agreement](/files/tidepool-vcla.pdf). This license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose**.
 
-If you are working on your own behalf and would like to submit a GitHub pull request (and are not already on the Contributor's list below), please post on GitHub -- either in the issue that addresses your pull request or the pull request itself -- the following text:
+If you are working on your own behalf and would like to submit a GitHub pull request (and are not already on the Contributors list below), please post on GitHub -- either in the issue that addresses your pull request or the pull request itself -- the following text:
 
 > I agree to the terms of Tidepool Project's Volunteer/Contributor License Agreement v1.0
 > as it exists at http://tidepool-org.github.io/TidepoolVCLA.pdf on <TODAY'S DATE>.
