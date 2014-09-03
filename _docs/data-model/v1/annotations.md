@@ -30,6 +30,7 @@ We document our known annotations below, but we do not limit the set of annotati
 ### Generic
 
 * `basal/mismatched-series` happens when the API receives an basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
+* `status/incomplete-tuple` happens when a `deviceMeta` `status` event is sent in and never completed.  See the [Device Metadata](device-meta) page for more details.
 
 ### Carelink
 
