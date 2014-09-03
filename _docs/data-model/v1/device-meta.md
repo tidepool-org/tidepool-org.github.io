@@ -49,7 +49,7 @@ Status events come in tuples delivered over time.  The first event in the tuple 
 
 Also, the final status event in an incomplete tuple will be annotated as such.  When the tuple is complete, the server will remove the annotation.  Said another way, if everything is in order, "resumed" events will not be stored, but instead it will be used to adjust the `duration` of the status event that came before them.
 
-In the unlikely event that the event specified by the `previous` field does not exist in the Tidepool platform, the submitted event will be stored, but it will be annotated with "status/unknown-previous" to indicate the condition.
+In the unlikely event that the event specified by the `previous` field does not exist in the Tidepool platform, the submitted event will be stored, but it will be annotated with "status/unknown-previous" to indicate the condition.  If there is no `previous` field specified on a "resumed" event, that will also result in this annotation being added.
 
 ### Storage/Output Format
 
