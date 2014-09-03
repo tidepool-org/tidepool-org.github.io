@@ -65,7 +65,7 @@ If you were to first emit the event
   "subType": "status",
   "status": "suspended",
   "reason": "manual",
-  "time": "2014-01-01T00:00:00.000Z",
+  "time": "2014-01-01T01:00:00.000Z",
   "deviceId": "123",
   "source": "example"
 }
