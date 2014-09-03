@@ -31,6 +31,8 @@ We document our known annotations below, but we do not limit the set of annotati
 
 * `basal/mismatched-series` happens when the API receives an basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
 * `status/incomplete-tuple` happens when a `deviceMeta` `status` event is sent in and never completed.  See the [Device Metadata](device-meta) page for more details.
+* `status/unknown-previous` happens when a `deviceMeta` `status` event is sent in with a `previous` field that doesn't reference an object in the Tidepool platform.  Accompanied by an `id` field:
+    * `id` the expected id of the previous event as specified in the `previous` field on the event submitted to the Tidepool platform
 
 ### Carelink
 

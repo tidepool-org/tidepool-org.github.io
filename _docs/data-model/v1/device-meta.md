@@ -47,9 +47,9 @@ A status event is used to represent the status of a pump.  Specifically, this is
 
 Status events come in tuples delivered over time.  The first event in the tuple must be a non "resumed" status, subsequent statuses can be any other status change until a "resumed" status is received.  The "resumed" event closes the tuple.  As each event in the tuple is received the system will update the duration of the previous event in the tuple according to the differences in the timestamps.
 
-Also, the final status event in an incomplete tuple will be annotated as such.  When the tuple is complete, the server will remove the annotation.
+Also, the final status event in an incomplete tuple will be annotated as such.  When the tuple is complete, the server will remove the annotation.  Said another way, if everything is in order, "resumed" events will not be stored, but instead it will be used to adjust the `duration` of the status event that came before them.
 
-If the status from the `previous` field does not exist in the Tidepool platform, then the event will start a new status tuple.  If it is a resume event and the event specified by `previous` does not exist, the resume event will be ignored.
+In the unlikely event that the event specified by the `previous` field does not exist in the Tidepool platform, the submitted event will be stored, but it will be annotated with "status/unknown-previous" to indicate the condition.
 
 ### Storage/Output Format
 
@@ -180,11 +180,19 @@ The tidepool platform will store and allow you to retrieve
     "deviceId": "123",
     "source": "example",
     "annotations": [{ "code": "status/incomplete-tuple" }]
+  },
+  {
+    "type": "deviceMeta",
+    "subType": "status",
+    "status": "resumed",
+    "reason": "manual",
+    "time": "2014-01-01T02:00:00.000Z",
+    "deviceId": "123",
+    "source": "example",
+    "annotations": [{ "code": "status/unknown-previous", "id": "1234-expected-id-of-previous-abcd" }]
   }
 ]
 ~~~
-
-That is, it will *ignore* the resumed event with an unknown previous.
 
 ## Calibration
 
