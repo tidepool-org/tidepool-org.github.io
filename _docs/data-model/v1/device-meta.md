@@ -176,7 +176,7 @@ The tidepool platform will store and allow you to retrieve
     "subType": "status",
     "status": "suspended",
     "reason": "manual",
-    "time": "2014-01-01T00:00:00.000Z",
+    "time": "2014-01-00T00:00:00.000Z",
     "deviceId": "123",
     "source": "example",
     "annotations": [{ "code": "status/incomplete-tuple" }]
