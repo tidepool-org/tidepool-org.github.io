@@ -291,9 +291,9 @@ The permissions currently available are:
 
 * **view** -- If B has view permission on account A, B can see all of A's data and metadata but does not have the ability to change it.
 * **upload** -- If B has upload permission, B can add new data to A's account. This implies that B can also read enough information to determine the date and time of A's last upload.
-* **note** -- If B has note permission, B can read the notes records in A's account and can create new notes in that account, as well as edit the notes that B has created.
+* **note** -- If B has note permission, B can read the notes records in A's account and can create new notes and comments in that account, as well as edit the notes that B has created.
 * **edit** -- If B has edit permission, B is allowed to change A's data and metadata, but does not have the ability to delete it.
-* **admin** -- If B has admin permission, B can delete the account, change metadata, and change all permissions. 
+* **admin** -- If B has admin permission, B can delete the account, change metadata, and change all permissions. It also includes the ability to send and accept invitations. 
 * **root** -- Root can do anything; account A always has root on itself. No one except A can have root on account A. (Root doesn't actually exist as a permission bit in the database -- it's just returned from the API as if it does). 
 
 ### Example
@@ -437,69 +437,207 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
   If a permission is not listed, the permission is not granted. 
 
 
+## Confirmations
+
+There are three types of confirmations that can be generated:
+
+* Initial signup ("signup")
+* Forgot password ("forgot")
+* Invitations to another user to "join your care team" (a way of saying "give a user permission to access your data). ("invite")
+
+All three types have the ability to send a confirmation, list pending confirmations, dismiss a confirmation, delete a pending confirmation, and accept a confirmation. The invitations also have the ability to get a list of confirmations received.
+
+Note that in the case of invitations, the invitation goes to another user. In the case of signup/forgot, the confirmation goes to the same user.
+
+## Initial signup
+
+### Send a signup confirmation
+
+Send a signup confirmation email to a userid. 
+
+```
+POST /confirm/send/signup/:userid
+```
+
+### Accept/confirm a signup
+
+This would be PUT by the web page at the link in the signup email.
+
+```
+PUT /confirm/send/signup/:userid
+```
+
+### Dismiss a signup
+
+In the event that someone uses the wrong email address, the receiver could explicitly dismiss a signup with this link (useful for metrics and to identify phishing attempts). 
+
+```
+PUT /confirm/dismiss/signup/:userid
+```
+
+### List signup confirmations
+
+Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array.
+
+```
+GET /confirm/signup/:userid
+```
+
+### Delete an existing signup confirmation
+
+Delete any existing confirmation request.
+
+```
+DELETE /confirm/signup/:userid
+```
+
+## Lost password
+
+### Send a lost password confirmation
+
+Send a lost password confirmation email to a userid. 
+
+```
+POST /confirm/send/forgot/:userid
+```
+
+### Accept/confirm a lost password
+
+This would be PUT by the web page at the link in the lost password email.
+
+```
+PUT /confirm/send/forgot/:userid
+```
+
+### Dismiss a lost password
+
+In the event that someone tries the lost password link incorrectly, the receiver could explicitly dismiss with this link. 
+
+```
+PUT /confirm/dismiss/forgot/:userid
+```
+
+### List lost password requests
+
+Fetch any existing lost password requests. Will always return either 404 (not found) or a 200 with a single result in an array.
+
+```
+GET /confirm/forgot/:userid
+```
+
+### Delete an existing lost password request
+
+Delete any existing lost password request.
+
+```
+DELETE /confirm/forgot/:userid
+```
+
+
 ## Member Invitations
 
 ### Send member invitation
 
   Send invitation to add a new member to a care team you are an admin of.
 
+  The invitation must include the permissions being granted (edit, notes, view, upload,  admin) in the same format as granting permissions, so that the invitation can properly express the request.
+
   ```
-  POST /groups/:userid/invite
+  POST /confirm/send/invite/:userid
 
   x-tidepool-session-token: <token>
+  
   body: {
     "email": "personToInvite@email.com",
-    "permission": "admin" //or view_only
+    "permissions": [
+      "view": {},
+      "note": {}
+    ]
   }
   ```
 
+  The userid is the user sending the invitation. When sending an invitation, you don't necessarily know if the user is already on the system or not, which is why there's no recipient ID field. 
+
 ### Get Sent invitations
 
-  Get sent invitation for a group you own or are an admin of.
+  Get the still-pending invitations for a group you own or are an admin of. These are the invitations you have sent that have not been accepted. There is no way to tell if an invitation has been ignored. Requires admin privileges.
 
   ```
-  GET /groups/:userid/invited
+  GET /confirm/invite/:userid
 
   x-tidepool-session-token: <token>
+
+  body: [{
+    "email": "invitation1@email.com",
+    "permissions": [
+      "view": {},
+      "note": {}
+    ]
+  }]
   ```
 
 ### Cancel Sent invitation
 
-  Removes a pending invitation (one that has not yet been accepted by the recipient). This can happen before or after it being dismissed but not after it being approved. Requires admin privilieges.
+  Removes a pending invitation (one that has not yet been accepted by the recipient). This can happen before or after it being dismissed but not after it has been accepted. Requires admin privileges.
 
   ```
-  DELETE /groups/:userid/invited/:inviteId
+  DELETE /confirm/:userid/invited/:invited_address
 
   x-tidepool-session-token: <token>
   ```
+
+  The userid field is the user who sent the invitation, and the invited_address field is the email address that was invited.
+
 ### Get received invitations
 
-  Get list of received invitations for logged in user.
+  Get list of received invitations for logged in user. These are invitations that have been sent to this user but not yet acted upon. (This call is unique to invite; there is no equivalent for signup or forgot.)
 
   ```
-  GET /user/invites
+  GET /confirm/invitations/:userid
 
   x-tidepool-session-token: <token>
+
+  body: [{
+    "email": "invitation1@email.com",
+    "userid": "123abc",
+    "permissions": [
+      "view": {},
+      "note": {}
+    ]
+  }]
   ```
+
+
 ### Dismiss invitation
 
   Sets a dismissed flag in the invitation so that the users that received the invitation does not see it again. The user that sent it still sees it.
 
   ```
-  POST /user/invites/:invitationId/dismiss
+  PUT /confirm/dismiss/invite/:userid/:invited_by
 
   x-tidepool-session-token: <token>
   ```
 
+  No body is required (it's a PUT), but both :userid and :invitedby are required.
+
 ### Accept invitation
 
+  Performs the required permission actions to set the permissions as spec'd in the invitation, then deletes the invitation record. 
+
+  After performing this action, the client should refresh its information about the user's careteams.
+
   ```
-  POST /user/invites/:invitationId/accept
+  PUT /confirm/accept/invite/:userid/:invited_by
+
+  x-tidepool-session-token: <token>
   ```
-  An invitation gets accepted and a care team is created, then invitation gets deleted.
+
+  No body is required (it's a PUT), but both :userid and :invitedby are required.
 
 
-# Ideally we (api consumers) would deal with member invitation and confirmations is the way invitations are handeled by the backend.
+# STUFF BELOW HERE IS NOTES BUT NOT DOCUMENTATION YET (kent)
+
+## Ideally we (api consumers) would deal with member invitation and confirmations is the way invitations are handled by the backend.
 
 ## Confirmations
 
@@ -507,7 +645,7 @@ This section is meant to describe what confirmations are and how to use them.
 
 A transction id for example in links generated by the system. A transation id is passed to the client application which can then query the transaction api to get the state and metadata for the transaction.
 
-Transcation types: careteam_invitation, password_reset and email_confirmation.
+Transaction types: careteam_invitation, password_reset and email_confirmation.
 
 Sample data format:
 
@@ -601,7 +739,7 @@ Body of post is:
 }
 ```
 
-The fullName field and username are both required. The username can be any valid username; the call will be rejected if the username is not unique. The password may be omitted or blank. If so, the account will be given a random password and it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank.
+The fullName field and username are both required. The username can be any valid username; the call will be rejected if the username is not unique. The password may be omitted or blank. If so, it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank. 
 
 If validation fails, a 400 error is returned with an explanation of the error in the body.
 
@@ -619,7 +757,7 @@ If all validation passes, the new account is created and the caller's account is
 
 Need create new "dummy account" (user `456`, no password).
 
-First create dummy user and profile. We need to figure out how user `123` becomes an owner for dummy account `456`. Ideally would happend in one call, to avoid risks of a ghosts account.
+First create dummy user and profile. We need to figure out how user `123` becomes an owner for dummy account `456`. Ideally would happen in one call, to avoid risks of a ghosts account.
 
 Would having Root access to the acconut mean that i can delte the acount. If have root and account was login.
 
@@ -635,5 +773,5 @@ var profile = {
 };
 ```
 
-(User `123`, me, has `admin` permissions (maybe root permisons too?) to user `456`, my daughter.)
-Removal of last admin would also require account deletion.
+(User `123`, me, has `admin` permissions to user `456`, my daughter.)
+It is not possible to remove last admin if account doesn't have login or recovery capabilities (i.e, if account doesn't have emails or password).
