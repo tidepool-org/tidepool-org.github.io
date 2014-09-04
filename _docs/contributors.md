@@ -13,7 +13,7 @@ If you are working on your own behalf and would like to submit a GitHub pull req
 > I agree to the terms of Tidepool Project's Volunteer/Contributor License Agreement v1.0
 > as it exists at http://tidepool-org.github.io/TidepoolVCLA.pdf on <TODAY'S DATE>.
 
-Please make sure that one of Tidepool's employees (see below) sees it and adds you to the list below.
+If you submit this as a pull request, please make sure that one of Tidepool's employees (see below) sees it and adds you to the list below. You may also email the above text to [legal@tidepool.org](mailto:legal@tidepool.org).
 
 If your contributions are on behalf of a company or you need to get your company's permission to contribute, please follow the instructions in the [VCLA](/files/tidepool-vcla.pdf).
 
