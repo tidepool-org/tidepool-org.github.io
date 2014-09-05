@@ -10,6 +10,9 @@ This page is for holding useful links.
 
 ##Tidepool-internal Links
 
+[API User Guide](/tidepool-api)
+: An attempt at a usage-oriented guide to the Tidepool API. Still a work in progress, but we hope it's useful.
+
 [Tidepool Data Formats](/data-model/v1)
 : Defines the data structures we store and how they're organized.
 
