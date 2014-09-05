@@ -520,7 +520,7 @@ th {
 
 td {
 	padding: .7em 1.25em;
-	min-width: 150px;
+	min-width: 100px;
 }
 
 td:first-child {
