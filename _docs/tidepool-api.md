@@ -445,9 +445,9 @@ There are three types of confirmations that can be generated:
 * Forgot password ("forgot")
 * Invitations to another user to "join your care team" (a way of saying "give a user permission to access your data). ("invite")
 
-All three types have the ability to send a confirmation, list pending confirmations, dismiss a confirmation, delete a pending confirmation, and accept a confirmation. The invitations also have the ability to get a list of confirmations received.
+The three systems share the fact that they all deal with email notifications, but they differ in their details. The forgot password and signup systems are special because several of their operations need to be done without being authenticated (if you could log in, you wouldn't need to send a forgot password notification). The invitation system requires two users, and one of them may not yet have an account.
 
-Note that in the case of invitations, the invitation goes to another user. In the case of signup/forgot, the confirmation goes to the same user.
+The signup system (where we get a confirmation that new users actually have a valid email address) is the most generic, so we'll deal with it first:
 
 ## Initial signup
 
@@ -457,81 +457,109 @@ Send a signup confirmation email to a userid.
 
 ```
 POST /confirm/send/signup/:userid
+x-tidepool-session-token: <token>
 ```
+
+This post is sent by the signup logic. In this state, the user account has been created but has a flag that forces the user to the confirmation-required page until the signup has been confirmed.
+
+(We need some rules about how often you can attempt a signup with a given email address, to keep this from being used to spam people either deliberately or accidentally. This call should also be throttled at the system level to prevent distributed attacks.)
+
+It sends an email that contains a random confirmation link. 
+
+### Resend confirmation 
+
+If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email. 
+
+```
+POST /confirm/resend/signup/:userid
+x-tidepool-session-token: <token>
+```
+
 
 ### Accept/confirm a signup
 
-This would be PUT by the web page at the link in the signup email.
+This would be PUT by the web page at the link in the signup email. No authentication is required.
 
 ```
-PUT /confirm/send/signup/:userid
+PUT /confirm/accept/signup/:userid/:confirmationID
 ```
+
+When this call is made, the flag that prevents login on an account is removed, and the user is directed to the login page. If the user has an active cookie for signup (created with a short lifetime) we can accept the presence of that cookie to allow the actual login to be skipped.
 
 ### Dismiss a signup
 
-In the event that someone uses the wrong email address, the receiver could explicitly dismiss a signup with this link (useful for metrics and to identify phishing attempts). 
+In the event that someone uses the wrong email address, the receiver could explicitly dismiss a signup attempt with this link (useful for metrics and to identify phishing attempts). This link would be some sort of parenthetical comment in the signup confirmation email, like "(I didn't try to sign up for Tidepool.)" No authentication required.
 
 ```
 PUT /confirm/dismiss/signup/:userid
 ```
 
+Making this request deletes the account record that was used to create the signup.
+
 ### List signup confirmations
 
-Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array.
+This call is provided for completeness -- we don't expect to need it in the actual user flow.
+
+Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array. 
 
 ```
 GET /confirm/signup/:userid
+x-tidepool-session-token: <token>
 ```
+
 
 ### Delete an existing signup confirmation
 
-Delete any existing confirmation request.
+This call is provided for completeness -- we don't expect to need it in the actual user flow.
+
+Delete any existing confirmation request. If this is called, it deletes the request but does not delete the account.
 
 ```
 DELETE /confirm/signup/:userid
+x-tidepool-session-token: <token>
 ```
+
 
 ## Lost password
 
-### Send a lost password confirmation
+Lost passwords are special because they have to be created and accepted without the usual authentication.
 
-Send a lost password confirmation email to a userid. 
-
+###Creating a lost password request:
 ```
-POST /confirm/send/forgot/:userid
-```
-
-### Accept/confirm a lost password
-
-This would be PUT by the web page at the link in the lost password email.
-
-```
-PUT /confirm/send/forgot/:userid
+GET /confirm/send/forgot/:useremail
 ```
 
-### Dismiss a lost password
+If the request is correctly formed, always returns a 200, even if the email address was not found (this way it can't be used to validate email addresses).
 
-In the event that someone tries the lost password link incorrectly, the receiver could explicitly dismiss with this link. 
+The call is throttled at the system level to limit distributed attacks.
 
-```
-PUT /confirm/dismiss/forgot/:userid
-```
+If the email address is found in the Tidepool system, this will:
 
-### List lost password requests
+* Create a confirm record and a random key
+* Send an email with a link containing the key
 
-Fetch any existing lost password requests. Will always return either 404 (not found) or a 200 with a single result in an array.
+Visiting the URL in the email will fetch a page that offers the user the chance to accept or reject the lost password request. If accepted, the user must then create a new password that will replace the old one.
 
-```
-GET /confirm/forgot/:userid
-```
 
-### Delete an existing lost password request
-
-Delete any existing lost password request.
+### Accepting a lost password request
 
 ```
-DELETE /confirm/forgot/:userid
+POST /confirm/accept/forgot/
+
+body {
+  "key": "confirmkey"
+  "email": "address_on_the_account"
+  "password": "new_password"
+}
 ```
+
+This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account. 
+
+If this call is completed without error, the lost password request is marked as accepted. Otherwise, the lost password request remains active until it expires.
+
+### Dismiss a lost password request
+
+This is not necessary -- upon any successful login, the lost password request will be automatically deleted. (If the user successfully logs in after creating the lost password request, it is presumed that they didn't actually need to change it.)
 
 
 ## Member Invitations
@@ -569,10 +597,10 @@ DELETE /confirm/forgot/:userid
 
   body: [{
     "email": "invitation1@email.com",
-    "permissions": [
+    "permissions": {
       "view": {},
       "note": {}
-    ]
+    }
   }]
   ```
 
@@ -618,7 +646,7 @@ DELETE /confirm/forgot/:userid
   x-tidepool-session-token: <token>
   ```
 
-  No body is required (it's a PUT), but both :userid and :invitedby are required.
+  No body is required, but both :userid and :invitedby are required.
 
 ### Accept invitation
 
@@ -632,7 +660,7 @@ DELETE /confirm/forgot/:userid
   x-tidepool-session-token: <token>
   ```
 
-  No body is required (it's a PUT), but both :userid and :invitedby are required.
+  No body is required, but both :userid and :invitedby are required.
 
 ## Confirmation data structure
 
@@ -722,14 +750,14 @@ Creates a child data account that is managed by the account :userid. For client-
 Body of post is:
 ```javascript
 {
-  "username": "any_unique_username",
-  "password": "apassword",
+  "username": "a_username",
+  "password": "a_password",
   "emails": [list_of_emails]
   "fullName": "Jane Smith"
 }
 ```
 
-The fullName field and username are both required. The username can be any valid username; the call will be rejected if the username is not unique. The password may be omitted or blank. If so, it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank. 
+The fullName field and username are both required. The username can be any valid username, or it can be omitted or blank. If present, the call will be rejected if the username is not unique. If no username is specified then a random one will be generated and assigned (it can be changed later, if desired). The password may be omitted or blank. If so, it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank. 
 
 If validation fails, a 400 error is returned with an explanation of the error in the body.
 
