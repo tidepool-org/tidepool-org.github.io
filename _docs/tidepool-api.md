@@ -566,101 +566,101 @@ This is not necessary -- upon any successful login, the lost password request wi
 
 ### Send member invitation
 
-  Send invitation to add a new member to a care team you are an admin of.
+Send invitation to add a new member to a care team you are an admin of.
 
-  The invitation must include the permissions being granted (edit, notes, view, upload,  admin) in the same format as granting permissions, so that the invitation can properly express the request.
+The invitation must include the permissions being granted (edit, notes, view, upload,  admin) in the same format as granting permissions, so that the invitation can properly express the request.
 
-  ```
-  POST /confirm/send/invite/:userid
+```
+POST /confirm/send/invite/:userid
 
-  x-tidepool-session-token: <token>
-  
-  body: {
-    "email": "personToInvite@email.com",
-    "permissions": [
-      "view": {},
-      "note": {}
-    ]
-  }
-  ```
+x-tidepool-session-token: <token>
 
-  The userid is the user sending the invitation. When sending an invitation, you don't necessarily know if the user is already on the system or not, which is why there's no recipient ID field. 
+body: {
+  "email": "personToInvite@email.com",
+  "permissions": [
+    "view": {},
+    "note": {}
+  ]
+}
+```
+
+The userid is the user sending the invitation. When sending an invitation, you don't necessarily know if the user is already on the system or not, which is why there's no recipient ID field. 
 
 ### Get Sent invitations
 
-  Get the still-pending invitations for a group you own or are an admin of. These are the invitations you have sent that have not been accepted. There is no way to tell if an invitation has been ignored. Requires admin privileges.
+Get the still-pending invitations for a group you own or are an admin of. These are the invitations you have sent that have not been accepted. There is no way to tell if an invitation has been ignored. Requires admin privileges.
 
-  ```
-  GET /confirm/invite/:userid
+```
+GET /confirm/invite/:userid
 
-  x-tidepool-session-token: <token>
+x-tidepool-session-token: <token>
 
-  body: [{
-    "email": "invitation1@email.com",
-    "permissions": {
-      "view": {},
-      "note": {}
-    }
-  }]
-  ```
+body: [{
+  "email": "invitation1@email.com",
+  "permissions": {
+    "view": {},
+    "note": {}
+  }
+}]
+```
 
 ### Cancel Sent invitation
 
-  Removes a pending invitation (one that has not yet been accepted by the recipient). This can happen before or after it being dismissed but not after it has been accepted. Requires admin privileges.
+Removes a pending invitation (one that has not yet been accepted by the recipient). This can happen before or after it being dismissed but not after it has been accepted. Requires admin privileges.
 
-  ```
-  DELETE /confirm/:userid/invited/:invited_address
+```
+DELETE /confirm/:userid/invited/:invited_address
 
-  x-tidepool-session-token: <token>
-  ```
+x-tidepool-session-token: <token>
+```
 
-  The userid field is the user who sent the invitation, and the invited_address field is the email address that was invited.
+The userid field is the user who sent the invitation, and the invited_address field is the email address that was invited.
 
 ### Get received invitations
 
-  Get list of received invitations for logged in user. These are invitations that have been sent to this user but not yet acted upon. (This call is unique to invite; there is no equivalent for signup or forgot.)
+Get list of received invitations for logged in user. These are invitations that have been sent to this user but not yet acted upon. (This call is unique to invite; there is no equivalent for signup or forgot.)
 
-  ```
-  GET /confirm/invitations/:userid
+```
+GET /confirm/invitations/:userid
 
-  x-tidepool-session-token: <token>
+x-tidepool-session-token: <token>
 
-  body: [{
-    "email": "invitation1@email.com",
-    "userid": "123abc",
-    "permissions": [
-      "view": {},
-      "note": {}
-    ]
-  }]
-  ```
+body: [{
+  "email": "invitation1@email.com",
+  "userid": "123abc",
+  "permissions": {
+    "view": {},
+    "note": {}
+  }
+}]
+```
 
 
 ### Dismiss invitation
 
-  Sets a dismissed flag in the invitation so that the users that received the invitation does not see it again. The user that sent it still sees it.
+Sets a dismissed flag in the invitation so that the users that received the invitation does not see it again. The user that sent it still sees it.
 
-  ```
-  PUT /confirm/dismiss/invite/:userid/:invited_by
+```
+PUT /confirm/dismiss/invite/:userid/:invited_by
 
-  x-tidepool-session-token: <token>
-  ```
+x-tidepool-session-token: <token>
+```
 
-  No body is required, but both :userid and :invitedby are required.
+No body is required, but both :userid and :invitedby are required.
 
 ### Accept invitation
 
-  Performs the required permission actions to set the permissions as spec'd in the invitation, then deletes the invitation record. 
+Performs the required permission actions to set the permissions as spec'd in the invitation, then deletes the invitation record. 
 
-  After performing this action, the client should refresh its information about the user's careteams.
+After performing this action, the client should refresh its information about the user's careteams.
 
-  ```
-  PUT /confirm/accept/invite/:userid/:invited_by
+```
+PUT /confirm/accept/invite/:userid/:invited_by
 
-  x-tidepool-session-token: <token>
-  ```
+x-tidepool-session-token: <token>
+```
 
-  No body is required, but both :userid and :invitedby are required.
+No body is required, but both :userid and :invitedby are required.
 
 ## Confirmation data structure
 
@@ -748,6 +748,7 @@ x-tidepool-session-token: <token>
 Creates a child data account that is managed by the account :userid. For client-side uses, :userid must be the account owned by the token.
 
 Body of post is:
+
 ```javascript
 {
   "username": "a_username",
