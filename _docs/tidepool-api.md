@@ -313,7 +313,7 @@ Ellen, Alice's aunt, provides care but not management.
 Here's the permissions table:
 
  permission| Alice | Bob | Carol | Dave | Ellen
-- | - | - | - | - | -
+--- | --- | --- | --- | --- | ---
 view | |X|X| |
 upload | |X|X| |X
 note | |X|X|X|X
