@@ -626,8 +626,7 @@ GET /confirm/invitations/:userid
 x-tidepool-session-token: <token>
 
 body: [{
-  "email": "invitation1@email.com",
-  "userid": "123abc",
+  "invitedBy": "123abc",
   "permissions": {
     "view": {},
     "note": {}
@@ -635,6 +634,7 @@ body: [{
 }]
 ```
 
+The permissions object is showing the permissions that have been offered by the user who sent the invitation.
 
 ### Dismiss invitation
 
@@ -662,49 +662,6 @@ x-tidepool-session-token: <token>
 
 No body is required, but both :userid and :invitedby are required.
 
-## Confirmation data structure
-
-This section is meant to describe what confirmations are. The API above doesn't care how this is implemented, but it's useful to have the data structures here.
-
-Sample data format:
-
-```javascript
-{
-  // Destination of confirmation can be:
-  // an existing user...
-  "userid": "123",
-  // OR an email address
-  "userEmail": "msmith@example.com",
-
-  // Origin of confirmation (as userid)
-  // (optional, only if different from destination)
-  "createdBy": "456",
-
-  // Confirmation type
-  // forgot, signup, invite
-  "type": "invite",
-
-  // Confirmation status
-  // Possible values: pending, confirmed, failed, expired
-  // Note that this is the only field that can change
-  // (along with "modifiedOn" of course)
-  "status": "pending",
-
-  // Confirmation key
-  // The only thing public, sent via email?
-  "key": "slj39jng921nquirtey=",
-
-  // Confirmation lifecyle (used to expire or for analytics)
-  "created": "2014-01-31T12:23:32Z",
-  "modified": "2014-02-14T09:00:25Z",
-
-  // Error object when status is "failed"
-  "error": {
-    "name": "EmailDeliveryFailure",
-    "message": "Could not deliver email to provided address"
-  }
-}
-```
 
 ## Data accounts
 
