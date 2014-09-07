@@ -526,7 +526,7 @@ Lost passwords are special because they have to be created and accepted without 
 
 ###Creating a lost password request:
 ```
-GET /confirm/send/forgot/:useremail
+POST /confirm/send/forgot/:useremail
 ```
 
 If the request is correctly formed, always returns a 200, even if the email address was not found (this way it can't be used to validate email addresses).
@@ -544,7 +544,7 @@ Visiting the URL in the email will fetch a page that offers the user the chance 
 ### Accepting a lost password request
 
 ```
-POST /confirm/accept/forgot/
+PUT /confirm/accept/forgot/
 
 body {
   "key": "confirmkey"
