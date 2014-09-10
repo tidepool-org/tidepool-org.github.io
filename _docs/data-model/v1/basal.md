@@ -263,6 +263,7 @@ This will result in the Tidepool platform storing
     "scheduleName": "Program 1",
     "rate": 0.7,
     "duration": 7200000,
+    "expectedDuration": 14400000,
     "time": "2014-01-01T00:00:00.000Z",
     "deviceId": "1234",
     "source": "example"
