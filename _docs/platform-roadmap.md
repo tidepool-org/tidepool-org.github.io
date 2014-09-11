@@ -104,7 +104,7 @@ The data storage system currently in use in Blip is a custom framework designed 
 ####Architectural thinking we need to do first:
 
   * Design and document our unified data storage model:
-    * What is the data storage model? Define data schemas, data formats, and hierarchy of data. *September 2014: this is available [here](http://tidepool.org/data-model/v1/)*
+    * What is the data storage model? Define data schemas, data formats, and hierarchy of data. *September 2014: this is available [here](http://developer.tidepool.io/data-model/v1/)*
     * How do we handle queries? We probably need a small query language. Design something that can start small and be extended.
     * How will we do notifications based on those queries? (In this case, "notifications" means a mechanism for software systems to be notified when items in the database are changed according to certain conditions.)
     * How is data provenance tracked? How are modifications to data expressed?
