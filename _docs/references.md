@@ -25,6 +25,9 @@ This page is for holding useful links.
 [Metrics Glossary](/metrics-glossary)
 : This is the glossary of terms used in our metrics reporting. Mostly useful internally, but someday we may be able to share all the information coming from our metrics.
 
+[Platform Notes](/platform-notes)
+: This is a set of links to notes about working on particular platforms. The Tidepool team develops internally on Macs, and deploys on Ubuntu linux on AWS, so our systems are tuned for those platforms. This document contains information (usually provided by third parties) about working with other platforms.
+
 ##External Links
 
 ###Node and Key Libraries
