@@ -282,14 +282,14 @@ This will result in the Tidepool platform storing
 Note that the duration on the initial basal event was updated to reflect the actual duration before the basal rate was changed.  Also, note that there is no annotation on the event, because the previous event lined up.
 
 
-### Suspended
+### Suspend
 
 Suspended basals are much the same as scheduled and temp basals:
 
 ~~~json
     {
       "type": "basal",
-      "deliveryType": "suspended",
+      "deliveryType": "suspend",
       "duration": number_of_milliseconds_the_suspend_will_be_in_effect_if_known,
       "time": see_common_fields,
       "deviceId": see_common_fields,
@@ -301,7 +301,7 @@ Suspended basals are much the same as scheduled and temp basals:
 
 These fields are a subset of those from a scheduled basal.  The `duration` is optional, but *should* be provided if there is some mechanism that will turn the pump back on automatically after some elapsed period of time.
 
-The `suppressed` field represents any basals that this suspend event is suppressing.  The pump should make an effort to try to emit events whenever there is a change in the actual basal that would have been delivered if the suspension weren't in operation.  This is not always possible, however, and in cases where it is not possible, it is acceptable to send a suspended event without a `suppressed` field.
+The `suppressed` field represents any basals that this suspend event is suppressing.  The pump should make an effort to try to emit events whenever there is a change in the actual basal that would have been delivered if the suspension weren't in operation.  This may not always be possible, however, and in cases where it is not possible, it is acceptable to send a suspended event without a `suppressed` field.
 
 ### Temp
 
