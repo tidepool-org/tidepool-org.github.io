@@ -30,6 +30,7 @@ We document our known annotations below, but we do not limit the set of annotati
 ### Generic
 
 * `basal/mismatched-series` happens when the API receives an basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
+* `basal/intersects-incomplete-suspend` happens when the interval of a basal segment contains a `deviceMeta` event annotated with `status/incomplete-tuple`. (See next item.) This basal segment will *not* reflect the incomplete suspend event and thus may not reflect actual delivery (which may have been suspended).
 * `status/incomplete-tuple` happens when a `deviceMeta` `status` event is sent in and never completed.  See the [Device Metadata](device-meta) page for more details.
 * `status/unknown-previous` happens when a `deviceMeta` `status` event is sent in with a `previous` field that doesn't reference an object in the Tidepool platform.  Accompanied by an `id` field:
     * `id` the expected id of the previous event as specified in the `previous` field on the event submitted to the Tidepool platform.  This might be null or just not exist if there wasn't a `previous` field provided on the submitted event.
@@ -44,5 +45,6 @@ We document our known annotations below, but we do not limit the set of annotati
 * `carelink/settings/wizard-mismatch` same as "basal" but with other wizard settings: insulin sensitivity, insulin:carb ratio, etc
 * `carelink/settings/activeSchedule-mismatch` same as "basal" but with the currently active schedule
     * We believe all three of the `mismatch` issues largely arise from the following situation: You've uploaded data from a pump to CareLink, but that pump has been reset between the last upload and the current upload.
+* `carelink/impending-device-overlap` occurs when two Medtronic insulin pumps of the same model were uploaded to one account with data overlaping in time. Because Carelink does not identify the serial number of the pump whence each datum originated, we cannot separate such overlapping data, and in the short term will remove it instead. This annotation should appear on the last basal segment *prior* to the removed overlapping data (in order that the annotation will be exposed clearly to the user).
 
   
