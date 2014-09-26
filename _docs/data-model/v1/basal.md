@@ -14,6 +14,7 @@ There are three general types of basal events that tidepool understands:
 * injected
 * scheduled
 * temp
+* suspended
 
 Note, some of the field descriptions refer to common fields, those are available on the [base v1 page](..)
 
@@ -281,6 +282,27 @@ This will result in the Tidepool platform storing
 Note that the duration on the initial basal event was updated to reflect the actual duration before the basal rate was changed.  Also, note that there is no annotation on the event, because the previous event lined up.
 
 
+### Suspend
+
+Suspended basals are much the same as scheduled and temp basals:
+
+~~~json
+    {
+      "type": "basal",
+      "deliveryType": "suspend",
+      "duration": number_of_milliseconds_the_suspend_will_be_in_effect_if_known,
+      "time": see_common_fields,
+      "deviceId": see_common_fields,
+      "source": see_common_fields,
+      "previous": the_basal_event_that_was_have_been_previously_received,
+      "suppressed": basal_events_not_being_delivered_because_this_one_is_active
+    }
+~~~
+
+These fields are a subset of those from a scheduled basal.  The `duration` is optional, but *should* be provided if there is some mechanism that will turn the pump back on automatically after some elapsed period of time.
+
+The `suppressed` field represents any basals that this suspend event is suppressing.  The pump should make an effort to try to emit events whenever there is a change in the actual basal that would have been delivered if the suspension weren't in operation.  This may not always be possible, however, and in cases where it is not possible, it is acceptable to send a suspended event without a `suppressed` field.
+
 ### Temp
 
 Temp basals are much the same as scheduled basals:
@@ -303,6 +325,7 @@ Temp basals are much the same as scheduled basals:
 These fields are basically the same as those from a scheduled basal, except for the introduction of the `percent` field.  If `percent` is provided and `value` is null, our systems will compute the value to be the given percentage of the the value of the first supressed event.
 
 With temps, it is relatively common that the previous field is the exact same as the first element of the suppressed field.
+
 
 #### Storage/Output Format
 
