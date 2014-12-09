@@ -19,10 +19,8 @@ These events are point-in-time and look like
   "type": "upload",
   "time": "ISO8601_timestamp",
   "timezone": "name_of_timezone",
-  "timezoneOffset": "offset_in_minutes",
   "uploadId": "unique_id",
   "byUser": "userId_of_the_uploading user"
-  "deviceTime": "see_common_fields",
   "createdTime": "see_common_fields",
   "modifiedTime": "see_common_fields",
   "source": "see_common_fields",
@@ -32,7 +30,7 @@ These events are point-in-time and look like
 
 ### timezone
 
-The timezone is the *name* of the timezone selected by the user for the upload. The offset alone is not sufficient information to present to someone who wants to edit the data, because at different times of the year, the offset can change.
+The timezone is the *name* of the timezone selected by the user for the upload. The timezoneOffset as used in individual records is not sufficient information to present to someone who wants to edit the data, because at different times of the year, the offset can change -- it may also be the case that the offset is different between different records in a single upload.
 
 ### uploadId
 
@@ -42,7 +40,11 @@ The uploadId is generated as a hash from several values:
 * The deviceId for the upload data
 * The current session token
 
-The point is that the uploadId should change for each device, for each upload session. At some point, we may support real-time monitoring of devices, in which case the upload session may be quite long -- so by using the session token, the uploadId will change periodically as the token is refreshed.
+The point is that the uploadId should change for each device, for each upload session. 
+
+For situations where we are uploading data extracted from a non-device source, such as when we scrape data from third party websites that do not support a data API, the uploadId should likely be consistent for an entire session, even if that session contains data from multiple physical devices.
+
+At some point, we may support real-time monitoring of devices, in which case the upload session may be quite long -- so by using the session token, the uploadId will change periodically as the token is refreshed.
 
 ### byUser
 
