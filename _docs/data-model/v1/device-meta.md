@@ -43,7 +43,7 @@ A status event is used to represent the status of a pump.  Specifically, this is
     * "alarm" - the pump automatically suspended due to an alarm
 * For resumed status
     * "manual" - the user manually resumed the pump
-    * "automatic" - the pump resume on its own
+    * "automatic" - the pump resumed on its own
     * "automatic/user-accepted" - the pump resumed on its own after low-glucose suspend (LGS); the user cleared at least one LGS alarm, indicating tacit acceptance of the suspend
     * "automatic/user-ignored" - the pump resumed on its own after low-glucose suspend (LGS); the user did not respond to any of the LGS alarms
 
