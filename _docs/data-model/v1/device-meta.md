@@ -5,7 +5,7 @@ published: true
 ---
 # DeviceMeta
 
-DeviceMeta events are a catch-all for metadata about whatever device is currently being used.  We expect the domain of deviceMeta events to expand regularly as we want to track more and more things about the device-proper.
+DeviceMeta events are a catch-all for metadata about whatever device is currently being used.  We expect the domain of deviceMeta events to expand regularly as we want to track more and more things about the device proper.
 
 The "type" of a deviceMeta event is defined by the `subType` field.
 
@@ -43,7 +43,9 @@ A status event is used to represent the status of a pump.  Specifically, this is
     * "alarm" - the pump automatically suspended due to an alarm
 * For resumed status
     * "manual" - the user manually resumed the pump
-    * "automatic" - the pump resumed on its own
+    * "automatic" - the pump resume on its own
+    * "automatic/user-accepted" - the pump resumed on its own after low-glucose suspend (LGS); the user cleared at least one LGS alarm, indicating tacit acceptance of the suspend
+    * "automatic/user-ignored" - the pump resumed on its own after low-glucose suspend (LGS); the user did not respond to any of the LGS alarms
 
 Status events come in tuples delivered over time.  The first event in the tuple must be a non "resumed" status, subsequent statuses can be any other status change until a "resumed" status is received.  The "resumed" event closes the tuple.  As each event in the tuple is received the system will update the duration of the previous event in the tuple according to the differences in the timestamps.
 
