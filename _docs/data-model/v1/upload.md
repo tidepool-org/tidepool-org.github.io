@@ -19,6 +19,7 @@ These events are point-in-time and look like
   "type": "upload",
   "time": "ISO8601_timestamp",
   "timezone": "name_of_timezone",
+  "version": "version_of_uploader",
   "uploadId": "unique_id",
   "byUser": "userId_of_the_uploading user"
   "createdTime": "see_common_fields",
@@ -31,6 +32,10 @@ These events are point-in-time and look like
 ### timezone
 
 The timezone is the *name* of the timezone selected by the user for the upload. The timezoneOffset as used in individual records is not sufficient information to present to someone who wants to edit the data, because at different times of the year, the offset can change -- it may also be the case that the offset is different between different records in a single upload.
+
+### version
+
+This is the version of the uploader that was used to parse the data for the upload session, e.g. `"version":"chrome uploader v0.9.0"`. The intention is that then if we have a bug with a particular version of the uploader we can trace all the data that was processed with that version.
 
 ### uploadId
 
