@@ -25,6 +25,7 @@ Wizard events are point-in-time and look like
   "payload": see_below,
   "time": see_common_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields,
   "bolus": bolus_event_resulting_from_wizard_if_exists
 }

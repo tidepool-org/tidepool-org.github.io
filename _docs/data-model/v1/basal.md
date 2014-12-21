@@ -31,6 +31,7 @@ This represents an injection of a long-acting insulin.
   "insulin": name_of_insulin_used,
   "time": see_common_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields
 }
 ~~~

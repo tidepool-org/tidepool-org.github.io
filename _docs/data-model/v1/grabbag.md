@@ -12,6 +12,7 @@ Grab Bag represents an event with absolutely no semantic verification done on an
   "type": "grabbag",
   "subType": your_name_here,
   "time": see_common_fields,
+  "uploadId": see_common_fields,
   ... your fields here ...
 }
 ~~~
