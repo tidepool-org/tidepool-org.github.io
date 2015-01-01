@@ -24,7 +24,7 @@ A status event is used to represent the status of a pump.  Specifically, this is
   "type": "deviceMeta",
   "subType": "status",
   "status": suspended_or_resumed,
-  "reason": indication_of_why
+  "reason": indication_of_why,
   "time": see_common_fields,
   "duration": max_duration_of_status_if_known,
   "deviceId": see_common_fields,
@@ -55,6 +55,8 @@ In the unlikely event that the event specified by the `previous` field does not 
 
 ### Storage/Output Format
 
+The storage and output format for status events differs from what was initially ingested only with respect to the `reason` field for `status`-type events. (Also, the `previous` field will not actually be stored. Instead, it is used simply as a verfication mechanism.) The storage and output format combines the `reason` codes for each of the events making up a `status` tuple. In all cases, the `reason` field is an object with keys that corresponded to the `status` (i.e., `suspended` or `resumed`) and values chosen from the sets of appropriate reason codes for each `status`.
+
 The storage and output format for status events is essentially a mirror except the `previous` field will not actually be stored.  Instead, it is used simply as a verification mechanism.
 
 #### Example: Event submitted with previous that exists
@@ -66,7 +68,7 @@ If you were to first emit the event
   "type": "deviceMeta",
   "subType": "status",
   "status": "suspended",
-  "reason": "manual",
+  "reason": {"suspended": "manual"},
   "time": "2014-01-01T01:00:00.000Z",
   "deviceId": "123",
   "source": "example"
@@ -81,7 +83,7 @@ At this point, the tidepool platform will store and allow you to retrieve
     "type": "deviceMeta",
     "subType": "status",
     "status": "suspended",
-    "reason": "manual",
+    "reason": {"suspended": "manual"},
     "time": "2014-01-01T01:00:00.000Z",
     "deviceId": "123",
     "source": "example"
@@ -97,7 +99,7 @@ If you then emit
   "type": "deviceMeta",
   "subType": "status",
   "status": "resumed",
-  "reason": "manual",
+  "reason": {"resumed": "manual"},
   "time": "2014-01-01T01:30:00.000Z",
   "deviceId": "123",
   "source": "example",
@@ -105,7 +107,7 @@ If you then emit
     "type": "deviceMeta",
     "subType": "status",
     "status": "suspended",
-    "reason": "manual",
+    "reason": {"suspended": "manual"},
     "time": "2014-01-01T00:00:00.000Z",
     "deviceId": "123",
     "source": "example"
@@ -121,7 +123,7 @@ The tidepool platform will store and allow you to retrieve
     "type": "deviceMeta",
     "subType": "status",
     "status": "suspended",
-    "reason": "manual",
+    "reason": {"suspended": "manual", "resumed": "manual"},
     "time": "2014-01-01T01:00:00.000Z",
     "duration": 1800000,
     "deviceId": "123",
@@ -139,7 +141,7 @@ If you were to first emit the event
   "type": "deviceMeta",
   "subType": "status",
   "status": "suspended",
-  "reason": "manual",
+  "reason": {"resumed": "manual"},
   "time": "2014-01-01T00:00:00.000Z",
   "deviceId": "123",
   "source": "example"
@@ -153,7 +155,7 @@ And then emit
   "type": "deviceMeta",
   "subType": "status",
   "status": "resumed",
-  "reason": "manual",
+  "reason": {"resumed": "manual"},
   "time": "2014-01-01T02:00:00.000Z",
   "deviceId": "123",
   "source": "example",
@@ -161,7 +163,7 @@ And then emit
     "type": "deviceMeta",
     "subType": "status",
     "status": "suspended",
-    "reason": "manual",
+    "reason": {"suspended": "manual"},
     "time": "2014-01-01T01:00:00.000Z",
     "deviceId": "123",
     "source": "example"
@@ -177,7 +179,7 @@ The tidepool platform will store and allow you to retrieve
     "type": "deviceMeta",
     "subType": "status",
     "status": "suspended",
-    "reason": "manual",
+    "reason": {"suspended": "manual"},
     "time": "2014-01-00T00:00:00.000Z",
     "deviceId": "123",
     "source": "example",
@@ -187,7 +189,7 @@ The tidepool platform will store and allow you to retrieve
     "type": "deviceMeta",
     "subType": "status",
     "status": "resumed",
-    "reason": "manual",
+    "reason": {"resumed": "manual"},
     "time": "2014-01-01T02:00:00.000Z",
     "deviceId": "123",
     "source": "example",
@@ -213,4 +215,4 @@ A calibration event represents a calibration of a CGM.  It looks like
 
 ## Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
