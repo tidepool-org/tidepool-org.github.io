@@ -13,6 +13,7 @@ A settings object represents the settings of a pump.  A settings object sent int
     "type": "settings",
     "time": see_common_fields,
     "deviceId": see_common_fields,
+    "uploadId": see_common_fields,
     "source": see_common_fields
     "activeSchedule": currently_active_basal_schedule_name,
     "units": see_below,

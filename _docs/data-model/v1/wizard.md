@@ -14,7 +14,8 @@ Wizard events are point-in-time and look like
   "type": "wizard",
   "recommended": {
     "carb": number_of_units_to_cover_carbs,
-    "correction": number_of_units_to_cover_correction
+    "correction": number_of_units_to_cover_correction,
+    "net": total_recommendation_after_insulin_on_board_accounting_if_any
   },
   "bgInput": bg_as_input_into_wizard,
   "carbInput": carbohydrates_as_input_into_wizard_in_mg,
@@ -25,6 +26,7 @@ Wizard events are point-in-time and look like
   "payload": see_below,
   "time": see_common_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields,
   "bolus": bolus_event_resulting_from_wizard_if_exists
 }
@@ -32,6 +34,7 @@ Wizard events are point-in-time and look like
 
 * `recommended.carb` is the number of units of insulin that the wizard recommended to cover carbohydrate intake.
 * `recommended.correction` is the number of units of insulin that the wizard recommended to attempt to bring the PwD down to their target BG.
+* `recommended.net` is the net number of units of insulin that the wizard recommended, taking into account `recommended.carb`, `recommended.correction`, and `insulinOnBoard`. We store the result of this calculation because different devices do this calculation in different ways.
 * `bgInput` is the blood glucose value input into the wizard.  This is converted to mmol/l based on a `units` field.
 * `carbInput` is the carbohydrate value (mg) input into the wizard, note that this is not necessarily an indication of carbohydrates that were actually consumed.  It is, instead, an indication of carbohydrates that the PwD entered into their pump.
 * `insulinOnBoard` is the units of insulin currently in suspension inside of the PwD.  Metaphorically speaking, this can be thought of as how many little yellow school buses with Mrs. Frizzle and kids are floating around learning about the PwD's anatomy.

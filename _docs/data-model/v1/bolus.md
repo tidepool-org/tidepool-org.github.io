@@ -28,6 +28,7 @@ An "injected" bolus is a bolus that was delivered via injection.  It is a single
   "insulin": name_of_insulin_used,
   "time": see_common_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields
 }
 ~~~
@@ -47,6 +48,7 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
   "normal": number_of_units,
   "time": see_common_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields
 }
 ~~~
@@ -63,12 +65,13 @@ It may be followed by a "completion" event that looks almost the same as the abo
   "normal": number_of_units,
   "time": see_common_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields,
   "previous": bolus_event_that_is_now_completed
 }
 ~~~
 
-The `previous` field should be an exact copy (including timestamp) of the original bolus event received.  If `normal` of the "completion" event is different from the `normal` of the "start" event, we will store the `normal` from the "start" event in the `expectedNormal` field of the original event, and update the `normal` field to be the value from the "completion" event.
+The `previous` field should be an exact copy (including timestamp, but uploadId will be ignored) of the original bolus event received.  If `normal` of the "completion" event is different from the `normal` of the "start" event, we will store the `normal` from the "start" event in the `expectedNormal` field of the original event, and update the `normal` field to be the value from the "completion" event.
 
 ### Example: Submitting a bolus that succeeded
 
@@ -81,6 +84,7 @@ If you first submit
   "normal": 2.0,
   "time": "2014-01-01T00:00:00.000Z",
   "deviceId": "1234",
+  "uploadId": "abc123def567",
   "source": "example"
 }
 ~~~
@@ -94,6 +98,7 @@ you *may* also subsequently submit
   "normal": 2.0,
   "time": "2014-01-01T00:02:00.000Z",
   "deviceId": "1234",
+  "uploadId": "ccc111222333",
   "source": "example",
   "previous": {
     "type": "bolus",

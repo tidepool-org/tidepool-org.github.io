@@ -27,6 +27,7 @@ Below are the GitHub names of people who have agreed to Tidepool VCLA via GitHub
 [anderspitman](https://github.com/anderspitman) | [Agreed in blip#121](https://github.com/tidepool-org/blip/pull/121)
 [trhodeos](https://github.com/trhodeos) | [Agreed in tideline#48](https://github.com/tidepool-org/tideline/pull/48)
 [yrrebnarg](https://github.com/yrrebnarg) | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
+[ursooperduper](https://github.com/ursooperduper) | [Agreed in blip#182](https://github.com/tidepool-org/blip/pull/182)
 
 ##Committers
 
@@ -34,14 +35,12 @@ These are the people who have commit rights to at least some of Tidepool's repos
 
 User | Area
 ---- | ----
-brandonarbiter | Product
-cheddar | Engineering (*)
-cmakler | Product
 HowardLook | CEO
+brandonarbiter | Product
+kentquirk | Engineering (*)
 ianjorgensen | Engineering (*)
 jebeck | Engineering (*)
 jh-bate | Engineering (*)
-kentquirk | Engineering (*)
-mccanne | Engineering
-nicolashery | Engineering (*)
 skrugman | Design
+cheddar | Engineering
+nicolashery | Engineering

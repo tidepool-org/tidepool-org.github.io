@@ -21,6 +21,7 @@ Note events look like:
   "createdTime": see_provenance_fields,
   "modifiedTime": see_provenance_fields,
   "deviceId": see_common_fields,
+  "uploadId": see_common_fields,
   "source": see_common_fields
 }
 ~~~
