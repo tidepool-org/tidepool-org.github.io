@@ -12,7 +12,7 @@ The `annotations` field is physically an array of annotation objects, but semant
 An annotation object has one required field, `code`, and can have any number of other fields.  For example
 
 ~~~json
-    { "code": "carelink/basal/temp-percent-create-scheduled" }
+    { "code": "carelink/basal/fabricated-from-schedule" }
 ~~~
 
 is valid.  Also
@@ -30,10 +30,16 @@ We document our known annotations below, but we do not limit the set of annotati
 ### Generic
 
 * `basal/mismatched-series` happens when the API receives a basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
+
+
 * `basal/unknown-duration` seems to happen around initial set-up of a new or replacement pump, when we don't yet have a complete set of basal schedules to match basal rate changes against, but more generally speaking this annotation code should appear on all basal rate segments for which we cannot determine a duration. (Since a basal rate segment represents delivery of insulin at a certain rate over an interval of time, any basal rate event lacking a duration is uninterpretable.)
+
+
 * `basal/intersects-incomplete-suspend` happens when the interval of a basal rate segment contains a `deviceMeta` event annotated with `status/incomplete-tuple`. (See next item.) This basal segment will *not* reflect the incomplete suspend event and thus may not reflect actual delivery (which may have been suspended). The annotation should also include a `deviceMetaId` field:
     * `deviceMetaId` the `id` of the `deviceMeta` annotated with `status/incomplete-tuple` that is contained within the time interval of the basal segment.
 * `status/incomplete-tuple` happens when a `deviceMeta` `status` event is sent in and never completed.  See the [Device Metadata](device-meta) page for more details.
+
+
 * `status/unknown-previous` happens when a `deviceMeta` `status` event is sent in with a `previous` field that doesn't reference an object in the Tidepool platform.  Accompanied by an `id` field:
     * `id` the expected id of the previous event as specified in the `previous` field on the event submitted to the Tidepool platform.  This might be null or just not exist if there wasn't a `previous` field provided on the submitted event.
 
@@ -45,5 +51,11 @@ We document our known annotations below, but we do not limit the set of annotati
     * First, when a percentage temp basal is active, Medtronic pumps ignore and do not provide any further "basal rate change" events.  Meaning that we must look at the current settings in order to determine when those changes occurred and what the original (scheduled but suppressed) rate was.  Not having these events actually means that it is impossible to audit the activities of the pump during a temp basal.  We generate the events that the pump *should* be generating as part of its audit log and annotate them with this annotation to indicate that they are events we have generated.
     * Second, whenever there is some kind of gap in the basal segment history, either due to discarding an uninterpretable event or because the pump is an older model that does not keep a full running log of basal rate changes. In these cases, we fill in the expected basal rate changes from the currently active basal schedule in the pump's settings and annotate each to make it clear that these data points are events we have generated.
 * `carelink/basal/fabricated-from-suppressed` can happen upon resuming from a suspend when Medtronic does not provide (in the proper sequence, or at all) the basal rate event that the pump returned to upon exiting suspension. In cases such as this, we fabricate a basal rate based on the most recent rate that we believe was suppressed by the suspend and annotate this event to make it clear that we have generated it.
+
+    
+* `carelink/bolus/missing-square-component` happens when we process a normal bolus with `IS_DUAL_COMPONENT=true` but don't manage to find the corresponding square-wave bolus. (Combining component bolus events and/or bolus wizard events is particularly tricky with CareLink data.)
+
+
+* `carelink/wizard/long-search` happens when we can't be 100% certain that we've *correctly* combined a wizard event with an actual bolus delivery event. We rely on the upload sequence numbers of events in the CareLink data to combine these events, but sometimes other events (e.g., pump alarms) disturb the sequence. We make a reasonable effort to allow for this by searching beyond exactly where we expect the corresponding event to be in the sequence, but when we have done this, we apply this annotation to express our lack of absolute certainty in the result.
 
   
