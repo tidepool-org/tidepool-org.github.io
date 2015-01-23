@@ -14,8 +14,7 @@ SMBG represents blood glucose from a finger prick or other "self-monitoring" met
   "value": bg_value_from_self_monitoring_device,
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "uploadId": see_common_fields,
-  "source": see_common_fields
+  "uploadId": see_common_fields
 }
 ~~~
 

@@ -18,8 +18,7 @@ A food event looks like
   "fat": grams_of_fat,
   "location": location_of_meal,
   "name": name_of_food,
-  "uploadId": see_common_fields,
-  "source": see_common_fields
+  "uploadId": see_common_fields
 }
 ~~~
 

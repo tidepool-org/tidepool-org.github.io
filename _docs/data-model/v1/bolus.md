@@ -28,8 +28,7 @@ An "injected" bolus is a bolus that was delivered via injection.  It is a single
   "insulin": name_of_insulin_used,
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "uploadId": see_common_fields,
-  "source": see_common_fields
+  "uploadId": see_common_fields
 }
 ~~~
 
@@ -48,8 +47,7 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
   "normal": number_of_units,
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "uploadId": see_common_fields,
-  "source": see_common_fields
+  "uploadId": see_common_fields
 }
 ~~~
 
@@ -66,7 +64,6 @@ It may be followed by a "completion" event that looks almost the same as the abo
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "uploadId": see_common_fields,
-  "source": see_common_fields,
   "previous": bolus_event_that_is_now_completed
 }
 ~~~
@@ -84,8 +81,7 @@ If you first submit
   "normal": 2.0,
   "time": "2014-01-01T00:00:00.000Z",
   "deviceId": "1234",
-  "uploadId": "abc123def567",
-  "source": "example"
+  "uploadId": "abc123def567"
 }
 ~~~
 
@@ -99,14 +95,12 @@ you *may* also subsequently submit
   "time": "2014-01-01T00:02:00.000Z",
   "deviceId": "1234",
   "uploadId": "ccc111222333",
-  "source": "example",
   "previous": {
     "type": "bolus",
     "subType": "normal",
     "normal": 2.0,
     "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
   }
 }
 ~~~
@@ -119,8 +113,7 @@ In this case, whether you submit the follow-up event or not, the Tidepool platfo
   "subType": "normal",
   "normal": 2.0,
   "time": "2014-01-01T00:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }
 ~~~
 
@@ -135,8 +128,7 @@ If you start by submitting
   "subType": "normal",
   "normal": 2.0,
   "time": "2014-01-01T00:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }
 ~~~
 
@@ -149,14 +141,12 @@ and subsequently submit
   "normal": 1.0,
   "time": "2014-01-01T00:02:00.000Z",
   "deviceId": "1234",
-  "source": "example",
   "previous": {
     "type": "bolus",
     "subType": "normal",
     "normal": 2.0,
     "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
   }
 }
 ~~~
@@ -170,8 +160,7 @@ the follow-up event will update the original datum, changing the value of `norma
   "normal": 1.0,
   "expectedNormal": 2.0,
   "time": "2014-01-01T00:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }
 ~~~
 
@@ -188,8 +177,7 @@ A "square" bolus is a bolus that is delivered over some time duration, somewhat 
   "extended": number_of_units,
   "duration": milliseconds_over_which_the_bolus_should_be_delivered,
   "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "source": see_common_fields
+  "deviceId": see_common_fields
 }
 ~~~
 
@@ -203,7 +191,6 @@ It is followed up with a "completion" event that looks the exact same as the abo
   "duration": milliseconds_over_which_the_bolus_was_delivered,
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "source": see_common_fields,
   "previous": bolus_event_that_is_now_completed
 }
 ~~~
@@ -226,8 +213,7 @@ A "dual/square" bolus is a bolus that starts out with a normal bolus and then co
   "extended": number_of_units_for_extended_delivery,
   "duration": milliseconds_over_which_the_extended_portion_should_be_delivered,
   "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "source": see_common_fields
+  "deviceId": see_common_fields
 }
 ~~~
 
@@ -240,7 +226,6 @@ It may be followed up with a "completion" event that looks the exact same as the
   "normal": number_of_units
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "source": see_common_fields,
   "previous": initial_dual_square_bolus
 }
 ~~~
@@ -255,7 +240,6 @@ Which may also be followed up with a "completion" event that looks the exact sam
   "duration": milliseconds_over_which_the_extended_portion_was_delivered,
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "source": see_common_fields,
   "previous": bolus_event_that_is_now_completed
 }
 ~~~

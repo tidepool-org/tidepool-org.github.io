@@ -29,7 +29,6 @@ A status event is used to represent the status of a pump.  Specifically, this is
   "duration": max_duration_of_status_if_known,
   "deviceId": see_common_fields,
   "uploadId": see_common_fields,
-  "source": see_common_fields,
   "previous": previously_active_status_event
 }
 ~~~

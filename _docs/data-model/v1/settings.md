@@ -14,7 +14,6 @@ A settings object represents the settings of a pump.  A settings object sent int
     "time": see_common_fields,
     "deviceId": see_common_fields,
     "uploadId": see_common_fields,
-    "source": see_common_fields
     "activeSchedule": currently_active_basal_schedule_name,
     "units": see_below,
     "basalSchedules": see_below,
@@ -41,7 +40,7 @@ A settings object represents the settings of a pump.  A settings object sent int
 
 ~~~json
     {
-        "standard": [ 
+        "standard": [
           { "rate": 0.8, "start": 0 },
           { "rate": 0.75, "start": 3600000 },
           ...
@@ -56,7 +55,7 @@ A settings object represents the settings of a pump.  A settings object sent int
 
 Where:
 
-* `rate` is the basal rate 
+* `rate` is the basal rate
 * `start` is the millisecond offset from midnight that day, representing when the rate should take effect
 
 ### carbRatio
@@ -70,9 +69,9 @@ Where:
       ...
     ]
 ~~~
- 
-Where 
-* `amount` is the units of carbs per unit of insulin 
+
+Where
+* `amount` is the units of carbs per unit of insulin
 * `start` is the millisecond offset from midnight that day, representing when the ratio should take effect
 
 ### insulinSensitivity
@@ -89,7 +88,7 @@ Where
 
 Where:
 
-* `amount` is the expected decrease in bg per unit of insulin 
+* `amount` is the expected decrease in bg per unit of insulin
 * `start` is the millisecond offset from midnight that day, representing when the sensitivity value should take effect
 
 ### bgTarget
