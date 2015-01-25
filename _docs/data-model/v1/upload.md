@@ -90,7 +90,7 @@ Again, for new devices please contact Tidepool so we can standardize on a name.
 
 Manufacturers often identify devices in a series of similar devices, each with a different model identification -- for example, Medtronic has the Paradigm Revel 523 and Paradigm Revel 723 pumps. Therefore, we have two levels of identifier. In this case, `deviceSeries` would be `"Paradigm Revel"` and `deviceModel` would be `523` or `723`.
 
-For manufacturers who don't have multiple levels, use the deviceSeries field and set the deviceModel field to an empty string (do not omit it).
+For manufacturers who don't have multiple levels, use the deviceModel field and set the deviceSeries field to an empty string (do not omit it).
 
 ### deviceSerialNumber
 
