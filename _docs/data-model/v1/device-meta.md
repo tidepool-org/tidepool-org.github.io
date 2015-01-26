@@ -11,8 +11,95 @@ The "type" of a deviceMeta event is defined by the `subType` field.
 
 Current DeviceMeta events are
 
+* alarm
+* prime
+* reset
 * status
 * calibration
+
+## Alarm
+
+An alarm event is used to represent a user-facing alarm from an insulin pump. An alarm event looks like
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "alarm",
+  "alarmType": type_of_alarm_or_other,
+  "payload": see_common_fields,
+  "time": see_common_fields,
+  "deviceId": see_common_fields,
+  "uploadId": see_common_fields
+}
+~~~
+
+The `alarmType`s built into the data model are all and only those alarms that are common to most, if not all, insulin pumps. Currently this list is:
+
+- `low_insulin` for low reservoir/cartridge alarms
+- `no_insulin` for empty reservoir/cartridge alarms
+- `low_power` for low battery alarms
+- `no_power` for out of battery alarms
+- `occlusion` for occlusion (blockage of infusion set) alarms
+- `auto_off` for when the pump stops all delivery due to inactivity for a period longer than the user's programmed threshold (if any)
+- `over_limit` for when insulin delivery has surpassed any of a user's programmed maximum bolus, basal, or hourly delivery thresholds
+
+Many if not all `alarm` events will include a `payload` object with more information about the alarm that is device-specific. For example, a `low_insulin` alarm may have a `units_left` field in its `payload` to record the number of units of insulin that were remaining in the insulin pump's reservoir at the time of the alarm.
+
+In addition, a `payload` object is *required* when `alarmType` is `other`; this value is used to capture all alarms that are device-specific. For example, a pod expiration alarm is specific to the Insulet OmniPod insulin delivery system, and a 'pump body disconnected' alarm is specific to an Asante Snap insulin pump. The `payload` object should include all information that could be relevant to anyone wishing to audit the history and performance of the insulin pump in question.
+
+### Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
+
+## Prime
+
+A prime event represents the priming of either an infusion line (tubing) or an infusion cannula. It looks like
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "prime",
+  "primeTarget": tubing_or_cannula,
+  "volume": optional_units_delivered,
+  "time": see_common_fields,
+  "deviceId": see_common_fields,
+  "uploadId": see_common_fields
+}
+~~~
+
+`primeTarget` can have two values depending on the object of the priming action - either `tubing` for an infusion line prime or `cannula` for a cannula prime.
+
+The `volume` field is optional. It should be included if the data specifies the volume of insulin delivered in the course of the priming.
+
+### Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
+
+## Reset
+
+A reset event represents any event in an insulin delivery system that implies a return to a device state not yet ready to deliver insulin. This varies depending on the type of insulin delivery device. For conventional syringe-type insulin pumps, this will be a rewind event. For an Insulet OmniPod system, it is a new pod activation event. For an Asante Snap system, it is a new pump body event. This event often implies a suspension of insulin delivery; in the case that the device data includes a reset event but does not include a separate indication of insulin delivery suspension, a `status` event should also be uploaded to the platform.
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "reset",
+  "payload": see_common_fields,
+  "time": see_common_fields,
+  "deviceId": see_common_fields,
+  "uploadId": see_common_fields
+}
+~~~
+
+The `payload` object should be included in most cases in order to expose the specifics of the event type that is being interpreted more generally as a `reset`, along with any other relevant device-specific information. For example, the `payload` for an Insulet OmniPod `reset` might include the following fields:
+
+- `eventType` with the value `new_pod`
+- `podSerial` for the new pod's serial number
+- `podLot` for the new pod's lot number
+- etc.
+
+### Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
 
 ## Status
 
@@ -25,8 +112,9 @@ A status event is used to represent the status of a pump.  Specifically, this is
   "subType": "status",
   "status": suspended_or_resumed,
   "reason": indication_of_why,
-  "time": see_common_fields,
   "duration": max_duration_of_status_if_known,
+  "payload": see_common_fields,
+  "time": see_common_fields,
   "deviceId": see_common_fields,
   "uploadId": see_common_fields,
   "source": see_common_fields,
@@ -36,17 +124,34 @@ A status event is used to represent the status of a pump.  Specifically, this is
 
 `status` is the new status, it can be "suspended" or "resumed".
 
-`reason` is an indication of why the status was changed.  It can be:
+`reason` is an indication of why the status was changed; it is an object with fields for either or both of `suspended` and `resumed` because the causes for each of these status changes may differ. For both `suspended` and `resumed` statuses, `reason` is a strictly binary distinction between `manual` (caused by direct action of the user) and `automatic` (all cases not involving direct user intervention), as a more nuanced taxonomy allows too much room for interpretation around the edge cases. However, a third option `unknown` is available when the device data does not include enough information to determine whether a suspension or resumption was caused by direct user intervention or not. (This is the case, for example, with Insulet OmniPod pod deactivations, which can be manual or automatic, but the deactivation records themselves do not include the cause of the deactivation.)
 
-* For suspended status
-    * "manual" - the user manually suspended the pump
-    * "low_glucose" - the pump automatically suspended due to low blood glucose
-    * "alarm" - the pump automatically suspended due to an alarm
-* For resumed status
-    * "manual" - the user manually resumed the pump
-    * "automatic" - the pump resumed on its own
-    * "automatic/user-accepted" - the pump resumed on its own after low-glucose suspend (LGS); the user cleared at least one LGS alarm, indicating tacit acceptance of the suspend
-    * "automatic/user-ignored" - the pump resumed on its own after low-glucose suspend (LGS); the user did not respond to any of the LGS alarms
+The `payload` object is expected to contain more information about the cause of the suspension or resumption where it is available. For example, for MiniMed 530G insulin pumps with low-glucose suspend, there is a distinction between circumstances in which the pump resumes from a low-glucose suspend automatically after two hours depending on whether the user interacted with any of the LGS alarms during the duration of the suspend. We represent this distinction in the payload as follows:
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "status",
+  "status": "suspended",
+  "reason": {
+    "suspended": "automatic",
+    "resumed": "automatic"
+  },
+  "time": see_common_fields,
+  "duration": 7200000,
+  "payload": {
+    "suspended": {
+      "cause": "low_glucose",
+      "threshold": 80,
+    },
+    "resumed": {
+      "cause": "timed_out",
+      "user_intervention": "ignored"
+    }
+   }
+   ...
+}
+~~~
 
 Status events come in tuples delivered over time.  The first event in the tuple must be a non "resumed" status, subsequent statuses can be any other status change until a "resumed" status is received.  The "resumed" event closes the tuple.  As each event in the tuple is received the system will update the duration of the previous event in the tuple according to the differences in the timestamps.
 
@@ -199,6 +304,10 @@ The tidepool platform will store and allow you to retrieve
 ]
 ~~~
 
+### Storage/Output Format
+
+See examples above for the storage and output format for this data type and note that `previous` is never stored.
+
 ## Calibration
 
 A calibration event represents a calibration of a CGM.  It looks like
@@ -210,10 +319,10 @@ A calibration event represents a calibration of a CGM.  It looks like
   "value": bg_value_for_calibration,
   "time": see_common_fields,
   "deviceId": see_common_fields,
-  "source": see_common_fields
+  "uploadId": see_common_fields
 }
 ~~~
 
-## Storage/Output Format
+### Storage/Output Format
 
 The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
