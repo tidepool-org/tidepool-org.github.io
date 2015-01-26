@@ -110,15 +110,14 @@ A status event is used to represent the status of a pump.  Specifically, this is
 {
   "type": "deviceMeta",
   "subType": "status",
-  "status": suspended_or_resumed,
-  "reason": indication_of_why,
-  "duration": max_duration_of_status_if_known,
-  "payload": see_common_fields,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields,
-  "source": see_common_fields,
-  "previous": previously_active_status_event
+  "status": "suspended_or_resumed",
+  "reason": "indication_of_why",
+  "duration": "max_duration_of_status_if_known",
+  "payload": "see_common_fields",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields",
+  "previous": "previously_active_status_event"
 }
 ~~~
 

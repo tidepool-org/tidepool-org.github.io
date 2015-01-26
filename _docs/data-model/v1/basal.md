@@ -26,13 +26,12 @@ This represents an injection of a long-acting insulin.
 {
   "type": "basal",
   "deliveryType": "injected",
-  "value": total_number_of_units_injected,
-  "duration": number_of_milliseconds_this_injection_is_expected_to_last,
-  "insulin": name_of_insulin_used,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields,
-  "source": see_common_fields
+  "value": "total_number_of_units_injected",
+  "duration": "number_of_milliseconds_this_injection_is_expected_to_last",
+  "insulin": "name_of_insulin_used",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
@@ -58,14 +57,13 @@ This is a "scheduled" basal, it is a basal dosing that is operating according to
 {
   "type": "basal",
   "deliveryType": "scheduled",
-  "scheduleName": name_of_schedule_from_settings,
-  "rate": number_of_units_per_hour,
-  "duration": number_of_milliseconds_this_basal_rate_will_be_in_effect,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "source": see_common_fields,
-  "previous": the_basal_event_that_would_have_been_previously_received,
-  "suppressed": basal_events_not_being_delivered_because_this_one_is_active
+  "scheduleName": "name_of_schedule_from_settings",
+  "rate": "number_of_units_per_hour",
+  "duration": "number_of_milliseconds_this_basal_rate_will_be_in_effect",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "previous": "the_basal_event_that_would_have_been_previously_received",
+  "suppressed": "basal_events_not_being_delivered_because_this_one_is_active"
 }
 ~~~
 
@@ -89,8 +87,7 @@ We start with a basal with no previous
   "rate": 0.7,
   "duration": 10800000,
   "time": "2014-01-01T00:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }
 ~~~
 
@@ -105,7 +102,6 @@ Then, we submit another basal with a previous
   "duration": 3600000,
   "time": "2014-01-01T03:00:00.000Z",
   "deviceId": "1234",
-  "source": "example",
   "previous": {
     "type": "basal",
     "deliveryType": "scheduled",
@@ -113,8 +109,7 @@ Then, we submit another basal with a previous
     "rate": 0.7,
     "duration": 10800000,
     "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
   }
 }
 ~~~
@@ -129,8 +124,7 @@ This will result in the Tidepool platform storing
     "rate": 0.7,
     "duration": 10800000,
     "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
 },{
   "type": "basal",
   "deliveryType": "scheduled",
@@ -138,8 +132,7 @@ This will result in the Tidepool platform storing
   "rate": 1.0,
   "duration": 3600000,
   "time": "2014-01-01T03:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }]
 ~~~
 
@@ -155,8 +148,7 @@ We start with a basal with no previous
   "rate": 0.7,
   "duration": 10800000,
   "time": "2014-01-01T00:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }
 ~~~
 
@@ -171,7 +163,6 @@ Then, we submit another basal with a previous
   "duration": 7200000,
   "time": "2014-01-01T04:00:00.000Z",
   "deviceId": "1234",
-  "source": "example",
   "previous": {
     "type": "basal",
     "deliveryType": "scheduled",
@@ -179,8 +170,7 @@ Then, we submit another basal with a previous
     "rate": 1.0,
     "duration": 3600000,
     "time": "2014-01-01T03:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
   }
 }
 ~~~
@@ -196,7 +186,6 @@ This will result in the Tidepool platform storing
     "duration": 10800000,
     "time": "2014-01-01T00:00:00.000Z",
     "deviceId": "1234",
-    "source": "example",
     "annotations": [{ "code": "basal/mismatched-series" }]
 },{
   "type": "basal",
@@ -205,8 +194,7 @@ This will result in the Tidepool platform storing
   "rate": 2.0,
   "duration": 7200000,
   "time": "2014-01-01T04:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }]
 ~~~
 
@@ -225,8 +213,7 @@ We start with a basal with no previous
   "rate": 0.7,
   "duration": 10800000,
   "time": "2014-01-01T00:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }
 ~~~
 
@@ -241,7 +228,6 @@ Then, we submit another basal with a previous
   "duration":7 14400000,
   "time": "2014-01-01T02:00:00.000Z",
   "deviceId": "1234",
-  "source": "example",
   "previous": {
     "type": "basal",
     "deliveryType": "scheduled",
@@ -249,8 +235,7 @@ Then, we submit another basal with a previous
     "rate": 0.7,
     "duration": 10800000,
     "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
   }
 }
 ~~~
@@ -266,8 +251,7 @@ This will result in the Tidepool platform storing
     "duration": 7200000,
     "expectedDuration": 14400000,
     "time": "2014-01-01T00:00:00.000Z",
-    "deviceId": "1234",
-    "source": "example"
+    "deviceId": "1234"
 },{
   "type": "basal",
   "deliveryType": "scheduled",
@@ -275,8 +259,7 @@ This will result in the Tidepool platform storing
   "rate": 0.8,
   "duration": 14400000,
   "time": "2014-01-01T02:00:00.000Z",
-  "deviceId": "1234",
-  "source": "example"
+  "deviceId": "1234"
 }]
 ~~~
 
@@ -291,12 +274,11 @@ Suspended basals are much the same as scheduled and temp basals:
     {
       "type": "basal",
       "deliveryType": "suspend",
-      "duration": number_of_milliseconds_the_suspend_will_be_in_effect_if_known,
-      "time": see_common_fields,
-      "deviceId": see_common_fields,
-      "source": see_common_fields,
-      "previous": the_basal_event_that_was_have_been_previously_received,
-      "suppressed": basal_events_not_being_delivered_because_this_one_is_active
+      "duration": "number_of_milliseconds_the_suspend_will_be_in_effect_if_known",
+      "time": "see_common_fields",
+      "deviceId": "see_common_fields",
+      "previous": "the_basal_event_that_was_have_been_previously_received",
+      "suppressed": "basal_events_not_being_delivered_because_this_one_is_active"
     }
 ~~~
 
@@ -312,14 +294,13 @@ Temp basals are much the same as scheduled basals:
     {
       "type": "basal",
       "deliveryType": "temp",
-      "rate": number_of_units_per_hour,
-      "percent": floating_point_percentage_of_suppressed_basal_that_should_be_delivered
-      "duration": number_of_milliseconds_the_temporary_basal_will_be_in_effect,
-      "time": see_common_fields,
-      "deviceId": see_common_fields,
-      "source": see_common_fields,
-      "previous": the_basal_event_that_would_have_been_previously_received,
-      "suppressed": basal_events_not_being_delivered_because_this_one_is_active
+      "rate": "number_of_units_per_hour",
+      "percent": "floating_point_percentage_of_suppressed_basal_that_should_be_delivered"
+      "duration": "number_of_milliseconds_the_temporary_basal_will_be_in_effect",
+      "time": "see_common_fields",
+      "deviceId": "see_common_fields",
+      "previous": "the_basal_event_that_would_have_been_previously_received",
+      "suppressed": "basal_events_not_being_delivered_because_this_one_is_active"
     }
 ~~~
 
