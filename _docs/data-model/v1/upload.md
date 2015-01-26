@@ -22,8 +22,8 @@ These events are point-in-time and look like
   "version": "version_of_uploader",
   "uploadId": "unique_id",
   "byUser": "userId_of_the_uploading user"
-  "deviceTags": ["tags_relating_to_device_features"...],
-  "deviceManufacturer": "name_of_manufacturer",
+  "deviceTags": ["tag_relating_to_device_features", "..."],
+  "deviceManufacturers": ["name_of_manufacturer", "..."],
   "deviceModel": "mfr_device_model",
   "deviceSerialNumber": "serial_number",
   "deviceId": "see_common_fields",
@@ -76,11 +76,12 @@ This is a list of broad attributes that can be applied to the device. It is an a
 
 Integrated devices or multifunction devices should use multiple tags as appropriate. For example, the Animas Vibe combo insulin delivery and CGM system would have tags `insulin-pump` and `cgm`. For devices that do not fit in these categories, please contact Tidepool so we can standardize on a good tag.
 
-### deviceManufacturer
+### deviceManufacturers
 
-This is the name of the device manufacturer. We are trying to standardize this field, so please use exactly the following names:
+This is the name or names of the device manufacturer(s), as an array. It may be more than one for devices that are joint projects of multiple organizations; again, the Animas Vibe would have `["Animas", "Dexcom"]` here. We are trying to standardize this field, so please use exactly the following names:
 
     Abbott
+    Animas
     Asante
     Dexcom
     Insulet
