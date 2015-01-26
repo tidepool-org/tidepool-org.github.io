@@ -24,11 +24,11 @@ An "injected" bolus is a bolus that was delivered via injection.  It is a single
 {
   "type": "bolus",
   "subType": "injected",
-  "value": number_of_units_injected,
-  "insulin": name_of_insulin_used,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "value": "number_of_units_injected",
+  "insulin": "name_of_insulin_used",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
@@ -44,10 +44,10 @@ A "normal" bolus is a one-time dose of insulin that is all delivered as quickly 
 {
   "type": "bolus",
   "subType": "normal",
-  "normal": number_of_units,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "normal": "number_of_units",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
@@ -60,11 +60,11 @@ It may be followed by a "completion" event that looks almost the same as the abo
 {
   "type": "bolus",
   "subType": "normal",
-  "normal": number_of_units,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields,
-  "previous": bolus_event_that_is_now_completed
+  "normal": "number_of_units",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields",
+  "previous": "bolus_event_that_is_now_completed"
 }
 ~~~
 
@@ -174,10 +174,10 @@ A "square" bolus is a bolus that is delivered over some time duration, somewhat 
 {
   "type": "bolus",
   "subType": "square",
-  "extended": number_of_units,
-  "duration": milliseconds_over_which_the_bolus_should_be_delivered,
-  "time": see_common_fields,
-  "deviceId": see_common_fields
+  "extended": "number_of_units",
+  "duration": "milliseconds_over_which_the_bolus_should_be_delivered",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields"
 }
 ~~~
 
@@ -187,11 +187,11 @@ It is followed up with a "completion" event that looks the exact same as the abo
 {
   "type": "bolus",
   "subType": "square",
-  "extended": number_of_units,
-  "duration": milliseconds_over_which_the_bolus_was_delivered,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "previous": bolus_event_that_is_now_completed
+  "extended": "number_of_units",
+  "duration": "milliseconds_over_which_the_bolus_was_delivered",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "previous": "bolus_event_that_is_now_completed"
 }
 ~~~
 
@@ -209,11 +209,11 @@ A "dual/square" bolus is a bolus that starts out with a normal bolus and then co
 {
   "type": "bolus",
   "subType": "dual/square",
-  "normal": number_of_units,
-  "extended": number_of_units_for_extended_delivery,
-  "duration": milliseconds_over_which_the_extended_portion_should_be_delivered,
-  "time": see_common_fields,
-  "deviceId": see_common_fields
+  "normal": "number_of_units",
+  "extended": "number_of_units_for_extended_delivery",
+  "duration": "milliseconds_over_which_the_extended_portion_should_be_delivered",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields"
 }
 ~~~
 
@@ -223,10 +223,10 @@ It may be followed up with a "completion" event that looks the exact same as the
 {
   "type": "bolus",
   "subType": "normal",
-  "normal": number_of_units
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "previous": initial_dual_square_bolus
+  "normal": "number_of_units"
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "previous": "initial_dual_square_bolus"
 }
 ~~~
 
@@ -236,11 +236,11 @@ Which may also be followed up with a "completion" event that looks the exact sam
 {
   "type": "bolus",
   "subType": "square",
-  "extended": number_of_units,
-  "duration": milliseconds_over_which_the_extended_portion_was_delivered,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "previous": bolus_event_that_is_now_completed
+  "extended": "number_of_units",
+  "duration": "milliseconds_over_which_the_extended_portion_was_delivered",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "previous": "bolus_event_that_is_now_completed"
 }
 ~~~
 
