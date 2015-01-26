@@ -25,11 +25,11 @@ An alarm event is used to represent a user-facing alarm from an insulin pump. An
 {
   "type": "deviceMeta",
   "subType": "alarm",
-  "alarmType": type_of_alarm_or_other,
-  "payload": see_common_fields,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "alarmType": "type_of_alarm_or_other",
+  "payload": "see_common_fields",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
@@ -59,11 +59,11 @@ A prime event represents the priming of either an infusion line (tubing) or an i
 {
   "type": "deviceMeta",
   "subType": "prime",
-  "primeTarget": tubing_or_cannula,
-  "volume": optional_units_delivered,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "primeTarget": "tubing_or_cannula",
+  "volume": "optional_units_delivered",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
@@ -77,16 +77,17 @@ The storage and output format for this datum is exactly what was initially inges
 
 ## Reset
 
-A reset event represents any event in an insulin delivery system that implies a return to a device state not yet ready to deliver insulin. This varies depending on the type of insulin delivery device. For conventional syringe-type insulin pumps, this will be a rewind event. For an Insulet OmniPod system, it is a new pod activation event. For an Asante Snap system, it is a new pump body event. This event often implies a suspension of insulin delivery; in the case that the device data includes a reset event but does not include a separate indication of insulin delivery suspension, a `status` event should also be uploaded to the platform.
+A reset event represents any event in an insulin delivery system that implies a return to a device state not yet ready to deliver insulin. This varies depending on the type of insulin delivery device. For conventional syringe-type insulin pumps, this will be a rewind event. For an Insulet OmniPod system, it is a new pod activation event. For an Asante Snap system, it is a new pump body event. This event often implies a suspension of insulin delivery; in the case that the device data includes a reset event but does not include a separate indication of insulin delivery suspension, a `status` event should also be uploaded to the platform and should be included (in its entirety) in the `status` field.
 
 ~~~json
 {
   "type": "deviceMeta",
   "subType": "reset",
-  "payload": see_common_fields,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "payload": "see_common_fields",
+  "status": "optional_status_object",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
@@ -99,7 +100,7 @@ The `payload` object should be included in most cases in order to expose the spe
 
 ### Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
+If the `status` field of a reset event is present as an object, it is reduced to its ID hash upon upload. There are no other modifications performed.
 
 ## Status
 
@@ -136,7 +137,7 @@ The `payload` object is expected to contain more information about the cause of 
     "suspended": "automatic",
     "resumed": "automatic"
   },
-  "time": see_common_fields,
+  "time": "see_common_fields",
   "duration": 7200000,
   "payload": {
     "suspended": {
@@ -315,10 +316,10 @@ A calibration event represents a calibration of a CGM.  It looks like
 {
   "type": "deviceMeta",
   "subType": "calibration",
-  "value": bg_value_for_calibration,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "value": "bg_value_for_calibration",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
