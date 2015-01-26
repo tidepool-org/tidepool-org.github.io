@@ -12,13 +12,13 @@ A food event looks like
 ~~~json
 {
   "type": "food",
-  "time": see_common_fields,
-  "carbs": grams_of_carbs,
-  "protein": grams_of_protein,
-  "fat": grams_of_fat,
-  "location": location_of_meal,
-  "name": name_of_food,
-  "uploadId": see_common_fields
+  "time": "see_common_fields",
+  "carbs": "grams_of_carbs",
+  "protein": "grams_of_protein",
+  "fat": "grams_of_fat",
+  "location": "location_of_meal",
+  "name": "name_of_food",
+  "uploadId": "see_common_fields"
 }
 ~~~
 

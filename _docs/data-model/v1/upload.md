@@ -21,7 +21,7 @@ These events are point-in-time and look like
   "timezone": "name_of_timezone",
   "version": "version_of_uploader",
   "uploadId": "unique_id",
-  "byUser": "userId_of_the_uploading user"
+  "byUser": "userId_of_the_uploading user",
   "deviceTags": ["tag_relating_to_device_features", "..."],
   "deviceManufacturers": ["name_of_manufacturer", "..."],
   "deviceModel": "mfr_device_model",

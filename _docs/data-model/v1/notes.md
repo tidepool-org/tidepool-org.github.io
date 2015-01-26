@@ -12,16 +12,16 @@ Note events look like:
 ~~~json
 {
   "type": "note",
-  "shortText": short_text_of_note,
-  "text": text_of_note,
-  "creatorId": userId of the account that created the note
-  "reference": event_to_which_this_note_refers,
-  "time": time_this_message_refers_to,
-  "displayTime": optional_time_to_display_when_rendered,
-  "createdTime": see_provenance_fields,
-  "modifiedTime": see_provenance_fields,
-  "deviceId": see_common_fields,
-  "uploadId": see_common_fields
+  "shortText": "short_text_of_note",
+  "text": "text_of_note",
+  "creatorId": "userId of the account that created the not"e
+  "reference": "event_to_which_this_note_refers",
+  "time": "time_this_message_refers_to",
+  "displayTime": "optional_time_to_display_when_rendered",
+  "createdTime": "see_provenance_fields",
+  "modifiedTime": "see_provenance_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields"
 }
 ~~~
 
