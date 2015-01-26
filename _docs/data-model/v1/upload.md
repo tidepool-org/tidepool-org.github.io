@@ -22,11 +22,10 @@ These events are point-in-time and look like
   "version": "version_of_uploader",
   "uploadId": "unique_id",
   "byUser": "userId_of_the_uploading user"
-  "deviceType": "type_of_device",
-  "deviceManufacturer": "name_of_manufacturer",
-  "deviceSeries": "mfr_device_series",
-  "deviceModel": "mfr_device_model_within_a_series",
-  "deviceSerialNumber": "serial_number"
+  "deviceTags": ["tags_relating_to_device_features"...],
+  "deviceManufacturers": ["name_of_manufacturer"...],
+  "deviceModel": "mfr_device_model",
+  "deviceSerialNumber": "serial_number",
   "deviceId": "see_common_fields",
   "createdTime": "see_common_fields",
   "modifiedTime": "see_common_fields"
@@ -61,43 +60,53 @@ The Tidepool platform supports the idea that a user other than the data owner ma
 
 ## device information
 
-### deviceType
-This is the broad category of the device. In general, it should be one of the following:
+For all of the fields under device information, we are trying to provide a basic taxonomy and standards so that it will be easy to query for specific device types or classes.
 
-* `"pump"` (for insulin pumps)
+Thus, if you are storing information in the Tidepool platform and are unsure of what information should go here, please contact us so we can help you and maintain a high standard of data quality.
+
+### deviceTags
+This is a list of broad attributes that can be applied to the device. It is an array of individual string values. Please use exactly the attributes below if they apply, in addition to any others that are appropriate:
+
+* `"insulin-pump"` (for insulin pumps)
 * `"cgm"` (for continuous glucose monitors)
-* `"pump-cgm"` (for pumps integrated with a cgm)
 * `"bgm"` (for blood glucose meters that are not continuous meters)
-* `"pen"` (for insulin injection devices)
+* `"fgm"` (for 'flash' glucose meters that are not continuous meters but able to read on demand)
+* `"pen"` (for insulin injection devices that record the doses)
 * `"manual"` (for manually entered data)
 
-For devices that do not fit in one of these categories, please contact Tidepool so we can standardize on a good name.
+Integrated devices or multifunction devices should use multiple tags as appropriate. For devices that do not fit in these categories, please contact Tidepool so we can standardize on a good tag.
 
-### deviceManufacturer
+### deviceBrand
 
-This is the name of the device manufacturer. We are trying to standardize this field as well, so please use exactly the following names:
+This is an array containing the name or names of the device manufacturers. We are trying to standardize this field as well, so please use exactly the following names:
 
     Abbott
     Asante
     Dexcom
     Insulet
     Medtronic
-    OneTouch
+    LifeScan
 
 Again, for new devices please contact Tidepool so we can standardize on a name.
 
-### deviceSeries and deviceModel
+### deviceModel
 
-Manufacturers often identify devices in a series of similar devices, each with a different model identification -- for example, Medtronic has the Paradigm Revel 523 and Paradigm Revel 723 pumps. Therefore, we have two levels of identifier. In this case, `deviceSeries` would be `"Paradigm Revel"` and `deviceModel` would be `523` or `723`.
+This is the name the manufacturer uses to identify the device. Examples might be:
 
-For manufacturers who don't have multiple levels, use the deviceModel field and set the deviceSeries field to an empty string (do not omit it).
+    MiniMed 530G
+    G4
+    FreeStyle Precision Xtra
+
+Again, this is an array so that devices that are created in partnership between multiple manufacturers can be properly specified.
 
 ### deviceSerialNumber
 
 If the serial number of the device is available, put it here as a string, even if it's entirely numeric. If the serial number is not available, store it as a blank string.
 
+
 ### deviceId
-The deviceId should be a string that is sufficient to uniquely identify the device and which will be reused every time data is uploaded from this device. Since the deviceId shows up in every data element, it probably wants to be on the shorter side, so we suggest something like the first 3 characters of manufacturer, series, and model, followed by the serial number. For example: `DexG41123449542`.
+
+The deviceId should be a string that is sufficient to uniquely identify the device and which will be reused every time data is uploaded from this device. Since the deviceId shows up in every data element, it probably wants to be on the shorter side, so we suggest something like the first few characters of the name of the device, followed by the serial number. For example: `DexG4-1123449542`.
 
 
 
