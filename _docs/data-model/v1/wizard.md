@@ -27,7 +27,6 @@ Wizard events are point-in-time and look like
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "uploadId": see_common_fields,
-  "source": see_common_fields,
   "bolus": bolus_event_resulting_from_wizard_if_exists
 }
 ~~~
@@ -41,7 +40,7 @@ Wizard events are point-in-time and look like
 * `insulinCarbRatio` is the number of mg of carbohydrates that one unit of insulin is expected to cover
 * `insulinSensitivity` is the amount that one unit of insulin is expected to decrease blood glucose.  This is converted to mmol/l based on a `units` field.
 * `bgTarget` is the complex representation of the target blood glucose.  It can be  varying schemas that should align with the schemas in the [settings object](../settings) except there is no `start` field.
-* `payload` is an object of arbitrary fields that will be stored alongside the wizard event.  An example of things that might be stored is:
+* `payload` is an object of arbitrary fields that will be stored alongside the wizard event. This is just an instance of the common field `payload`. An example of things that might be stored is:
 
 ~~~json
 {
