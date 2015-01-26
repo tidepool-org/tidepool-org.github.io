@@ -23,7 +23,7 @@ These events are point-in-time and look like
   "uploadId": "unique_id",
   "byUser": "userId_of_the_uploading user"
   "deviceTags": ["tags_relating_to_device_features"...],
-  "deviceManufacturers": ["name_of_manufacturer"...],
+  "deviceManufacturer": "name_of_manufacturer",
   "deviceModel": "mfr_device_model",
   "deviceSerialNumber": "serial_number",
   "deviceId": "see_common_fields",
@@ -74,11 +74,11 @@ This is a list of broad attributes that can be applied to the device. It is an a
 * `"pen"` (for insulin injection devices that record the doses)
 * `"manual"` (for manually entered data)
 
-Integrated devices or multifunction devices should use multiple tags as appropriate. For devices that do not fit in these categories, please contact Tidepool so we can standardize on a good tag.
+Integrated devices or multifunction devices should use multiple tags as appropriate. For example, the Animas Vibe combo insulin delivery and CGM system would have tags `insulin-pump` and `cgm`. For devices that do not fit in these categories, please contact Tidepool so we can standardize on a good tag.
 
-### deviceBrand
+### deviceManufacturer
 
-This is an array containing the name or names of the device manufacturers. We are trying to standardize this field as well, so please use exactly the following names:
+This is the name of the device manufacturer. We are trying to standardize this field, so please use exactly the following names:
 
     Abbott
     Asante
@@ -94,10 +94,8 @@ Again, for new devices please contact Tidepool so we can standardize on a name.
 This is the name the manufacturer uses to identify the device. Examples might be:
 
     MiniMed 530G
-    G4
+    G4 Platinum
     FreeStyle Precision Xtra
-
-Again, this is an array so that devices that are created in partnership between multiple manufacturers can be properly specified.
 
 ### deviceSerialNumber
 
