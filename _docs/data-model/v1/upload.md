@@ -9,10 +9,8 @@ Upload represents the metadata associated with an upload of information to the T
 
 An upload record includes information on the time and provenance of the upload and includes a unique identifier that is used to decorate every data item associated with a given upload.
 
-
 ## Object
 These events are point-in-time and look like
-
 
 ~~~json
 {
@@ -24,9 +22,7 @@ These events are point-in-time and look like
   "byUser": "userId_of_the_uploading user",
   "deviceTags": ["tag_relating_to_device_features", "..."],
   "deviceManufacturers": ["name_of_manufacturer", "..."],
-  "deviceModel": "mfr_device_model",
-  "deviceSerialNumber": "serial_number",
-  "deviceId": "see_common_fields",
+  "devices": "array_of_devices",
   "createdTime": "see_common_fields",
   "modifiedTime": "see_common_fields"
 }
@@ -80,39 +76,40 @@ Integrated devices or multifunction devices should use multiple tags as appropri
 
 This is the name or names of the device manufacturer(s), as an array. It may be more than one for devices that are joint projects of multiple organizations; again, the Animas Vibe would have `["Animas", "Dexcom"]` here. We are trying to standardize this field, so please use exactly the following names:
 
-```
-Abbott
-Animas
-Asante
-Bayer
-Dexcom
-Insulet
-Medtronic
-LifeScan
-```
+ - `Abbott`
+ - `Animas`
+ - `Asante`
+ - `Bayer`
+ - `Dexcom`
+ - `Insulet`
+ - `Medtronic`
+ - `LifeScan`
 
 Again, for new devices please contact Tidepool so we can standardize on a name.
 
-### deviceModel
+### devices
 
-This is the name the manufacturer uses to identify the device. Examples might be:
+This is an array of devices, where each device is an object with three fields: `deviceModel`, `deviceSerialNumber`, and `deviceId`. *In most cases, there will only be a single object inside the `devices` array. Multiple devices in a single upload is a highly exceptional case.*
 
-```
-MiniMed 530G
-G4 Platinum
-FreeStyle Precision Xtra
-```
+`deviceModel` is the name the manufacturer uses to identify the device. Examples might be:
 
-### deviceSerialNumber
+ - `Paradigm Revel 723`
+ - `G4 Platinum`
+ - `FreeStyle Precision Xtra`
 
-If the serial number of the device is available, put it here as a string, even if it's entirely numeric. If the serial number is not available, store it as a blank string.
-
-
-### deviceId
+If the serial number of the device is available, put it in `deviceSerialNumber` as a string, even if it's entirely numeric. If the serial number is not available, store it as a blank string.
 
 The deviceId should be a string that is sufficient to uniquely identify the device and which will be reused every time data is uploaded from this device. Since the deviceId shows up in every data element, it probably wants to be on the shorter side, so we suggest something like the first few characters of the name of the device, followed by the serial number. For example: `DexG4-1123449542`.
 
+An example whole `devices` object would be:
 
+```
+{
+  "deviceModel": "Dexcom G4",
+  "deviceSerialNumber": "SDFIOUE",
+  "deviceId": "DexG4-SDFIOUE"
+}
+```
 
 ## Storage/Output Format
 
