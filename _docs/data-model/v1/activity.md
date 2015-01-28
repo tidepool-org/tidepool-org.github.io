@@ -3,7 +3,7 @@ layout: defaults
 title: Activity V1
 published: true
 ---
-# Activity
+# Activity [DRAFT]
 
 Activity is intended to track any exercise acitivity
 
