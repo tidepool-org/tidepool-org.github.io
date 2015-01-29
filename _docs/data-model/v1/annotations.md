@@ -40,6 +40,9 @@ We document our known annotations below, but we do not limit the set of annotati
 * `status/incomplete-tuple` happens when a `deviceMeta` `status` event is sent in and never completed.  See the [Device Metadata](device-meta) page for more details.
 
 
+* `bg/out-of-range` happens when a blood-glucose sensing device reads LOW or HIGH instead of a numerical value. We store a value of +/-1 from the max or min value (this will vary depending on device) and apply this annotation to expose the change.
+
+
 * `status/unknown-previous` happens when a `deviceMeta` `status` event is sent in with a `previous` field that doesn't reference an object in the Tidepool platform.  Accompanied by an `id` field:
     * `id` the expected id of the previous event as specified in the `previous` field on the event submitted to the Tidepool platform.  This might be null or just not exist if there wasn't a `previous` field provided on the submitted event.
 
