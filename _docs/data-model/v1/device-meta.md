@@ -40,6 +40,7 @@ The `alarmType`s built into the data model are all and only those alarms that ar
 - `low_power` for low battery alarms
 - `no_power` for out of battery alarms
 - `occlusion` for occlusion (blockage of infusion set) alarms
+- `no_delivery` for no insulin delivery alerts not due to occlusion
 - `auto_off` for when the pump stops all delivery due to inactivity for a period longer than the user's programmed threshold (if any)
 - `over_limit` for when insulin delivery has surpassed any of a user's programmed maximum bolus, basal, or hourly delivery thresholds
 
@@ -75,14 +76,14 @@ The `volume` field is optional. It should be included if the data specifies the 
 
 The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
 
-## Delivery Reset
+## Reservoir Change
 
-A delivery reset event represents any event in an insulin delivery system that implies a return to a device state not yet ready to deliver insulin. This varies depending on the type of insulin delivery device. For conventional syringe-type insulin pumps, this will be a rewind event. For an Insulet OmniPod system, it is a new pod activation event. For an Asante Snap system, it is a new pump body event. This event often implies a suspension of insulin delivery; in the case that the device data includes a reset event but does not include a separate indication of insulin delivery suspension, a `status` event should also be uploaded to the platform and should be included (in its entirety) in the `status` field.
+A reservoir change event represents any event in an insulin delivery system that implies a return to a device state not yet ready to deliver insulin. This varies depending on the type of insulin delivery device. For conventional syringe-type insulin pumps, this will be a rewind event. For an Insulet OmniPod system, it is a pod deactivation event. This event often implies a suspension of insulin delivery; in the case that the device data includes a reset event but does not include a separate indication of insulin delivery suspension, a `status` event should also be uploaded to the platform and should be included (in its entirety) in the `status` field.
 
 ~~~json
 {
   "type": "deviceMeta",
-  "subType": "deliveryReset",
+  "subType": "reservoirChange",
   "payload": "see_common_fields",
   "status": "optional_status_object",
   "time": "see_common_fields",
