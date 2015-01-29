@@ -6,11 +6,11 @@ published: true
 
 This document was last edited at the end of June, 2014.
 
-#Platform Roadmap
+# Platform Roadmap
 
 This document lays out a roadmap of Tidepool's general technical focus for our platform the next several months. It is not a product design document, and specifically does not cover the design or development of our user-facing features within apps such as Blip.
 
-##Overview
+## Overview
 
 Tidepool's team is small. We are constrained by our available resources, and we are also constrained by various external factors. Our primary, long-term goal is to have the maximum possible positive impact on people who have Type 1 Diabetes. We believe that means that we should concentrate on getting our first bit of software into the hands of real users. 
 
@@ -31,7 +31,7 @@ It is these ends that drive the prioritization and sequencing of the items in th
 
 Items marked with *@@* are lower priority given our current company priorities. Some of these (at least the ones not tied to Tidepool's deployment) might be good candidates for third party contributors to consider working on, as it's less likely that Tidepool's developers will be working on them soon. These items are marked with *@@3*.
 
-##Our technical goals
+## Our technical goals
 
 These are the high level technical goals that are informed by our company goals. The order in which they're listed is definitely not the order in which they will be implemented. Note that these are the high level goals; details are later in the document.
 
@@ -40,17 +40,17 @@ These are the high level technical goals that are informed by our company goals.
 * *Continue to extend the Tidepool platform for third party uses.* Tidepool intends to be a hosting provider for data related to diabetes -- not just device data, but all the data that has an effect on blood sugar or insulin dosing decisions (exercise, food intake, etc). We also believe that we promote the best possible outcomes by being open about the entire platform, and by hosting data for anyone who chooses to work with us. 
 * *Build a world-class quality system.* We recognize that the work we're doing directly affects people's health. We must be very, very confident in the code we write and how we deploy it. But the traditional approach to life-safety software development uses a "design-first" approach that attempts to specify every requirement in advance. It's been shown time and again that that approach leads to massive cost overruns and explodes the size of development teams and the time required to build a solution. At Tidepool, we believe that we can show the world how to build great, high-quality software with a small team in an agile way. To prove it, we will need a concerted approach to how we manage all elements of quality -- from documentation to testing to verification to validation to requirements traceability. 
 
-##Steps to get there:
+## Steps to get there:
 
 Below are the major areas we are working towards to achieve the goals set out above. There is some sequence to this list of steps, but we will certainly not follow this sequence exactly. There are too many variables and people to impose significant control over sequencing.
 
-###Provide a full spectrum of standard platform capabilities
+### Provide a full spectrum of standard platform capabilities
 
 Our platform needs to be a world-class, documented, secure, tested framework of capabilities for storing and retrieving diabetes data. Certain things are required from anything that wants to call itself a platform.
 
 Descriptions here will usually be terse -- fuller explanations of what they mean can usually be found in GitHub or our Trello boards; if you want to know more about something and can't find it here, ask us in our IRC channel and someone will help you find the right place. For all these links, see [the main page](http://tidepool-org.github.io/).
 
-####For our own needs:
+#### For our own needs:
 
 These are API features that we need in order to support Blip in the next few months.
 
@@ -64,7 +64,7 @@ These are API features that we need in order to support Blip in the next few mon
   * *@@* Develop an "undergoing maintenance" page that we can quickly failover to if there are technical problems so that users understand why things are failing. 
   * *@@* Develop a framework that better allows for partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities (such as the ability to direct a certain percentage of users to a given deployment) would give us more control.
 
-####Make our apps into "third party" apps:
+#### Make our apps into "third party" apps:
 
 These features are aimed at allowing us to support third parties -- people who want to use Tidepool's platform as a backend to their own applications, or open source people who want to stand up their own versions of Tidepool's APIs. Tidepool's client apps will not be privileged in their access to security information. This is not required for commercialization but it is next in line.
 
@@ -80,7 +80,7 @@ These features are aimed at allowing us to support third parties -- people who w
   * *@@3* Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
   * *@@* Further work on automation -- what we do, how we do it (tools, etc). This has to do with builds and testing.
 
-####For privacy / security / data stewardship:
+#### For privacy / security / data stewardship:
 
 We believe strongly that people own their own data and need to finish the work that will allow people to control their data. We need to follow security best practices and defend our systems against attacks and poor programming. 
 
@@ -97,11 +97,11 @@ We believe strongly that people own their own data and need to finish the work t
   * *@@* Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data. (Requires ability to play back a log and feed it into the db.)
 
 
-###Update data storage system
+### Update data storage system
 
 The data storage system currently in use in Blip is a custom framework designed to support Blip, but it's not yet a general purpose system that allows multiple types of data to be stored together and used in different ways by different apps. Our goal is a unified storage model that integrates a wide range of data types. There is a separate document that is being developed on the data formats. There will be another on query languages.
 
-####Architectural thinking we need to do first:
+#### Architectural thinking we need to do first:
 
   * Design and document our unified data storage model:
     * What is the data storage model? Define data schemas, data formats, and hierarchy of data. *September 2014: this is available [here](http://developer.tidepool.io/data-model/v1/)*
@@ -109,7 +109,7 @@ The data storage system currently in use in Blip is a custom framework designed 
     * How will we do notifications based on those queries? (In this case, "notifications" means a mechanism for software systems to be notified when items in the database are changed according to certain conditions.)
     * How is data provenance tracked? How are modifications to data expressed?
 
-####Implementation to enable Blip to use the new capabilities:
+#### Implementation to enable Blip to use the new capabilities:
 
   * Create HTTP API for ingestion of data to the unified form. This will support upload of as little as a single point at a time (to support cloud-connected devices) as well as block uploads. *June 2014: we have the first version of this deployed and working on our development server.*
   * Provide a simple query system to deliver the data that Blip currently uses (for example, querying a restricted date range to speed up Blip response time).
@@ -119,7 +119,7 @@ The data storage system currently in use in Blip is a custom framework designed 
   * Remove conversion logic from the access API.
   * Develop ability to query data provenance information for auditing.
 
-####Implementation that enables future needs:
+#### Implementation that enables future needs:
 
   * Create a structure for a more general query system that will work not only for Blip but for a variety of needs.
   * Design tool for adjusting timestamps and time zones on blocks of data
@@ -128,7 +128,7 @@ The data storage system currently in use in Blip is a custom framework designed 
   * Design and build a notification system that allows apps to subscribe to changes based on stored queries. It should support both connected and disconnected notifications (so, for example, someone could set an alert to notify an app when new data is uploaded to an account). 
 
 
-###Universal Uploader
+### Universal Uploader
 
   * Build a general-purpose technology for downloading data from a USB serial device.
     * Probably browser-based.
@@ -141,7 +141,7 @@ The data storage system currently in use in Blip is a custom framework designed 
 
   * *@@3* Implement mobile app that can use a usb/bluetooth converter to upload data from a device in real time.
 
-###Step up test coverage, documentation and process
+### Step up test coverage, documentation and process
 
 As discussed above, we need to be very serious about testing and measurement of that testing. We should resist pointless testing but should be confident in our test strategy and effectiveness of our coverage. We should also have documented policies of situations where new tests *must* be written. If we end up going all the way to an FDA application, our test suites must be suitably robust.
 
@@ -154,7 +154,7 @@ As discussed above, we need to be very serious about testing and measurement of 
   * Get further documentation set up and figure out how to make sure it's current and correct. The right way to do it is to find a way to integrate the documentation into the code so that it can be generated directly from the code. 
   * Create and publish a set of auditable metrics suitable for use by FDA and others.
 
-###Improve quality of tooling and the structure of our code
+### Improve quality of tooling and the structure of our code
 
 In general, we should continually be trying to make our code easier to write, build, test, and deploy. This helps us, and it also helps others to help us. Specifically:
 
@@ -162,7 +162,7 @@ In general, we should continually be trying to make our code easier to write, bu
   * Extract and centralize common code. Where do we repeat ourselves and how can we do less of it?
   * Explain our platform and automation strategy and then enhance it. Make it clear what we support and what we don't. 
 
-###EHR Integration
+### EHR Integration
 
 *@@* For proper acceptance of Blip in clinics, we will have to provide a safe and effective means for the clinic's EHR systems to talk to Blip and Tidepool. It will not be feasible for Tidepool to do the integration work here -- what we can do is offer a set of features to make it as easy as possible for EHR systems and clinical IT departments to work with us. We are working on a set of user requirements for this. Roughly, though:
 

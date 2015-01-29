@@ -17,7 +17,7 @@ When a request arrives, the router looks up its path and attempts to match it to
 
 ![Server operations]({{ site.url }}/images/architecture/RoutingDiagram.png)
 
-###Example:
+### Example:
 * The 'message-api' server starts up at internal IP address 20.10.10.10:5050 and registers itself with hakken.
 * The router (styx) is set up to know that requests for the path ```/message``` go to "message-api".
 * Styx also has a local cache of the information from hakken (called a watch), which hakken automatically updates whenever anything changes.
