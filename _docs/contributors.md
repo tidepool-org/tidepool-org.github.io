@@ -4,7 +4,7 @@ title: Tidepool Project Contributors
 published: true
 ---
 
-##Making Contributions
+## Making Contributions
 
 We really appreciate your interest in Tidepool, and your help in improving our products, so we want you to understand what will be done with the contributions that you make. In order to make contributions or volunteer as a tester, UI designer or in any other way, you'll need to agree to our [Volunteer/Contributor License Agreement](/files/tidepool-vcla.pdf). This license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose**.
 
@@ -17,7 +17,7 @@ If you submit this as a pull request, please make sure that one of Tidepool's em
 
 If your contributions are on behalf of a company or you need to get your company's permission to contribute, please follow the instructions in the [VCLA](/files/tidepool-vcla.pdf).
 
-##Contributors
+## Contributors
 
 Below are the GitHub names of people who have agreed to Tidepool VCLA via GitHub pull request comments. These are the non-Tidepool employees from whom Tidepool can accept pull requests. Other VCLAs that have been agreed to on paper or via email are not listed here.
 
@@ -29,7 +29,7 @@ Below are the GitHub names of people who have agreed to Tidepool VCLA via GitHub
 [yrrebnarg](https://github.com/yrrebnarg) | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
 [ursooperduper](https://github.com/ursooperduper) | [Agreed in blip#182](https://github.com/tidepool-org/blip/pull/182)
 
-##Committers
+## Committers
 
 These are the people who have commit rights to at least some of Tidepool's repositories. If you need code review or help with contributions, please pick one of the people with (*) -- these are Tidepool's fulltime engineers -- and name them in your commit or pull request.
 

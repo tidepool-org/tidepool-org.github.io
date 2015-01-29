@@ -3,7 +3,7 @@ layout: defaults
 title: About Serial Ports
 published: true
 ---
-#What we know about USB Serial Ports
+# What we know about USB Serial Ports
 
 ## Why we care
 

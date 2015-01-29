@@ -4,11 +4,11 @@ title: Tidepool Technical Reference
 published: true
 ---
 
-#Technical Reference materials
+# Technical Reference materials
 
 This page is for holding useful links.
 
-##Tidepool-internal Links
+## Tidepool-internal Links
 
 [API User Guide](/tidepool-api)
 : An attempt at a usage-oriented guide to the Tidepool API. Still a work in progress, but we hope it's useful.
@@ -31,9 +31,9 @@ This page is for holding useful links.
 [About Serial Ports](/serial-ports)
 : This is a document that explains the challenges we have working with devices that communicate over serial ports.
 
-##External Links
+## External Links
 
-###Node and Key Libraries
+### Node and Key Libraries
 
 * [Node](http://nodejs.org/)
 * [npm](http://npmjs.org/)
@@ -44,12 +44,12 @@ This page is for holding useful links.
 * [Bunyan (logger)](https://github.com/trentm/node-bunyan)
 * [Moment (time)](http://momentjs.com/)
 
-###Client-side links
+### Client-side links
 
 * [React](http://facebook.github.io/react/)
 * [bows (logging)](https://github.com/latentflip/bows)
 
-###Documentation systems
+### Documentation systems
 
 * [Github pages](https://pages.github.com/)
 * [Jekyll site generator](http://jekyllrb.com/docs/home/)

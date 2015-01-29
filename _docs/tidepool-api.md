@@ -524,7 +524,7 @@ x-tidepool-session-token: <token>
 
 Lost passwords are special because they have to be created and accepted without the usual authentication.
 
-###Creating a lost password request:
+### Creating a lost password request:
 ```
 POST /confirm/send/forgot/:useremail
 ```
