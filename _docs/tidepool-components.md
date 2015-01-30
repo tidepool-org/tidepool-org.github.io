@@ -10,4 +10,4 @@ The following list of Tidepool components constitutes a sort of guided tour of t
 
 A hint: if you look at the [main github page for Tidepool](https://github.com/tidepool-org), the repositories are sorted in order of the most recent commit. Generally that will be a pretty good hint as to which repositories are under active development -- and anything further down than page 2 is probably inactive.
 
-To get things running, see the [Starting Services](StartingUpServices.html) page.
+To get things running, see the [Starting Services](/starting-up-services) page.
