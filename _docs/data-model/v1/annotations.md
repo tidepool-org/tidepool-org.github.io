@@ -18,7 +18,7 @@ An annotation object has one required field, `code`, and can have any number of 
 is valid.  Also
 
 ~~~json
-    { "code": "bg/out-of-range", "threshold": 40 }
+    { "code": "bg/out-of-range", "threshold": 40, "value": "low" }
 ~~~
 
 Could also be valid.  That is, the idea is that the annotation can optionally provide some information that helps when explaining what went wrong.  The fabricated example above would be for a CBG reading that ends up below 40 but the CGM can only read down to 40.  If there were another CGM that could read down to 25, then that CGM would set the threshold value to 25 instead of 40.
