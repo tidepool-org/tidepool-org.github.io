@@ -3,33 +3,33 @@ layout: defaults
 title: Tidepool Project Contributions
 published: true
 ---
-#How you can help
+# How you can help
 
 **Thanks in advance!** We really appreciate your interest in helping out the Tidepool Project. We've listed lots of possibilities below. If you'd like to volunteer or contribute, please read our [Volunteer/Contributor License Agreement](/files/tidepool-vcla.pdf). The license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose.**
 
-##Use it
+## Use it
 
 If you're a person with type 1 diabetes, please help test our apps and our platform. We'd love your feedback on user experience and functionality. Since our applications and platform are still under development, DO NOT USE OUR APPLICATIONS TO MAKE THERAPY ADJUSTMENTS.
 
 If you'd like to learn more about about how you can participate in an IRB-approved pilot study, please sign up to our mailing lists for [blip](http://tidepool.org/blip) and [Nutshell](http://tidepool.org/Nutshell).
 
-##Test it
+## Test it
 
-###Manual QA
+### Manual QA
 
 Sometimes, the best way to test a product is to bang on it. First, create an account to use blip. Track data, look at the results. Look for edge cases where data points are missing. Compare your data to the information displayed by blip. There should be nothing missing, nothing extra, and all the data you see should be accurate.
 
 If you find something wrong, tell us. If you find something confusing, tell us. If you don't find something you expected to find, tell us. We want all our software to be easy to use and to make information really clear.
 
-###Technical QA
+### Technical QA
 
 Are you technically inclined with good attention to detail? Help with the testing of the software from a technical point of view.
 
 Check out the repository and run the tests. Look at the test scripts, look for uncovered conditions, and write tests to check them. Submit pull requests. If you find bugs, write up the bugs and submit pull requests with code that validates the bug. If you want to fix the bug, a pull request that fixes the bug will also be appreciated!
 
-##Doc it
+## Doc it
 
-###Documentation
+### Documentation
 
 It's pretty much a given that we'll never have enough documentation. Can you help with writing it? The kinds of things we need help with include:
 
@@ -40,9 +40,9 @@ It's pretty much a given that we'll never have enough documentation. Can you hel
 
 To help with documentation, the easiest way for us is if you fork the [repository for this documentation site](https://github.com/tidepool-org/tidepool-org.github.io) and file a pull request. The site is using GitHub pages with Jekyll as the page generator. See README.md in the repository for how to get started; if you’re comfortable with git and a text editor, it’s pretty easy. If you're not comfortable with issuing pull requests, or just have a small edit, please [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues). If you believe larger changes are needed and you're not sure how to do that through GitHub, please contact us and we'll try to find a mutually acceptable solution.
 
-##Code it
+## Code it
 
-###Code maintenance
+### Code maintenance
 
 We need help at all levels.
 

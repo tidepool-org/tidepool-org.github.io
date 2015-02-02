@@ -3,11 +3,11 @@ layout: defaults
 title: Metrics Glossary
 published: true
 ---
-#Metrics Glossary
+# Metrics Glossary
 
 This is a glossary for our metrics tracking, by module.
 
-##Blip
+## Blip
 
 Clicked Back To Care Team List
 : User clicked the Back To Care Team List button
@@ -126,11 +126,11 @@ Viewed Profile Create
 Viewed Profile Edit
 : User viewed the Profile Edit page
 
-##Clamshell
+## Clamshell
 
-##Platform
+## Platform
 
-###Metrics that are tied to a user action
+### Metrics that are tied to a user action
 
 collection update {coll: collection}
 : Posted by Seagull when a collection is updated for the given user.
@@ -158,7 +158,7 @@ manageprivatepair {verb: req.method}
 
 
 
-###Metrics without a user associated with them
+### Metrics without a user associated with them
 
 addThread
 : Posted by the message-api when a new message thread is created.

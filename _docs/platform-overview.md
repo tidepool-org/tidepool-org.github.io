@@ -4,7 +4,7 @@ title: Tidepool Platform Architecture
 published: true
 ---
 
-#The Big Picture
+# The Big Picture
 
 Tidepool's platform is based around a few key principles:
 
