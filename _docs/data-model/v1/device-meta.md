@@ -27,6 +27,7 @@ An alarm event is used to represent a user-facing alarm from an insulin pump. An
   "subType": "alarm",
   "alarmType": "type_of_alarm_or_other",
   "payload": "see_common_fields",
+  "status": "optional_status_object",
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields"
@@ -47,6 +48,8 @@ The `alarmType`s built into the data model are all and only those alarms that ar
 Many if not all `alarm` events will include a `payload` object with more information about the alarm that is device-specific. For example, a `low_insulin` alarm may have a `units_left` field in its `payload` to record the number of units of insulin that were remaining in the insulin pump's reservoir at the time of the alarm.
 
 In addition, a `payload` object is *required* when `alarmType` is `other`; this value is used to capture all alarms that are device-specific. For example, a pod expiration alarm is specific to the Insulet OmniPod insulin delivery system, and a 'pump body disconnected' alarm is specific to an Asante Snap insulin pump. The `payload` object should include all information that could be relevant to anyone wishing to audit the history and performance of the insulin pump in question.
+
+For some devices, an alarm event (e.g., an occlusion alarm) is the only indication of a suspension of insulin delivery. In such a case, a `status` event should also be uploaded to the platform and should be included (in its entirety) in the `status` field of the `alarm` event.
 
 ### Storage/Output Format
 
