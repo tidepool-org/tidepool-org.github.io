@@ -95,12 +95,7 @@ A reservoir change event represents any event in an insulin delivery system that
 }
 ~~~
 
-The `payload` object should be included in most cases in order to expose the specifics of the event type that is being interpreted more generally as a `reset`, along with any other relevant device-specific information. For example, the `payload` for an Insulet OmniPod `reset` might include the following fields:
-
-- `eventType` with the value `new_pod`
-- `podSerial` for the new pod's serial number
-- `podLot` for the new pod's lot number
-- etc.
+The `payload` object may be included in order to expose the specifics of the event type that is being interpreted more generally as a `reset`, along with any other relevant device-specific information.
 
 ### Storage/Output Format
 
