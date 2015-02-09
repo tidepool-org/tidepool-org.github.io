@@ -207,6 +207,7 @@ A calibration event represents a calibration of a CGM.  It looks like
   "type": "deviceMeta",
   "subType": "calibration",
   "value": bg_value_for_calibration,
+  "units": see_common_fields,
   "time": see_common_fields,
   "deviceId": see_common_fields,
   "source": see_common_fields

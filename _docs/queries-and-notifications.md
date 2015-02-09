@@ -6,11 +6,11 @@ published: true
 
 This document was created by Kent Quirk and last edited in late August, 2014. It is a work in progress.
 
-#Current Status
+# Current Status
 
 As of 26 Aug 2014, we have a sample [implementation](../query-implementation) of a Go-based TQL parser that can parse correctly-formatted queries, but doesn't do well with poorly-formatted stuff. It doesn't yet generate the TQL JSON, but that's the next step. 
 
-#Background
+# Background
 
 This is an attempt to sketch out a framework for how Tidepool will provide a system for handling queries against the data we track.
 
@@ -26,7 +26,7 @@ SQL is a model for this sort of concept -- but the language isn't quite appropri
 
 If we spec out a flexible design for a query language, we can implement it over time without ever changing the API or breaking existing code.
 
-#Design rules
+# Design rules
 
 * It's a query language, not a data manipulation language -- it will not be possible to modify data with this language, only to retrieve it. 
 
@@ -55,7 +55,7 @@ A few notes when reading the examples:
 * ALL CAPS are keywords, Initial Caps are functions provided by the language, lowercase are variables, fields, or columns.
 
 
-#Example use cases and the queries for them
+# Example use cases and the queries for them
 
 ## Simple use cases
 

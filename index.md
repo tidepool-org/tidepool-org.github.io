@@ -4,7 +4,7 @@ title: Tidepool Project
 published: true
 ---
 
-#Tidepool Developer Portal
+# Tidepool Developer Portal
 
 This is Tidepool's developer microsite. If you are looking for our company web site, please visit [tidepool.org](https://tidepool.org).
 
