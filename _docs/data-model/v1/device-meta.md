@@ -16,6 +16,7 @@ Current DeviceMeta events are
 * deliveryReset
 * status
 * calibration
+* timeChange
 
 ## Alarm
 
@@ -315,13 +316,48 @@ A calibration event represents a calibration of a CGM.  It looks like
 {
   "type": "deviceMeta",
   "subType": "calibration",
-  "value": bg_value_for_calibration,
-  "units": see_common_fields,
-  "time": see_common_fields,
-  "deviceId": see_common_fields,
-  "source": see_common_fields
+  "value": "bg_value_for_calibration",
+  "units": "see_common_fields",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "source": "see_common_fields"
 }
 ~~~
+
+### Storage/Output Format
+
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
+
+## Time Change
+
+A time change event represents a change to the device's date and/or time settings. It looks like
+
+~~~json
+{
+  "type": "deviceMeta",
+  "subType": "timeChange",
+  "change": {
+    "from": "local_device_time_before_time_change",
+    "to": "local_device_time_after_time_change",
+    "timezone": "optional_(see_below)",
+    "reason": "optional_(see_below)"
+  },
+  "reason": "option_reason",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "source": "see_common_fields"
+}
+~~~
+
+A time change concerns the local time displayed on a device. The date and time displayed on the device just before the change is made is stored in the `from` field of the `change` attribute object, and the date and time resulting from the change is stored in the `to` field. Both date and time objects are formatted as ISO8601 dates without any offset from UTC specified - i.e., `YYYY-MM-DDThh:mm:ss`.
+
+The `change` object may also optionally contain the name of the timezone that is to be understood as applying to all times at and after the device time in the `to` field. A `reason` code may also be applied to explain why a change to the device's date and time settings was necessary. Possible values at present are:
+
+- `from_daylight_savings` (fall back)
+- `to_daylight_savings` (spring forward)
+- `travel`
+- `correction` for corrections to device clock "drift" or larger corrections (such as realizing a device was set to 7 a.m. instead of 7 p.m., etc.)
+- `other`
 
 ### Storage/Output Format
 
