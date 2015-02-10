@@ -29,6 +29,8 @@ We document our known annotations below, but we do not limit the set of annotati
 
 ### Generic
 
+* `time-change` happens when we detected a change in a device's date & time settings that results in either gaps or overlaps in the data. This annotation is *required* to appear on data that we know overlaps with other data coming from the same device.
+
 * `basal/mismatched-series` happens when the API receives a basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
 
 
