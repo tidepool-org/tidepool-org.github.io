@@ -340,7 +340,7 @@ A time change event represents a change to the device's date and/or time setting
     "from": "local_device_time_before_time_change",
     "to": "local_device_time_after_time_change",
     "timezone": "optional_(see_below)",
-    "reason": "optional_(see_below)"
+    "reasons": "optional_array_of_reason_codes_(see_below)"
   },
   "reason": "option_reason",
   "time": "see_common_fields",
@@ -351,13 +351,15 @@ A time change event represents a change to the device's date and/or time setting
 
 A time change concerns the local time displayed on a device. The date and time displayed on the device just before the change is made is stored in the `from` field of the `change` attribute object, and the date and time resulting from the change is stored in the `to` field. Both date and time objects are formatted as ISO8601 dates without any offset from UTC specified - i.e., `YYYY-MM-DDThh:mm:ss`.
 
-The `change` object may also optionally contain the name of the timezone that is to be understood as applying to all times at and after the device time in the `to` field. A `reason` code may also be applied to explain why a change to the device's date and time settings was necessary. Possible values at present are:
+The `change` object may also optionally contain the name of the timezone that is to be understood as applying to all times at and after the device time in the `to` field. One or several `reasons` codes may also be applied as an array to explain why a change to the device's date and time settings was necessary. Possible values at present are:
 
 - `from_daylight_savings` (fall back)
 - `to_daylight_savings` (spring forward)
 - `travel`
 - `correction` for corrections to device clock "drift" or larger corrections (such as realizing a device was set to 7 a.m. instead of 7 p.m., etc.)
 - `other`
+
+`reasons` is an array because it is quite conceivable that more than one code will apply to a singular date and time change - for example, an adjustment for clock "drift" may often co-occur with a switch to or from daylight savings time.
 
 ### Storage/Output Format
 
