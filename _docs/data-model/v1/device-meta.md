@@ -342,7 +342,6 @@ A time change event represents a change to the device's date and/or time setting
     "timezone": "optional_(see_below)",
     "reasons": "optional_array_of_reason_codes_(see_below)"
   },
-  "reason": "option_reason",
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "source": "see_common_fields"
