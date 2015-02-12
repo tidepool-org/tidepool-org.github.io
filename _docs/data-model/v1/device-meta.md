@@ -339,6 +339,7 @@ A time change event represents a change to the device's date and/or time setting
   "change": {
     "from": "local_device_time_before_time_change",
     "to": "local_device_time_after_time_change",
+    "agent": "manual_or_automatic",
     "timezone": "optional_(see_below)",
     "reasons": "optional_array_of_reason_codes_(see_below)"
   },
@@ -349,6 +350,8 @@ A time change event represents a change to the device's date and/or time setting
 ~~~
 
 A time change concerns the local time displayed on a device. The date and time displayed on the device just before the change is made is stored in the `from` field of the `change` attribute object, and the date and time resulting from the change is stored in the `to` field. Both date and time objects are formatted as ISO8601 dates without any offset from UTC specified - i.e., `YYYY-MM-DDThh:mm:ss`.
+
+The `agent` field within `change` describes the source of the change - either `manual` (the user) or `automatic` (the device). This field is required. At present, we know of no devices that include a timezone in the device settings and automatically change to and from daylight savings time, but we expect that this may happen in the future as Bluetooth-communicating devices enter the market.
 
 The `change` object may also optionally contain the name of the timezone that is to be understood as applying to all times at and after the device time in the `to` field. One or several `reasons` codes may also be applied as an array to explain why a change to the device's date and time settings was necessary. Possible values at present are:
 
