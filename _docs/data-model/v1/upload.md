@@ -80,16 +80,16 @@ Integrated devices or multifunction devices should use multiple tags as appropri
 
 This is the name or names of the device manufacturer(s), as an array. It may be more than one for devices that are joint projects of multiple organizations; again, the Animas Vibe would have `["Animas", "Dexcom"]` here. We are trying to standardize this field, so please use exactly the following names:
 
-```
-Abbott
-Animas
-Asante
-Bayer
-Dexcom
-Insulet
-Medtronic
-LifeScan
-```
+
+* `Abbott`
+* `Animas`
+* `Asante`
+* `Bayer`
+* `Dexcom`
+* `Insulet`
+* `LifeScan`
+* `Medtronic`
+* `Tandem`
 
 Again, for new devices please contact Tidepool so we can standardize on a name.
 
@@ -97,11 +97,10 @@ Again, for new devices please contact Tidepool so we can standardize on a name.
 
 This is the name the manufacturer uses to identify the device. Examples might be:
 
-```
-MiniMed 530G
-G4 Platinum
-FreeStyle Precision Xtra
-```
+
+* `MiniMed 530G 551`
+* `G4 Platinum`
+* `FreeStyle Precision Xtra`
 
 ### deviceSerialNumber
 
