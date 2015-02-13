@@ -13,7 +13,7 @@ Current DeviceMeta events are
 
 * alarm
 * prime
-* deliveryReset
+* reservoirChange
 * status
 * calibration
 * timeChange
