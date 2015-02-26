@@ -74,6 +74,20 @@ Where
 * `amount` is the units of carbs per unit of insulin
 * `start` is the millisecond offset from midnight that day, representing when the ratio should take effect
 
+On some pumps, there can be many schedules of `carbRatio` settings, parallel to how a user can program several different basal schedules. In these cases `carbRatio` will be an object keyed by the name of each schedule, for example
+
+~~~json
+	{
+		"standard": [
+			{ "amount": 12, "start": 0 },
+			{ "amount": 10, "start": 21600000 }
+		],
+		"pattern a": [
+			...
+		]
+	}
+~~~
+
 ### insulinSensitivity
 
 `insulinSensitivity`: The insulin sensitivity rates in effect on the pump.  These look like
@@ -90,6 +104,20 @@ Where:
 
 * `amount` is the expected decrease in bg per unit of insulin
 * `start` is the millisecond offset from midnight that day, representing when the sensitivity value should take effect
+
+On some pumps, there can be many schedules of `insulinSensitivity` settings, parallel to how a user can program several different basal schedules. In these cases `insulinSensitivity` will be an object keyed by the name of each schedule, for example
+
+~~~json
+	{
+		"standard": [
+			{ "amount": 65, "start": 0 },
+			{ "amount": 45, "start": 18000000 }
+		],
+		"pattern a": [
+			...
+		]
+	}
+~~~
 
 ### bgTarget
 
@@ -138,6 +166,20 @@ Where:
 * `target` is the target glucose that the wizard/calculator should attempt to achieve
 * `range` is the range of "acceptable" values around the target
 * `start` is the millisecond offset from midnight that day, representing when the setting should take effect
+
+On some pumps, there can be many schedules of `bgTarget` settings, parallel to how a user can program several different basal schedules. In these cases `bgTarget` will be an object keyed by the name of each schedule, for example
+
+~~~json
+	{
+		"standard": [
+		  { "low": 100, "high": 120, "start": 0 },
+		  { "low": 90, "high": 110, "start": 18000000 }
+		],
+		"pattern a": [
+			...
+		]
+	}
+~~~
 
 ## Storage/Output Format
 
