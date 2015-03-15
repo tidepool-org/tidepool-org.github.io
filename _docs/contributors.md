@@ -29,6 +29,7 @@ Below are the GitHub names of people who have agreed to Tidepool VCLA via GitHub
 [yrrebnarg](https://github.com/yrrebnarg) | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
 [ursooperduper](https://github.com/ursooperduper) | [Agreed in blip#182](https://github.com/tidepool-org/blip/pull/182)
 [dduugg](https://github.com/dduugg) | [Agreed in tideline#201](https://github.com/tidepool-org/tideline/pull/201)
+[dandv](https://github.com/dandv) | [Agreed in tidepool-org.github.io#52](https://github.com/tidepool-org/tidepool-org.github.io/pull/52)
 
 ## Committers
 
