@@ -9,7 +9,7 @@ Basal events represent a basal dosing over time.  At a high level they are a tim
 
 To this end, each basal event should completely encapsulate the full story of basal delivery for the pump.  You will notice that a temp overriding a scheduled basal actually contains the scheduled basal as a "suppressed" field on the temp basal event.  Similarly, the "previous" basal rate can optionally (but should always) be included.  Tidepool is able to use this previous field to verify the current state of the basal data before effecting the change.
 
-There are three general types of basal events that tidepool understands:
+There are three general types of basal events that Tidepool understands:
 
 * injected
 * scheduled
