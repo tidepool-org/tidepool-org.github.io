@@ -7,13 +7,13 @@ published: true
 
 ## Process structure, routing, and discovery
 
-Each individual component of the Tidepool Platform is a nodejs application that manages some list of URLs and HTTP verbs. For example, the message API handles a URL called "send", among others. These node applications are deployed on physical servers. Each server has one or more "slots" for applications. The servers and slots are managed by a system we call shio. We can deploy a given node application on multiple slots if necessary to support scaling.
+Each individual component of the Tidepool Platform is a Node.js application that manages some list of URLs and HTTP verbs. For example, the message API handles a URL called "send", among others. These Node applications are deployed on physical servers. Each server has one or more "slots" for applications. The servers and slots are managed by a system we call *shio*. We can deploy a given node application on multiple slots if necessary to support scaling.
 
-A system called hakken operates as a discovery system. Hakken maintains a list of services and their locations in the system. It supports multiple instances of a given service, and hakken itself can be deployed multiple times. This level of redundancy allows us to build a system that can survive the loss of any individual component.
+A system called *hakken* operates as a discovery system. Hakken maintains a list of services and their locations in the system. It supports multiple instances of a given service, and hakken itself can be deployed multiple times. This level of redundancy allows us to build a system that can survive the loss of any individual component.
 
-External requests from applications on the internet come in to the system through the router, which is known as styx. The router is the only application that has an externally-accessible IP and internet address (api.tidepool.io). The router maintains a mapping of URL paths to particular process names.
+External requests from applications on the Internet come in to the system through the router, which is known as *styx*. The router is the only application that has an externally-accessible IP and Internet address (api.tidepool.io). The router maintains a mapping of URL paths to particular process names.
 
-When a request arrives, the router looks up its path and attempts to match it to a service name. When a match is found, it looks up the service name using hakken and routes the request to an instance of the appropriate node server, rewriting the url along the way.
+When a request arrives, the router looks up its path and attempts to match it to a service name. When a match is found, it looks up the service name using hakken and routes the request to an instance of the appropriate Node server, rewriting the URL along the way.
 
 ![Server operations]({{ site.url }}/images/architecture/RoutingDiagram.png)
 
