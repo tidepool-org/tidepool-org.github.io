@@ -43,9 +43,9 @@ Fields in this data structure include:
 * **username** -- User-supplied, required, unique, editable -- A unique username provided by the user (could be an email name or a user name, whatever). Used to provide a unique login name. 
 * **emails** -- User-supplied, required, array, editable -- Each email in the list must be unique in the database. The first item in the list is used for sending notifications and messages. Password recovery can take place with any of them. Any of them can be used instead of username to log in. 
 * **pwhash** -- Required, user-supplied but obfuscated, editable -- The user's password is hashed and stored; only the hashes are ever compared. Actual password is never stored and not recoverable (we'll have a password generation system). This field never leaves the user API for any reason.
-* **private** -- a javascript object containing id and hash information for other private data fields. Each element in the private object is itself an object with two fields. There are API methods for generating these objects, for saving them in the **private** field, and for regenerating them if they need to change. This field is never returned from any query outside the firewall -- only Tidepool servers can access it. It is generally expected that each separate Tidepool API will create a unique element in the private object (one for metadata, one for message data, etc).
-  * **id** a short, Tidepool-generated, unique, semi-permanent ID that is intended for use in naming things.
-  * **hash** Tidepool-generated, unique, hash -- used for encrypting things
+* **private** -- A JavaScript object containing id and hash information for other private data fields. Each element in the private object is itself an object with two fields. There are API methods for generating these objects, for saving them in the **private** field, and for regenerating them if they need to change. This field is never returned from any query outside the firewall -- Only Tidepool servers can access it. It is generally expected that each separate Tidepool API will create a unique element in the private object (one for metadata, one for message data, etc).
+  * **id** -- A short, Tidepool-generated, unique, semi-permanent ID that is intended for use in naming things.
+  * **hash** -- Tidepool-generated, unique, hash -- used for encrypting things
 
 ## User Metadata
 
@@ -56,11 +56,11 @@ The field is divided into named compartments called "collections". The intent is
 Metadata fields include:
 
 * **metaid** -- Unique, semipermanent, server-only -- the key field in the database. Stored in user-api as private.meta.id.
-* **value** -- An object, consisting of a block of json that has been stringized and encrypted with userapi/private.meta.hash (plus salt). Top-level fields in this object are collections; each collection is itself an object with a specified format:
+* **value** -- An object, consisting of a block of JSON that has been stringized and encrypted with userapi/private.meta.hash (plus salt). Top-level fields in this object are collections; each collection is itself an object with a specified format:
   * **profile** -- Tidepool-defined, required -- Contains the profile collection.
     * **fullname** -- User-supplied, required, editable -- The full name of the user, as the user wishes to be known to others. Would be used in things like "Full Name wants to invite you to join..."
     * **shortname** -- User-supplied, required, editable -- the short form of the name, used in things like UIs. The short name would be displayed on a summary of a chat message. (Length limited?)
-    * **publicbio** -- User-supplied, optional, editable -- A block of text (limited to 500 characters) that is displayed on the "about you" section of your profile.
+    * **publicbio** -- User-supplied, optional, editable -- A block of text (limited to 500 characters) that is displayed in the "about you" section of your user profile.
   * **groups** -- server-only; all groups are optional, but the groups object itself must exist even if empty -- An object containing members, each of which is a group ID. Specific members are:
     * **team** -- This is the group of users who participate in the message traffic about you. Messages posted to this group are attached to your user data.
     * **uploaders** -- This is a group of users who also have the right to upload data to this account. The account holder always has this right so this field is only needed if multiple people have upload rights.
@@ -68,9 +68,9 @@ Metadata fields include:
     * **patients** -- This is the group of users whose patient data you can see (you're a member of one or more groups for them -- team, uploaders, viewers). Users always have the right to see their own data, so this field only applies if you need to see data for someone other than yourself.
     * **invited** -- This is a list of people you've invited to be on your team but who have not yet accepted.
     * **invitedby** -- This is a list of users who have sent you invitations to be on their team. You must accept invitations to be on a team. (We may skip this step for pilot.)
-  * **private** -- similiar to private field in the user API, but for information that is related to patient data. Has a list of named objects, each with id and hash elements. If the user is not a patient, this field will contain no members.
-      * **patient** -- the id and hash of patient data
-      * **sandcastle** -- the id and hash used for the raw data API (sandcastle)
+  * **private** -- Similiar to the `private` field in the user API, but for information that is related to patient data. Has a list of named objects, each with id and hash elements. If the user is not a patient, this field will contain no members.
+      * **patient** -- The id and hash of patient data
+      * **sandcastle** -- The id and hash used for the raw data API ([sandcastle](https://github.com/tidepool-org/sandcastle))
 
 ## Group Data
 
@@ -84,8 +84,8 @@ Since groups are just lists of people, there are no real semantics to the group 
 
 Fields in a group include:
 
-* **groupid** -- generated, unique, permanent -- The ID for the group.
-* **members** -- the userids of the people in the list
+* **groupid** -- Tidepool-generated, unique, permanent -- The ID for the group.
+* **members** -- Array -- The userids of the people in the list.
 
 ## Patient Data
 
@@ -95,14 +95,14 @@ Note that top-level fields are separately encrypted so that we could theoretical
 
 Patient data includes:
 
-* **patientid** the value from metadata/private.patient.id
-* **health** -- required, encrypted -- an object that contains health-related data
-  * **diagnosisdate** -- user-supplied, editable, semi-optional -- the date the patient was diagnosed. An object with year, month, day fields, but absence of day, day and month, or all three fields is permitted (user may only know or care about part of this information)
-  * **other?** -- what other health fields do we need?
-* **demographic** -- required, encrypted -- an object containing demographic data
-  * **birthdate** -- optional
-  * **zip code** -- optional
-  * **gender** -- optional
+* **patientid** -- The value from metadata/private.patient.id
+* **health** -- Required, encrypted -- An object that contains health-related data
+  * **diagnosisdate** -- User-supplied, editable, semi-optional -- The date the patient was diagnosed. An object with year, month, day fields, but absence of day, day and month, or all three fields is permitted (user may only know or care about part of this information)
+  * **other?** -- What other health fields do we need?
+* **demographic** -- Required, encrypted -- an object containing demographic data
+  * **birthdate** -- Optional
+  * **zip code** -- Optional
+  * **gender** -- Optional
 
 # Still to do...
 ## Messages
