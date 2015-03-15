@@ -62,7 +62,7 @@ These are API features that we need in order to support Blip in the next few mon
     * User email confirmation
 
   * *@@* Develop an "undergoing maintenance" page that we can quickly failover to if there are technical problems so that users understand why things are failing. 
-  * *@@* Develop a framework that better allows for partial deploys and A/B testing. Our current implementation of hakken and styx allow for a fair amount of flexibility here, but addition of a few capabilities (such as the ability to direct a certain percentage of users to a given deployment) would give us more control.
+  * *@@* Develop a framework that better allows for partial deploys and A/B testing. Our current implementation of [hakken and styx](/server-architecture) allow for a fair amount of flexibility here, but addition of a few capabilities (such as the ability to direct a certain percentage of users to a given deployment) would give us more control.
 
 #### Make our apps into "third party" apps:
 
@@ -76,7 +76,7 @@ These features are aimed at allowing us to support third parties -- people who w
     * Permit researchers to use their own data.
     * Permit device vendors to use device-specific data.
   * *@@* Support these things on a third-party-accessible sandboxed version of our API so that app developers can build against a dummy API without real customer data. Provide some test accounts or test account generators so that people can experiment without creating lots of bogus data in our production database.
-  * Version our API in the Accepts: header (makes the platform more predictable for third parties and makes it so that we can improve it without immediately obsoleting existing systems that depend on it).
+  * Version our API in the `Accepts:` header (makes the platform more predictable for third parties and makes it so that we can improve it without immediately obsoleting existing systems that depend on it).
   * *@@3* Further refactoring; extract commonalities for our standard API. Make it easier to create things that fit into the platform.
   * *@@* Further work on automation -- what we do, how we do it (tools, etc). This has to do with builds and testing.
 
@@ -84,27 +84,27 @@ These features are aimed at allowing us to support third parties -- people who w
 
 We believe strongly that people own their own data and need to finish the work that will allow people to control their data. We need to follow security best practices and defend our systems against attacks and poor programming. 
 
-  * Provide standalone endpoints for managing things that are central to the platform should be common across multiple apps:
+  * Provide standalone endpoints for managing things that are central to the platform and should be common across multiple apps:
     * Login (this is the point of OAuth support)
     * Signup
     * User profile management (including invitations, editing contact information and password recovery)
     * Uploading data
   * Throttle API calls -- especially to the user-api -- to limit ability of badly-behaved clients to damage us.
   * Add password quality rules so people can't create unsafe passwords. 
-  * Allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer -- for example, a zip of JSON files).
-  * *@@3* Allow upload of one of these data blobs to recreate an individual's data.
+  * Export: allow downloading all of someone's data in one action (result should be something that is machine-interpretable, but that can be understood with a little effort by someone who is not a software developer -- for example, a zip of JSON files).
+  * *@@3* Import: allow upload of one of these data blobs to recreate an individual's data.
   * *@@* Complete the features involved in allowing someone to delete their own account and all associated data.
-  * *@@* Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data. (Requires ability to play back a log and feed it into the db.)
+  * *@@* Log database transactions so we can play them back for recovery between daily backups. This permits backup recovery without losing any data. (Requires ability to play back a log and feed it into the database.)
 
 
 ### Update data storage system
 
-The data storage system currently in use in Blip is a custom framework designed to support Blip, but it's not yet a general purpose system that allows multiple types of data to be stored together and used in different ways by different apps. Our goal is a unified storage model that integrates a wide range of data types. There is a separate document that is being developed on the data formats. There will be another on query languages.
+The data storage system currently in use in Blip is a custom framework designed to support Blip, but it's not yet a general purpose system that allows multiple types of data to be stored together and used in different ways by different apps. Our goal is a unified storage model that integrates a wide range of data types. There is a separate document that is being developed on the [data formats](/data-model/v1/). There will be another on query languages.
 
 #### Architectural thinking we need to do first:
 
   * Design and document our unified data storage model:
-    * What is the data storage model? Define data schemas, data formats, and hierarchy of data. *September 2014: this is available [here](http://developer.tidepool.io/data-model/v1/)*
+    * What is the [data storage model](/data-model/v1/)? Define data schemas, data formats, and hierarchy of data.
     * How do we handle queries? We probably need a small query language. Design something that can start small and be extended.
     * How will we do notifications based on those queries? (In this case, "notifications" means a mechanism for software systems to be notified when items in the database are changed according to certain conditions.)
     * How is data provenance tracked? How are modifications to data expressed?
@@ -139,7 +139,7 @@ The data storage system currently in use in Blip is a custom framework designed 
     * Asante
     * ...
 
-  * *@@3* Implement mobile app that can use a usb/bluetooth converter to upload data from a device in real time.
+  * *@@3* Implement mobile app that can use a USB/Bluetooth converter to upload data from a device in real time.
 
 ### Step up test coverage, documentation and process
 
@@ -151,7 +151,7 @@ As discussed above, we need to be very serious about testing and measurement of 
   * Start analyzing our dependencies and their testing coverage; decide how to manage them in a way we can track. Minimize dependencies and stabilize versions.
   * Re-engage on our test strategies for the frontend. Automated end-to-end testing is probably not the most effective use of our resources. How can we do this better?
   * Create and document our model for how we do user requirements and how we tie them to Trello and GitHub.
-  * Get further documentation set up and figure out how to make sure it's current and correct. The right way to do it is to find a way to integrate the documentation into the code so that it can be generated directly from the code. 
+  * Get further documentation set up and figure out how to make sure it's current and correct. The right way to do it is to find a way to integrate the documentation into the code ([JSDoc](http://usejsdoc.org/)?) so that it can be generated directly from the code. 
   * Create and publish a set of auditable metrics suitable for use by FDA and others.
 
 ### Improve quality of tooling and the structure of our code
