@@ -7,7 +7,7 @@ published: true
 
 Bolus events represent a one-time dose of fast-acting insulin.  Even though a bolus is one-time, it is not immediate.  Pumps generally deliver a bolus over the course of minutes/tens of seconds.  It is possible that it is interrupted and it is important to know what was actually delivered.  For that reason, a bolus can be a multi-event process. One event indicates the start and subsequent events indicate completion.
 
-There are multiple types of boluses that the tidepool platform can handle.
+There are multiple types of boluses that the Tidepool platform can handle.
 
 * injected
 * normal
@@ -34,7 +34,7 @@ An "injected" bolus is a bolus that was delivered via injection.  It is a single
 
 ## Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
 
 ## Normal
 

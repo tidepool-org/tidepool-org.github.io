@@ -181,7 +181,7 @@ If you were to first emit the event
 }
 ~~~
 
-At this point, the tidepool platform will store and allow you to retrieve
+At this point, the Tidepool platform will store and allow you to retrieve
 
 ~~~json
 [
@@ -221,7 +221,7 @@ If you then emit
 }
 ~~~
 
-The tidepool platform will store and allow you to retrieve
+The Tidepool platform will store and allow you to retrieve
 
 ~~~json
 [
@@ -277,7 +277,7 @@ And then emit
 }
 ~~~
 
-The tidepool platform will store and allow you to retrieve
+The Tidepool platform will store and allow you to retrieve
 
 ~~~json
 [
