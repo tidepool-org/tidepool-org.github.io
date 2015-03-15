@@ -30,4 +30,4 @@ Values that come directly from a blood glucose meter can either contain an empty
 
 ### Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.

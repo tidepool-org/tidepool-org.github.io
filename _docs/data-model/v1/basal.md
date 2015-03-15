@@ -47,7 +47,7 @@ The fields generally follow the same semantics as other basal events, except
 
 ## Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
 
 ### Scheduled
 

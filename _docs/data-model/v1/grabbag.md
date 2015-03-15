@@ -21,4 +21,4 @@ Grab Bag represents an event with absolutely no semantic verification done on an
 
 ## Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.

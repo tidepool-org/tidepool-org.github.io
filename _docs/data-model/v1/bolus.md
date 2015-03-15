@@ -34,7 +34,7 @@ An "injected" bolus is a bolus that was delivered via injection.  It is a single
 
 ## Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed
+The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
 
 ## Normal
 
