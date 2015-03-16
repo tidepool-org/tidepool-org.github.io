@@ -23,7 +23,7 @@ From a corporate point of view, this means that we must:
   1. Implement a quality system that satisfies FDA requirements.
   1. Submit for (and then receive) FDA approval.
 
-Our very aggressive goal is to submit the appropriate application to the FDA by the end of 2014. 
+Our very aggressive goal is to submit the appropriate application to the FDA by the end of 2014. Update as of October, 2014: We met with the FDA and received guidance (notes [here](https://tidepool.org/wp-content/uploads/2013/08/002_Tidepool_Meeting_Minutes.pdf)) that we should Register and List, do not need to submit a 510(k). So we are still building a quality system and implementing within it, but documenting is internal, not to be filed.
 
 As mentioned above, this document does not consider the design and development of user interfaces. It is focused on getting a useful, robust, HIPAA-compliant backend built, tested, deployed, and capable of being FDA-approved. 
 
