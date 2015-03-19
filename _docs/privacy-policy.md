@@ -1,3 +1,8 @@
+---
+layout: defaults
+title: Tidepool Privacy Policy
+published: true
+---
 ### DRAFT AND TEST -- THIS IS AN EXPERIMENT IN USING GITHUB MARKDOWN TO REPRESENT OUR PRIVACY POLICY
 ### THIS IS NOT ACTUALLY TIDEPOOL'S PRIVACY POLICY
 
