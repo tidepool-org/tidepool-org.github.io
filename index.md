@@ -39,4 +39,4 @@ We intend to but have not yet set up mailing lists for development. When we do, 
 
 *Thank you for your support.*
 
-This is a test [privacy policy](privacypolicy).
+This is a test of having our [privacy policy](privacy-policy) maintained on GitHub.
