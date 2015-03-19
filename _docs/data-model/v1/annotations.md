@@ -29,6 +29,8 @@ We document our known annotations below, but we do not limit the set of annotati
 
 ### Generic
 
+* `time-change` happens when we detected a change in a device's date & time settings that results in either gaps or overlaps in the data. This annotation is *required* to appear on data that we know overlaps with other data coming from the same device.
+
 * `basal/mismatched-series` happens when the API receives a basal event with a `previous` field that does not line up with the basal event immediately before it in the stream of basal events.
 
 
@@ -68,4 +70,9 @@ We document our known annotations below, but we do not limit the set of annotati
 
 * `carelink/wizard/long-search` happens when we can't be 100% certain that we've *correctly* combined a wizard event with an actual bolus delivery event. We rely on the upload sequence numbers of events in the CareLink data to combine these events, but sometimes other events (e.g., pump alarms) disturb the sequence. We make a reasonable effort to allow for this by searching beyond exactly where we expect the corresponding event to be in the sequence, but when we have done this, we apply this annotation to express our lack of absolute certainty in the result.
 
+### Insulet
+
+* `insulet/basal/fabricated-from-schedule` appears on the last basal of each upload. Since Insulet does not provide a duration on basal events, we compare the final basal segment's rate and schedule name against the basal schedules in the OmniPod user's current (as of upload) settings and use the duration from the schedule if the rate and schedule name match.
+
+* `insulet/bolus/split-extended` may occur when a bolus with an extended component crosses midnight and the bolus was not entered using the suggested bolus calculator. The Insulet data always splits extended bolus records that cross midnight into two records, but without a suggested bolus calculator record to tie potentially split records together, it is impossible to know which records may have been split and which are actually two separate bolus events. Hence, whenever there is an extended bolus occurring very close to midnight that does not have an associated suggested bolus calculator record, we add this annotation to indicate that this may be the second part of a split record.
   
