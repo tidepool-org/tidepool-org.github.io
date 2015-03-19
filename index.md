@@ -38,3 +38,5 @@ Since our team spans the globe, there's nearly always someone in the #tidepool I
 We intend to but have not yet set up mailing lists for development. When we do, we'll put the information here. In the meantime, please feel free to drop a note to [info@tidepool.org](mailto://info@tidepool.org), and it will find the right recipient quickly.
 
 *Thank you for your support.*
+
+This is a test [privacy policy](privacypolicy).
