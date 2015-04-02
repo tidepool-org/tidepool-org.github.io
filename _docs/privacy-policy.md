@@ -13,9 +13,8 @@ Tidepool treats the information of Users and Care Team Members differently. For 
 * [FOR CARE TEAM MEMBERS](#careteam)
 * [FOR BOTH](#all)
 
-### <a name="users">For Users</a>
-### Privacy Policy – for Users
-### 1. Summary 
+#### <a name="users">Privacy Policy – for Users</a>
+#### 1. Summary 
 We collect your information so that we can show it to you in useful ways in our applications like Blip, the Tidepool Uploader, Nutshell and Sonar. Our applications store and retrieve data through our hosted cloud platform, called the Tidepool Platform. You may choose to share your health information with others and with applications that connect to the Tidepool Platform.
 
 This Privacy Policy describes what we do with your information and is guided by the following principles:
