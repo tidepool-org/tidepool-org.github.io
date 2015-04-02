@@ -4,17 +4,18 @@ title: Tidepool Privacy Policy
 published: true
 ---
 
-### Tidepool App Privacy Policy v0.9
+### Tidepool Privacy Policy v0.9
+### Effective Date: April 6, 2015
 
-### Version 0.9 Effective Date: April 6, 2015
 The privacy and security of your information is important to us. We collect information from people who use Tidepool applications to help manage their diabetes (“Users”) and from the people with whom the User chooses to share that information (“Care Team Members”). **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY AND DATA POLICY.**
 Tidepool treats the information of Users and Care Team Members differently. For this reason, this Privacy Policy has separate sections that apply to Users, to Care Team Members, and to both Users and Care Team Members.
 * [FOR USERS](#users)
 * [FOR CARE TEAM MEMBERS](#careteam)
 * [FOR BOTH](#all)
 
+### <a name="users">For Users</a>
 ### Privacy Policy – for Users
-### Summary 
+### 1. Summary 
 We collect your information so that we can show it to you in useful ways in our applications like Blip, the Tidepool Uploader, Nutshell and Sonar. Our applications store and retrieve data through our hosted cloud platform, called the Tidepool Platform. You may choose to share your health information with others and with applications that connect to the Tidepool Platform.
 
 This Privacy Policy describes what we do with your information and is guided by the following principles:
@@ -30,29 +31,22 @@ This Privacy Policy describes what we do with your information and is guided by 
 
 This summary is for your convenience only and has no legal effect.  
 
-**The Privacy and Security of Your Information is Important to Us.**
+**2. The Privacy and Security of Your Information is Important to Us.**
 This Privacy Policy describes how Tidepool Project (“Tidepool,” “us,” or “we”) collects, uses, and discloses information collected from you as a User in connection with your use of our web- and mobile-based applications (such as Blip and Tidepool Uploader; together with any other web- and mobile-based applications developed by Tidepool, the “Tidepool Apps”). 
-This Privacy Policy is a part of the Tidepool Project Terms of Use (“Terms of Use”). The Terms of Use is the contract between you and Tidepool that governs your access and use of the Tidepool Apps and makes you the legal owner of the data, notes, files and other information you store and manage using the Tidepool Apps. By becoming a registered User and creating an account (“Account”) with Tidepool, you must also accept the Terms of Use Please read this entire Privacy Policy and the Terms of Use.
+
+This Privacy Policy is a part of the [Tidepool Project Terms of Use](terms-of-use) (“Terms of Use”). The Terms of Use is the contract between you and Tidepool that governs your access and use of the Tidepool Apps and makes you the legal owner of the data, notes, files and other information you store and manage using the Tidepool Apps. By becoming a registered User and creating an account (“Account”) with Tidepool, you must also accept the [Terms of Use](terms-of-use). Please read this entire Privacy Policy and the [Terms of Use](terms-of-use).
+
 The summary above is for your convenience only and has no legal effect. In the event of any conflict between the provisions of the Terms of Use and this Privacy Policy, the terms and conditions of the Terms of Use will prevail. If you don’t agree with the terms of this Privacy Policy or the Terms of Use, please don’t use the Tidepool Apps. **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY POLICY.**
 
-As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website, www.tidepool.org, and indicate the date it was last revised. 
-
-### <a name="users">For Users</a>
-This is text that will go in the users section. There will be lots of text here.
-
-### <a name="careteam">For CareTeam Members</a>
-This is text that will go in the users section. There will be lots of text here.
-
-### <a name="all">For Everyone</a>
-This is text that will go in the users section. There will be lots of text here.
+As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website at [www.tidepool.org/legal](www.tidepool.org/legal) and indicate the date it was last revised. 
 
 Frequently Asked Questions:
-WHAT DOES THIS PRIVACY POLICY COVER?
-WHAT INFORMATION DOES TIDEPOOL COLLECT AND FOR WHAT PURPOSES?
-WHAT CHOICES DO I HAVE ABOUT THE USE OF MY INFORMATION?
-HOW OLD DO USERS OF TIDEPOOL APPS NEED TO BE?
-HOW DO I INVITE MEMBERS TO JOIN MY CARE TEAM OR INVITE OTHERS TO USE TIDEPOOL APPS?
-WHAT ABOUT THE PRACTICES OF THIRD-PARTY APPLICATIONS THAT YOU CAN CONNECT TO TIDEPOOL APPS?
+* WHAT DOES THIS PRIVACY POLICY COVER?
+* WHAT INFORMATION DOES TIDEPOOL COLLECT AND FOR WHAT PURPOSES?
+* WHAT CHOICES DO I HAVE ABOUT THE USE OF MY INFORMATION?
+* HOW OLD DO USERS OF TIDEPOOL APPS NEED TO BE?
+* HOW DO I INVITE MEMBERS TO JOIN MY CARE TEAM OR INVITE OTHERS TO USE TIDEPOOL APPS?
+* WHAT ABOUT THE PRACTICES OF THIRD-PARTY APPLICATIONS THAT YOU CAN CONNECT TO TIDEPOOL APPS?
 
 WHAT DOES THIS PRIVACY POLICY COVER?
 This Privacy Policy applies to Tidepool’s treatment of “personal information,” which is information that uniquely identifies a User or otherwise contains personally identifiable information. This Privacy Policy also applies to the data, notes, and files you or any of your Care Team Members upload, store, and manage using the Tidepool Apps. This Privacy Policy does not apply to the practices of companies that Tidepool does not own or control, or to individuals who Tidepool does not employ or manage.
