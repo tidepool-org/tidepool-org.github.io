@@ -39,4 +39,5 @@ We intend to but have not yet set up mailing lists for development. When we do, 
 
 *Thank you for your support.*
 
-This is a test of having our [privacy policy](privacy-policy) maintained on GitHub.
+These are Tidepool's [Application Terms of Use](terms-of-use), maintained here on GitHub.
+This is Tidepool's [privacy policy](privacy-policy) maintained here on GitHub.
