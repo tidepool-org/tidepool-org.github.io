@@ -1,3 +1,4 @@
+---
 layout: defaults
 title: Tidepool Applications Terms of Use
 published: true
