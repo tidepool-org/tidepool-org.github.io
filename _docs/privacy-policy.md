@@ -4,10 +4,12 @@ title: Tidepool Privacy Policy
 published: true
 ---
 
-### Tidepool Privacy Policy v0.9
-### Effective Date: April 6, 2015
+#### Tidepool Privacy Policy
+#### Effective Date: April 6, 2015
+#### Version 0.9
 
 The privacy and security of your information is important to us. We collect information from people who use Tidepool applications to help manage their diabetes (“Users”) and from the people with whom the User chooses to share that information (“Care Team Members”). **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY AND DATA POLICY.**
+
 Tidepool treats the information of Users and Care Team Members differently. For this reason, this Privacy Policy has separate sections that apply to Users, to Care Team Members, and to both Users and Care Team Members.
 * [FOR USERS](#users)
 * [FOR CARE TEAM MEMBERS](#careteam)
@@ -30,10 +32,10 @@ This Privacy Policy describes what we do with your information and is guided by 
 
 This summary is for your convenience only and has no legal effect.  
 
-**2. The Privacy and Security of Your Information is Important to Us.**
+#### 2. The Privacy and Security of Your Information is Important to Us.####
 This Privacy Policy describes how Tidepool Project (“Tidepool,” “us,” or “we”) collects, uses, and discloses information collected from you as a User in connection with your use of our web- and mobile-based applications (such as Blip and Tidepool Uploader; together with any other web- and mobile-based applications developed by Tidepool, the “Tidepool Apps”). 
 
-This Privacy Policy is a part of the [Tidepool Project Terms of Use](terms-of-use) (“Terms of Use”). The Terms of Use is the contract between you and Tidepool that governs your access and use of the Tidepool Apps and makes you the legal owner of the data, notes, files and other information you store and manage using the Tidepool Apps. By becoming a registered User and creating an account (“Account”) with Tidepool, you must also accept the [Terms of Use](terms-of-use). Please read this entire Privacy Policy and the [Terms of Use](terms-of-use).
+This Privacy Policy is a part of the [Tidepool Project Applications Terms of Use](terms-of-use) (“Terms of Use”). The Terms of Use is the contract between you and Tidepool that governs your access and use of the Tidepool Apps and makes you the legal owner of the data, notes, files and other information you store and manage using the Tidepool Apps. By becoming a registered User and creating an account (“Account”) with Tidepool, you must also accept the [Terms of Use](terms-of-use). Please read this entire Privacy Policy and the [Terms of Use](terms-of-use).
 
 The summary above is for your convenience only and has no legal effect. In the event of any conflict between the provisions of the Terms of Use and this Privacy Policy, the terms and conditions of the Terms of Use will prevail. If you don’t agree with the terms of this Privacy Policy or the Terms of Use, please don’t use the Tidepool Apps. **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY POLICY.**
 
