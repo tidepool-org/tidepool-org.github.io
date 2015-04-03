@@ -237,8 +237,11 @@ If Tidepool is involved in a merger, acquisition, sale, or other disposition of 
 You must be 13 or older to register as a Care Team Member with any Tidepool Apps. If we become aware that a person under 13 has registered with or is using any Tidepool App, we will delete the Care Team Member’s Account. 
 
 #### 6.4 HOW DO I INVITE OTHERS TO USE TIDEPOOL APPS?
+
 If you would like to invite someone to become a User of any Tidepool App, we’ll ask you for the person’s email address for the sole purpose of sending an invitation.
+
 ---
+
 ### Privacy Policy – Additional Terms for Users and Care Team Members
 
 The following additional terms apply to both Users and Care Team Members. 
