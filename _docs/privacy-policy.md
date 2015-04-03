@@ -289,13 +289,10 @@ We act in accordance with the principle behind the California “Shine the Light
 
 #### 7.8 WHERE CAN I SEND QUESTIONS, COMMENTS OR SUGGESTIONS ABOUT TIDEPOOL’S PRIVACY PRACTICES?
 We welcome your questions and feedback and will work to improve our practices based on useful input we receive. Please contact us at privacy@tidepool.org or via mail at:
-
-**Tidepool Project**
-
-**Attn: Legal Department**
-
-**555 Bryant St., #429**
-
-**Palo Alto, CA 94301**
-
+```
+Tidepool Project
+Attn: Legal Department
+555 Bryant St., #429
+Palo Alto, CA 94301
+```
 
