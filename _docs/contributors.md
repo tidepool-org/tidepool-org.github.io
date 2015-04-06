@@ -30,6 +30,7 @@ Below are the GitHub names of people who have agreed to Tidepool VCLA via GitHub
 [ursooperduper](https://github.com/ursooperduper) | [Agreed in blip#182](https://github.com/tidepool-org/blip/pull/182)
 [dduugg](https://github.com/dduugg) | [Agreed in tideline#201](https://github.com/tidepool-org/tideline/pull/201)
 [dandv](https://github.com/dandv) | [Agreed in tidepool-org.github.io#52](https://github.com/tidepool-org/tidepool-org.github.io/pull/52)
+[timberframe](https://github.com/timberframe) | Agreed via email to legal@tidepool.org on 20th-March-2015
 
 ## Committers
 
@@ -44,5 +45,3 @@ ianjorgensen | Engineering (*)
 jebeck | Engineering (*)
 jh-bate | Engineering (*)
 skrugman | Design
-cheddar | Engineering
-nicolashery | Engineering
