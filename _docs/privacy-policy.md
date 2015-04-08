@@ -72,9 +72,9 @@ With your permission, we may also provide internal, diagnostic data from your di
 You have the option of granting the maker of your diabetes monitoring or treatment device with access to the information you upload from the device via the Tidepool Uploader. Providing your device maker with access to this data may assist the device maker in provide customer support or diagnose and address issues with the device. Providing data access to the device maker also helps them understand how their devices are being used, which helps them make better devices in the future. We may charge device makers a monthly fee for access to this data. 
 
 You may choose to provide the makers certain device makers, including but not limited to the following, with information collected from your device via the Tidepool Uploader:
+* Asante Snap 
 * Dexcom G4 
 * Insulet OmniPod 
-* Asante Snap 
 * Tandem t:slim
 
 Your device manufacturer may be able to identify you based on the serial number associated with the device and other information about you in its possession. 
@@ -95,6 +95,7 @@ For all diabetes devices:
 
 For blood glucose meters:
 * Included: blood glucose readings and time stamps
+* 
 For continuous glucose meters (“CGM”):
 * Included: estimated glucose values and time stamps, events tracked by the CGM, including meals, insulin, calibration, exercise, health 
 
@@ -114,7 +115,7 @@ You may have the option to link or connect Tidepool Apps and the information col
 
 **Study Management for Academic & Clinical Research**
 
-XXX Insert info about studies here. XXX
+XXX TODO: Insert info about clinical research studies here. XXX
 
 **Information we collect automatically about you when you use Tidepool Apps**
 
@@ -174,9 +175,9 @@ Users have control of their data.  This means that as a Care Team Member your ac
 
 This Privacy Policy describes what we do with the information you provide us when you register and in your use of Tidepool applications.
 
-#### 5. This summary is for your convenience only and has no legal effect.    
+**This summary is for your convenience only and has no legal effect.**
 
-**The Privacy and Security of Information Is Important to Us.**
+####5. The Privacy and Security of Information Is Important to Us.**
 
 This Privacy Policy describes how Tidepool Project (“Tidepool,” “us,” or “we”) collects, uses, and discloses information collected inform you as a Care Team Member in connection with your use of our web- and mobile-based applications (such as Blip and Tidepool Uploader; together with any other web- and mobile-based applications developed by Tidepool, the “Tidepool Apps”).
 
@@ -184,14 +185,14 @@ This Privacy Policy is a part of the Tidepool Project Applications Terms of Use 
 
 The summary above is for your convenience only and has no legal effect. In the event of any conflict between the provisions of the Terms of Use and this Privacy Policy, the terms and conditions of the Terms of Use will prevail. If you don’t agree with the terms of this Privacy Policy or the Terms of Use, please don’t use the Tidepool Apps. **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY POLICY.**
 
-As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website, www.tidepool.org and indicate the date it was last revised.  
+As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website, [tidepool.org/legal](tidepool.org/legal) and indicate the date it was last revised.
+
 #### 6. Frequently Asked Questions:
 * WHAT DOES THIS PRIVACY POLICY COVER?
 * WHAT INFORMATION DOES TIDEPOOL COLLECT AND FOR WHAT PURPOSES? 
 * WHAT CHOICES DO I HAVE ABOUT THE USE OF MY INFORMATION?
 * HOW OLD DO CARE TEAM MEMBERS OF TIDEPOOL APPS NEED TO BE?
 * HOW DO I INVITE OTHERS TO USE TIDEPOOL APPS?
-
 
 #### 6.1 WHAT DOES THIS PRIVACY POLICY COVER?
 This Privacy Policy applies to Tidepool’s treatment of “personal information,” which is information that uniquely identifies a Care Team Member or otherwise contains personally identifiable information. This Privacy Policy also applies to notes and other information that you as a Care Team Member add to a User’s Account using the Tidepool Apps. This Privacy Policy does not apply to the practices of companies that Tidepool does not own or control, or to individuals that Tidepool does not employ or manage.
@@ -234,6 +235,7 @@ You can choose to stop receiving marketing or informational emails from us by cl
 If Tidepool is involved in a merger, acquisition, sale, or other disposition of all or a substantial portion of its assets, you will be notified via email of any change in ownership and any choices you can make about your personal information.  
 
 #### 6.3 HOW OLD DO CARE TEAM MEMBERS OF TIDEPOOL APPS NEED TO BE?
+
 You must be 13 or older to register as a Care Team Member with any Tidepool Apps. If we become aware that a person under 13 has registered with or is using any Tidepool App, we will delete the Care Team Member’s Account. 
 
 #### 6.4 HOW DO I INVITE OTHERS TO USE TIDEPOOL APPS?
@@ -242,7 +244,7 @@ If you would like to invite someone to become a User of any Tidepool App, we’l
 
 ---
 
-### Privacy Policy – Additional Terms for Users and Care Team Members
+### <a name="all">Privacy Policy – Additional Terms for Users and Care Team Members</a>
 
 The following additional terms apply to both Users and Care Team Members. 
 #### 7. Frequently Asked Questions:
