@@ -290,7 +290,7 @@ While we take steps to protect your personal information and data and keep it se
 We act in accordance with the principle behind the California “Shine the Light” law, CA Civil Code § 1798.83, which gives consumers the right to know about certain personal information shared with third parties. We will never do that without your express permission, except as described in this Privacy Policy. Under California law, a California resident with whom we have an established relationship has the right to request certain information with respect to the types of personal information that Tidepool has shared with third parties for these purposes, and the identities of those third parties, within the immediately preceding calendar year, subject to certain exceptions. All requests for such information must be in writing and sent to Tidepool at the mailing address set forth below.  
 
 #### 7.8 WHERE CAN I SEND QUESTIONS, COMMENTS OR SUGGESTIONS ABOUT TIDEPOOL’S PRIVACY PRACTICES?
-We welcome your questions and feedback and will work to improve our practices based on useful input we receive. Please contact us at privacy@tidepool.org or via mail at:
+We welcome your questions and feedback and will work to improve our practices based on useful input we receive. Please contact us at (privacy@tidepool.org)[mailto:privacy@tidepool.org) or via mail at:
 ```
 Tidepool Project
 Attn: Legal Department
