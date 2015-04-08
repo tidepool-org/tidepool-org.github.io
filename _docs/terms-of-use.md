@@ -1,5 +1,5 @@
 ---
-layout: defaults
+layout: legal
 title: Tidepool Applications Terms of Use
 published: true
 ---
