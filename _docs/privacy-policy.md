@@ -1,5 +1,5 @@
 ---
-layout: defaults
+layout: legal
 title: Tidepool Privacy Policy
 published: true
 ---
