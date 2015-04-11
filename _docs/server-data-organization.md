@@ -5,13 +5,13 @@ published: true
 ---
 # Tidepool's Server Data Model
 
-The core concept behind Tidepool's data model is that there are different classes of security needed for different types of data. User data needed for logins needs to be in one database, searchable. User metadata is encrypted on a per-user basis, and protected so that even having both the user data and the metadata, you still wouldn't be able to decrypt it without also having our deploy keys. It is also the case that you can't go backward from metadata to user data, you can only go forward from user data to metadata. The same is true for metadata -> patientdata. If you have patient data, you can't find the metadata associated with it.
+The core concept behind Tidepool's data model is that there are different classes of security needed for different types of data. User data needed for logins needs to be in one database, searchable. User metadata is encrypted on a per-user basis, and protected so that even having both the user data and the metadata, you still wouldn't be able to decrypt it without also having our deploy keys. It is also the case that you can't go backward from metadata to user data, you can only go forward from user data to metadata. The same is true for metadata -> patientdata. If you only have patient data, you can't find the metadata associated with it.
 
 ## Glossary
 
 * **Tidepool-generated** -- This is a field that was generated automatically by Tidepool. It is effectively an unpredictable random string, and there is no derivable relationship between this field and the user it is associated with, nor is there any relationship between this field and others like it.
 
-* **User-supplied** -- The end user can create this field. 
+* **User-supplied** -- The end user can create this field.
 
 * **Unique** -- This field must be unique within the database.
 
@@ -33,15 +33,15 @@ The core concept behind Tidepool's data model is that there are different classe
 
 ## User / Login information
 
-This is information that lives in the user API (tidepool-org/user-api). This consists of the minimum amount of information about individual users to permit them to log in, and explicitly excludes any information about whether they are patients. 
+This is information that lives in the user API (tidepool-org/user-api). This consists of the minimum amount of information about individual users to permit them to log in, and explicitly excludes any information about whether they are patients.
 
 **NOTE** -- *PATIENT data should never touch the user repository.* The reason is that the user repository uses a single key for all data, while other repositories can encrypt information on a per-user basis.
 
 Fields in this data structure include:
 
-* **userid** -- Tidepool-generated, unique, permanent -- The userid created when the user first creates an account. It never changes. 
-* **username** -- User-supplied, required, unique, editable -- A unique username provided by the user (could be an email name or a user name, whatever). Used to provide a unique login name. 
-* **emails** -- User-supplied, required, array, editable -- Each email in the list must be unique in the database. The first item in the list is used for sending notifications and messages. Password recovery can take place with any of them. Any of them can be used instead of username to log in. 
+* **userid** -- Tidepool-generated, unique, permanent -- The userid created when the user first creates an account. It never changes.
+* **username** -- User-supplied, required, unique, editable -- A unique username provided by the user (could be an email name or a user name, whatever). Used to provide a unique login name.
+* **emails** -- User-supplied, required, array, editable -- Each email in the list must be unique in the database. The first item in the list is used for sending notifications and messages. Password recovery can take place with any of them. Any of them can be used instead of username to log in.
 * **pwhash** -- Required, user-supplied but obfuscated, editable -- The user's password is hashed and stored; only the hashes are ever compared. Actual password is never stored and not recoverable (we'll have a password generation system). This field never leaves the user API for any reason.
 * **private** -- A JavaScript object containing id and hash information for other private data fields. Each element in the private object is itself an object with two fields. There are API methods for generating these objects, for saving them in the **private** field, and for regenerating them if they need to change. This field is never returned from any query outside the firewall -- Only Tidepool servers can access it. It is generally expected that each separate Tidepool API will create a unique element in the private object (one for metadata, one for message data, etc).
   * **id** -- A short, Tidepool-generated, unique, semi-permanent ID that is intended for use in naming things.
@@ -49,7 +49,7 @@ Fields in this data structure include:
 
 ## User Metadata
 
-This is further information about the user. The main field (called value) is the user-api private.meta.id value. The value of the field is a block of json, encrypted with private.meta.hash plus a deploy-specific salt value. 
+This is further information about the user. The main field (called value) is the user-api private.meta.id value. The value of the field is a block of json, encrypted with private.meta.hash plus a deploy-specific salt value.
 
 The field is divided into named compartments called "collections". The intent is that someday collections will each be able to have a schema that can control what members they can have.
 
@@ -74,7 +74,7 @@ Metadata fields include:
 
 ## Group Data
 
-Groups are just lists of users. Nothing more. 
+Groups are just lists of users. Nothing more.
 
 They are currently used for two things, primarily -- permissions management and messaging. They might someday do more than that.
 
