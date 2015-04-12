@@ -17,7 +17,7 @@ The phrase, stolen from [David Weinberger](http://www.smallpieces.com/index.php)
 * Each piece is isolated and does a limited set of tasks well
 * Easy for others to contribute to in an open source environment
 
-These benefits all interlock and reinforce each other. 
+These benefits all interlock and reinforce each other.
 
 ## Open Source
 
@@ -40,10 +40,14 @@ The value of this is that it makes it easy to write services that communicate us
 
 The kind of client applications that Tidepool wants to build -- beautiful, elegant presentation of sophisticated data -- require JavaScript. There is an explosion of engineering effort being expended to build better and better tools and techniques. Furthermore, nearly all the work being done in JavaScript is open source.
 
-Because of this, and because nearly every good client application needs support on the server side as well, JavaScript is rapidly becoming a strong competitor in the server space. [Node](http://nodejs.org/) is a credible server platform with a strong community. By standardizing on Node, Tidepool will benefit both from the tremendous rate of growth in this space as well as allowing our engineers and contributors to work in JavaScript for both client and server. Furthermore, the tooling support for such environments is also growing leaps and bounds. It's an exciting place to be.
+Tidepool's early server development was also based around Javascript. [Node](http://nodejs.org/) is a credible server platform with a strong community. By initially standardizing on Node, Tidepool intended to benefit both from the tremendous rate of growth in this space as well as allowing our engineers and contributors to work in JavaScript for both client and server.
+
+## Go
+
+Several months of experience developing our early server frameworks in JavaScript and Node led us to believe that Tidepool's direction didn't map well to Node's strengths. Consequently, we searched for an alternative and settled on the Go programming language and the tools that support it. Several of Tidepool's servers are now written in Go.
 
 ## Heavily tested and testable
-Having isolated, small components makes it a lot easier to write test systems that help to verify that the pieces work as designed. We are writing test scripts to validate our APIs at the unit test level as well as with integration tests. When we find bugs, we have a general policy to try to write a (failing) test that will demonstrate the bug, then fix the bug, and then prove that the test now succeeds. We expect to run tests automatically on our repositories (we're currently ramping up with Travis-CI) and measure test coverage (experimenting with Coveralls). 
+Having isolated, small components makes it a lot easier to write test systems that help to verify that the pieces work as designed. We are writing test scripts to validate our APIs at the unit test level as well as with integration tests. When we find bugs, we have a general policy to try to write a (failing) test that will demonstrate the bug, then fix the bug, and then prove that the test now succeeds. We expect to run tests automatically on our repositories (we're currently ramping up with Travis-CI) and measure test coverage (experimenting with Coveralls).
 
-Please note that testing is something that improves over time. The developer who wrote the code is both the best person to write some tests (because presumably the dev knows the code) and the worst (because any blind spots in the code are likely to be duplicated in the tests). 
+Please note that testing is something that improves over time. The developer who wrote the code is both the best person to write some tests (because presumably the dev knows the code) and the worst (because any blind spots in the code are likely to be duplicated in the tests).
 
