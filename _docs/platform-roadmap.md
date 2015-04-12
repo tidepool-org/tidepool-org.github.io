@@ -4,7 +4,7 @@ title: Tidepool Platform Roadmap
 published: true
 ---
 
-This document was last edited at the end of June, 2014.
+This document was last edited at the start of April, 2015.
 
 # Platform Roadmap
 
