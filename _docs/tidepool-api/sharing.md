@@ -8,18 +8,13 @@ published: true
 
 Tidepool user data can be shared flexibly with groups of other Tidepool users.  This document explains how to interact with the backend API to access those sharing functions. 
 
-For other API endpoints, see the introductory [API walkthrough](/tidepool-api/index) . 
+For other API endpoints, see the introductory [API walkthrough](/tidepool-api/index).  This API documentation is open-source -- please help keep it up-to-date.
 
 
-## Groups
+## Overview
 
-A better name for Groups would be "Permissions", but for historical reasons they're called groups. 
+A user's "groups" are the set of accounts for which the user has some permission.  A better name for Groups would be "Permissions", but for historical reasons they're called groups. 
 
-### Overview
-
-The "gatekeeper" project provides the mechanism by which Tidepool manages permissions between users.
-
-A user's "groups" are the set of accounts for which the user has some permission.
 
 The permissions currently available are:
 
@@ -73,11 +68,14 @@ If Carol asks "which groups am I in?", she might get back:
   Susie: view, upload, note
   Michael: view
 
-(Where Susie and Michael are other clients of hers.) The gatekeeper API is at the ```/access``` endpoint on Tidepool servers. Here's the list of things you can do with gatekeeper:
+(Where Susie and Michael are other clients of hers.) 
 
-### Which groups is a user in?
+Note to Tidepool developers: in the backend this is implemented in (gatekeeper)[https://github.com/tidepool-org/gatekeeper/blob/master/lib/server.js].  The gatekeeper API is at the ```/access``` endpoint on Tidepool servers.  
+
+## Which groups is a user in?
 
 This really means "whose data can a user access, and what permissions exist for each of them?"
+
 
 ```
 GET /access/groups/:userId
@@ -104,7 +102,11 @@ The response to this request would look something like this:
 }
 ```
 
-### Who can access a given user's data?
+### Error responses
+
+  * **401 Unauthorized**: The currently authenticated user does not have permissions to look at groups for the requested user.
+
+## Who can access a given user's data?
 
 This generates the list of userids that have access to the specified user's data, and which permissions they have.
 
@@ -126,7 +128,11 @@ The groupId here is the userId belonging to the session token, or someone for wh
 }
 ```
 
-### What permissions does userid have for groupid?
+### Error responses
+
+  * **401 Unauthorized**: The currently authenticated user does not have permissions to look at this group.
+
+## What permissions does userid have for groupid?
 
 This call checks a specific pair of users. The request is only valid if the session token making the request has admin permission on groupid, or if it is userid.
 
@@ -144,7 +150,13 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
 }
 ```
 
-### Set a user's permissions
+### Error responses
+
+  * **401 Unauthorized**: The currently authenticated user does not have permissions to look at this information.
+  * **404 Not Found**: The group does not grant any permissions to the user identified in the URL.
+  * **500 ServerError**: Another error occurred in the backend. 
+
+## Set a user's permissions
 
   This gives a user a specific set of permissions to access data.
 
