@@ -279,7 +279,7 @@ messages: [
 
 ## Groups
 
-A better name for Groups would be "Permissions", but for historical reasons they're called groups. 
+A better name for Groups would be "Permissions", but for historical reasons they're called groups.
 
 ### Overview
 
@@ -293,8 +293,8 @@ The permissions currently available are:
 * **upload** -- If B has upload permission, B can add new data to A's account. This implies that B can also read enough information to determine the date and time of A's last upload.
 * **note** -- If B has note permission, B can read the notes records in A's account and can create new notes and comments in that account, as well as edit the notes that B has created.
 * **edit** -- If B has edit permission, B is allowed to change A's data and metadata, but does not have the ability to delete it.
-* **admin** -- If B has admin permission, B can delete the account, change metadata, and change all permissions. It also includes the ability to send and accept invitations. 
-* **root** -- Root can do anything; account A always has root on itself. No one except A can have root on account A. (Root doesn't actually exist as a permission bit in the database -- it's just returned from the API as if it does). 
+* **admin** -- If B has admin permission, B can delete the account, change metadata, and change all permissions. It also includes the ability to send and accept invitations.
+* **root** -- Root can do anything; account A always has root on itself. No one except A can have root on account A. (Root doesn't actually exist as a permission bit in the database -- it's just returned from the API as if it does).
 
 ### Example
 Let's make this more real with an example:
@@ -317,9 +317,9 @@ Here's the permissions table:
 view | |X|X| |
 upload | |X|X| |X
 note | |X|X|X|X
-edit | |X| | | 
-admin | |X| | | 
-root | X | | | | 
+edit | |X| | |
+admin | |X| | |
+root | X | | | |
 
 If Alice asks "who can access my data?", she gets back the equivalent of:
 
@@ -419,7 +419,7 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
   x-tidepool-session-token: <token>
   ```
 
-  The groupId must be the user being modified, and the userId must be the user getting the permission. If permissions are being added, the user making the request (the user in the session token) must have admin permission on the group being modified. If permissions are being dropped, the user with the permission is allowed to drop it (in other words, it's OK to say you don't want to be able to see someone's data). 
+  The groupId must be the user being modified, and the userId must be the user getting the permission. If permissions are being added, the user making the request (the user in the session token) must have admin permission on the group being modified. If permissions are being dropped, the user with the permission is allowed to drop it (in other words, it's OK to say you don't want to be able to see someone's data).
 
   Body is a block of permissions that looks like this:
 
@@ -434,7 +434,7 @@ The "groupId" belongs to the user whose data is being accessed, and the userId b
 
   Note that each permission has an empty object to define its existence; this is to support the idea of more granular permissions later (for example, the "view" permission could support the concept of specific subsets of data to be viewed).
 
-  If a permission is not listed, the permission is not granted. 
+  If a permission is not listed, the permission is not granted.
 
 
 ## Confirmations
@@ -453,7 +453,7 @@ The signup system (where we get a confirmation that new users actually have a va
 
 ### Send a signup confirmation
 
-Send a signup confirmation email to a userid. 
+Send a signup confirmation email to a userid.
 
 ```
 POST /confirm/send/signup/:userid
@@ -464,11 +464,11 @@ This post is sent by the signup logic. In this state, the user account has been 
 
 (We need some rules about how often you can attempt a signup with a given email address, to keep this from being used to spam people either deliberately or accidentally. This call should also be throttled at the system level to prevent distributed attacks.)
 
-It sends an email that contains a random confirmation link. 
+It sends an email that contains a random confirmation link.
 
-### Resend confirmation 
+### Resend confirmation
 
-If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email. 
+If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email.
 
 ```
 POST /confirm/resend/signup/:userid
@@ -500,7 +500,7 @@ Making this request deletes the account record that was used to create the signu
 
 This call is provided for completeness -- we don't expect to need it in the actual user flow.
 
-Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array. 
+Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array.
 
 ```
 GET /confirm/signup/:userid
@@ -553,7 +553,7 @@ body {
 }
 ```
 
-This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account. 
+This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account.
 
 If this call is completed without error, the lost password request is marked as accepted. Otherwise, the lost password request remains active until it expires.
 
@@ -562,20 +562,21 @@ If this call is completed without error, the lost password request is marked as 
 This is not necessary -- upon any successful login, the lost password request will be automatically deleted. (If the user successfully logs in after creating the lost password request, it is presumed that they didn't actually need to change it.)
 
 
-## Member Invitations
+## Member invitations
 
 ### Send member invitation
 
-Send invitation to add a new member to a care team you are an admin of.
+Send an invitation to add a new member to the group of a data account (user needs to have admin permissions).
 
 The invitation must include the permissions being granted (edit, notes, view, upload,  admin) in the same format as granting permissions, so that the invitation can properly express the request.
 
 ```
 POST /confirm/send/invite/:userid
-
 x-tidepool-session-token: <token>
+```
 
-body: {
+```javascript
+{
   "email": "personToInvite@email.com",
   "permissions": [
     "view": {},
@@ -584,83 +585,163 @@ body: {
 }
 ```
 
-The userid is the user sending the invitation. When sending an invitation, you don't necessarily know if the user is already on the system or not, which is why there's no recipient ID field. 
+Response:
 
-### Get Sent invitations
+```
+201 Created
+```
 
-Get the still-pending invitations for a group you own or are an admin of. These are the invitations you have sent that have not been accepted. There is no way to tell if an invitation has been ignored. Requires admin privileges.
+```javascript
+{
+  "key": "6llIvY4GGx5XnNEfqWRry027q65BTe__",
+  "type": "careteam_invitation",
+  "status": "pending",
+  "email": "personToInvite@email.com",
+  "creatorId": "259f86ebc5",
+  "context": {
+    "view": {}
+  },
+  "created": "2014-10-03T15:19:46.268320998-04:00",
+  "modified": "2014-10-03T15:19:46.268320998-04:00"
+}
+```
+
+The `:userid` URL param is the user sending the invitation. When sending an invitation, you don't necessarily know if the user is already in the system or not, which is why there is no recipient ID field in the response.
+
+If you try to send an invitation to an `email` that already has an existing invitation (with a status of `pending`, `completed`, or `declined`), an error will be sent back:
+
+```
+409 Conflict
+```
+
+However, if a prior invitation was `canceled` by the user having sent it, it is possible to send another one to the same email.
+
+Finally, if you try to send an invitation to an email that belongs to a user who is *already a member of your group*, you will also get an error:
+
+```
+409 Conflict
+```
+
+### Get sent invitations
+
+Get the still-pending invitations for a group you own or are an admin of. These are the invitations you have sent that have not been accepted or ignored. There is no way to tell if an invitation has been ignored. Requires admin privileges.
 
 ```
 GET /confirm/invite/:userid
-
 x-tidepool-session-token: <token>
-
-body: [{
-  "email": "invitation1@email.com",
-  "permissions": {
-    "view": {},
-    "note": {}
-  }
-}]
 ```
 
-### Cancel Sent invitation
+Response:
+
+```
+200 OK
+```
+
+```javascript
+[
+  {
+    "key": "j3z8HsuAFZoQXN53bGeLw1XHgPpjhw2O",
+    "type": "careteam_invitation",
+    "status": "pending",
+    "email": "charles.west@example.com",
+    "creatorId": "259f86ebc5",
+    "context": {
+      "view": {}
+    },
+    "created": "2014-05-03T11:19:46.268320998-04:00",
+    "modified": "2014-05-03T11:19:46.268320998-04:00"
+  },
+  // ...
+]
+```
+
+If no invitations are pending, the response body will be **empty**.
+
+### Cancel sent invitation
 
 Removes a pending invitation (one that has not yet been accepted by the recipient). This can happen before or after it being dismissed but not after it has been accepted. Requires admin privileges.
 
 ```
-DELETE /confirm/:userid/invited/:invited_address
-
+PUT /confirm/:userid/invited/:email
 x-tidepool-session-token: <token>
 ```
 
-The userid field is the user who sent the invitation, and the invited_address field is the email address that was invited.
+Response:
+
+```
+200 OK
+```
+
+The `:userid` param is the user who sent the invitation, and the `:email` param is the email address that was invited.
 
 ### Get received invitations
 
-Get list of received invitations for logged in user. These are invitations that have been sent to this user but not yet acted upon. (This call is unique to invite; there is no equivalent for signup or forgot.)
+Get list of received invitations for logged-in user (URL param `:userid`). These are invitations that have been sent to this user but not yet acted upon. (This call is unique to invitations, there is no equivalent for signup or forgot.)
 
 ```
 GET /confirm/invitations/:userid
-
 x-tidepool-session-token: <token>
-
-body: [{
-  "invitedBy": "123abc",
-  "permissions": {
-    "view": {},
-    "note": {}
-  }
-}]
 ```
 
-The permissions object is showing the permissions that have been offered by the user who sent the invitation.
+Response:
+
+```
+200 OK
+```
+
+```javascript
+[
+  {
+    "key": "j3z8HsuAFZoQXN53bGeLw1XHgPpjhw2O",
+    "type": "careteam_invitation",
+    "status": "pending",
+    "email": "charles.west@example.com",
+    "creatorId": "259f86ebc5",
+    "context": {
+      "view": {}
+    },
+    "created": "2014-05-03T11:19:46.268320998-04:00",
+    "modified": "2014-05-03T11:19:46.268320998-04:00"
+  },
+  // ...
+]
+```
+
+The `context` object is showing the permissions that have been offered by the user who sent the invitation.
+
+If no invitations are pending, the response body will be **empty**.
 
 ### Dismiss invitation
 
-Sets a dismissed flag in the invitation so that the users that received the invitation does not see it again. The user that sent it still sees it.
+Sets a "declined" flag on the invitation so that the user that received the invitation does not see it again. The user that sent it still sees it.
 
 ```
-PUT /confirm/dismiss/invite/:userid/:invited_by
-
+PUT /confirm/dismiss/invite/:userid/:creatorId
 x-tidepool-session-token: <token>
 ```
 
-No body is required, but both :userid and :invitedby are required.
+Response:
+
+```
+204 No Content
+```
 
 ### Accept invitation
 
-Performs the required permission actions to set the permissions as spec'd in the invitation, then deletes the invitation record. 
+Performs the required permission actions to set the permissions as spec'd in the invitation, then flags the invitation record as "completed".
 
-After performing this action, the client should refresh its information about the user's careteams.
+After performing this action, the client should refresh its information about the groups the user has access to.
 
 ```
-PUT /confirm/accept/invite/:userid/:invited_by
-
+PUT /confirm/accept/invite/:userid/:creatorId
 x-tidepool-session-token: <token>
 ```
 
-No body is required, but both :userid and :invitedby are required.
+Response:
+
+```
+204 No Content
+```
 
 
 ## Data accounts
@@ -715,7 +796,7 @@ Body of post is:
 }
 ```
 
-The fullName field and username are both required. The username can be any valid username, or it can be omitted or blank. If present, the call will be rejected if the username is not unique. If no username is specified then a random one will be generated and assigned (it can be changed later, if desired). The password may be omitted or blank. If so, it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank. 
+The fullName field and username are both required. The username can be any valid username, or it can be omitted or blank. If present, the call will be rejected if the username is not unique. If no username is specified then a random one will be generated and assigned (it can be changed later, if desired). The password may be omitted or blank. If so, it will not be possible to log into the account directly. Emails is a list of email addresses and it may be omitted or blank.
 
 If validation fails, a 400 error is returned with an explanation of the error in the body.
 
