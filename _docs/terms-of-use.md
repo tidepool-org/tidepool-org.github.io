@@ -50,7 +50,7 @@ As described in the Privacy Policy[insert link], you control your Information an
 ## 4. Acceptable Use of Tidepool Apps
 We trust you to use the Tidepool Apps responsibly, and you agree not to misuse them. You must use the Tidepool Apps only for lawful purposes, and you agree to comply with all applicable laws, rules, and regulations in using the Tidepool Apps. You must also respect the privacy and Information of others who use Tidepool Apps and comply with our Privacy Policy[Insert link].
 
-**4.1 deUse of Health Information.**
+**4.1 Use of Health Information**
 
 We follow software development best practices to help ensure that everything we show you is accurate and complete. However, we cannot guarantee that the Tidepool Apps do not have errors or bugs. Even if there are no errors or bugs, it is possible to draw inappropriate conclusions from Information that you see. **TIDEPOOL DOES NOT WARRANT AND SHALL NOT BE RESPONSIBLE OR LIABLE FOR THE ACCURACY OR RELIABILITY OF THE INFORMATION ON THE TIDEPOOL APPS. YOU ACCEPT FULL RESPONSIBILITY FOR YOUR TREATMENT AND THERAPY DECISIONS.**
 
@@ -62,7 +62,7 @@ If you are using our software to manage your diabetes, do not make therapy chang
 
 If you notice problems or issues with your Information, please double-check it from its source. If you believe there are problems or inaccuracies in the display of your Information on the Tidepool Apps, please let us know by contacting us at [support@tidepool.org](mailto:support@tidepool.org).
 
-**4.2	Other Uses**
+**4.2 Other Uses**
 
 In addition, here are things you cannot do or attempt to do with Tidepool Apps:
 * Violate the terms and conditions of the Privacy Policy.
@@ -90,14 +90,14 @@ If you give us reasonable time to respond to your report before making any infor
 
 ## 5. Content Licensing and Intellectual Property Rights
 
-**5.1	Creative Commons License**
+**5.1 Creative Commons License**
 The Tidepool Apps, including all contents, such as text, images, audio, and the source code used to generate the pages (collectively, “Tidepool Content”), are generally made available for public sharing and reuse through the [Creative Commons Attribution Share-Alike 4.0 license (“Creative Commons License”)](https://creativecommons.org/licenses/by-sa/4.0/legalcode), or any later version therof.  Some of the Tidepool Content is acquired from sources that prohibit further use of their content without advance permission. Where possible, the Tidepool App will display a notice with the applicable license relevant to that content. You agree to abide by such licenses. Some Tidepool Content expressly indicates that the author considers their work proprietary and requires prior permission for the any use of their work. In such cases, you should contact the author or author’s agent for permission to use their content.
 
-**5.2	Trademarks and Trade Dress**
+**5.2 Trademarks and Trade Dress**
 The rights in the trademarks, logos, service marks, and trade dress (collectively “Trademarks”) of Tidepool are not licensed under the Creative Commons License. If you use text displayed in Tidepool Apps, wish to use any of our Trademarks, or if you have any other questions about complying with our licensing terms, you should email [legal@tidepool.org](mailto:legal@tidepool.org).
 Some Tidepool Content may contain Trademarks of other parties. Except for a few limited circumstances, Trademarks cannot be used without advance written permission of the owner of the Trademark.
 
-**5.3	Your Content**
+**5.3 Your Content**
 We take the intellectual property rights of others seriously and ask you to do the same. You agree that you own or have the necessary rights in and to any and all content you upload or post to the Tidepool Apps. Not owning or having the necessary rights is a violation of these Terms.
 
 **5.4 Source Code**
