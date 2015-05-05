@@ -17,8 +17,7 @@ Blood ketones represent ketone concentration values (specifically beta-ketones, 
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields",
-  "value": "ketone_concentration_measurement",
-  "measurementUnits": "mmol/L"
+  "value": "ketone_concentration_measurement"
 }
 ~~~
 
