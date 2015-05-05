@@ -16,12 +16,12 @@ A cgmSettings object represents the settings of a continuous glucose monitor. A 
   "displayUnits": "see_common_fields",
   "inputUnits": "see_common_fields",
   "transmitterId": "transmitter_ID_as_a_string",
-  "lowSettings": {
+  "lowAlerts": {
     "enabled": "boolean",
     "level": "blood_glucose_in_mmol/L",
     "snooze": "see_below"
   },
-  "highSettings": {
+  "highAlerts": {
     "enabled": "boolean",
     "level": "blood_glucose_in_mmol/L",
     "snooze": "see_below"
@@ -50,7 +50,7 @@ A cgmSettings object represents the settings of a continuous glucose monitor. A 
       "timeSensitivity": "see_below"
     }
   },
-  "calibration": {
+  "calibrationAlerts": {
     "preReminder": "see_below",
     "overdueAlert": "see_below"
   },
