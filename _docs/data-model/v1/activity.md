@@ -10,16 +10,16 @@ Activity is intended to track any exercise acitivity
 ``` json
 {
   "type": "activity",
-  "subType": "your_type_here",
-  "duration": "milliseconds_you_were_active",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields",
+  "subType": "see_below",
+  "duration": "milliseconds_of_activity",
   "intensityMet": "optional_MET_intensity_indicator",
   "intensityBorg": "optional_Borg_intensity_indicator",
   "intensityHr": "optional_heartrate_intensity_indicator",
   "intensityWatts": "optional_watts_intensity_indicator",
-  "location" : "optional_location",
-  "time": "see_common_fields",
-  "deviceId": "see_common_fields",
-  "uploadId": "see_common_fields"
+  "location": "optional_location"
 }
 ```
 
