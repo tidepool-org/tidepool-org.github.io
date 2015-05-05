@@ -14,7 +14,7 @@ A cgmSettings object represents the settings of a continuous glucose monitor. A 
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields",
   "displayUnits": "see_common_fields",
-  "units": "see_common_fields",
+  "inputUnits": "see_common_fields",
   "transmitterId": "transmitter_ID_as_a_string",
   "lowSettings": {
     "enabled": "boolean",
