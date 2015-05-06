@@ -166,9 +166,9 @@ the follow-up event will update the original datum, changing the value of `norma
 
 
 
-## Square
+## Extended
 
-A "square" bolus is a bolus that is delivered over some time duration, somewhat similar to a large, fixed-value temp basal.  It is composed of two events:
+An "extended" bolus is a bolus that is delivered over some time duration, somewhat similar to a large, fixed-value temp basal.  It is composed of two events:
 
 ~~~json
 {
@@ -176,7 +176,7 @@ A "square" bolus is a bolus that is delivered over some time duration, somewhat 
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields",
-  "subType": "square",
+  "subType": "extended",
   "extended": "number_of_units",
   "duration": "milliseconds_over_which_the_bolus_should_be_delivered"
 }
@@ -190,7 +190,7 @@ It is followed up with a "completion" event that looks the exact same as the abo
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields",
-  "subType": "square",
+  "subType": "extended",
   "extended": "number_of_units",
   "duration": "milliseconds_over_which_the_bolus_was_delivered",
   "previous": "bolus_event_that_is_now_completed"
@@ -201,11 +201,11 @@ The caveat about `normal` from the "normal" bolus above also applies, except it 
 
 ### Storage/Output Format
 
-`square` boluses follow the same rules for storage and output format as `normal` boluses (see examples above). Except that instead of "normal" becoming "expectedNormal", for `square` boluses both the "extended" and the "duration" fields can be updated. When updated, the old values are stored as "expectedExtended" and "expectedDuration", respectively.
+`extended` boluses follow the same rules for storage and output format as `normal` boluses (see examples above). Except that instead of "normal" becoming "expectedNormal", for `extended` boluses both the "extended" and the "duration" fields can be updated. When updated, the old values are stored as "expectedExtended" and "expectedDuration", respectively.
 
-## Dual
+## normalAndExtended
 
-A "dual" bolus is a bolus that starts out with a normal bolus and then continues into a square bolus. It is composed of 3 events:
+A "normalAndExtended" bolus is a bolus that starts out with a normal bolus and then continues into an extended bolus. It is composed of 3 events:
 
 ~~~json
 {
@@ -213,7 +213,7 @@ A "dual" bolus is a bolus that starts out with a normal bolus and then continues
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields",
-  "subType": "dual",
+  "subType": "normalAndExtended",
   "normal": "number_of_units_for_immediate_delivery",
   "extended": "number_of_units_for_extended_delivery",
   "duration": "milliseconds_over_which_the_extended_portion_should_be_delivered"
@@ -234,7 +234,7 @@ It may be followed up with a "completion" event that looks the exact same as the
 }
 ~~~
 
-Which may also be followed up with a "completion" event that looks the exact same as the completion for a "square" bolus:
+Which may also be followed up with a "completion" event that looks the exact same as the completion for a "extended" bolus:
 
 ~~~json
 {
@@ -242,7 +242,7 @@ Which may also be followed up with a "completion" event that looks the exact sam
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
   "uploadId": "see_common_fields",
-  "subType": "square",
+  "subType": "extended",
   "extended": "number_of_units",
   "duration": "milliseconds_over_which_the_extended_portion_was_delivered",
   "previous": "bolus_event_that_is_now_completed"
@@ -251,8 +251,8 @@ Which may also be followed up with a "completion" event that looks the exact sam
 
 With the exact same caveats about differences in values for the `value`, `extended` and `duration` fields.
 
-Note that the completion events are not required. It is legal to not send a `normal` completion event, but send a `square` completion event in the case that the `normal` bolus successfully completes and the `square` portion gets canceled. It is also legal to send the completion event for `square` before the completion event for `normal` if both get canceled.
+Note that the completion events are not required. It is legal to not send a `normal` completion event, but send an `extended` completion event in the case that the `normal` bolus successfully completes and the `extended` portion gets canceled. It is also legal to send the completion event for `extended` before the completion event for `normal` if both get canceled.
 
 ### Storage/Output Format
 
-`dual` boluses follow the same rules for storage and output format as `normal` and `square` boluses (see examples above). It is correct to think of a `dual` bolus as effectively the concatenation of a `normal` and a `square` event. For example, if the `normal` completes "correctly" and the `square` portion is cut short, only the `square` parameters "duration" and "extended" will be updated.
+`normalAndExtended` boluses follow the same rules for storage and output format as `normal` and `extended` boluses (see examples above). It is correct to think of a `normalAndExtended` bolus as effectively the concatenation of a `normal` and an `extended` event. For example, if the `normal` completes "correctly" and the `extended` portion is cut short, only the `extended` parameters "duration" and "extended" will be updated.
