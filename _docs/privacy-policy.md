@@ -46,7 +46,7 @@ The summary above is for your convenience only and has no legal effect. In the e
 
 As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website at [www.tidepool.org/legal](www.tidepool.org/legal) and indicate the date it was last revised.
 
-## 3. Frequently Asked Questions:
+## 3. Frequently Asked Questions
 
 * What does this privacy policy cover?
 * What information does Tidepool collect and for what purposes?
@@ -207,7 +207,7 @@ The summary above is for your convenience only and has no legal effect. In the e
 
 As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website, [tidepool.org/legal](tidepool.org/legal) and indicate the date it was last revised.
 
-## 6. Frequently Asked Questions:
+## 6. Frequently Asked Questions
 
 * What does this privacy policy cover?
 * What information does Tidepool collect and for what purposes?
@@ -263,7 +263,7 @@ If you would like to invite someone to become a User of any Tidepool App, we’l
 
 The following additional terms apply to both Users and Care Team Members.
 
-## 7. Frequently Asked Questions:
+## 7. Frequently Asked Questions
 
 * Are there any territorial restrictions for using Tidepool Apps?
 * Do any third party servcie providers have access to my information?
