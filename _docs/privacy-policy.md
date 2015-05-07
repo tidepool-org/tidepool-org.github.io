@@ -5,11 +5,12 @@ published: true
 ---
 
 # Tidepool Privacy Policy
-**Effective Date: May 1, 2015, Version 0.91**
+**Effective Date: May 7, 2015, Version 0.92**
 
 The privacy and security of your information is important to us. We collect information from people who use Tidepool applications to help manage their diabetes (“Users”) and from the people with whom the User chooses to share that information (“Care Team Members”). **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY AND DATA POLICY.**
 
 Tidepool treats the information of Users and Care Team Members differently. For this reason, this Privacy Policy has separate sections that apply to Users, to Care Team Members, and to both Users and Care Team Members.
+
 * [FOR USERS](#users)
 * [FOR CARE TEAM MEMBERS](#careteam)
 * [FOR BOTH](#all)
@@ -36,6 +37,7 @@ This Privacy Policy describes what we do with your information and is guided by 
 This summary is for your convenience only and has no legal effect.
 
 ## 2. The Privacy and Security of Your Information is Important to Us.####
+
 This Privacy Policy describes how Tidepool Project (“Tidepool,” “us,” or “we”) collects, uses, and discloses information collected from you as a User in connection with your use of our web- and mobile-based applications (such as Blip and Tidepool Uploader; together with any other web- and mobile-based applications developed by Tidepool, the “Tidepool Apps”).
 
 This Privacy Policy is a part of the [Tidepool Project Applications Terms of Use](terms-of-use) (“Terms of Use”). The Terms of Use is the contract between you and Tidepool that governs your access and use of the Tidepool Apps and makes you the legal owner of the data, notes, files and other information you store and manage using the Tidepool Apps. By becoming a registered User and creating an account (“Account”) with Tidepool, you must also accept the [Terms of Use](terms-of-use). Please read this entire Privacy Policy and the [Terms of Use](terms-of-use).
@@ -45,6 +47,7 @@ The summary above is for your convenience only and has no legal effect. In the e
 As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website at [www.tidepool.org/legal](www.tidepool.org/legal) and indicate the date it was last revised.
 
 ## 3. Frequently Asked Questions:
+
 * WHAT DOES THIS PRIVACY POLICY COVER?
 * WHAT INFORMATION DOES TIDEPOOL COLLECT AND FOR WHAT PURPOSES?
 * WHAT CHOICES DO I HAVE ABOUT THE USE OF MY INFORMATION?
@@ -53,9 +56,11 @@ As our services expand, we will evaluate our policies and practices and occasion
 * WHAT ABOUT THE PRACTICES OF THIRD-PARTY APPLICATIONS THAT YOU CAN CONNECT TO TIDEPOOL APPS?
 
 **3.1 WHAT DOES THIS PRIVACY POLICY COVER?**
+
 This Privacy Policy applies to Tidepool’s treatment of “personal information,” which is information that uniquely identifies a User or otherwise contains personally identifiable information. This Privacy Policy also applies to the data, notes, and files you or any of your Care Team Members upload, store, and manage using the Tidepool Apps. This Privacy Policy does not apply to the practices of companies that Tidepool does not own or control, or to individuals who Tidepool does not employ or manage.
 
 **3.2 WHAT INFORMATION DOES TIDEPOOL COLLECT AND FOR WHAT PURPOSES?**
+
 **Registration and Contact Information**
 
 To register as a User, you must provide your email address and create a password. You use your email address and password to log in. We may also collect contact information, such as your name, address, phone number, and certain non-personal information that does not itself identify you, such as your IP address.
@@ -113,7 +118,8 @@ For insulin pumps:
 
 For exercise monitors:
 
-* Included: Exercise and activity data imported from devices or software, such as FitBit, FuelBand, HealthKit, Strava, and RunKeeper (not including GPS data or personally identifying information).
+* Included: Exercise and activity data imported from devices or software, such as FitBit, FuelBand, HealthKit, Strava, and RunKeeper
+* Not included: GPS data or personally identifying information
 
 We will not include in the anonymized diabetes database (1) freeform text and notes entered by you or anyone you’ve provided access to or (2) any other data that could identify a specific individual.
 
@@ -227,30 +233,22 @@ Your User has the option to donate anonymized data from his or her Account to th
 
 We receive and store certain types of information whenever you interact with Tidepool Apps. We automatically receive and record information on your activity on our server logs, including your IP address, and the app features you access and use. Generally, we automatically collect usage information, such as the number of Users or Care Team Members or the frequency of their app usage, the features of the Tidepool Apps you use, and how Users and Care Team Members interact. We only use this data in aggregate form, that is, as a statistical measure, and not in a manner that would identify you personally. This type of aggregate data enables us to figure out how users use different parts of the Tidepool Apps so that we can improve them. 
 
-### 6.3 WHAT CHOICES DO I HAVE ABOUT THE USE OF MY INFORMATION?
+6.3 WHAT CHOICES DO I HAVE ABOUT THE USE OF MY INFORMATION?
 Your User owns all content you generate on their Accounts and you have no control over that information.  However, you can delete or change other personal information.
 
-**Change Your Information**
+**Change Your Information** You can change the contact information you provided when you registered by going to Account Settings.
 
-You can change the contact information you provided when you registered by going to Account Settings.
+**Cancel Your Account** You can also cancel your Account at any time. Upon cancellation, we will delete your Account information but not information or comments you have added to any User Accounts.
 
-**Cancel Your Account**
+**Email Communications** You can choose to stop receiving marketing or informational emails from us by clicking the “unsubscribe” link at the bottom of any such email.
 
-You can also cancel your Account at any time. Upon cancellation, we will delete your Account information but not information or comments you have added to any User Accounts.
+**Corporate Events** If Tidepool is involved in a merger, acquisition, sale, or other disposition of all or a substantial portion of its assets, you will be notified via email of any change in ownership and any choices you can make about your personal information.
 
-**Email Communications**
-
-You can choose to stop receiving marketing or informational emails from us by clicking the “unsubscribe” link at the bottom of any such email.
-
-**Corporate Events**
-
-If Tidepool is involved in a merger, acquisition, sale, or other disposition of all or a substantial portion of its assets, you will be notified via email of any change in ownership and any choices you can make about your personal information.
-
-### 6.3 HOW OLD DO TIDEPOOL APP CARE TEAM MEMBERS NEED TO BE?
+**6.3 HOW OLD DO TIDEPOOL APP CARE TEAM MEMBERS NEED TO BE?**
 
 You must be 13 or older to register with Tidepool Apps as a Care Team Member. If you are at least 13 but are under the age of 18, you may only register with and use Tidepool Apps with your parent’s or legal guardian’s express prior consent. If you are a parent or legal guardian who has consented to the use of Tidepool Apps by a person between the ages of 13 and 18, you are fully responsible for that person’s use of Tidepool Apps and agree to be bound by the terms of this Privacy Policy. If we discover that a person under 13 has registered as a Care Team Member, we will delete the person’s account. 
 
-### 6.4 HOW DO I INVITE OTHERS TO USE TIDEPOOL APPS?
+**6.4 HOW DO I INVITE OTHERS TO USE TIDEPOOL APPS?**
 
 If you would like to invite someone to become a User of any Tidepool App, we’ll ask you for the person’s email address for the sole purpose of sending an invitation.
 
@@ -271,12 +269,15 @@ The following additional terms apply to both Users and Care Team Members.
 * WHERE CAN I SEND QUESTIONS, COMMENTS OR SUGGESTIONS ABOUT TIDEPOOL’S PRIVACY PRACTICE?
 
 **7.1 ARE THERE ANY TERRITORIAL RESTRICTIONS FOR USING TIDEPOOL APPS?**
+
 At this time, Tidepool Apps are only intended for use in the United States.
 
 **7.2 DO ANY THIRD PARTY SERVICE PROVIDERS HAVE ACCESS TO MY INFORMATION?**
+
 We may employ independent companies or other third parties and individuals to help us provide, facilitate or improve the Tidepool Apps (such as customer service support or data hosting). These service providers may have access to your personal information and data as necessary to perform their services for Tidepool.
 
 **7.3 WHEN MIGHT TIDEPOOL HAVE TO DISCLOSE MY INFORMATION?**
+
 Other than sharing you have agreed to, we will only disclose personal information or data in the following limited circumstances relating to abuse or misuse of the Tidepool Apps or legal process.
 
 (1) If Tidepool believes you’ve misused or abused the Tidepool Apps or the personal information of any User or Care Team Member, or attempted to interfere with or harm the Tidepool Apps, we will investigate and cooperate with appropriate law enforcement, including, if necessary or appropriate, by disclosing your name, registration information or IP address and any other relevant information, to protect our rights or property, or those of our Users, Care Team Members, and others. We will cooperate fully with any legal process or criminal investigation into the misuse or abuse of the Tidepool Apps.
@@ -287,9 +288,11 @@ Other than sharing you have agreed to, we will only disclose personal informatio
 Where your personal information and data has been requested by any governmental entity or other third party pursuant to subpoena or similar legal process, we will notify you as quickly as practicable before providing any such information, unless we are legally prohibited from doing so or we believe in good faith that disclosure is or may be necessary to protect life, avoid serious physical injury or property loss or damage, or to prevent or investigate an ongoing crime.
 
 **7.4 HOW LONG DOES TIDEPOOL KEEP MY INFORMATION?**
+
 Tidepool will retain your Account and related information on your behalf as long as needed to support your use of the Tidepool Apps and comply as necessary with our legal obligations, resolve disputes, and enforce our agreements.  We may delete your Account due to inactivity, but we will notify you by email prior to doing so and give you a reasonable opportunity to either transfer your data or begin active use of your Account again.
 
 **7.5 HOW DOES TIDEPOOL SECURE MY INFORMATION?**
+
 To help protect the privacy of personal information and data you transmit using Tidepool Apps, we use technology designed to encrypt your personal information and data before it is sent to us over the internet. In addition, we take steps to protect the personal information and data that you provide us against unauthorized access. However, the software, hardware and networks that support the Tidepool Apps may, from time to time, require maintenance or experience problems or breaches of security beyond our control.
 
 Please also be aware that despite our best intentions and the guidelines outlined in this Privacy and Data Policy, no data transmission over the internet or encryption method can be guaranteed to be 100% secure. Tidepool cannot guaranty the security of the information you provide us, and therefore you use Tidepool Apps at your own risk.
@@ -297,9 +300,11 @@ Please also be aware that despite our best intentions and the guidelines outline
 While we take steps to protect your personal information and data and keep it secure, you also play a role in protecting your information. You can help to maintain the security of this information by not sharing your account information and password with anyone and by preventing unauthorized use of your mobile device.
 
 **7.6 WHAT ABOUT MY PRIVACY RIGHTS IN CALIFORNIA?**
+
 We act in accordance with the principle behind the California “Shine the Light” law, CA Civil Code § 1798.83, which gives consumers the right to know about certain personal information shared with third parties. We will never do that without your express permission, except as described in this Privacy Policy. Under California law, a California resident with whom we have an established relationship has the right to request certain information with respect to the types of personal information that Tidepool has shared with third parties for these purposes, and the identities of those third parties, within the immediately preceding calendar year, subject to certain exceptions. All requests for such information must be in writing and sent to Tidepool at the mailing address set forth below.
 
 **7.7 WHERE CAN I SEND QUESTIONS, COMMENTS OR SUGGESTIONS ABOUT TIDEPOOL’S PRIVACY PRACTICES?**
+
 We welcome your questions and feedback and will work to improve our practices based on useful input we receive. Please contact us at [privacy@tidepool.org](mailto:privacy@tidepool.org) or via mail at:
 
 <pre>
