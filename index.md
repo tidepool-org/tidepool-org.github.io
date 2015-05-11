@@ -35,7 +35,7 @@ If you want to contribute work back to us (and we hope you do!), you need to agr
 
 Since our team spans the globe, there's nearly always someone in the #tidepool IRC channel on freenode.net. Feel free to pop in there and engage with us.
 
-We intend to but have not yet set up mailing lists for development. When we do, we'll put the information here. In the meantime, please feel free to drop a note to [info@tidepool.org](mailto://info@tidepool.org), and it will find the right recipient quickly.
+We intend to but have not yet set up mailing lists for development. When we do, we'll put the information here. In the meantime, please feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
 *Thank you for your support.*
 
