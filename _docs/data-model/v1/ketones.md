@@ -14,11 +14,10 @@ Blood ketones represent ketone concentration values (specifically beta-ketones, 
 ~~~json
 {
   "type": "bloodKetone",
-  "value": "ketone_concentration_measurement",
-  "units": "mmol/L",
   "time": "see_common_fields",
   "deviceId": "see_common_fields",
-  "uploadId": "see_common_fields"
+  "uploadId": "see_common_fields",
+  "value": "ketone_concentration_measurement"
 }
 ~~~
 
@@ -33,10 +32,9 @@ Urine ketones represent ketone concentration values obtained by home testing wit
 ~~~json
 {
   "type": "urineKetone",
-  "value": "see_below",
   "time": "see_common_fields",
-  "deviceId": "see_common_fields",
-  "uploadId": "see_common_fields"
+  "uploadId": "see_common_fields",
+  "value": "see_below"
 }
 ~~~
 
