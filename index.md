@@ -16,25 +16,18 @@ This is a work in progress. If you find something particularly confusing, please
 
 ## Getting started
 
-1. Read about [ways you can help](how-to-help).
-1. Read through the [use cases](use-cases) we're trying to solve for.
-1. Read about the [technical vision](platform-overview) that informs our software architecture. See our [platform roadmap](platform-roadmap).
-1. Read about our [server architecture](server-architecture) and [server data model](server-data-organization). These pages tell how the many moving parts of our server system fit together, and how the various bits of server data is organized. These documents do not talk about the medical data specifically; they're more about the user data and metadata.
+1. Read about getting the stack running on your own machine with [starting services](starting-up-services).
 1. Read our [data formats](data-model/v1) documentation to understand what medical data we can track and how it's organized.
+1. Visit the [Tidepool github account](https://github.com/tidepool-org) to see the active repositories and how they fit together.
+1. If you're looking for more reference details, check out [our references page](references).
 
-Once you're done with all that reading, you're ready to dive into the code! Visit the [Tidepool components](tidepool-components) page to see the active repositories and how they fit together.
+## Helping out
 
-To get the stack running on your own machine, see the [Starting Services](starting-up-services) page.
+The Tidepool project needs you! Whether your skills lie in development or you just want to help out, there are ways you can get involved.
 
-If you're looking for reference info, check out [our references page](references).
-
-If you want to contribute work back to us (and we hope you do!), you need to agree to our Volunteer/Contributor License Agreement (VCLA). See [the Contributors page](contributors) for more info.
-
-## Communicating with the team
-
-Since our team spans the globe, there's nearly always someone in the #tidepool IRC channel on freenode.net. Feel free to pop in there and engage with us.
-
-We intend to but have not yet set up mailing lists for development. When we do, we'll put the information here. In the meantime, please feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
+1. If you're a developer and would like to contribute, fork us on github and join us in our [gitter.im channel](https://gitter.im/tidepool-org/public).
+    2. If you want to contribute work back to us (and we hope you do!), you need to agree to our Volunteer/Contributor License Agreement (VCLA). See [the Contributors page](contributors) for more info.
+1. Feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
 *Thank you for your support.*
 
