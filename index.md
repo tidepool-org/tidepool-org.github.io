@@ -21,7 +21,6 @@ This is a work in progress. If you find something particularly confusing, please
 1. Read about the [technical vision](platform-overview) that informs our software architecture. See our [platform roadmap](platform-roadmap).
 1. Read about our [server architecture](server-architecture) and [server data model](server-data-organization). These pages tell how the many moving parts of our server system fit together, and how the various bits of server data is organized. These documents do not talk about the medical data specifically; they're more about the user data and metadata.
 1. Read our [data formats](data-model/v1) documentation to understand what medical data we can track and how it's organized.
-1. Read about [our plan for the Tidepool Query Language](queries-and-notifications) and [its implementation JSON format](query-implementation).
 
 Once you're done with all that reading, you're ready to dive into the code! Visit the [Tidepool components](tidepool-components) page to see the active repositories and how they fit together.
 
