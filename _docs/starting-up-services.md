@@ -8,9 +8,9 @@ published: true
 
 Welcome to the technical side of Tidepool!
 
-If you have questions, you can email us, or join us in the #tidepool IRC channel on freenode.net.
+If you have any questions, please join us in our [Gitter channel](https://gitter.im/tidepool-org/public) or e-mail us.
 
-We generally track bugs in [the issues list of Tidepool's "hub" repository](https://github.com/tidepool-org/hub/issues?state=open).
+Note: we *don't* use GitHub Issues to track issues on our platform and application repositories. Open source contributors are welcome to file issues on GitHub, but our process will be to ingest them into our project management process (currently mainly on Trello) and close them.
 
 ## Quickstart
 
@@ -20,7 +20,7 @@ Starting up the platform locally requires a number of different pieces to make e
 
 You need a command line development environment; you need a bash-compatible shell and git, mercurial (hg) bzr, npm, node, grunt, mocha, and mongod installed and on your path to support JavaScript, and the Go language installed for supporting Go.
 
-Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a mac, you'll need to install XCode, and the XCode command line tools.
+Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a Mac, you'll need to install XCode, and the XCode command-line tools. (After opening XCode once to accept this license agreement, you can install the command-line tools from the Terminal with `xcode-select --install`.)
 
 ## Installing everything
 

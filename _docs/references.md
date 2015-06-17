@@ -10,11 +10,11 @@ This page is for holding useful links.
 
 ## Tidepool-internal Links
 
-[API User Guide](/tidepool-api)
-: An attempt at a usage-oriented guide to the Tidepool API. Still a work in progress, but we hope it's useful.
+[API User Guide](/tidepool-api/index)
+: An attempt at a usage-oriented guide to the Tidepool API. Still a work in progress, but we hope it’s useful.
 
-[Tidepool Data Formats](/data-model/v1)
-: Defines the data structures we store and how they're organized.
+[Tidepool Data Model](/data-model/v1)
+: Defines the data structures we store for medical data and how they're organized.
 
 [Getting Started](/starting-up-services)
 : The place you should look if you're trying to get the Tidepool software stack running.
@@ -51,4 +51,4 @@ Platform Notes
 
 ### Documentation systems
 
-* [Github pages](https://pages.github.com/)
+* [GitHub pages](https://pages.github.com/)
