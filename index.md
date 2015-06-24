@@ -12,30 +12,34 @@ We are building an internet application platform and series of applications to h
 
 This is a microsite for helping to guide and manage the open source nature of our work. Its intended audience is software developers who are interested in helping us continuously improve the way we serve the Type 1 Diabetes community.
 
-This is a work in progress. If you find something particularly confusing, please feel free to [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues) with suggestions on how it could be clearer.
+This is a work in progress. If you find something particularly confusing, please feel free to [file an issue](https://github.com/tidepool-org/tidepool-org.github.io/issues) with suggestions on how it could be clearer. (Note: we *don't* use GitHub Issues to track issues on our platform and application repositories. Open source contributors are welcome to file issues on GitHub, but our process will be to ingest them into our project management process (currently mainly on Trello) and close them.)
 
 ## Getting started
 
-1. Read about [ways you can help](how-to-help).
-1. Read through the [use cases](use-cases) we're trying to solve for.
-1. Read about the [technical vision](platform-overview) that informs our software architecture. See our [platform roadmap](platform-roadmap).
-1. Read about our [server architecture](server-architecture) and [server data model](server-data-organization). These pages tell how the many moving parts of our server system fit together, and how the various bits of server data is organized. These documents do not talk about the medical data specifically; they're more about the user data and metadata.
-1. Read our [data formats](data-model/v1) documentation to understand what medical data we can track and how it's organized.
-1. Read about [our plan for the Tidepool Query Language](queries-and-notifications) and [its implementation JSON format](query-implementation).
+1. Read about getting the stack running on your own machine with [starting services](starting-up-services).
+1. Read our [data model](data-model/v1) documentation to understand what medical data we ingest and how it's organized.
+1. Visit [Tidepool on GitHub](https://github.com/tidepool-org) to see our active repositories and how they fit together.
+1. If you're looking for more reference details, check out [our references page](references).
 
-Once you're done with all that reading, you're ready to dive into the code! Visit the [Tidepool components](tidepool-components) page to see the active repositories and how they fit together.
+## Communication
 
-To get the stack running on your own machine, see the [Starting Services](starting-up-services) page.
+We are now using a [Gitter channel](https://gitter.im/tidepool-org/public) for internal communication as well as communication with the open-source community. The Tidepool-affiliated people you may see in the channel are:
 
-If you're looking for reference info, check out [our references page](references).
+- @HowardLook, President, CEO, and Founder
+- @brandonarbiter, VP of Product and Business Development
+- @jh-bate (Jamie Bate), Engineer
+- @jebeck (Jana Beck), Engineer
+- @NSRiggall (Nick Riggall), Customer Operations Lead
+- @skrugman (Sara Krugman), Designer
+- @kgoot (Karina Goot), Engineering Intern
 
-If you want to contribute work back to us (and we hope you do!), you need to agree to our Volunteer/Contributor License Agreement (VCLA). See [the Contributors page](contributors) for more info.
+## Helping out
 
-## Communicating with the team
+The Tidepool project needs you! Whether your skills lie in development or you just want to help out, there are ways you can get involved.
 
-Since our team spans the globe, there's nearly always someone in the #tidepool IRC channel on freenode.net. Feel free to pop in there and engage with us.
-
-We intend to but have not yet set up mailing lists for development. When we do, we'll put the information here. In the meantime, please feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
+1. If you're a developer and would like to contribute, fork us on github and join us in our [Gitter channel](https://gitter.im/tidepool-org/public).
+    2. If you want to contribute work back to us (and we hope you do!), you need to agree to our Volunteer/Contributor License Agreement (VCLA). See [the Contributors page](contributors) for more info.
+1. Feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
 *Thank you for your support.*
 
