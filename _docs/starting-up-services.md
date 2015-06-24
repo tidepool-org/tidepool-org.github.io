@@ -20,6 +20,11 @@ Starting up the platform locally requires a number of different pieces to make e
 
 You need a command line development environment; you need a bash-compatible shell and git, mercurial (hg) bzr, npm, node, grunt, mocha, and mongod installed and on your path to support JavaScript, and the Go language installed for supporting Go.
 
+If you're performing a new MongoDB installation on a Mac (using `brew install mongodb`), you also need to do the following:
+
+- Run `sudo mkdir -p /data/db`
+- Set permissions for `/data/db` to the local user using `sudo chown <your username> /data/db`
+
 Some of the node libraries we use have native (C/C++) code in them, so you also need a C++ compiler. To get one on a Mac, you'll need to install XCode, and the XCode command-line tools. (After opening XCode once to accept this license agreement, you can install the command-line tools from the Terminal with `xcode-select --install`.)
 
 ## Installing everything
