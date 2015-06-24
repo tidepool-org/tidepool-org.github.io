@@ -8,7 +8,7 @@ published: true
 
 Welcome to the technical side of Tidepool!
 
-If you have any questions, please join us in our [Gitter channel](https://gitter.im/tidepool-org/public) or e-mail us.
+If you have any questions, please join us in our [Gitter channel](https://gitter.im/tidepool-org/public) or [e-mail us](mailto:info@tidepool.org).
 
 Note: we *don't* use GitHub Issues to track issues on our platform and application repositories. Open source contributors are welcome to file issues on GitHub, but our process will be to ingest them into our project management process (currently mainly on Trello) and close them.
 
