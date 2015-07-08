@@ -4,11 +4,12 @@ title: Data Model Migrations
 published: true
 ---
 
-## Migration to _schemaVersion=0
+### _schemaVersion=0
 
 This migration applies to change introducted as part of the "UTC Bootstrap" ADD_REFERENCE_HERE changes and introduces a generic [`_schemaVersion`](v1#versioning-and-updates) to our data model.
 
 **Check**
+
 In the mongo console check to see if you need to apply the migration by finding how many records don't have the `_schemaVersion`
 
 ```
@@ -22,6 +23,7 @@ you should see a count of the records
 ```
 
 **Backup**
+
 In mongo backup your existing data collection by performing a copyTo
 
 ```
