@@ -27,13 +27,13 @@ you should see a count of the records
 In mongo backup your existing data collection by performing a copyTo
 
 ```
-> db.deviceData.copyTo("prev_deviceData")
+$ mongoexport --db data --collection deviceData --out deviceData_PreSchemaVersion.json
 ```
 
 Once successful you will see a count of the records that have been copied to the backed up collection
 
 ```
-49903
+$ exported 49903 records
 ```
 
 **Apply**
@@ -59,11 +59,11 @@ WriteResult({ "nMatched" : 49903, "nUpserted" : 0, "nModified" : 49903 })
 If you want run the process again or rollback for any reason then do the following
 
 ```
-> db.prev_deviceData.copyTo("deviceData")
+$ mongoimport --db data --collection deviceData --type json --file ./deviceData_PreSchemaVersion.json --jsonArray
 ```
 
 Once successful you will see a count of the records that have been copied back to your original collection.
 
 ```
-49903
+$ imported 49903 records
 ```
