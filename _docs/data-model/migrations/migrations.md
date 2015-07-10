@@ -49,7 +49,7 @@ On the collection you want to update run the following
 > db.deviceData.update({_schemaVersion: {"$exists":false}},{$set:{_schemaVersion:0}},{multi:true})
 ```
 
-You should revieve feedback that the update has succeeded similar to the following.
+You should receive feedback that the update has succeeded similar to the following.
 NOTE: you don't always see this feedback, in our deployed environments we run the query listed below to ensure all records are now upgraded.
 
 ```
