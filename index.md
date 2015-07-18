@@ -32,6 +32,7 @@ We are now using a [Gitter channel](https://gitter.im/tidepool-org/public) for i
 - @NSRiggall (Nick Riggall), Customer Operations Lead
 - @skrugman (Sara Krugman), Designer
 - @kgoot (Karina Goot), Engineering Intern
+- @ethanlook (Ethan Look), Engineering Intern
 
 ## Helping out
 
