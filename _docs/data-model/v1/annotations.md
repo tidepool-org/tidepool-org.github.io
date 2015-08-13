@@ -75,4 +75,8 @@ We document our known annotations below, but we do not limit the set of annotati
 * `insulet/basal/fabricated-from-schedule` appears on the last basal of each upload. Since Insulet does not provide a duration on basal events, we compare the final basal segment's rate and schedule name against the basal schedules in the OmniPod user's current (as of upload) settings and use the duration from the schedule if the rate and schedule name match.
 
 * `insulet/bolus/split-extended` may occur when a bolus with an extended component crosses midnight and the bolus was not entered using the suggested bolus calculator. The Insulet data always splits extended bolus records that cross midnight into two records, but without a suggested bolus calculator record to tie potentially split records together, it is impossible to know which records may have been split and which are actually two separate bolus events. Hence, whenever there is an extended bolus occurring very close to midnight that does not have an associated suggested bolus calculator record, we add this annotation to indicate that this may be the second part of a split record.
+
+### Bayer
+
+* `bayer/smbg/unreported-hi-lo-threshold` may appear with `bg/out-of-range` if the thresholds are not reported in the header. This is only known to happen on the Bayer Contour Next Link so far, possibly due to a bug in the device firmware. With this annotation, 20 is used as the low threshold and 600 as the high threshold, as these are the most common thresholds for these devices.
   
