@@ -8,8 +8,9 @@ published: true
 
 This migration applies to changes introduced as part of the "UTC Bootstrap" ADD_REFERENCE_HERE changes and introduces a generic [`_schemaVersion`](v1#versioning-and-updates) to our data model.
 
-**NOTE**
-1. If you are running locally your device data is most likley in a mongo db called ``streams``. The examples below are using a db called ``data`` as we use in our deployed environments. This inconsistency will be fixed shortly.
+**NOTE:**
+
+If you are running locally your device data is most likley in a mongo db called ``streams``. The examples below are using a db called ``data`` as we use in our deployed environments. This inconsistency will be fixed shortly.
 
 **Check**
 
@@ -28,7 +29,7 @@ you should see a count of the records
 
 **Backup**
 
-In mongo backup your existing data collection by performing a copyTo
+In mongo backup your existing data collection by performing a ``mongoexport``
 
 ```
 $ mongoexport --db data --collection deviceData --out deviceData_PreSchemaVersion.json
@@ -50,7 +51,10 @@ On the collection you want to update run the following
 ```
 
 You should receive feedback that the update has succeeded similar to the following.
-NOTE: you don't always see this feedback, in our deployed environments we run the query listed below to ensure all records are now upgraded.
+
+**NOTE:** 
+
+you don't always see this feedback, in our deployed environments we run the query listed below to ensure all records are now upgraded.
 
 ```
 WriteResult({ "nMatched" : 49903, "nUpserted" : 0, "nModified" : 49903 })
