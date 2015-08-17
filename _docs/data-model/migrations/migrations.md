@@ -12,7 +12,7 @@ This migration applies to changes introduced as part of the "UTC Bootstrap" ADD_
 
 If you are running locally your device data is most likley in a mongo db called ``streams``. The examples below are using a db called ``data`` as we use in our deployed environments. This inconsistency will be fixed shortly.
 
-**Check**
+### Check
 
 In the mongo console check to see if you need to apply the migration by finding how many records don't have the `_schemaVersion`
 
@@ -27,7 +27,7 @@ you should see a count of the records
 49903
 ```
 
-**Backup**
+### Backup
 
 In mongo backup your existing data collection by performing a ``mongoexport``
 
@@ -41,7 +41,7 @@ Once successful you will see a count of the records that have been copied to the
 $ exported 49903 records
 ```
 
-**Apply**
+### Apply
 
 On the collection you want to update run the following
 
@@ -67,7 +67,8 @@ or run this query to check all records are now upgraded. Post upgrade it should 
 > db.deviceData.find({"_schemaVersion": {"$exists”:false}}).count()
 ```
 
-**Rollback** (if required)
+### Rollback 
+**(if required)**
 
 If you want run the process again or rollback for any reason then do the following
 
