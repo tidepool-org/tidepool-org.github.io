@@ -1,37 +1,26 @@
 ---
 layout: defaults
-title: Settings V1
+title: Pump Settings V1
 published: true
 ---
-# Settings
+# Insulin Pump Settings
 
-## Object
-A settings object represents the settings of a pump.  A settings object sent into our API looks like
+A pumpSettings object represents the settings of an insulin pump.  A pumpSettings object sent into our API looks like
 
 ~~~
 {
-    "type": "settings",
-    "time": see_common_fields,
-    "deviceId": see_common_fields,
-    "uploadId": see_common_fields,
-    "activeSchedule": currently_active_basal_schedule_name,
-    "units": see_below,
-    "basalSchedules": see_below,
-    "carbRatio" | "carbRatios" : see_below,
-    "insulinSensitivity" | "insulinSensitivities" : see_below,
-    "bgTarget" | "bgTargets" : see_below
+  "type": "pumpSettings",
+  "time": "see_common_fields",
+  "deviceId": "see_common_fields",
+  "uploadId": "see_common_fields",
+  "displayUnits": "see_common_fields",
+  "inputUnits": "see_common_fields",
+  "activeSchedule": "currently_active_basal_schedule_name",
+  "basalSchedules": "see_below",
+  "carbRatio" | "carbRatios": "see_below",
+  "insulinSensitivity" | "insulinSensitivities": "see_below",
+  "bgTarget" | "bgTargets": "see_below"
 }
-~~~
-
-### units
-
-`units`: an object representing the units that the pump is operating with.  Looks like
-
-~~~json
-    {
-      "carb": "grams",
-      "bg": "mg/dL"
-    }
 ~~~
 
 ### basalSchedules
@@ -189,4 +178,4 @@ On some pumps, there can be many schedules of blood glucose target settings, par
 
 ## Storage/Output Format
 
-The storage and output format for this datum is exactly what was initially ingested.  There are no modifications performed.
+The storage and output format for this datum is exactly what was initially ingested, minus the `inputUnits`, which are *never* stored.  There are no modifications performed.
