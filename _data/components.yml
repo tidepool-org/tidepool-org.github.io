@@ -54,7 +54,7 @@
     - headline: Data Upload
       purpose: Manages uploads of health data. 
       github_name: jellyfish
-      description: Under active development. Defines and enforces the format of the data that is uploaded to the Tidepool system. The data formats are documented in the <a href="../data-model/v1">Data Model Pages</a>.
+      description: Under active development. Defines and enforces the format of the data that is uploaded to the Tidepool system. The data formats are documented in the <a href="../data-model-v1/v1">Data Model Pages</a>.
 
     - headline: Authorization client and server
       github_name: gatekeeper

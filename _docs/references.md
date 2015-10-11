@@ -13,7 +13,7 @@ This page is for holding useful links.
 [API User Guide](/tidepool-api/index)
 : An attempt at a usage-oriented guide to the Tidepool API. Still a work in progress, but we hope it’s useful.
 
-[Tidepool Data Model](/data-model/v1)
+[Tidepool Data Model](/data-model-v1/v1)
 : Defines the data structures we store for medical data and how they're organized.
 
 [Getting Started](/starting-up-services)
