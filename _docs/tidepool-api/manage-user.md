@@ -52,12 +52,12 @@ POST /metadata/:userid/profile
 x-tidepool-session-token: <token>
 ```
 
-Example:
+Example Request:
 ```
 curl -X POST -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"fullName": "Mary Smith", "shortName":"Mary", "patient": { "birthday": "1990-01-31", "diagnosisDate": "1999-01-31", "aboutMe": "I like oranges"}}' '<api-endpoint>/metadata/<userid>/profile'
 ```
 
-Response:
+Example Response:
 ```
 200 OK
 ```
@@ -88,13 +88,13 @@ GET /auth/user/:userid
 x-tidepool-session-token: <token>
 ```
 
-Example:
+Example Request:
 
 ```
 curl -X GET -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" '<api-endpoint>/auth/user/<userid>'
 ```
 
-Response:
+Example Response:
 
 ```
 200 OK
@@ -118,13 +118,13 @@ GET /metadata/<userid>/profile
 x-tidepool-session-token: <token>
 ```
 
-Example:
+Example Request:
 
 ```
 curl -X GET -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" '<api-endpoint>/metadata/<userid>/profile'
 ```
 
-Response:
+Example Response:
 
 ```
 200 OK
@@ -161,13 +161,13 @@ PUT /auth/user/<userid>
 x-tidepool-session-token: <token>
 ```
 
-Example:
+Example Request:
 
 ```
 curl -X PUT -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"updates": {"termsAccepted":"2015-10-26T22:53:39.199Z"}}' '<api-endpoint>/auth/user/<userid>'
 ```
 
-Response:
+Example Response:
 
 ```
 200 OK
