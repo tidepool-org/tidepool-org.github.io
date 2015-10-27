@@ -10,6 +10,71 @@ For authentication, maintaining session token and logging out, see the introduct
 
 ## User
 
+### Signup user
+
+There are two parts creating a "user object", the **account** and then the **profile**.
+
+First, create the **account**:
+
+```
+POST /auth/user
+```
+
+Example Request:
+```
+curl -X POST -H "Content-Type: application/json" -d '{"username":"mary@example.com", "password":"myn3wpa55ord", "emails":["mary@example.com"]}'' '<api-endpoint>/auth/user'
+```
+
+Example Response:
+```
+201 Created
+```
+
+```json
+{
+  "userid": "b816f97ec5",
+  "username": "mary@example.com",
+  "emails": [
+    "mary@example.com"
+  ],
+  "termsAccepted": ""
+}
+```
+
+```
+-H "x-tidepool-session-token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkdXIiOjIuNTkyZSswNiwiZXhwIjoxNDQ4NTY3NDMwLCJzdnIiOiJubyIsInVzciI6IjMzZGYwNTJhNGIifQ.9-5Tf-vMXEtSl9EhWwHq_yAR9k2hCaEv0E3Akd0DX3w"
+```
+
+Then, create the **profile**:
+
+```
+POST /metadata/:userid/profile
+x-tidepool-session-token: <token>
+```
+
+Example:
+```
+curl -X POST -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"fullName": "Mary Smith", "shortName":"Mary", "patient": { "birthday": "1990-01-31", "diagnosisDate": "1999-01-31", "aboutMe": "I like oranges"}}' '<api-endpoint>/metadata/<userid>/profile'
+```
+
+Response:
+```
+200 OK
+```
+
+```json
+{
+  "fullName": "Mary Smith",
+  "shortName":"Mary",
+  "patient": {
+    "birthday": "1990-01-31",
+    "diagnosisDate": "1999-01-31",
+    "aboutMe": "I like oranges"
+  }
+}
+```
+
+
 ### Get user
 
 Defaults to current user
@@ -23,19 +88,26 @@ GET /auth/user/:userid
 x-tidepool-session-token: <token>
 ```
 
+Example:
+
+```
+curl -X GET -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" '<api-endpoint>/auth/user/<userid>'
+```
+
 Response:
 
 ```
 200 OK
 ```
 
-```javascript
+```json
 {
-  "userid": "88144f5ea3",
+  "userid": "b816f97ec5",
   "username": "mary@example.com",
   "emails": [
     "mary@example.com"
-  ]
+  ],
+  "termsAccepted": "2015-10-26T22:53:39.199Z"
 }
 ```
 
@@ -44,7 +116,12 @@ Then fetch the **profile** information using the logged-in `userid` and session 
 ```
 GET /metadata/<userid>/profile
 x-tidepool-session-token: <token>
+```
 
+Example:
+
+```
+curl -X GET -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" '<api-endpoint>/metadata/<userid>/profile'
 ```
 
 Response:
@@ -53,15 +130,47 @@ Response:
 200 OK
 ```
 
-```javascript
+```json
 {
   "fullName": "Mary Smith",
+  "shortName": "Mary",
   "patient": {
     "birthday": "1990-01-31",
     "diagnosisDate": "1999-01-31",
     "aboutMe": "I like oranges"
   }
 }
+```
+
+
+### Update user
+
+Apply updates to an existing users account for any or all of the feilds listed below
+
+```json
+{
+  "username":"mary_other@example.com",
+  "emails":["mary_other@example.com"],
+  "termsAccepted":"2015-10-26T22:53:39.199Z",
+  "password":"n3wpa55wOrd"
+}
+```
+
+```
+PUT /auth/user/<userid>
+x-tidepool-session-token: <token>
+```
+
+Example:
+
+```
+curl -X PUT -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"updates": {"termsAccepted":"2015-10-26T22:53:39.199Z"}}' '<api-endpoint>/auth/user/<userid>'
+```
+
+Response:
+
+```
+200 OK
 ```
 
 
@@ -194,11 +303,7 @@ This is not necessary -- upon any successful login, the lost password request wi
 
 [Create account, update profile]
 
-### Update user
 
-Defaults to current user
-
-[Update account, update profile]
 
 ### Change password
 
