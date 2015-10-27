@@ -54,7 +54,7 @@ x-tidepool-session-token: <token>
 
 Example Request:
 ```
-curl -X POST -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"fullName": "Mary Smith", "shortName":"Mary", "patient": { "birthday": "1990-01-31", "diagnosisDate": "1999-01-31", "aboutMe": "I like oranges"}}' '<api-endpoint>/metadata/<userid>/profile'
+curl -X POST -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"fullName": "Mary Smith", "shortName":"Mary", "patient": { "birthday": "1990-01-31", "diagnosisDate": "1999-01-31"}}' '<api-endpoint>/metadata/<userid>/profile'
 ```
 
 Example Response:
