@@ -6,7 +6,7 @@ published: true
 
 # Tidepool API: Managing User
 
-For authentication, maintaining session token and logging out, see the introductory [API walkthrough](/tidepool-api/index) . 
+For authentication, maintaining session token and logging out, see the introductory [API walkthrough](/tidepool-api/index) .
 
 ## User
 
@@ -68,8 +68,7 @@ Example Response:
   "shortName":"Mary",
   "patient": {
     "birthday": "1990-01-31",
-    "diagnosisDate": "1999-01-31",
-    "aboutMe": "I like oranges"
+    "diagnosisDate": "1999-01-31"
   }
 }
 ```
@@ -136,8 +135,7 @@ Example Response:
   "shortName": "Mary",
   "patient": {
     "birthday": "1990-01-31",
-    "diagnosisDate": "1999-01-31",
-    "aboutMe": "I like oranges"
+    "diagnosisDate": "1999-01-31"
   }
 }
 ```
@@ -145,7 +143,7 @@ Example Response:
 
 ### Update user
 
-Apply updates to an existing users account for any or all of the feilds listed below
+Apply updates to an existing users account for any or all of the fields listed below
 
 ```json
 {
@@ -190,7 +188,7 @@ The signup system (where we get a confirmation that new users actually have a va
 
 ### Send a signup confirmation
 
-Send a signup confirmation email to a userid. 
+Send a signup confirmation email to a userid.
 
 ```
 POST /confirm/send/signup/:userid
@@ -201,11 +199,11 @@ This post is sent by the signup logic. In this state, the user account has been 
 
 (We need some rules about how often you can attempt a signup with a given email address, to keep this from being used to spam people either deliberately or accidentally. This call should also be throttled at the system level to prevent distributed attacks.)
 
-It sends an email that contains a random confirmation link. 
+It sends an email that contains a random confirmation link.
 
-### Resend confirmation 
+### Resend confirmation
 
-If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email. 
+If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email.
 
 ```
 POST /confirm/resend/signup/:userid
@@ -237,7 +235,7 @@ Making this request deletes the account record that was used to create the signu
 
 This call is provided for completeness -- we don't expect to need it in the actual user flow.
 
-Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array. 
+Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array.
 
 ```
 GET /confirm/signup/:userid
@@ -290,7 +288,7 @@ body {
 }
 ```
 
-This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account. 
+This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account.
 
 If this call is completed without error, the lost password request is marked as accepted. Otherwise, the lost password request remains active until it expires.
 
