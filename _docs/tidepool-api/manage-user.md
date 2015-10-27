@@ -6,9 +6,73 @@ published: true
 
 # Tidepool API: Managing User
 
-For authentication, maintaining session token and logging out, see the introductory [API walkthrough](/tidepool-api/index) . 
+For authentication, maintaining session token and logging out, see the introductory [API walkthrough](/tidepool-api/index) .
 
 ## User
+
+### Signup user
+
+There are two parts creating a "user object", the **account** and then the **profile**.
+
+First, create the **account**:
+
+```
+POST /auth/user
+```
+
+Example Request:
+```
+curl -X POST -H "Content-Type: application/json" -d '{"username":"mary@example.com", "password":"myn3wpa55ord", "emails":["mary@example.com"]}'' '<api-endpoint>/auth/user'
+```
+
+Example Response:
+```
+201 Created
+```
+
+```json
+{
+  "userid": "b816f97ec5",
+  "username": "mary@example.com",
+  "emails": [
+    "mary@example.com"
+  ],
+  "termsAccepted": ""
+}
+```
+
+```
+-H "x-tidepool-session-token" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkdXIiOjIuNTkyZSswNiwiZXhwIjoxNDQ4NTY3NDMwLCJzdnIiOiJubyIsInVzciI6IjMzZGYwNTJhNGIifQ.9-5Tf-vMXEtSl9EhWwHq_yAR9k2hCaEv0E3Akd0DX3w"
+```
+
+Then, create the **profile**:
+
+```
+POST /metadata/:userid/profile
+x-tidepool-session-token: <token>
+```
+
+Example Request:
+```
+curl -X POST -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"fullName": "Mary Smith", "shortName":"Mary", "patient": { "birthday": "1990-01-31", "diagnosisDate": "1999-01-31"}}' '<api-endpoint>/metadata/<userid>/profile'
+```
+
+Example Response:
+```
+200 OK
+```
+
+```json
+{
+  "fullName": "Mary Smith",
+  "shortName":"Mary",
+  "patient": {
+    "birthday": "1990-01-31",
+    "diagnosisDate": "1999-01-31"
+  }
+}
+```
+
 
 ### Get user
 
@@ -23,19 +87,26 @@ GET /auth/user/:userid
 x-tidepool-session-token: <token>
 ```
 
-Response:
+Example Request:
+
+```
+curl -X GET -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" '<api-endpoint>/auth/user/<userid>'
+```
+
+Example Response:
 
 ```
 200 OK
 ```
 
-```javascript
+```json
 {
-  "userid": "88144f5ea3",
+  "userid": "b816f97ec5",
   "username": "mary@example.com",
   "emails": [
     "mary@example.com"
-  ]
+  ],
+  "termsAccepted": "2015-10-26T22:53:39.199Z"
 }
 ```
 
@@ -44,24 +115,60 @@ Then fetch the **profile** information using the logged-in `userid` and session 
 ```
 GET /metadata/<userid>/profile
 x-tidepool-session-token: <token>
-
 ```
 
-Response:
+Example Request:
+
+```
+curl -X GET -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" '<api-endpoint>/metadata/<userid>/profile'
+```
+
+Example Response:
 
 ```
 200 OK
 ```
 
-```javascript
+```json
 {
   "fullName": "Mary Smith",
+  "shortName": "Mary",
   "patient": {
     "birthday": "1990-01-31",
-    "diagnosisDate": "1999-01-31",
-    "aboutMe": "I like oranges"
+    "diagnosisDate": "1999-01-31"
   }
 }
+```
+
+
+### Update user
+
+Apply updates to an existing users account for any or all of the fields listed below
+
+```json
+{
+  "username":"mary_other@example.com",
+  "emails":["mary_other@example.com"],
+  "termsAccepted":"2015-10-26T22:53:39.199Z",
+  "password":"n3wpa55wOrd"
+}
+```
+
+```
+PUT /auth/user/<userid>
+x-tidepool-session-token: <token>
+```
+
+Example Request:
+
+```
+curl -X PUT -H "Content-Type: application/json" -H "x-tidepool-session-token: <token>" -d '{"updates": {"termsAccepted":"2015-10-26T22:53:39.199Z"}}' '<api-endpoint>/auth/user/<userid>'
+```
+
+Example Response:
+
+```
+200 OK
 ```
 
 
@@ -81,7 +188,7 @@ The signup system (where we get a confirmation that new users actually have a va
 
 ### Send a signup confirmation
 
-Send a signup confirmation email to a userid. 
+Send a signup confirmation email to a userid.
 
 ```
 POST /confirm/send/signup/:userid
@@ -92,11 +199,11 @@ This post is sent by the signup logic. In this state, the user account has been 
 
 (We need some rules about how often you can attempt a signup with a given email address, to keep this from being used to spam people either deliberately or accidentally. This call should also be throttled at the system level to prevent distributed attacks.)
 
-It sends an email that contains a random confirmation link. 
+It sends an email that contains a random confirmation link.
 
-### Resend confirmation 
+### Resend confirmation
 
-If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email. 
+If a user didn't receive the confirmation email and logs in, they're directed to the confirmation-required page which can offer to resend the confirmation email.
 
 ```
 POST /confirm/resend/signup/:userid
@@ -128,7 +235,7 @@ Making this request deletes the account record that was used to create the signu
 
 This call is provided for completeness -- we don't expect to need it in the actual user flow.
 
-Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array. 
+Fetch any existing confirmation requests. Will always return either 404 (not found) or a 200 with a single result in an array.
 
 ```
 GET /confirm/signup/:userid
@@ -181,7 +288,7 @@ body {
 }
 ```
 
-This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account. 
+This call will be invoked by the lost password screen with the key that was included in the URL of the lost password screen. For additional safety, the user will be required to manually enter the email address on the account as part of the UI, and also to enter a new password which will replace the password on the account.
 
 If this call is completed without error, the lost password request is marked as accepted. Otherwise, the lost password request remains active until it expires.
 
@@ -194,11 +301,7 @@ This is not necessary -- upon any successful login, the lost password request wi
 
 [Create account, update profile]
 
-### Update user
 
-Defaults to current user
-
-[Update account, update profile]
 
 ### Change password
 
