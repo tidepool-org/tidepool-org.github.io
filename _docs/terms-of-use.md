@@ -5,7 +5,7 @@ published: true
 ---
 
 # Tidepool Applications Terms of Use
-**Effective Date: May 7, 2015, Version 0.92**
+**Effective Date: November 2, 2015, Version 1.0**
 
 These Terms of Use (“Terms”) form a legally binding contract between you and Tidepool Project (“Tidepool”), so please read the following terms carefully before using any Tidepool Apps (as defined below). We provide you with access to and use of the Tidepool Apps subject to your compliance with these Terms. By registering and creating an account (“Account”) with Tidepool or using the Tidepool Apps, you agree to be bound by these Terms. Please note that by registering with Tidepool and/or using the Tidepool Apps, in addition to agreeing to these Terms, you will also be required to agree to the terms and conditions of our Privacy Policy.
 
