@@ -5,7 +5,7 @@ published: true
 ---
 
 # Tidepool Privacy Policy
-**Effective Date: May 7, 2015, Version 0.92**
+**Effective Date: November 2, 2015, Version 1.0**
 
 The privacy and security of your information is important to us. We collect information from people who use Tidepool applications to help manage their diabetes (“Users”) and from the people with whom the User chooses to share that information (“Care Team Members”). **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY AND DATA POLICY.**
 
