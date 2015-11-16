@@ -67,3 +67,18 @@ If you want to do it the hard way:
   Also, for services that interconnect, you will need to make sure that the `SERVICE_NAME` and `XXX_SERVICE` properties line up.  Like, if the service uses user-api, then you will need to set `USER_API_SERVICE` equal to the value of `SERVICE_NAME` set on the user-api server. Now that you have thought about how you are configuring your services, you can actually fire them up.
 
 * Fire up the services that you need in any order.  For services that setup watches on other services, you should notice log lines when it finds instances of those services.
+
+## Using Tidepool
+
+Congratulations! You should have a local copy of the Tidepool platform running now.  If everything worked, it will be waiting for a browser to connect at [http://localhost:3000](http://localhost:3000).  Opening that link should load a login page, with a 'Sign Up' button in the top-right.
+
+Creating a new account on a local Tidepool platform is a little different than using the public system.  You will need to pick an email address that contains the text `+skip` (e.g., `testUser+skip@example.com`). Don't worry, no email will actually be sent there, so you can make up any email address you want. You will need to remember it, though, because that is the username you will use to log in.
+
+Click `Sign up` and your account will be created. You can ignore the screen that tells you to check your email because you used a `+skip` address. You can go straight to the [Log in](http://localhost:3000/#/login) screen and log in with the email address and password you set in the sign up step.
+
+## Uploading Data
+
+The [chrome-uploader](https://github.com/tidepool-org/chrome-uploader) is the simplest way to upload data to Tidepool.  Again, you will need to do things a little differently to make use of your local platform. (The extension in the Chrome store won't work with a locally-running version of the platform.)
+
+If you used the `get_current_tidepool_repos.sh` script above, then you should have a local copy of the `chrome-uploader` in your Tidepool directory.  Using the same shell where you started the Tidepool services (with `tools/runservers`), change into the `chrome-uploader` directory and follow the directions for building and loading the uploader in the [README.md](https://github.com/tidepool-org/chrome-uploader/blob/master/README.md#how-to-set-it-up)
+
