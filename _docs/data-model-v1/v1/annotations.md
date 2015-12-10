@@ -79,4 +79,11 @@ We document our known annotations below, but we do not limit the set of annotati
 ### Bayer
 
 * `bayer/smbg/unreported-hi-lo-threshold` may appear with `bg/out-of-range` if the thresholds are not reported in the header. This is only known to happen on the Bayer Contour Next Link so far, possibly due to a bug in the device firmware. With this annotation, 20 is used as the low threshold and 600 as the high threshold, as these are the most common thresholds for these devices.
+
+### Tandem
+
+* `tandem/basal/fabricated-from-schedule` appears on the last basal of each upload. Since Tandem does not provide a duration on basal events, we compare the final basal segment's rate and schedule name against the basal schedules in the user's current (as of upload) settings and use the duration from the schedule if the rate and schedule name match.
+* `tandem/basal/fabricated-from-occlusion-alarm` appears on the suspended basal after an occlusion alarm is triggered. A suspended basal is created manually, as an occlusion alarm does not trigger a basal rate change event (used to create all other basals).
+* `tandem/basal/fabricated-from-new-day` appears on a basal that crosses midnight, and is used to break long-running or flat basals into smaller segments.
+
   
