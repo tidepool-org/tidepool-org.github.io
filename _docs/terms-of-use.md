@@ -14,7 +14,7 @@ These Terms of Use (“Terms”) form a legally binding contract between you and
 * We are stewards of your data. Users (as defined below) own their Information and decide who gets access to their Information.
 * You may only use Tidepool’s applications for lawful purposes.
 * You are granted a Creative Commons license to use certain aspects of Tidepool’s applications.
-* We care about protecting your privacy. Please review our [Privacy Policy](privacy-policy).
+* We care about protecting your privacy. Please review our [Privacy Policy](../privacy-policy).
 * Tidepool applications are meant to be a tool to help you make decisions about your care, but we cannot guarantee their accuracy or reliability.
 * Please don’t make therapy changes without consulting your healthcare professional. Tidepool applications are not a replacement for your healthcare professional.
 
@@ -29,7 +29,7 @@ These Terms include provisions that treat Users differently from members of the 
 
 ## 3. User Information Ownership
 
-You (the User) are the legal owner of the data, notes, files, and other information you store and manage using the Tidepool Apps (“Information”). These Terms and our [Privacy Policy](privacy-policy), which is incorporated into these Terms, shall govern the use of your Information. You agree that you are solely responsible for the accuracy and content of your Information.
+You (the User) are the legal owner of the data, notes, files, and other information you store and manage using the Tidepool Apps (“Information”). These Terms and our [Privacy Policy](../privacy-policy), which is incorporated into these Terms, shall govern the use of your Information. You agree that you are solely responsible for the accuracy and content of your Information.
 
 **3.1 Your Rights**
 
@@ -117,7 +117,7 @@ We take the intellectual property rights of others seriously and ask you to do t
 
 **5.4 Source Code**
 
-We make our applications available both in hosted form, where we run it on Tidepool-managed servers, and also in source code form, where you (or someone else) can download the source code from GitHub ([www.github.com/Tidepool-org](www.github.com/Tidepool-org)), build it, and run it locally or on your own servers. These Terms apply only to the hosted version of the Tidepool Apps.
+We make our applications available both in hosted form, where we run it on Tidepool-managed servers, and also in source code form, where you (or someone else) can download the source code from GitHub ([www.github.com/Tidepool-org](http://www.github.com/Tidepool-org)), build it, and run it locally or on your own servers. These Terms apply only to the hosted version of the Tidepool Apps.
 
 ## 6. Availability of Tidepool Apps
 
