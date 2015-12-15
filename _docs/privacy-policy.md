@@ -205,7 +205,7 @@ This Privacy Policy is a part of the Tidepool Project Applications Terms of Use 
 
 The summary above is for your convenience only and has no legal effect. In the event of any conflict between the provisions of the Terms of Use and this Privacy Policy, the terms and conditions of the Terms of Use will prevail. If you don’t agree with the terms of this Privacy Policy or the Terms of Use, please don’t use the Tidepool Apps. **BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF YOUR INFORMATION IN ACCORDANCE WITH THIS PRIVACY POLICY.**
 
-As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website, [tidepool.org/legal](tidepool.org/legal) and indicate the date it was last revised.
+As our services expand, we will evaluate our policies and practices and occasionally implement improvements and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will notify you (for example, by email to the email address in your account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website, [tidepool.org/legal](http://tidepool.org/legal) and indicate the date it was last revised.
 
 ## 6. Frequently Asked Questions
 
