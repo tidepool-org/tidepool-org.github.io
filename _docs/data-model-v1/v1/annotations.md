@@ -84,6 +84,6 @@ We document our known annotations below, but we do not limit the set of annotati
 
 * `tandem/basal/fabricated-from-schedule` appears on the last basal of each upload. Since Tandem does not provide a duration on basal events, we compare the final basal segment's rate and schedule name against the basal schedules in the user's current (as of upload) settings and use the duration from the schedule if the rate and schedule name match.
 * `tandem/basal/fabricated-from-occlusion-alarm` appears on the suspended basal after an occlusion alarm is triggered. A suspended basal is created manually, as an occlusion alarm does not trigger a basal rate change event (used to create all other basals).
-* `tandem/basal/fabricated-from-new-day` appears on a basal that crosses midnight, and is used to break long-running or flat basals into smaller segments.
+* `tandem/basal/fabricated-from-new-day` appears on a basal that crosses midnight, and is used to break long-running or flat basals into smaller segments. When the pump is suspended, new-day events are still generated with the commanded (non-zero) basal rate, so they have to be ignored. As such, we only generate new-day events when we think they're actually appropriate, and annotate them as such.
 
   
