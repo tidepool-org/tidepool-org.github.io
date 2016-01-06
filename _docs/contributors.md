@@ -19,7 +19,7 @@ If your contributions are on behalf of a company or you need to get your company
 
 ## Contributors
 
-Below are the GitHub usernames of people who have agreed to Tidepool VCLA via GitHub pull request comments or via e-mail to legal@tidepool.org. These are the non-Tidepool employees from whom Tidepool can accept pull requests. Other VCLAs that have been agreed to on paper are not listed here.
+Below are the GitHub usernames of people who have agreed to Tidepool VCLA via GitHub issue or pull request comments or via e-mail to legal@tidepool.org. These are the non-Tidepool employees from whom Tidepool can accept pull requests. Other VCLAs that have been agreed to on paper are not listed here.
 
  User | Agreement link
  ---- | --------------
