@@ -32,15 +32,20 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [dandv](https://github.com/dandv) | [Agreed in tidepool-org.github.io#52](https://github.com/tidepool-org/tidepool-org.github.io/pull/52)
 [timberframe](https://github.com/timberframe) | Agreed via email to legal@tidepool.org on 20th-March-2015
 [dotMR](https://github.com/dotMR) | [Agreed in blip#234](https://github.com/tidepool-org/blip/pull/234#issuecomment-110268108)
+[creswick](https://github.com/creswick) | [Agreed in chrome-uploader#194](https://github.com/tidepool-org/chrome-uploader/pull/194#issue-117195413)
+[pazaan](https://github.com/pazaan) | [Agreed in chrome-uploader#221](https://github.com/tidepool-org/chrome-uploader/pull/221#issue-125375002)
 
 ## Committers
 
 These are the people who have commit rights to at least some of Tidepool's repositories. If you need code review or help with contributions, please pick one of the people with (*) -- these are Tidepool's fulltime engineers -- and @mention them in your pull request.
 
-User | Area
+Name (username) | Area
 ---- | ----
-HowardLook | CEO
-brandonarbiter | Product
-jebeck | Engineering (*)
-jh-bate | Engineering (*)
-skrugman | Design
+Howard Look (HowardLook) | CEO
+Brandon Arbiter (brandonarbiter) | Product
+Darin Krauss (darinkrauss) | Engineering (*)
+Gerrit Niezen (gniezen) | Engineering (*)
+Gordon Dent (GordyG) | Engineering
+Jana Beck (jebeck) | Engineering (*)
+Jamie Bate (jh-bate) | Engineering (*)
+Sara Krugman (skrugman) | Design
