@@ -5,7 +5,7 @@ published: true
 ---
 # How you can help
 
-**Thanks in advance!** We really appreciate your interest in helping out the Tidepool Project. We've listed lots of possibilities below. If you'd like to volunteer or contribute, please read our [Volunteer/Contributor License Agreement](/files/tidepool-vcla.pdf). The license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose.**
+**Thanks in advance!** We really appreciate your interest in helping out the Tidepool Project. We've listed lots of possibilities below. If you'd like to volunteer or contribute, please read our [Volunteer/Contributor License Agreement](/files/TidepoolVCLA.pdf). The license is for your protection as well as the protection of Tidepool and its licensees; **it does not change your rights to use your own contributions for any other purpose.**
 
 ## Use it
 
