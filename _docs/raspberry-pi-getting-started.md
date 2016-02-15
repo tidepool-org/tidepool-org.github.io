@@ -4,6 +4,8 @@ title: Getting started on the Raspberry Pi
 published: true
 ---
 
+**NB: This document is out-of-date and deprecated. It may be deleted soon. (If you'd like to save it by updating it, feel free to [open a pull request](https://github.com/tidepool-org/tidepool-org.github.io).)**
+
 Forays by [eurenda](https://github.com/eurenda) into installing Tidepool according to [instructions](http://developer.tidepool.io/starting-up-services/).
 
 Intended as a proof-of-concept.  No guarantees of speed, reliability, or usability (though everything seems to indicate that it is usable speed when rendered in Chrome):

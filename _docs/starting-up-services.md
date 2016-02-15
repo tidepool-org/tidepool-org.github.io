@@ -46,7 +46,7 @@ See the comments at the top of the `runservers` file for more information on usi
 If you want to do it the hard way:
 
 * You will first need to start up Mongo; a single Mongo is sufficient.
-* Next you should start up a [hakken](/tidepool-components#hakken) coordinator.  Remember the port that you have it listening on.  An example config for this service might be:
+* Next you should start up a hakken coordinator.  Remember the port that you have it listening on.  An example config for this service might be:
 
     ```
     DISCOVERY_HOST=localhost:8000
