@@ -17,7 +17,7 @@ This is a work in progress. If you find something particularly confusing, please
 ## Getting started
 
 1. Read about getting the stack running on your own machine with [starting services](starting-up-services).
-1. Read our [data model](data-model-v1/v1) documentation to understand what medical data we ingest and how it's organized.
+1. Read our [data model](data-model/) documentation to understand what medical data we ingest and how it's organized.
 1. Visit [Tidepool on GitHub](https://github.com/tidepool-org) to see our active repositories and how they fit together.
 1. If you're looking for more reference details, check out [our references page](references).
 
