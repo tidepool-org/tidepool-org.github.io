@@ -25,9 +25,9 @@ The intended audience for this microsite is software developers, but others may 
 * Project Management reference, including:
   * Current and recent sprint boards (on Trello)
   * [Sprint planning priority documents](https://drive.google.com/a/lookfamily.org/folderview?id=0Bzqw_G5XWp9KY0pZTnFUSVFoUU0&usp=drive_web) (in Google Docs).
-  * Product Backlogs  (on Trello)
-  *  * [Active, force-ranked product backlog](https://trello.com/b/pQtao5gN/active-force-ranked-product-backlog)
-  *  * "Maybe someday" backlogs for [Blip](https://trello.com/b/iKydvoiJ/backlog-blip), [Uploader](https://trello.com/b/oHy9VXYY/backlog-uploader), [Blip Notes](https://trello.com/b/jjciNmRJ/backlog-blip-notes), [Backend](https://trello.com/b/RUDDN3yq/backlog-backend)
+  * Product Backlogs (on Trello)
+    * [Active, force-ranked product backlog](https://trello.com/b/pQtao5gN/active-force-ranked-product-backlog)
+    * "Maybe someday" backlogs for [Blip](https://trello.com/b/iKydvoiJ/backlog-blip), [Uploader](https://trello.com/b/oHy9VXYY/backlog-uploader), [Blip Notes](https://trello.com/b/jjciNmRJ/backlog-blip-notes), [Backend](https://trello.com/b/RUDDN3yq/backlog-backend)
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
 
 ## A Note about Contributing to Tidepool's Source Code
