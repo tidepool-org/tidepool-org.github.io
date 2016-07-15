@@ -24,6 +24,7 @@ The intended audience for this microsite is software developers, but others may 
   * [Tidepool data model documentation](data-model)
 * Project Management reference, including:
   * Current and recent sprint boards (on Trello)
+    * [Sprint 34](https://trello.com/b/aN98Vryv/sprint-34-2016-06-30-2016-07-15), [Sprint 33](https://trello.com/b/mwvefWmh/sprint-33-2016-06-02), [Sprint 32](https://trello.com/b/otIDXmuI/sprint-32-2016-05-11-2016-05-30)
   * [Sprint planning priority documents](https://drive.google.com/a/lookfamily.org/folderview?id=0Bzqw_G5XWp9KY0pZTnFUSVFoUU0&usp=drive_web) (in Google Docs).
   * Product Backlogs (on Trello)
     * [Active, force-ranked product backlog](https://trello.com/b/pQtao5gN/active-force-ranked-product-backlog)
