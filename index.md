@@ -13,6 +13,7 @@ Tidepool is building a cloud-based platform and applications that help reduce th
 
 ## About this Developer Microsite
 The intended audience for this microsite is software developers, but others may also find it valuable. Here are some useful links:
+
 * All of our [source code on GitHub](https://github.com/tidepool-org).
 * All of our user interface designs:
   * [UI designs for all Tidepool apps on Pixelapse](https://www.pixelapse.com/tidepool)
@@ -30,6 +31,7 @@ The intended audience for this microsite is software developers, but others may 
 Since our founding in 2013, Tidepool has had dozens of volunteer contributors to our efforts. Contributions have come in many forms, including source code, user interface designs, testing, legal and product management.
 
 To cut to the chase: Although we are an open source project, we are not currently set up in a way that makes it easy to contribute code back to Tidepool and have it merged in with our production software. There are lots of reasons for this:
+
 * Our platform is pretty complicated to get set up and running locally, and we don't have a good Docker or Vagrant container setup.
 * We tend to give ourselves aggressive sprint goals, which does not leave enough slack to support outside contributors.
 * We don't have anyone whose job is to ensure the success of the open source community (though we'd like to add this… please [let us know](mailto:jobs@tidepool.org) if you are interested!)
@@ -42,6 +44,7 @@ With that out of the way, here are some ways to get started:
 If you think you think you'd like to contribute designs, code, or or anything else back to the project, please read our Volunteer/Contributor License Agreement (VCLA) on our [Contributors](contributors) page. This agreement protects you and Tidepool and does not take away any rights that you have to your work.
 
 Depending on what kind of work you are trying to do, you may wish to engage with our source code in different ways:
+
 * **Tidepool Uploader**: If you'd like to help add device support to the Tidepool Uploader, check out the [chrome-uploader](https://github.com/tidepool-org/chrome-uploader) repository. (You can also install the production [Tidepool Uploader from the Chrome Web Store](https://chrome.google.com/webstore/detail/tidepool-uploader/cabklgajffclbljkhmjphejemhpbghfb).)
 * **Blip**: You may wish to build Blip, our web application, locally but still run against our hosted back-end services. If so, check out the README in the [blip](https://github.com/tidepool-org/blip) repository. (Of course you can also just run the prodiction Blip at [blip.tidepool.org](https://blip.tidepool.org).
 * **Your Applications**: You may wish create your own application that accesses our hosted back-end services (the Tidepool Platform). If it's a web app, you may wish to look at Blip. If it's a mobile app, check out the [Nutshell](https://github.com/tidepool-org/nutshell-ios) or Blip Notes repos (a.k.a. [Urchin for Android](https://github.com/tidepool-org/urchin-android) or [Urchin for iOS](https://github.com/tidepool-org/urchin)).
