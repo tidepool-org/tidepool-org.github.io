@@ -14,14 +14,15 @@ Tidepool is building a cloud-based platform and applications that help reduce th
 ## About this Developer Microsite
 The intended audience for this microsite is software developers, but others may also find it valuable. Here are some useful links:
 
-* All of our [source code on GitHub](https://github.com/tidepool-org).
+* All of our [source code on GitHub](https://github.com/tidepool-org)
+
 * All of our user interface designs:
   * [UI designs for all Tidepool apps on Pixelapse](https://www.pixelapse.com/tidepool)
   * [UI designs and prototype for the Bionic Pancreas on GitHub](https://github.com/tidepool-org/bionicpancreas)
 * A list of Technical References, including:
   * A Tidepool Platform architectural overview. (TODO)
   * [Tidepool data model documentation](data-model)
-* Project Management reference TODO), including:
+* Project Management reference (TODO), including:
   * Current and recent sprint boards (on Trello)
   * Sprint planning priority documents (in Google Docs).
   * Product backlogs on Trello.
@@ -36,7 +37,7 @@ To cut to the chase: Although we are an open source project, we are not currentl
 * We tend to give ourselves aggressive sprint goals, which does not leave enough slack to support outside contributors.
 * We don't have anyone whose job is to ensure the success of the open source community (though we'd like to add this… please [let us know](mailto:jobs@tidepool.org) if you are interested!)
 
-Said another way: **We love being an open source project, and we intend to stay that way.** Being open source reinforces our commitment to transparency, and it helps to catalyze innovation in the pursuit of a diabetes app ecosystem. **But we still have work to do before we will feel *good* about being a *good* open source project.** We want to be easier to setup locally and easier to contribute back t. We want to be transparent about this, because while we would love to have you as a contributor, we also don't want you to get frustrated or feel like you've wasted valuable time and effort.
+Said another way: **We love being an open source project, and we intend to stay that way.** Being open source reinforces our commitment to transparency, and it helps to catalyze innovation in the pursuit of a diabetes app ecosystem. **But we still have work to do before we will feel *good* about being a *good* open source project.** We want to be easier to setup locally and easier to contribute back to. We want to be transparent about this, because while we would love to have you as a contributor, we also don't want you to get frustrated or feel like you've wasted valuable time and effort.
 
 ## Getting Started as a Contributor
 
