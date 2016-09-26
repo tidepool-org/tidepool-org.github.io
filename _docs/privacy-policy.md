@@ -31,7 +31,7 @@ This Privacy Policy describes what we do with your information and is guided by 
 * You decide who has access to your information.
 * You decide which Tidepool applications and which third-party applications have access to your information or can post new information on your behalf.
 * You decide whether and which device makers have access to data from your devices.
-* You decide if you would like to contribute your information to researchers, for example throughto the Tidepool Anonymized Diabetes Database or other identifiable research databases.
+* You decide if you would like to contribute your information to researchers, for example through the Tidepool Anonymized Diabetes Database or other identifiable research databases.
 * You can export your information and take it with you whenever you like.
 
 This summary is for your convenience only and has no legal effect.
