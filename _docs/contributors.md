@@ -34,6 +34,7 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [dotMR](https://github.com/dotMR) | [Agreed in blip#234](https://github.com/tidepool-org/blip/pull/234#issuecomment-110268108)
 [creswick](https://github.com/creswick) | [Agreed in chrome-uploader#194](https://github.com/tidepool-org/chrome-uploader/pull/194#issue-117195413)
 [pazaan](https://github.com/pazaan) | [Agreed in chrome-uploader#221](https://github.com/tidepool-org/chrome-uploader/pull/221#issue-125375002)
+[mortonfox](https://github.com/mortonfox) | [Agreed in tideline#304](https://github.com/tidepool-org/tideline/pull/304#issuecomment-283496808)
 
 ## Committers
 
@@ -43,9 +44,11 @@ Name (username) | Area
 ---- | ----
 Howard Look (HowardLook) | CEO
 Brandon Arbiter (brandonarbiter) | Product
+Chris McGee (krystophv) | Engineering (*)
 Darin Krauss (darinkrauss) | Engineering (*)
 Gerrit Niezen (gniezen) | Engineering (*)
-Gordon Dent (GordyG) | Engineering
+Hunter Dougless (hntrdglss) | Engineering (*)
 Jana Beck (jebeck) | Engineering (*)
 Jamie Bate (jh-bate) | Engineering (*)
+Lennart Goedhart (pazaan) | Engineering (*)
 Sara Krugman (skrugman) | Design
