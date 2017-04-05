@@ -20,18 +20,18 @@ To learn more, please review the following:
 1. PwD User Information Ownership  
 1.1 Your PwD User Rights  
 1.2 License to Access and Use Information  
-1.3 Information Security
+1.3 Information Security  
 1.4 Control and Sharing
 2. Care Team Member, Researcher, and Clinician Accounts
-3. Acceptable Use of Tidepool Apps
-3.1 Use of Health Information
-3.2 Other Uses
-3.3 Responsible Disclosure Policy
-4. Content Licensing and Intellectual Property Rights
-4.1 Creative Commons License
-4.2 Trademarks and Trade Dress
-4.3 Your Information
-4.4 Hosted Software
+3. Acceptable Use of Tidepool Apps  
+3.1 Use of Health Information  
+3.2 Other Uses  
+3.3 Responsible Disclosure Policy  
+4. Content Licensing and Intellectual Property Rights  
+4.1 Creative Commons License  
+4.2 Trademarks and Trade Dress  
+4.3 Your Information  
+4.4 Hosted Software  
 5. Availability of Tidepool Apps
 6. Linked Sites and Third Parties
 7. Consent to Communication
@@ -70,7 +70,11 @@ A. If you choose to grant access to your Information to a Care Team Member, Tide
 
 B. To facilitate your use of the Tidepool Apps, you hereby grant to Tidepool a non-exclusive, royalty-free license to use, store, reproduce and display any Information you store or manage through the Tidepool Apps solely as reasonably necessary to operate the Tidepool Apps at your direction and on your behalf, and subject to these Terms and our [Privacy Policy](https://tidepool.org/privacy-policy.html).
 
-1.3 Information Security The security and privacy of your Information is important. Tidepool uses reasonable administrative, physical and technical safeguards to protect the security, confidentiality and integrity of your Information. For example, data that you upload from your diabetes devices is transmitted and stored using industry-standard encryption, as is any personal information or metadata you share with Tidepool. All information and data is encrypted both at rest and during transport. TIDEPOOL SHALL NOT BE RESPONSIBLE OR LIABLE FOR UNAUTHORIZED ACCESS, HACKING, OR OTHER SECURITY INTRUSIONS OR FAILURE TO STORE OR THE THEFT, DELETION, CORRUPTION, DESTRUCTION, DAMAGE, OR LOSS OF ANY DATA OR INFORMATION. 1.4\. Control and Sharing As described in the [Privacy Policy](https://tidepool.org/privacy-policy.html), PwD Users control the Information in their accounts and set permissions for sharing. Through features in the Tidepool Apps, you as a PwD User will always be able to view and change the access rights of your Care Team Members and change your sharing preferences such as sharing with Clinicians, Researchers, Tidepool, third-party applications and third-party device makers.
+1.3 Information Security
+The security and privacy of your Information is important. Tidepool uses reasonable administrative, physical and technical safeguards to protect the security, confidentiality and integrity of your Information. For example, data that you upload from your diabetes devices is transmitted and stored using industry-standard encryption, as is any personal information or metadata you share with Tidepool. All information and data is encrypted both at rest and during transport. TIDEPOOL SHALL NOT BE RESPONSIBLE OR LIABLE FOR UNAUTHORIZED ACCESS, HACKING, OR OTHER SECURITY INTRUSIONS OR FAILURE TO STORE OR THE THEFT, DELETION, CORRUPTION, DESTRUCTION, DAMAGE, OR LOSS OF ANY DATA OR INFORMATION. 
+
+1.4\. Control and Sharing 
+As described in the [Privacy Policy](https://tidepool.org/privacy-policy.html), PwD Users control the Information in their accounts and set permissions for sharing. Through features in the Tidepool Apps, you as a PwD User will always be able to view and change the access rights of your Care Team Members and change your sharing preferences such as sharing with Clinicians, Researchers, Tidepool, third-party applications and third-party device makers.
 
 ### **2. Care Team Member, Researcher, and Clinician Accounts**
 
