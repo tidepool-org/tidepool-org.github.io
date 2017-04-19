@@ -23,8 +23,8 @@ The intended audience for this microsite is software developers, but others may 
   * [UI designs and prototype for the Bionic Pancreas on GitHub](https://github.com/tidepool-org/bionicpancreas)
 * All of our technical documentation (a work in progress!):
   * [General docs](http://developer.tidepool.io/docs/) that don't belong to a specific app/repository, plus:
-    * The Blip [docs](http://developer.tidepool.io/blip/) and [developer guide](http://developer.tidepool.io/blip/docs/StartHere.html)
-    * The Chrome uploader [docs](http://developer.tidepool.io/chrome-uploader/) and [developer guide](http://developer.tidepool.io/chrome-uploader/docs/StartHere.html)
+    * Tidepool for web (codenamed 'Blip') [docs](http://developer.tidepool.io/blip/) and [developer guide](http://developer.tidepool.io/blip/docs/StartHere.html)
+    * Tidepool Uploader Uploader (Chrome extension) [docs](http://developer.tidepool.io/chrome-uploader/) and [developer guide](http://developer.tidepool.io/chrome-uploader/docs/StartHere.html)
     * The @tidepool/viz data visualization library [docs](http://developer.tidepool.io/viz/) and [developer guide](http://developer.tidepool.io/viz/docs/StartHere.html)
   * [Tidepool data model documentation](http://developer.tidepool.io/data-model/)
 * Project Management references, including:
@@ -54,9 +54,9 @@ If you think you think you'd like to contribute designs, code, or or anything el
 Depending on what kind of work you are trying to do, you may wish to engage with our source code in different ways:
 
 * **Tidepool Uploader**: If you'd like to help add device support to the Tidepool Uploader, check out the [chrome-uploader](https://github.com/tidepool-org/chrome-uploader) repository. (You can also install the production [Tidepool Uploader from the Chrome Web Store](https://chrome.google.com/webstore/detail/tidepool-uploader/cabklgajffclbljkhmjphejemhpbghfb).)
-* **Blip**: You may wish to build Blip, our web application, locally but still run against our hosted back-end services. If so, check out the README in the [blip](https://github.com/tidepool-org/blip) repository. (Of course you can also just run the production Blip at [blip.tidepool.org](https://blip.tidepool.org).
-* **Your Applications**: You may wish create your own application that accesses our hosted back-end services (the Tidepool Platform). If it's a web app, you may wish to look at Blip. If it's a mobile app, check out the [Nutshell](https://github.com/tidepool-org/nutshell-ios) or Blip Notes repos (a.k.a. [Urchin for Android](https://github.com/tidepool-org/urchin-android) or [Urchin for iOS](https://github.com/tidepool-org/urchin)).
-  * Please don't develop your app against our production environment without talking to us. Instead, please use our integration environment, found at int-blip.tidepool.org and int-api.tidepool.org.
+* **Tidepool for web**: You may wish to build Tidepool for web (codename 'Blip'), locally but still run against our hosted back-end services. If so, check out the README in the [blip](https://github.com/tidepool-org/blip) repository. (Of course you can also just run the production Tidepool for web at [app.tidepool.org](https://app.tidepool.org).
+* **Your Applications**: You may wish create your own application that accesses our hosted back-end services (the Tidepool Platform). If it's a web app, you may wish to look at Tidepool for web. If it's a mobile app, check out the [Nutshell](https://github.com/tidepool-org/nutshell-ios) or Blip Notes repos (a.k.a. [Urchin for Android](https://github.com/tidepool-org/urchin-android) or [Urchin for iOS](https://github.com/tidepool-org/urchin)).
+  * Please don't develop your app against our production environment without talking to us. Instead, please use our integration environment, found at int-app.tidepool.org and int-api.tidepool.org.
   * Read our [data model documentation](http://developer.tidepool.io/data-model/) to understand what medical data we ingest and how it’s organized.
   * [These comments](https://github.com/tidepool-org/tide-whisperer/blob/master/tide-whisperer.go#L193) show some documentation for our data APIs.
 
