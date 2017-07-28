@@ -10,12 +10,12 @@ We really appreciate your interest in Tidepool, and your help in improving our p
 
 If you are working on your own behalf and would like to submit a GitHub pull request (and are not already on the Contributors list below), please post on GitHub -- either in the issue that addresses your pull request or the pull request itself -- the following text:
 
-> I agree to the terms of Tidepool Project's Volunteer/Contributor License Agreement v1.0
-> as it exists at http://tidepool-org.github.io/files/TidepoolVCLA.pdf on <TODAY'S DATE>.
+> I agree to the terms of Tidepool Project's Volunteer/Contributor License Agreement v1.1
+> as it exists at http://tidepool-org.github.io/files/TidepoolVCLA-1.1.pdf on <TODAY'S DATE>.
 
 If you submit this as a pull request, please make sure that one of Tidepool's employees (see below) sees it and adds you to the list below. You may also email the above text to [legal@tidepool.org](mailto:legal@tidepool.org).
 
-If your contributions are on behalf of a company or you need to get your company's permission to contribute, please follow the instructions in the [VCLA](/files/TidepoolVCLA.pdf).
+If your contributions are on behalf of a company or you need to get your company's permission to contribute, please follow the instructions in the [VCLA](/files/TidepoolVCLA-1.1.pdf).
 
 ## Contributors
 
@@ -35,6 +35,7 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [creswick](https://github.com/creswick) | [Agreed in chrome-uploader#194](https://github.com/tidepool-org/chrome-uploader/pull/194#issue-117195413)
 [pazaan](https://github.com/pazaan) | [Agreed in chrome-uploader#221](https://github.com/tidepool-org/chrome-uploader/pull/221#issue-125375002)
 [mortonfox](https://github.com/mortonfox) | [Agreed in tideline#304](https://github.com/tidepool-org/tideline/pull/304#issuecomment-283496808)
+[jebeck](https://github.com/jebeck) | Agreed via email on 2017-07-20
 
 ## Committers
 
@@ -45,10 +46,9 @@ Name (username) | Area
 Howard Look (HowardLook) | CEO
 Brandon Arbiter (brandonarbiter) | Product
 Chris McGee (krystophv) | Engineering (*)
+Clint Beacock (cbwebdevelopment) | Engineering (*)
 Darin Krauss (darinkrauss) | Engineering (*)
 Gerrit Niezen (gniezen) | Engineering (*)
-Hunter Dougless (hntrdglss) | Engineering (*)
-Jana Beck (jebeck) | Engineering (*)
 Jamie Bate (jh-bate) | Engineering (*)
 Lennart Goedhart (pazaan) | Engineering (*)
-Sara Krugman (skrugman) | Design
+
