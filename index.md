@@ -16,20 +16,27 @@ Tidepool is building a cloud-based platform and applications that help reduce th
 
 The intended audience for this microsite is software developers, but others may also find it valuable. Here are some useful links:
 
-* All of our [source code on GitHub](https://github.com/tidepool-org)
+* All of our [source code on GitHub](https://github.com/tidepool-org). Some of the more commonly requested repos are:
+  * [Tidepool Uploader](https://github.com/tidepool-org/chrome-uploader)
+    * [Dexcom device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/dexcom)
+    * [Medtronic device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/medtronic)
+    * [OmniPod device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/insulet)
+    * [Tandem device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/tandem)
+  * [Visualization Library](https://github.com/tidepool-org/viz)
+  * [Tidepool Mobile for iOS](https://github.com/tidepool-org/mobile-ios)
+
 
 * All of our user interface designs:
-  * TODO: UI designs for all Tidepool apps
+  * [Google Drive](https://drive.google.com/drive/folders/0B1kZGwPgzp9iV2E0dk5UNGRmTTA)
   * [UI designs and prototype for the Bionic Pancreas on GitHub](https://github.com/tidepool-org/bionicpancreas)
 * All of our technical documentation (a work in progress!):
-  * [General docs](http://developer.tidepool.io/docs/) that don't belong to a specific app/repository, plus:
-    * Tidepool for web (codenamed 'Blip') [docs](http://developer.tidepool.io/blip/) and [developer guide](http://developer.tidepool.io/blip/docs/StartHere.html)
-    * Tidepool Uploader Uploader (Chrome extension) [docs](http://developer.tidepool.io/chrome-uploader/) and [developer guide](http://developer.tidepool.io/chrome-uploader/docs/StartHere.html)
-    * The @tidepool/viz data visualization library [docs](http://developer.tidepool.io/viz/) and [developer guide](http://developer.tidepool.io/viz/docs/StartHere.html)
+  * [General docs](http://developer.tidepool.org/docs/) that don't belong to a specific app/repository, plus:
+    * Tidepool for web (codenamed 'Blip') [docs](http://developer.tidepool.org/blip/) and [developer guide](http://developer.tidepool.org/blip/docs/StartHere.html)
+    * Tidepool Uploader Uploader (Chrome extension) [docs](http://developer.tidepool.org/chrome-uploader/) and [developer guide](http://developer.tidepool.org/chrome-uploader/docs/StartHere.html)
+    * The @tidepool/viz data visualization library [docs](http://developer.tidepool.io/viz/) and [developer guide](http://developer.tidepool.org/viz/docs/StartHere.html)
   * [Tidepool data model documentation](http://developer.tidepool.io/data-model/)
 * Project Management references, including:
   * Our current [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) Trello board
-  * A few of our recent Done boards in Trello, for [December 2016](https://trello.com/b/iPDyVIa1/done-december-2016), [November 2016](https://trello.com/b/G4LyPDa1/done-november-2016), and [October 2016](https://trello.com/b/U6X3Oi3m/done-october-2016)
   * The [Active Product Design](https://trello.com/b/EdZQUlp6/active-product-design) board on Trello, which is the immediate source for tasks on the [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board
   * "Maybe someday" backlogs for [Blip](https://trello.com/b/iKydvoiJ/backlog-blip), [Uploader](https://trello.com/b/oHy9VXYY/backlog-uploader), [Blip Notes](https://trello.com/b/jjciNmRJ/backlog-blip-notes), [Backend](https://trello.com/b/RUDDN3yq/backlog-backend)
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
@@ -62,7 +69,7 @@ Depending on what kind of work you are trying to do, you may wish to engage with
 
 ## Communication
 
-We are currently using [this Gitter channel](https://gitter.im/tidepool-org/public) for communication with the open-source community, although we plan to move to a public Slack channel as soon as that option is available. **We will be the first to admit that we aren't as responsive as we could or should be in Gitter.** We are very grateful to community members who have been so generous with their time supporting other members.
+We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](https://tidepoolorg.slack.com). We are very grateful to community members who have been so generous with their time supporting other members.
 
 Feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
