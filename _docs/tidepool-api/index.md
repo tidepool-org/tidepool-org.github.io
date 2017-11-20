@@ -16,7 +16,7 @@ This API is broken down into the following sections
 
 In addition, this page has logging in and making a data request (download) as a simple API walkthrough or tutorial.
 
-All requests URLs in this documentation are relative to `https://api.tidepool.io` (ex: `GET /auth/user` means `GET https://api.tidepool.io/auth/user`).
+All requests URLs in this documentation are relative to `https://api.tidepool.org` (ex: `GET /auth/user` means `GET https://api.tidepool.org/auth/user`).
 
 ## Simple Walkthrough
 
