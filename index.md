@@ -69,7 +69,7 @@ Depending on what kind of work you are trying to do, you may wish to engage with
 
 ## Communication
 
-We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](https://tidepoolorg.slack.com/shared_invite/enQtMjcwMjA0NDM4NzI1LTNlODQ4ZWVjYTYzZGVjMDI5NGUwZjhmYzcyYzEzYTgxOGE2NzdlZjU3Zjk4MTJkNDU0NjA1ZjBhNDUzMmU5NzE). We are very grateful to community members who have been so generous with their time supporting other members.
+We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](https://join.slack.com/t/tidepoolorg/shared_invite/enQtMjg0NzkxMjcwMzUyLWQ2NmRjZjM1ZGE0ZWU0MWNjOGY2M2RiOGI4NGE1MTI5MjdkMDYyNDE1MThlMzI1YmEyYTBjZGY4MzQ5ZmY5MjU). We are very grateful to community members who have been so generous with their time supporting other members.
 
 Feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
