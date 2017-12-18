@@ -45,7 +45,7 @@ The intended audience for this microsite is software developers, but others may 
 
 Since our founding in 2013, Tidepool has had dozens of volunteer contributors to our efforts. Contributions have come in many forms, including source code, user interface designs, testing, legal and product management.
 
-Because we are an FDA registered entity, any contributions we take from you will be tested thoroughly as part of out Quality  System. Depending on out current development priorities, it could be some time before your contribution is tested and made available publicly as part of Tidepool.
+Because we are an FDA registered entity, any contributions we take from you will be tested thoroughly as part of our Quality  System. Depending on our current development priorities, it could be some time before your contribution is tested and made available publicly as part of Tidepool.
 
 We want to be transparent about this, because while we would love to have you as a contributor, we also don't want you to get frustrated or feel like you've wasted valuable time and effort.
 
