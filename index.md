@@ -45,16 +45,12 @@ The intended audience for this microsite is software developers, but others may 
 
 Since our founding in 2013, Tidepool has had dozens of volunteer contributors to our efforts. Contributions have come in many forms, including source code, user interface designs, testing, legal and product management.
 
-To cut to the chase: Although we are an open source project, we are not currently set up in a way that makes it easy to contribute code back to Tidepool and have it merged in with our production software. There are lots of reasons for this:
+Because we are an FDA registered entity, any contributions we take from you will be tested thoroughly as part of our Quality  System. Depending on our current development priorities, it could be some time before your contribution is tested and made available publicly as part of Tidepool.
 
-* We tend to give ourselves aggressive sprint goals, which does not leave enough slack to support outside contributors.
-* We don't have anyone whose job is to ensure the success of the open source community (though we'd like to add this… please [let us know](mailto:jobs@tidepool.org) if you are interested!)
-
-Said another way: **We love being an open source project, and we intend to stay that way.** Being open source reinforces our commitment to transparency, and it helps to catalyze innovation in the pursuit of a diabetes app ecosystem. **But we still have work to do before we will feel *good* about being a *good* open source project.** We want to be easier to setup locally and easier to contribute back to. We want to be transparent about this, because while we would love to have you as a contributor, we also don't want you to get frustrated or feel like you've wasted valuable time and effort.
+We want to be transparent about this, because while we would love to have you as a contributor, we also don't want you to get frustrated or feel like you've wasted valuable time and effort.
 
 ## Getting Started as a Contributor
 
-With that out of the way, here are some ways to get started:
 If you think you think you'd like to contribute designs, code, or or anything else back to the project, please read our Volunteer/Contributor License Agreement (VCLA) on our [Contributors](contributors) page. This agreement protects you and Tidepool and does not take away any rights that you have to your work.
 
 Depending on what kind of work you are trying to do, you may wish to engage with our source code in different ways:
