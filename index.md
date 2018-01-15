@@ -65,7 +65,7 @@ Depending on what kind of work you are trying to do, you may wish to engage with
 
 ## Communication
 
-We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](https://public-chat.tidepool.org/). We are very grateful to community members who have been so generous with their time supporting other members.
+We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](http://public-chat.tidepool.org/). We are very grateful to community members who have been so generous with their time supporting other members.
 
 Feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
