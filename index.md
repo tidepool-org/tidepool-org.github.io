@@ -36,9 +36,8 @@ The intended audience for this microsite is software developers, but others may 
     * The @tidepool/viz data visualization library [docs](http://developer.tidepool.org/viz/) and [developer guide](http://developer.tidepool.org/viz/docs/StartHere.html)
   * [Tidepool data model documentation](http://developer.tidepool.org/data-model/)
 * Project Management references, including:
-  * Our current [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) Trello board
-  * The [Active Product Design](https://trello.com/b/EdZQUlp6/active-product-design) board on Trello, which is the immediate source for tasks on the [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board
-  * "Maybe someday" backlogs for [Blip](https://trello.com/b/iKydvoiJ/backlog-blip), [Tidepool Uploader](https://trello.com/b/oHy9VXYY/backlog-uploader), [Blip Notes](https://trello.com/b/jjciNmRJ/backlog-blip-notes), [Backend](https://trello.com/b/RUDDN3yq/backlog-backend)
+  * Our [Product Priorities](https://trello.com/b/JTCsoGjd/2018-q1-product-priorities) board on Trello organizes and defines the work identified in our [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board.
+  * Our past three months of completed tasks: [February](https://trello.com/b/lMs0iDJg/done-february-2018), [January](https://trello.com/b/PzmU2P5r/done-january-2018), [December](https://trello.com/b/gkplXUdg/done-december-2017).
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
 
 ## A Note about Contributing to Tidepool's Source Code
