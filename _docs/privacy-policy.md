@@ -40,58 +40,55 @@ As our services expand, we will evaluate our policies and practices and occasion
 Tidepool may treat the information of PwD Users, Care Team Members, Clinicians and Researchers differently. For this reason, this Privacy Policy has separate sections with information specific to PwD Users, to Care Team Members, to Clinicians and to Researchers, and a section that applies to everyone. To learn more, please review the following:  
 
 1. Information for PwD Users - Frequently Asked Questions for PwD Users  
-    1.1 What PwD User information does Tidepool collect and for what purposes?  
-        1.1.1 Registration and Contact Information  
-        1.1.2 Other Information You Provide to Us  
-        1.1.3 Third-Party Applications  
-        1.1.4 Study Management for Academic and Clinical Research  
-    1.2 What choices do PwD Users have?  
-        1.2.1 Care Team Access  
-        1.2.2 Custodial Accounts  
-        1.2.3 Options for Sharing Information with Device Makers  
-        1.2.4 Options for Sharing Anonymized Information with Researchers or Other Research Databases  
-        1.2.5 Export, Delete, or Change Your Information  
-        1.2.6 Cancel Your Account  
-        1.2.7 Other Rights You May Have Under HIPAA  
-        1.2.8 Email Communications  
-    1.3 How do I invite members to join my Care Team or invite others to use Tidepool Apps?  
-    1.4 What about the practices of third-party applications that PwD Users can connect to Tidepool Apps or the Tidepool Platform?  
-    1.5 Who else has access to my information?  
-
-2. Information for Care Team Members - Frequently Asked Questions for Care Team Members
-    2.1 What information does Tidepool collect from Care Team Members and for what purposes?  
-        2.1.1 Registration and Contact Information  
-        2.1.2 Other Information You Provide to Us  
-    2.2 What choices do Care Team Members have?  
-        2.2.1 Change Your Information  
-        2.2.2 Cancel Your Account  
-        2.2.3 Email Communications  
-
-3. Information for Clinicians and Researchers - Frequently Asked Questions for Clinicians and Researchers
-    3.1 What information does Tidepool collect from Clinicians and Researchers and for what purposes?  
-        3.1.1 Registration and Contact Information  
-        3.1.2 Other Information You Provide to Us; Custodial Accounts  
-        3.1.3 Other Information that You Collect from Patients or Study Subjects  
-        3.1.4 Business Associate Agreement  
-    3.2 What choices do Clinicians and Researchers have?  
-        3.2.1 Change Your Information  
-        3.2.2 Chancel Your Account  
-        3.2.3 Email Communications  
-
-4.  Information for Everyone - Frequently Asked Questions for Everyone
-    4.1 Are there any territorial restrictions for using Tidepool Apps?  
-    4.2 Do any third party service providers have access to my information?  
-    4.3 When can Tidepool disclose my information?  
-    4.4 How long does Tidepool keep my information?  
-    4.5 How does Tidepool secure my information?  
-    4.6 What about information about children?  
-    4.7 What are my California Privacy Rights?  
-    4.8 Does Tidepool use cookies?  
-    4.9 Does Tidepool collect information automatically when I use the Tidepool Apps?  
-    4.10 Can third parties collect information about me when I use the Tidepool Apps?  
-    4.11 Does Tidepool recognize Do Not Track signals?  
-    4.12 Additional Rights
-    4.13 Legal Basis for Collection, Use, and Processing of Information
+  1.1 What PwD User information does Tidepool collect and for what purposes?  
+  &nbsp;&nbsp;1.1.1 Registration and Contact Information  
+  &nbsp;&nbsp;1.1.2 Other Information You Provide to Us  
+  &nbsp;&nbsp;1.1.3 Third-Party Applications  
+  &nbsp;&nbsp;1.1.4 Study Management for Academic and Clinical Research  
+  1.2 What choices do PwD Users have?  
+  &nbsp;&nbsp;1.2.1 Care Team Access  
+  &nbsp;&nbsp;1.2.2 Custodial Accounts  
+  &nbsp;&nbsp;1.2.3 Options for Sharing Information with Device Makers  
+  &nbsp;&nbsp;1.2.4 Options for Sharing Anonymized Information with Researchers or Other Research Databases  
+  &nbsp;&nbsp;1.2.5 Export, Delete, or Change Your Information  
+  &nbsp;&nbsp;1.2.6 Cancel Your Account  
+  &nbsp;&nbsp;1.2.7 Other Rights You May Have Under HIPAA  
+  &nbsp;&nbsp;1.2.8 Email Communications  
+  1.3 How do I invite members to join my Care Team or invite others to use Tidepool Apps?  
+  1.4 What about the practices of third-party applications that PwD Users can connect to Tidepool Apps or the Tidepool Platform?  
+  1.5 Who else has access to my information?
+2. Information for Care Team Members - Frequently Asked Questions for Care Team Members  
+  2.1 What information does Tidepool collect from Care Team Members and for what purposes?  
+  &nbsp;&nbsp;2.1.1 Registration and Contact Information  
+  &nbsp;&nbsp;2.1.2 Other Information You Provide to Us  
+  2.2 What choices do Care Team Members have?  
+  &nbsp;&nbsp;2.2.1 Change Your Information  
+  &nbsp;&nbsp;2.2.2 Cancel Your Account  
+  &nbsp;&nbsp;2.2.3 Email Communications  
+3. Information for Clinicians and Researchers - Frequently Asked Questions for Clinicians and Researchers  
+  3.1 What information does Tidepool collect from Clinicians and Researchers and for what purposes?  
+  &nbsp;&nbsp;3.1.1 Registration and Contact Information  
+  &nbsp;&nbsp;3.1.2 Other Information You Provide to Us; Custodial Accounts  
+  &nbsp;&nbsp;3.1.3 Other Information that You Collect from Patients or Study Subjects  
+  &nbsp;&nbsp;3.1.4 Business Associate Agreement  
+  3.2 What choices do Clinicians and Researchers have?  
+  &nbsp;&nbsp;3.2.1 Change Your Information  
+  &nbsp;&nbsp;3.2.2 Chancel Your Account  
+  &nbsp;&nbsp;3.2.3 Email Communications  
+4. Information for Everyone - Frequently Asked Questions for Everyone  
+  4.1 Are there any territorial restrictions for using Tidepool Apps?  
+  4.2 Do any third party service providers have access to my information?  
+  4.3 When can Tidepool disclose my information?  
+  4.4 How long does Tidepool keep my information?  
+  4.5 How does Tidepool secure my information?  
+  4.6 What about information about children?  
+  4.7 What are my California Privacy Rights?  
+  4.8 Does Tidepool use cookies?  
+  4.9 Does Tidepool collect information automatically when I use the Tidepool Apps?  
+  4.10 Can third parties collect information about me when I use the Tidepool Apps?  
+  4.11 Does Tidepool recognize Do Not Track signals?  
+  4.12 Additional Rights
+  4.13 Legal Basis for Collection, Use, and Processing of Information
 
 ## **1\. Information for PwD Users**
 
