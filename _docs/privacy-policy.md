@@ -19,12 +19,12 @@ BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSU
 
 As this Privacy Policy explains, Tidepool is responsible for determining the purposes and means for the handling and processing of personal information subject to this Privacy Policy.  Tidepool is the “controller” of that information for purposes of compliance with the GDPR.  Tidepool is located and may be contacted at:
 
-    Tidepool Project
-    555 Bryant St., #429
-    Palo Alto, CA 94301
-    Attn: [insert title]
-    Telephone: 650-353-2352
-    E-Mail: info@tidepool.org
+	Tidepool Project
+	555 Bryant St., #429
+	Palo Alto, CA 94301
+	Attn: Privacy Officer
+	Telephone: 650-353-2352
+	E-Mail: info@tidepool.org
 
 Tidepool’s Privacy Official serves as our data protection officer.  Any PwD User, Care Team Member, Clinician or Researcher, or any other data subject, may contact the Privacy Official directly with questions, complaints, or suggestions concerning privacy or data protection, at the following address:
 
@@ -160,7 +160,7 @@ You may have the option to donate your _anonymized_ data with different Research
 You will not be directly identifiable based on the information you choose to donate. However, it may be possible for others to identify you if you have made your information available publicly in other ways; for example, if you post pictures or information to social media that describes you or your health condition, such as tweeting a picture of your continuous glucose monitor readings, it may be possible for someone to correlate that with information in a Tidepool dataset. For this reason, all donations of your information will require your explicit consent. Donated, anonymized information will be stored and made available without any of your personal Tidepool account information. If you agree to donate your information, here is the information that will and will not be included (if provided):
 
 *   For each PwD User:
-    *   Included: birth month and year, month and year of date of diagnosis, gender, and weight.
+    *   Included: birth month and year, month and year of date of diagnosis, gender, and weight
     *   Not included: name, address, email address, birth day, notes, profile picture, or other personally identifiable information
 *   For all diabetes devices:
     *   Included: device event and data timestamps
@@ -250,7 +250,7 @@ As a Clinician or Researcher, you will be able to create accounts and collect in
 **3.1 What information does Tidepool collect from Clinicians and Researchers and for what purposes?** 
 
 **3.1.1 Registration and Contact Information** 
-To register for a Tidepool account as a Clinician or Researcher, you must provide an email address and create a password. You use your email address and password to log in to the account. We may also collect other contact information, such as your name, your clinic or institution name, address, phone number, and certain information that does not itself directly identify you, such as your IP address or your role within your organization. An IP address is a number assigned to you by your Internet service provider so you can access the Internet. Although we do receive IP addresses, we do not use them to identify you personally or disclose them to others.
+To register for a Tidepool account as a Clinician or Researcher, you must provide an email address and create a password. You use your email address and password to log in to the account. We also collect other contact information, such as your name, your clinic or institution name, address, phone number, and certain information that does not itself directly identify you, such as your IP address or your role within your organization. An IP address is a number assigned to you by your Internet service provider so you can access the Internet. Although we do receive IP addresses, we do not use them to identify you personally or disclose them to others.
 
 We may use this information to: deliver, administer and improve the Tidepool Apps; provide customer service; improve and personalize your experience; better understand your needs and interests; fulfill requests you make; deliver special announcements and updates about the Tidepool Apps; and contact you about any of the above as well as any changes to or notifications regarding your account. 
 
@@ -293,12 +293,14 @@ The following information applies to all Users of the Tidepool Apps and Tidepool
 *   How long does Tidepool keep my information?
 *   How does Tidepool secure my information?
 *   What about information from children?
-*   What about my privacy rights in California?
+*   What are my privacy rights in California?
 *   Does Tidepool use cookies?
 *   Does Tidepool collect information automatically when I use the Tidepool Apps?
 *   Can third parties collect information about me when I use the Tidepool Apps?
 *   Does Tidepool recognize Do Not Track signals?
-*   Where can I send questions, comments or suggestions about Tidepool’s privacy practices?
+*   International Privacy Laws
+*   Additional Rights
+*   Legal Basis for Collection, Use, and Processing of Information
 
 **4.1 Are there any territorial restrictions for using Tidepool Apps?** 
 At this time, Tidepool Apps are only intended for use in the United States and the European Union (‘EU’). The Tidepool Apps and Tidepool Platform are hosted in the United States and all information is stored in the United States. By using the Tidepool Apps and Tidepool Platform you consent to processing and storage of your information in the United States.  For further information if you are an EU resident and using the Tidepool App or visiting the Tidepool website from the EU, please see the section below on [International Privacy Laws](#international_privacy_laws).
@@ -317,7 +319,7 @@ Other than the sharing you have authorized, we will only disclose your personal 
 Tidepool may disclose anonymous or statistical information about the use of the Tidepool Apps at any time without restriction. 
 
 **4.4 How long does Tidepool keep my information?** 
-Tidepool will retain your account and related information on your behalf as long as needed to support your use of the Tidepool Apps, for necessary back-up purposes  and comply as necessary with our legal obligations, resolve disputes, establish legal defenses, conduct audits, pursue legitimate business purposes, enforce our agreements and comply with applicable laws. We may delete your account due to inactivity, but we will notify you by email prior to doing so and give you a reasonable opportunity to either transfer your information or begin active use of your account again.
+Tidepool will retain your account and related information on your behalf as long as needed to support your use of the Tidepool Apps, for necessary backup purposes  and comply as necessary with our legal obligations, resolve disputes, establish legal defenses, conduct audits, pursue legitimate business purposes, enforce our agreements and comply with applicable laws. We may delete your account due to inactivity, but we will notify you by email prior to doing so and give you a reasonable opportunity to either transfer your information or begin active use of your account again.
 
 **4.5 How does Tidepool secure my information?** 
 To help protect the privacy of personal information and data you transmit using Tidepool Apps, we use technology designed to encrypt your personal information and data before it is sent to us over the internet. In addition, we take reasonable physical, administrative, and technical steps to protect the personal information and data that you provide us against unauthorized access. However, the software, hardware and networks that support the Tidepool Apps may, from time to time, require maintenance or experience problems or breaches of security beyond our control.
@@ -349,8 +351,7 @@ We currently do not use technology that recognizes a “do-not-track” signal f
 <a id="international_privacy_laws"></a>**4.12 International Privacy Laws**
 If you are using the Tidepool Apps from outside the United States, please note that you are sending your information, including your personal information, to the United States, where Tidepool’s servers are located. Your information may then be transferred within the United States or to another country. The United States or these other countries may not have data protection laws as comprehensive or protective as the laws of your country or of the European Union. However, Tidepool’s collection, use, and processing of your information will in all events continue to be conducted in accordance with this Privacy Policy.
 
-Additional Rights.
-
+**4.13 Additional Rights**
 Under the GDPR, residents of the European Union have specified rights in connection with their personal information held by Tidepool. Tidepool has chosen to provide these rights to all Tidepool users. Therefore, in addition to the other rights described in this Privacy Policy, you have the right:
 
 To be informed about the information that Tidepool collects about you, and how we use and disclose that information. This Privacy Policy describes those matters.
@@ -375,5 +376,5 @@ If any request remains unresolved, you also have the right to complain to your n
 
 Tidepool does not use your personal information for automated decision-making, as defined in the GDPR. Tidepool will not make any decision solely by automated means without human involvement, including profiling, that will produce legal effects upon a user, or that will have a similarly significant effect upon a user. The Tidepool apps may through automated means evaluate diabetes device and other data related to your health condition, and offer treatment recommendations to you and your treating physician. As is provided by the Terms of Use, Tidepool’s recommendations are not substitutes for the evaluation of your health care needs by a qualified physician or for the diagnosis and treatment decisions for you that your physician will make. Tidepool does not choose any treatment plan for you or decide the health care services users will receive. If the user authorizes it, all personal information the user has in Tidepool will be available to the user’s physician, so that physician may use that information to make medical treatment decisions independently.
 
-**4.13 Legal Basis for Collection, Use, and Processing of Information**
+**4.14 Legal Basis for Collection, Use, and Processing of Information**
 In accordance with the GDPR, the legal basis for our collection and processing of your information is your consent for us to do so. Your consent will be recorded when you register to use the Tidepool Apps. You may withdraw your consent at any time by canceling your account, and the information in that account about you will be deleted. However, we may need to retain a portion of your information for a reasonable period of time for legitimate purposes that are reasonable necessary for the proper management and administration of Tidepool’s business and the satisfaction of our legal obligations to third parties.
