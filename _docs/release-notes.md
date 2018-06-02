@@ -1,3 +1,8 @@
+---
+layout: legal
+title: Tidepool Release Notes
+published: true
+---
 # Release Notes
 > Because GitHub can be a scary place if you don't know where to look, or what you're looking for, these release notes will make updates to Tidepool for Web, the Tidepool Uploader, and Tidepool Mobile a bit more readable.  
 
