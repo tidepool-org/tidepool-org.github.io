@@ -3,8 +3,8 @@ layout: legal
 title: Tidepool Release Notes
 published: true
 ---
+# Tidepool Release Notes  
 
-# Tidepool Release Notes
 > Because GitHub can be a scary place if you don't know where to look, or what you're looking for, these release notes will make updates to Tidepool for Web, the Tidepool Uploader, and Tidepool Mobile a bit more readable.  
 
 > Because we love transparency, along with a description of what's new, each update includes a link out to the speicifc GitHub repository release (Code Update) and relevant public Trello cards (Feature Requirements) so you can get a better sense of who, what, when, where, and why.  

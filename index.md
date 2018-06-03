@@ -39,6 +39,7 @@ The intended audience for this microsite is software developers, but others may 
   * Our [Product Priorities](https://trello.com/b/JTCsoGjd/current-quarter-product-priorities) board on Trello organizes and defines the work identified in our [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board.
   * Our past three months of completed tasks: [May](https://trello.com/b/5n5BrcLT/done-2018-05), [April](https://trello.com/b/g0txHMsL/done-2018-04), [March](https://trello.com/b/600t4Sgt/done-2018-03).
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
+* Our [Release Notes](release-notes).
 
 ## A Note about Contributing to Tidepool's Source Code
 
