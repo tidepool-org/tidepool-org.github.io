@@ -63,6 +63,10 @@ Depending on what kind of work you are trying to do, you may wish to engage with
   * Read our [data model documentation](http://developer.tidepool.org/data-model/) to understand what medical data we ingest and how it’s organized.
   * [These comments](https://github.com/tidepool-org/tide-whisperer/blob/master/tide-whisperer.go#L193) show some documentation for our data APIs.
 
+## Known Issues
+We are currently working on adding OAuth support to our API.  
+We are aware that until this is done that there are token session handling issues.
+
 ## Communication
 
 We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](http://public-chat.tidepool.org/). We are very grateful to community members who have been so generous with their time supporting other members.
