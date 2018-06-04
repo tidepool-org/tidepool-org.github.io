@@ -5,9 +5,9 @@ published: true
 ---
 # Tidepool Release Notes  
 
-Since GitHub can be a scary place if you don't know where to look, or what you're looking for, these release notes will make updates to Tidepool for Web, the Tidepool Uploader, and Tidepool Mobile a bit more readable.  
+We love GitHub, but it can be an intimidating place for newcomers if you don't know where to look, or what you're looking for. To help with that, these release notes will make updates to Tidepool for Web, the Tidepool Uploader, and Tidepool Mobile a bit more readable.  
 
-Because we love transparency, along with a description of what's new, each update includes a link out to the speicifc GitHub repository release (**Code Update**) and relevant public Trello cards (**Feature Requirements**) so you can get a better sense of who, what, when, where, and why.  
+Because we love transparency, along with a description of what's new, each update includes a link out to the specifc GitHub repository release (**Code Update**) and relevant public Trello cards (**Feature Requirements**) so you can get a better sense of who, what, when, where, and why.  
 
 Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)  
 
