@@ -1,28 +1,28 @@
 ---
-layout: legal
+layout: homepage
 title: Tidepool Release Notes
 published: true
 ---
 # Tidepool Release Notes  
 
-> Because GitHub can be a scary place if you don't know where to look, or what you're looking for, these release notes will make updates to Tidepool for Web, the Tidepool Uploader, and Tidepool Mobile a bit more readable.  
+Since GitHub can be a scary place if you don't know where to look, or what you're looking for, these release notes will make updates to Tidepool for Web, the Tidepool Uploader, and Tidepool Mobile a bit more readable.  
 
-> Because we love transparency, along with a description of what's new, each update includes a link out to the speicifc GitHub repository release (Code Update) and relevant public Trello cards (Feature Requirements) so you can get a better sense of who, what, when, where, and why.  
+Because we love transparency, along with a description of what's new, each update includes a link out to the speicifc GitHub repository release (**Code Update**) and relevant public Trello cards (**Feature Requirements**) so you can get a better sense of who, what, when, where, and why.  
 
-> Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)  
+Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)  
 
-[Jump to Tidepool for Web Updates](#tidepool-for-web)  
-[Jump to Tidepool Uploader Updates](#tidepool-uploader)  
-[Jump to Tidepool Mobile Updates](#tidepool-mobile)  
+* [Jump to Tidepool for Web Updates](#tidepool-for-web)  
+* [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
+* [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-01
+# Last Updated: 2018-06-04
 
 <hr>
 
 ## Tidepool for Web  
-> Visit https://app.tidepool.org to see the results of these updates.  
+Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
-> Don't have a Tidepool account? Visit https://tidepool.org/signup to create your free Tidepool account.  
+Don't have a Tidepool account? Visit [https://tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
 ### 1.10.7 (Released 2018-05-14)
 We’ve added the AADE Foundation to our Tidepool Big Data Donation Project Nonprofit Partner list. Now you can choose to support an organization providing resources to diabetes educators with your data donation.  
@@ -71,9 +71,15 @@ Along the way, we made some adjustments to how and where your bolus tooltips dis
 <hr>
 
 ## Tidepool Uploader
-> Visit https://tidepool.org/uploader to download the latest version of the Tidepool Uploader.  
+Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
-> If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.6.0 (Release 2018-06-04)
+Tidepool now supports Trividia Health True Metrix, True Metrix Go, and True Metrix Air blood glucose meters. If you're looking to upload one of those meters, we've combined them all under _Trividia Health True Metrix_ label in our devices list. Keeps things nice and tidy
+[Feature Requirements](https://trello.com/c/OFkyZUe6/2-uploader-trividia-true-metrix-meters)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.6.0)
 
 ### 2.5.13 (Released 2018-05-31)
 Currently we import IOB data from Medtronic pumps from the Bolus Wizard Estimate of Active Insulin. However, if a manual bolus or a square wave bolus is done without the Bolus Wizard, we don't get the IOB information. This data is listed at Unabsorbed insulin and is separate from the Bolus Wizard data. Medtronic also does not include active insulin data for any Bolus Wizard boluses without an associated BG value, despite it being listed in Unabsorbed insulin. By importing Unabsorbed insulin instead of Active insulin we will be able to provide our users with more data. All of this to say we fixed that bug and now use "Unabsorbed Insulin" instead of "Active Insulin" to display IOB.  
@@ -154,7 +160,7 @@ Feature Requirements
 <hr>
 
 ## Tidepool Mobile  
-> Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
+Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
 
 ### 2.0.3 (Released 4/17/2018)  
 Dexcom uploading has improved, and we’ve updated some behind the scenes components to improve performance and (if we need it) troubleshooting bugs.  
