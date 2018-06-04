@@ -6,6 +6,9 @@ published: true
 
 # Tidepool API Guide (work in progress)
 
+The documentation in this area is largely out of date, and will eventually be replaces by Swagger (or similar)
+The most up-to-date API documentation is available in [this Google Doc](https://docs.google.com/document/d/13Dia3vM2JA25z5jVv3bnEKKUoA9EjACz4RCskIL-QWw).
+
 This API is broken down into the following sections
 
   * [User management](/tidepool-api/manage-user)
