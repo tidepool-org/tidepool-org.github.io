@@ -15,14 +15,14 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-04
+# Last Updated: 2018-06-05
 
 <hr>
 
 ## Tidepool for Web  
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
-Don't have a Tidepool account? Visit [https://tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
 ### 1.10.7 (Released 2018-05-14)
 We’ve added the AADE Foundation to our Tidepool Big Data Donation Project Nonprofit Partner list. Now you can choose to support an organization providing resources to diabetes educators with your data donation.  
@@ -68,6 +68,36 @@ Along the way, we made some adjustments to how and where your bolus tooltips dis
 [Feature Requirements](https://trello.com/c/MI81nZVi/16-bolus-tooltips-are-displaying-below-the-basal-rates-in-daily-view)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.10.0)
+
+### 1.9.9 (Release 2018-02-27)
+Data with no above-target values caused the Y scale on our daily view to be off. That's not the way we should treat no-hitters - we fixed that bug.  
+[Feature Requirements](https://trello.com/c/1r7IxaiA/19-data-with-no-above-target-values-causes-y-scale-on-daily-view-to-be-off)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.9)
+
+### 1.9.8 (Released 2018-02-23)
+Introducing our Bolus Tooltip. This will help you identify the difference in insulin delivery for a meal or a correction. Hover over any bolus in the daily view to see all your pump settings and a breakdown of insulin delivered.  
+[Feature Requirements](https://trello.com/c/vFjtdPcF/17-xl-data-viz-daily-differentiate-bolus-from-carbs-vs-bolus-from-correction)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.8)
+
+### 1.9.7 (Released 2018-02-14)
+We've added two new organizations you can support through the Tidepool Big Data Donation Project: DYF, and DiabetesSisters. We've also removed Diabetes Hands Foundation from the list of nonprofit organizations. We will miss their advocacy efforts, but are glad to see Beyond Type 1 pick up the baton and carry on their legacy.  
+[Feature Requirements](https://trello.com/c/F056JnEQ/8-update-big-data-nonprofit-partners)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.7)
+
+### 1.9.6 (Released 2018-02-14)
+In the sign up process for people with diabetes between 13 and 17 years old, the text on the Privacy Policy and Terms of Use verification page said "you'll need to have a parent or guardian agree to the terms on the next screen"...which wasn't quite right. We fixed that to say "you'll need to have a parent or guardian agree to the terms below."  
+[Feature Requirements](https://trello.com/c/8iv5C67V/5-text-on-privacy-policy-tou-verification-page-should-change-from-next-screen-to-below)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.6)
+
+### 1.9.5 (Released 2018-02-13)
+In an effort to better respect and reflect the diversity of the Tidepool community, you can now indicate your diabetes diagnosis: type 1, type 2, gestational, pre-diabetes, LADA, parent, or other. It's optional, but it's also important.  
+[Feature Requirements](https://trello.com/c/VyoPE9t0/4-xs-demographic-data-inclusion-phase-1)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.5)
 <hr>
 
 ## Tidepool Uploader
@@ -76,7 +106,7 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
 ### 2.6.0 (Release 2018-06-04)
-Tidepool now supports Trividia Health True Metrix, True Metrix Go, and True Metrix Air blood glucose meters. If you're looking to upload one of those meters, we've combined them all under _Trividia Health True Metrix_ label in our devices list. Keeps things nice and tidy
+Tidepool now supports Trividia Health True Metrix, True Metrix Go, and True Metrix Air blood glucose meters. If you're looking to upload one of those meters, we've combined them all under _Trividia Health True Metrix_ label in our devices list. Keeps things nice and tidy.  
 [Feature Requirements](https://trello.com/c/OFkyZUe6/2-uploader-trividia-true-metrix-meters)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.6.0)
@@ -157,6 +187,19 @@ Feature Requirements
 [Part 1](https://trello.com/c/gwB5pykC/3-uploader-delta-upload-ui), [Part 2](https://trello.com/c/5i0sM0wx/4-m-delta-uploads-3-of-4-medtronic-5-series), [Part 3](https://trello.com/c/ieSwFQq5/5-m-delta-uploads-4-of-4-tandem) 
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.1)
+
+### 2.4.0 (Released 2018-02-22)
+Tidepool now supports the Bayer Contour Next One blood glucose meter on Windows and Mac, and OneTouch Verio and Verio Flex blood glucose meters on Mac. (We're working on adding support for those two meters for our friends running Windows, stay tuned.)  
+Feature Requirements  
+[Part 1](https://trello.com/c/XGNCkEmk/14-add-support-for-bayer-contour-next-one), [Part 2](https://trello.com/c/UhxOg1zZ/15-uploader-onetouch-verio-and-verio-flex)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.4.0)
+
+### 2.3.0 (Released 2018-02-15)
+Clinicians and clinical study investigators, this one is for you: Tidepool now supports Abbott's FreeStyle Libre Pro.  
+[Feature Requirements](https://trello.com/c/2sVdsOOU/10-libre-pro)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.3.0)
 <hr>
 
 ## Tidepool Mobile  
