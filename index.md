@@ -37,7 +37,7 @@ The intended audience for this microsite is software developers, but others may 
   * [Tidepool data model documentation](http://developer.tidepool.org/data-model/)
 * Project Management references, including:
   * Our [Product Priorities](https://trello.com/b/JTCsoGjd/current-quarter-product-priorities) board on Trello organizes and defines the work identified in our [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board.
-  * Our past three months of completed tasks: [May](https://trello.com/b/5n5BrcLT/done-2018-05), [April](https://trello.com/b/g0txHMsL/done-2018-04), [March](https://trello.com/b/600t4Sgt/done-2018-03).
+  * Our past three months of completed tasks: [June](https://trello.com/b/lOPgM6aG/done-2018-06), [May](https://trello.com/b/5n5BrcLT/done-2018-05), [April](https://trello.com/b/g0txHMsL/done-2018-04).
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
 * Our [Release Notes](release-notes).
 
