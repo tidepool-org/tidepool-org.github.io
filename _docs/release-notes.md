@@ -98,6 +98,18 @@ In an effort to better respect and reflect the diversity of the Tidepool communi
 [Feature Requirements](https://trello.com/c/VyoPE9t0/4-xs-demographic-data-inclusion-phase-1)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.5)
+
+### 1.9.4 (Released 2018-01-22)
+Because the FreeStyle Libre only samples blood glucose data every 15 minutes instead of every 5 like other CGMs, our blood glucose distribution widget didn't factor in Libre data as CGM values. We've fixed that bug and adjusted the criteria for CGM data required for that widget. Sorry about that one.  
+[Feature Requirements](https://trello.com/c/FNlDqd1A/11-libre-data-not-being-calculated-due-to-insufficient-data-points)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.4)
+
+### 1.9.2 (Released 2018-01-04)
+Folks trying to verify their Tidepool account that was initially created by their clinician were encountering an error message. For what it's worth, their account was still verified, but no one wants to see unwarranted error messages. We don't want to be the developers who cried wolf. That bug has been fixed.  
+[Feature Requirements](https://trello.com/c/HKrQyncg/2-error-when-home-verifying-a-vca-created-account)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.2)
 <hr>
 
 ## Tidepool Uploader
@@ -121,7 +133,7 @@ Feature Requirements
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.13)
 
-### 2.5.11 (Released 5/16/2018)
+### 2.5.11 (Released 2018-05-16)
 Tidepool now supports Medtronic Veo (554/754) insulin pumps. Yay!  
 [Feature Requirements](https://trello.com/c/RU2SjKA1/7-uploader-support-medtronic-veo-554-754-pump)
 
@@ -139,19 +151,19 @@ Finally, if an account was set up to upload devices on one operating system, you
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.11)
 
-### 2.5.9 (Released 4/26/2018)
+### 2.5.9 (Released 2018-04-26)
 We changed some of the text for our Time Check pop up to make it clear that you should triple-check the time on the device you’re trying to upload. This is somewhere between a bug fix and a new feature. Feature fix?  
 [Feature Requirements](https://trello.com/c/ERwBfwRa/19-update-device-time-check-copy)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.9)
 
-### 2.5.8 (Released 4/26/2018)
+### 2.5.8 (Released 2018-04-26)
 Dependency updates aren’t always the most exciting thing, but we want to make sure you’re getting the latest and greatest software possible, so here we are with some shiny new code under the hood of the Tidepool Uploader.  
 [Feature Requirements](https://trello.com/c/LLQU6QaX/17-new-card-uploader-dependency-updates)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.8)
 
-### 2.5.7 (Released 4/23/2018)
+### 2.5.7 (Released 2018-04-23)
 Remember when we said we fixed that bug that prevented all your Libre data from uploading. This time we really, really fixed it. (To be fair, the FreeStyle Libre hasn’t been out that long, so it took a little time for larger datasets to come our way and push the boundaries of our code.)  
 [Feature Requirements](https://trello.com/c/UUfpJcP2/10-reading-all-the-available-data-from-a-libre-device)
 
@@ -160,19 +172,19 @@ For our friends with a Medtronic pump using more than 6 or 7 insulin sensitiviti
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.7)
 
-### 2.5.5 (Released 4/10/2018)
+### 2.5.5 (Released 2018-04-10)
 Be honest, how diligent are you at keeping your devices on time when you travel? The Tidepool Uploader will now warn you if it detects a difference between the time zone selected and the time indicated on your device.  
 [Feature Requirements](https://trello.com/c/1eAw2Fpc/2-uploader-timezones-as-a-user-i-want-the-uploader-to-warn-me-of-any-difference-between-my-device-time-and-computer-time-or-select)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.5)
 
-### 2.5.4 (Released 3/27/2018)
+### 2.5.4 (Released 2018-03-27)
 We found a bug that prevented every last data point on your FreeStyle Libre from uploading. That won’t be a problem anymore.  
 [Feature Requirements](https://trello.com/c/5KPT5Iim/20-libre-uploading-with-gaps-in-data)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.4)
 
-### 2.5.3 (Released 3/16/2018)
+### 2.5.3 (Released 2018-03-16)
 We’ve made improvements to our Uploader error-logging service, Rollbar to catch more hiccups and bummers that you throw our way. This will go a long way to helping us identify areas we can improve our software.  
 [Feature Requirements](https://trello.com/c/144Btqt7/13-uploader-improve-rollbar-logging)
 
@@ -181,7 +193,7 @@ Omnipod device settings were hell-bent on displaying as mg/dL even when uploaded
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.5.3)
 
-### 2.5.1 (Released 3/12/2018)
+### 2.5.1 (Released 2018-03-12)
 We gave upload times for Medtronic and Tandem pumps a serious speed boost. Prior to this update, we would pull all data off compatible Medtronic and Tandem pumps and sort out duplicate data later. Now, initial uploads of compatible Tandem and Medtronic pumps will show “We've improved how devices upload. This upload will take longer than usual, but your future uploads will be much, much faster.” After that, we will only upload new data. The result? A bolus from the Speed Force and much faster uploads in the future.  
 Feature Requirements  
 [Part 1](https://trello.com/c/gwB5pykC/3-uploader-delta-upload-ui), [Part 2](https://trello.com/c/5i0sM0wx/4-m-delta-uploads-3-of-4-medtronic-5-series), [Part 3](https://trello.com/c/ieSwFQq5/5-m-delta-uploads-4-of-4-tandem) 
@@ -200,12 +212,36 @@ Clinicians and clinical study investigators, this one is for you: Tidepool now s
 [Feature Requirements](https://trello.com/c/2sVdsOOU/10-libre-pro)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.3.0)
+
+### 2.2.5 (Released 2018-01-08)
+This is a bug bash bonanza.  
+
+We were notified of a bug that generated a "could not find basal schedule" error that was caused by a basal rate created for pizza. We affectionately called this the "Pizza Basal Bug". This has been fixed.  
+[Feature Requirement](https://trello.com/c/0yXu3EPF/9-pizza-basal-bug)
+
+Medtronic 5/7 series pumps can create "other" markers. That was news to us. We've fixed that bug so incoming "other" markers don't mess with your uploads.  
+[Feature Requirements](https://trello.com/c/heVgxuHy/8-unknown-medtronic-direct-record-type)
+
+We identified a bug in the UltraMini driver that calls a callback twice after a successful upload. A trivial bug fix, but a bug fix nonetheless.  
+[Feature Requirements](https://trello.com/c/DhwgWqsi/7-ultramini-callback-was-already-called)
+
+Animas uploads were getting fussy after a recent dependacy update. We've addressed this bug by adding functionality to resume a dropped connection.  
+[Feature Requirements](https://trello.com/c/re4NHbSw/6-animas-uncaught-typeerror-commandpacketparser-is-not-a-function)
+
+We were storing CGM values that were currently displayed on a Tandem t:slim G4 instead of the calibrated CGM value that was entered. That's our bad. We've fixed this bug.  
+[Feature Requirements](https://trello.com/c/VIhtCzG5/5-tandem-calibration-values-show-cgm-value-instead-of-calibration-value)
+
+We noticed when a Tandem temporary basal crossed into a new scheduled basal segment we only stored the rate and not the percentage. Best to keep things consistent - we fixed that bug and now temporary basals display as expected.  
+[Feature Requirements](https://trello.com/c/zGZ65BOr/4-tandem-temp-basal-display-bug)
+
+Well...that was productive.  
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.5)
 <hr>
 
 ## Tidepool Mobile  
 Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
 
-### 2.0.3 (Released 4/17/2018)  
+### 2.0.3 (Released 2018-04-17)  
 Dexcom uploading has improved, and we’ve updated some behind the scenes components to improve performance and (if we need it) troubleshooting bugs.  
 Feature Requirements...(wait for it)  
 [Part 1](https://trello.com/c/6w9gu1Ze/23-ios-tidepool-mobile-uploader-upload-in-batches-of-2000-instead-of-1000), [Part 2](https://trello.com/c/2IubSfH7/37-ios-tidepool-mobile-after-time-change-on-mobile-device-tidepool-notes-display-at-incorrect-place-on-the-timeline), [Part 3](https://trello.com/c/lsafiu38/26-ios-tidepool-mobile-use-7-tap-on-footer-on-login-screen-and-in-side-menu-to-access-debug-settings), [Part 4](https://trello.com/c/6bOOaSUY/32-ios-tidepool-mobile-uploader-when-user-taps-sync-button-on-initial-sync-the-title-incorrectly-changes-to-manual-sync), [Part 5](https://trello.com/c/VbnuPL3N/31-ios-tidepool-mobile-uploader-text-formatting-issue-in-manual-sync-help-text), [Part 6](https://trello.com/c/AI0NPm8w/34-ios-tidepool-mobile-uploader-show-a-stop-syncing-confirmation-alert-when-user-taps-stop-on-initial-manual-sync), [Part 7](https://trello.com/c/nR4PWzcg/36-ios-tidepool-mobile-simplify-debug-settings-ui), [Part 8](https://trello.com/c/HhQTYS10/35-ios-tidepool-mobile-uploader-instead-of-showing-finished-when-upload-is-finished-just-continue-to-show-x-of-y-days-with-100-prog), [Part 9](https://trello.com/c/CYk71cNo/22-ios-tidepool-mobile-integration-server-is-not-an-option-under-the-the-development-menu), [Part 10](https://trello.com/c/GvGni10O/30-ios-tidepool-mobile-uploader-implement-new-ui-spec-for-uploader-current-samples-and-manual-all-and-manual-last-two-weeks), [Part 11](https://trello.com/c/TG0DBp2w/21-ios-tidepool-mobile-uploader-use-separate-foreground-and-background-sessions-dont-invalidate-sessions), [Part 12](https://trello.com/c/fFWmd7oA/28-ios-tidepool-mobile-uploader-we-should-consider-taking-advantage-of-background-task-registration-to-get-more-time-to-continue-up), [Part 13](https://trello.com/c/DikLviaT/25-ios-tidepool-mobile-logging-appears-to-be-enabled-by-default-on-clean-install-we-should-only-enable-it-if-user-toggles-it-on-via), [Part 14](https://trello.com/c/K6JjrzGM/33-ios-tidepool-mobile-update-bugsee), [Part 15](https://trello.com/c/gRyj0mwi/20-ios-tidepool-mobile-uploader-when-observing-new-samples-in-background-if-we-have-persistent-pending-uploads-just-cancel-them-and), [Part 16](https://trello.com/c/g2ktMcYJ/24-ios-tidepool-mobile-uploader-fix-handling-of-deleted-samples-so-that-observing-reading-deleted-samples-doesnt-cause-the-reader-u), [Part 17](https://trello.com/c/OiEnzl7t/29-ios-tidepool-mobile-uploader-remove-the-phases-and-just-have-a-continuous-current-samples-uploader-and-support-for-manual-all-an), [Part 18](https://trello.com/c/AszRl3WW/27-ios-tidepool-mobile-uploader-improve-logging), [Part 19](https://trello.com/c/i9DvtpgK/38-tidepool-mobile-203-6-series-support) 
