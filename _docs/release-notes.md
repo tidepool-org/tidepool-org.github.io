@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-05
+# Last Updated: 2018-06-08
 
 <hr>
 
@@ -23,6 +23,18 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.10.9 (Release 2018-06-07)
+We found a bug that prevented a certain Tidepool Community Manager from logging into our demo accounts James and Jill Jellyfish (no relation). That's been fixed.  
+[Feature Requirements](https://trello.com/c/4lnTETQg/4-cannot-log-in-to-jill-jellyfish-account)
+
+An International Consensus Panel has updated recommended blood glucose thresholds. They seem pretty legit, so we've updated the default very low, low, in target, high, and very high thresholds for new accounts. Of course, you can change your target range to your liking any time you want.  
+[Feature Requirements](https://trello.com/c/OKj6Qyji/5-update-glucose-defaults-to-reflect-standards)
+
+While we were updating default thresholds, we noticed a bug that caused the y-axis labels on the daily view to disappear. Ah, the joys of writing code. We fixed that one too.  
+[Feature Requirements](https://trello.com/c/EJQHZnyv/6-bg-ticks-missing-in-daily-view-y-axis-for-mg-dl-display)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.10.9)
 
 ### 1.10.7 (Released 2018-05-14)
 We’ve added the AADE Foundation to our Tidepool Big Data Donation Project Nonprofit Partner list. Now you can choose to support an organization providing resources to diabetes educators with your data donation.  
@@ -110,6 +122,66 @@ Folks trying to verify their Tidepool account that was initially created by thei
 [Feature Requirements](https://trello.com/c/HKrQyncg/2-error-when-home-verifying-a-vca-created-account)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.2)
+
+### 1.9.1 (Released 2017-12-18)
+As much as we love how your data looks in Tidepool, some people need to hold the data in their hands. So we've expanded our print feature to include Basics, the last six Daily views, and Device Settings.  
+[Feature Requirements](https://trello.com/c/zdyHFY0M/8-l-blip-print-view-combined-basics-daily-settings)
+
+Part of our work on the expanded print view included a fix to a bug that caused three-digit carb counts to be truncated. Sorry about that.
+[Feature Requirements](https://trello.com/c/t777c7sr/10-daily-view-print-view-cannot-show-bolus-wizard-carb-counts-99g-only-shows-two-digits#)
+
+Hovering on a blood glucose value in development mode would cause our app to crash. We don't want to treat our developers like that, so we fixed this bug.  
+[Feature Requirements](https://trello.com/c/6gwIwBIF/9-bugfix-for-redux-state-mutation-violation-crashes-app-in-dev-mode)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.9.1)
+
+### 1.8.3 (Released 2017-11-30)
+Our Daily Print View kept spinning for some accounts, like a perpetual merry-go-round. This bug has been fixed.  
+[Feature Requirements](https://trello.com/c/G3u35uCo/24-bug-print-option-fails-to-load-with-latest-release)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.8.3)
+
+### 1.8.2 (Released 2017-11-29)
+The initial text we used to promote the Dexcom API connection was a bit confusing. We gave that green banner a copy-edit. Hopefully this clears things up. Remember how we debuted this feature the day before? That's why we call this a "hot fix".  
+[Feature Requirements](https://trello.com/c/1H3rwUBF/22-update-text-on-dexcom-api-banner)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.8.2)
+
+### 1.8.1 (Released 2017-11-28)
+We recently added the ability to connect your Dexcom account to Tidepool, automatically importing the data you upload to Dexcom Clarity. Most of this work happened on the back end, but we needed a way to easily notify you about this beyond emails, tweets, and Facebook posts. So here's a banner at the top of your page to keep you in the loop (you can dismiss it if you want, no worries.)  
+[Feature Update](https://trello.com/c/YzpXRsNJ/16-dexcom-api-messaging-banner)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.8.1)
+
+### 1.7.0 (Released 2017-11-06)
+We noticed some legacy code that got in the way of our Dexcom API connection. That's been resolved now.  
+[Feature Requirements](https://trello.com/c/y3HJ5D4k/4-deployment-details-2017-11-06-dexcom-api)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.7.0)
+
+### 1.6.13 (Released 2017-10-24)
+We updated the Bolus data on Basics to let you filter between override and underride boluses. The suggestion for manual boluses to be renamed to "letitride", however, was not approved.  
+[Feature Requirements](https://trello.com/c/pQaZdjad/21-data-viz-basics-distinguish-override-up-from-override-down)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.13)
+
+### 1.6.12 (Released 2017-10-18)
+We noticed a bug that displayed out of range CGM values as HI/LO and out of range blood glucose meter values as +1/-1 the threshold (for example, if the high threshold for a meter was 600, we would put the value at 601). In fixing this bug, we want these values to behave similarly, so now everything will display HI/LO or High/Low depending on the available space. Keeps things simple.  
+[Feature Requirements](https://trello.com/c/p7L3RoNn/19-hi-lo-smbg-shows-actual-value-instead)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.12)
+
+### 1.6.11 (Released 2017-10-17)
+We used to only show data on Basics if you uploaded at least once from a supported insulin pump. That didn't seem fair to non-pumpers, so now we'll show relevant portions in Basics based on whatever you've uploaded.  
+[Feature Requirements](https://trello.com/c/s3LiAYnA/5-s-blip-allow-basics-use-regardless-of-type-of-data-available)
+
+An outside contributor submitted a quick fix for a link in one of our ReadMe files.  
+[Feature Request](https://trello.com/c/vmZ1w6iG/7-fix-mocha-link-in-blip-readme)
+
+Did we mention Tidepool is open source? We also added an outside contribution that fixed some of our development tools.  
+[Feature Request](https://trello.com/c/1tLMULDP/6-restore-dev-tools-by-default-in-blip)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.11)
 <hr>
 
 ## Tidepool Uploader
@@ -236,6 +308,75 @@ We noticed when a Tandem temporary basal crossed into a new scheduled basal segm
 
 Well...that was productive.  
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.5)
+
+### 2.2.4 (Released 2017-12-21)
+Turns out a Precision Xtra meter needs a little more time than we initially thought to upload more than 400 blood glucose readings. We fixed that bug and upped the timeout time from 10 to 20 seconds.  
+[Feature Requirements](https://trello.com/c/NRFZHzbo/16-uploader-pxtra-times-out-if-there-are-many-bg-records-on-the-meter)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.4)
+
+### 2.2.3 (Released 2017-12-12)
+The Dexcom driver doesn't always handle error communication gracefully. We've addressed this bug by adding a little more context in case an upload cable gets disconnected.  
+[Feature Requirements](https://trello.com/c/X5Y3bDP7/3-uncaught-typeerror-cannot-read-property-attrs-of-null)
+
+FreeStyle Lite uploads were hanging up a bit. We poked around and fixed the bug causing this.  
+[Feature Requirements](https://trello.com/c/3lCJF3qM/4-freestyle-lite-upload-sometimes-hangs-at-70)
+
+We found a bug that caused a minor hubub when a Clinician account tried to load a patient profile that generated an error. We cleaned that up - things should operate smoothly now.  
+[Feature Requirements](https://trello.com/c/LMqqMx1x/5-errored-user-profile-still-being-added-to-available-upload-groups)
+
+Turns out, Low Glucose Suspend events on Medtronic pumps could have three or fewer records to represent the event. We found a bug that included the assumption that LGS events had exactly three records. You know what happens when you assume...this has been fixed.  
+[Feature Requirements](https://trello.com/c/vKfxm83B/2-uploader-error-suspend-resume-events-out-of-order)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.3)
+
+### 2.2.2 (Released 2017-11-29)
+It's hard to make dependency updates sound interesting, even though they're super important. You're going to have to trust us on this one, this stuff is a big deal.  
+[Feature Requirements](https://trello.com/c/kTDfWrzS/18-492-l-uploader-update-dependencies)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.2)
+
+### 2.2.1 (Released 2017-11-17)
+While the phrase "brand consolidation" makes us feel queasy, we do need to simplify things a bit. Since the name "Blip" is not a thing anymore, we changed the "Go to Blip" button to read "See data".  
+[Feature Requirements](https://trello.com/c/WU728Ih2/8-xs-rebrand-blip-to-tidepool-uploader)
+
+We fixed a single line of code that caused Precision Xtra uploads to fail. Yes, literally a single line of code.  
+[Feature Requirements](https://trello.com/c/PZzb3Ch2/7-precision-xtra-upload-fails)
+
+Our time change algorithm didn't like a particular default date that could be set in Medtronic pumps. We've fixed that bug so everyone can play nice again.  
+[Feature Requirements](https://trello.com/c/wonZCRNy/9-532-missing-time-change-record-on-530g)
+
+If a percentage temporary basal rate was the first record on a Medtronic pump, the Tidepool Uploader was not happy. With this bug fix, the Uploader has improved its morale.  
+[Feature Requirements](https://trello.com/c/RiSWtcG1/10-medtronic-direct-temp-basal-has-missing-rate)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.1)
+
+### 2.2.0 (Released 2017-11-03)
+Tidepool now supports Abbott's FreeStyle Libre. Woohoo! You have no idea how long we spent discussing the nuance and semantics between continuous and flash glucose monitoring.  
+[Feature Requirements](https://trello.com/c/XMchviCK/2-521-uploader-abbott-freestyle-libre)
+
+We've added a new feature called _Rollbar_ which automatically sends us error reports when something goes wrong. The entire team is quite excited about this one. You can expect a lot more bug fixes in the future.  
+[Feature Requirements](https://trello.com/c/cYSNiB1W/3-uploader-send-error-reports-automatically)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.2.0)
+
+### 2.1.1 (Released 2017-10-20)
+Tidepool now supports OneTouch Ultra 2 and UltraMini meters. Welcome to the fun!  
+[Feature Requirements](https://trello.com/c/drBwiv9K/15-522-onetouch-ultra-2-and-onetouch-mini)
+
+We added a super secret toggle that enables Debug Mode, which helps us troubleshoot issues that are reported to us. It's not actually super secret, but you don't need to worry about it unless something goes wrong and we ask you to do it. Speaking of help, if you ever run into problems, [support@tidepool.org](mailto:support@tidepool.org) is your best way to get in touch.  
+[Feature Requirements](https://trello.com/c/jo0EfNg2/14-uploader-unify-dev-prod-build)
+
+Our recent update to Electron means we can do fun things like support multiple cables for a single device. This means 3rd party cables can be used to upload, for example, supported Abbott meters.  
+[Feature Requirements](https://trello.com/c/mE0Q860H/16-519-electron-support-multiple-usb-pid-vid-combos-per-driver)
+
+Using Electron also means we can simplify options on the Choose Device screen. So we did that and combined all the different Contour Next meters as well as Abbott FreeStyle Lite and Freedom Lite to single options. As always, neat and tidy is the goal.  
+[Feature Requirements](https://trello.com/c/06aRAIAq/17-uploader-collapse-bayer-meters-into-a-single-bayer-contour-selection-prevent-unknown-device)
+
+We addressed two bugs causing unexpected data from Medtronic pumps. One was an assumption there would always be at least one basal record on a pump. The other resolved an issue we noticed when pump basal schedules get reset after a pump error.  
+[Feature Requirements](https://trello.com/c/TWzhnHRM/13-pump-errors-cause-unexpected-data-on-pump)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.1.1)
 <hr>
 
 ## Tidepool Mobile  
