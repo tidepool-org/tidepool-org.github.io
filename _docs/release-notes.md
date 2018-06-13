@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-12
+# Last Updated: 2018-06-13
 
 <hr>
 
@@ -24,7 +24,7 @@ Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of 
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
-### 1.10.9 (Release 2018-06-07)
+### 1.10.9 (Released 2018-06-07)
 We found a bug that prevented a certain Tidepool Community Manager from logging into our demo accounts James and Jill Jellyfish (no relation). That's been fixed.  
 [Feature Requirements](https://trello.com/c/4lnTETQg/4-cannot-log-in-to-jill-jellyfish-account)
 
@@ -81,7 +81,7 @@ Along the way, we made some adjustments to how and where your bolus tooltips dis
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.10.0)
 
-### 1.9.9 (Release 2018-02-27)
+### 1.9.9 (Released 2018-02-27)
 Data with no above-target values caused the Y scale on our daily view to be off. That's not the way we should treat no-hitters - we fixed that bug.  
 [Feature Requirements](https://trello.com/c/1r7IxaiA/19-data-with-no-above-target-values-causes-y-scale-on-daily-view-to-be-off)
 
@@ -306,7 +306,19 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
-### 2.6.0 (Release 2018-06-04)
+### 2.6.2 (Released 2018-06-13)
+We fixed some of our code that deals with identifying the right time for your data. If you really want to dig into our UTC Bootstrapping algorithm, send us an email and we'll talk your ear off about the challenges of device times.  
+[Feature Requirements](https://trello.com/c/rh2oLpjR/8-apply-utc-bootstrapping-fix-for-invalid-timezone-offset-to-new-data)
+
+We're running on node-serialport v6 now. You may not think that's exciting, but it fixes a bunch of issues for devices that connect through a serial port on Windows. And you thought dependency updates were boring? We now also automatically retry a serial port upload if it fails the first time. Boom!  
+[Feature Requirements](https://trello.com/c/ucvNt5d0/9-update-node-serialport-to-version-6)
+
+We fixed a bug in the OneTouch Ultra 2 driver which could cause some uploads to fail.  
+[Feature Requirements](https://trello.com/c/o8yPVF7v/10-onetouch-ultra-2-typeerror-details-cannot-read-property-length-of-null)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.6.2)
+
+### 2.6.0 (Released 2018-06-04)
 Tidepool now supports Trividia Health True Metrix, True Metrix Go, and True Metrix Air blood glucose meters. If you're looking to upload one of those meters, we've combined them all under _Trividia Health True Metrix_ label in our devices list. Keeps things nice and tidy.  
 [Feature Requirements](https://trello.com/c/OFkyZUe6/2-uploader-trividia-true-metrix-meters)
 
