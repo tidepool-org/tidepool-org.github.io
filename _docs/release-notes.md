@@ -310,7 +310,7 @@ If you already have the Tidepool Uploader installed on your computer, it will au
 We fixed some of our code that deals with identifying the right time for your data. If you really want to dig into our UTC Bootstrapping algorithm, send us an email and we'll talk your ear off about the challenges of device times.  
 [Feature Requirements](https://trello.com/c/rh2oLpjR/8-apply-utc-bootstrapping-fix-for-invalid-timezone-offset-to-new-data)
 
-We're running on node-serialport v6 now. You may not think that's exciting, but now devices that connect through a serial port will automatically retry an upload if it fails the first time. And you thought dependency updates were boring.  
+We're running on node-serialport v6 now. You may not think that's exciting, but it fixes a bunch of issues for devices that connect through a serial port on Windows. And you thought dependency updates were boring? We now also automatically retry a serial port upload if it fails the first time. Boom!  
 [Feature Requirements](https://trello.com/c/ucvNt5d0/9-update-node-serialport-to-version-6)
 
 We fixed a bug in the OneTouch Ultra 2 driver which could cause some uploads to fail.  
