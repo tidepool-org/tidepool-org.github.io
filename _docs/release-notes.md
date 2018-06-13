@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-08
+# Last Updated: 2018-06-12
 
 <hr>
 
@@ -176,12 +176,129 @@ We used to only show data on Basics if you uploaded at least once from a support
 [Feature Requirements](https://trello.com/c/s3LiAYnA/5-s-blip-allow-basics-use-regardless-of-type-of-data-available)
 
 An outside contributor submitted a quick fix for a link in one of our ReadMe files.  
-[Feature Request](https://trello.com/c/vmZ1w6iG/7-fix-mocha-link-in-blip-readme)
+[Feature Requirements](https://trello.com/c/vmZ1w6iG/7-fix-mocha-link-in-blip-readme)
 
 Did we mention Tidepool is open source? We also added an outside contribution that fixed some of our development tools.  
-[Feature Request](https://trello.com/c/1tLMULDP/6-restore-dev-tools-by-default-in-blip)
+[Feature Requirements](https://trello.com/c/1tLMULDP/6-restore-dev-tools-by-default-in-blip)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.11)
+
+### 1.6.8 (Released 2017-09-27)
+With the release of Tidepool Mobile on iOS, we're updating references across the Tidepool platform, like this one after you've created your account and signed up for data storage.  
+[Feature Requirements](https://trello.com/c/dkz5JMMg/39-xs-update-blip-notes-reference-to-tidepool-mobile-in-blip)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.8)
+
+### 1.6.6 (Released 2017-09-18)
+Continuing the post-Tidepool Uploader 2.0 launch, when you logged into your account, clicking "Upload" will either launch the Tidepool Uploader if you have it installed on your computer or prompt you to download the latest version of the Uploader if you haven't installed our software yet. Similarly, if you've installed the Tidepool Uploader before creating your account (kudos for jumping ahead in the fun), you'll be able to launch the Uploader from your browser after you've created your Data Storage Account. It only makes sense that the Upload links and buttons actually get you to the Uploader, right?  
+[Feature Requirements](https://trello.com/c/CTjNregM/36-490-electron-uploader-blip-integration)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.6)
+
+### 1.6.2 (Released 2017-09-12)
+Dear friends of Millie Mol, you can now change your display settings in your profile to display your blood glucose data in mmol/L.  
+[Feature Requirements](https://trello.com/c/FJKBYCVt/28-proper-support-for-mmol-l)
+
+When we first implemented the ability to display blood glucose data in mmol/L, it was a feature for internal-use only, and we noted a number of display bugs unique to that unit measurement. Along the way to rolling mmol/L out to all of you, we cleaned up those display bugs.  
+[Feature Requirements](https://trello.com/c/iUicHdcW/29-blip-regression-display-bugs-when-in-mmoll-mode)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.6.2)
+
+### 1.5.22 (Released 2017-09-07)
+Tidepool is free for people with diabetes and clinicians. That won't change. But the sign up process is a little different for those groups - and the signup forms should reflect that. So, we've updated the signup forms for new accounts to better distinguish between patient and clinician users.  
+[Feature Requirements](https://trello.com/c/yY5mTQjf/20-new-account-creation-forms-for-clinic-and-personal)
+
+Because we love our developers (internal and external), we've made a bunch of improvements and fixes for the Docker development experience. Technically this isn't a user-facing update, but it doesn't hurt to remind you that we care about the engineering process and we value your feedback on stuff like this.  
+[Feature Requirements](https://trello.com/c/PnIamSBO/21-improvements-and-fixes-for-the-docker-development-experience)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.22)
+
+### 1.5.17 (Released 2017-08-30)
+If you go more than 72 hours without a bolus from your insulin pump, we will hide the aggregated stats on our Basics view. Our previous threshold used to be 24 hours, be we decided to extended this out to a full 3-day vacation. Sometimes it's nice to take a break.  
+[Feature Requirements](https://trello.com/c/4wrRxoqr/15-extend-24-hours-no-bolus-rule-on-basics-to-72-hours)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.17)
+
+### 1.5.13 (Released 2017-08-16)
+Time zone changes during a temp basal on supported Medtronic pumps were not treated with the utmost care. Yes, this is a highly specific scenario, but we can do better. This bug has been fixed.  
+[Feature Requirements](https://trello.com/c/bnEjgwgW/13-uploaderbug-medtronic-direct-upload-with-erics-pump-fails-platform-validation)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.13)
+
+### 1.5.12 (Released 2017-08-07)
+We added a banner to help existing users share their data with the Tidepool Big Data Donation Project. Sharing, after all, is caring.  
+[Feature Requirements](https://trello.com/c/v8ovj43d/9-share-with-big-data-donation-ui-on-share-page)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.12)
+
+### 1.5.10 (Released 2017-08-02)
+Ordinarily, it's up to people with diabetes to share their data with their health care providers. But sometimes duplicate accounts are created and clinicians need to have the ability to remove those accounts from their patient list to minimize confusion. So we did that.  
+[Feature Requirements](https://trello.com/c/LIrmtf4i/5-remove-clinic-account-from-care-team)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.10)
+
+### 1.5.7 (Released 2017-08-01)
+We got reports that our PDF print view was rendering oddly in some applications. It took some sleuthing, but we've cleaned up our code and fixed those bugs. You're clear to print and save those PDFs to your heart and hard drive's content.  
+[Feature Requirements](https://trello.com/c/oVpqm14o/3-pdfs-do-not-show-data-visualization-in-some-apps)
+
+Along the way to fixing those PDF print view rendering bugs, we noticed that basal rates were showing up beyond the last upload time in the PDF print out. That was a bit presumptive of us, so now we're only showing basal data in print outs up to the last upload time.  
+[Feature Requirements](https://trello.com/c/hLh5RXez/2-daily-print-view-renders-basal-beyond-the-latest-pump-data-upload-time)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.7)
+
+### 1.5.5 (Released 2017-07-24)
+When you log into your Tidepool account, we will show you the view (Trends, Basics, Weekly) with your most recent data. This should help you get to the good parts sooner.  
+[Feature Requirements](https://trello.com/c/V8EvYZPi/27-m-people-get-confused-with-basics-date-being-pump-upload-date-when-they-have-more-recent-cgm-data)
+
+Previously, clicking "Refresh" would sometimes cause an "infinite refresh" that never finished. Since the phrase "infinite crisis" was already in use elsewhere in pop culture, figured it was best to fix this bug.  
+[Feature Requirements](https://trello.com/c/3HKSQKm5/26-refresh-button-data-load-hangs-forever)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.5)
+
+### 1.5.1 (Released 2017-07-06)
+We get it, sometimes you want to hold your data in your hands. Now you can click the "Print" icon in the Daily view and generate a PDF of your last 6 days of uploaded data. This can be printed, or saved to an EHR, or used in some other creative way PDFs can be used. This is just the beginning - we have grand plans for this feature in the future.  
+[Feature Requirements](https://trello.com/c/tjD655oz/2-l-blip-daily-print-view-first-production-release)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.5.1)
+
+### 1.4.7 (Released 2017-06-21)
+The "US/Pacific-New" timezone selection caused some trouble. Even though there isn't a realistic reason to use that timezone, the bug needs to be fixed to make sure data shows up as expected. And here we are.  
+[Feature Requirements](https://trello.com/c/w6UgCOQS/13-blipbug-dexcom-data-disappearing-after-carelink-data-uploaded)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.4.7)
+
+### 1.4.4 (Released 2017-06-21)
+Creating clinician accounts used to be manual process. Now, it's automated. It's likely you won't appreciate this one nearly as much as we do, but it's still a worthy thing to document. We've also automated our welcome email to new clinician accounts as well. Yay automation!  
+[Feature Requirements](https://trello.com/c/iYshJmxh/10-new-sign-up)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.4.4)
+
+### 1.4.1 (Released 2017-06-06)
+We're rolling out the ability to upload Medtronic data directly to Tidepool instead of importing from CareLink soon, this means we need to be able to deduplicate overlapping data. Your aggregate statistics are most appreciative of this update.  
+[Feature Requirements](https://trello.com/c/3uyQGXo9/6-medtronic-direct-deduplication)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.4.1)
+
+### 1.3.8 (Released 2017-05-23)
+We reduced the number of clicks it takes to donate your data through the Tidepool Big Data Donation Project.  
+[Feature Requirements](https://trello.com/c/ZnKDZhzv/10-improve-the-experience-sharing-with-big-data-donation-upon-tidepool-signup)
+
+We added Medtronic-specific annotations to basal data to ensure you know your Medtronic data is, in fact, Medtronic data.  
+[Feature Requirements](https://trello.com/c/dwFcsbNp/11-add-support-for-medtronic-direct-specific-annotations)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.3.8)
+
+### 1.3.4 (Released 2017-05-16)
+A bunch of information on Device Settings disappeared after a recent release. Not sure how that happened, but we waved a wand (and fixed the bug) and brought that info back. Abracadabra!  
+[Feature Requirements](https://trello.com/c/Q15cxITp/7-bug-header-info-regression-on-device-settings-print-view)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.3.4)
+
+### 1.3.3 (Released 2017-05-01)
+One of our updates froze the Device Settings page for Tandem users. We thawed that one out and fixed that bug. Sorry about that one.  
+[Feature Requirements](https://trello.com/c/Tn72jJMW/2-viz-bug-view-settings-for-tandem-device-hangs-on-v0714)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.3.3)
 <hr>
 
 ## Tidepool Uploader
@@ -377,6 +494,145 @@ We addressed two bugs causing unexpected data from Medtronic pumps. One was an a
 [Feature Requirements](https://trello.com/c/TWzhnHRM/13-pump-errors-cause-unexpected-data-on-pump)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.1.1)
+
+### 2.0.2 (Released 2017-09-15)
+In our continued effort to support the entire suite of Tandem products, the Tidepool Uploader will now upload Dexcom G5 data from a t:slim X2 pump.  
+[Feature Requirements](https://trello.com/c/aKu0nzdf/31-511-uploader-add-g5-support-for-tandem-pumps)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.0.2)
+
+### 2.0.1 (Released 2017-09-08)
+We noticed links in the Uploader were crashing computers running 32-bit versions of Windows. Sorry about that. We've fixed that bug and you can resume clicking away to your heart's content.  
+[Feature Requirements](https://trello.com/c/FFKssPse/23-518-uploader-windows-32-crashes-when-clicking-on-most-links-like-the-footer)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.0.1)
+
+### 2.0.0 (Released 2017-09-06)
+Introducing Tidepool Uploader 2.0. It's a stand-alone application that sets the stage for some ambitious improvements down the road (scroll up to see what we mean). We'll document the work behind each of the Feature Requirements below, but trust that this is an incredibly big deal and we're so happy to deliver this new and improved experience to the diabetes community.  
+
+The Tidepool Uploader works on Mac and Windows.  
+[Feature Requirements](https://trello.com/c/A86J1Lbt/8-485-electron-uploader-develop-installer-for-mac-and-windows)
+
+It still supports all the devices you've come to enjoy connecting to Tidepool.  
+[Feature Requirements](https://trello.com/c/AxAexUcA/10-486-electron-uploader-device-support)
+
+The new Tidepool Uploader runs on Electron, which means a lot of work went into moving our code.  
+[Feature Requirements](https://trello.com/c/RzFYcXyz/17-503-1ux-5dev-3tst-uploader-electron-uploader-part-2)
+
+We gave the login screen a bit of a makeover.  
+[Feature Requirements](https://trello.com/c/HOJrre0z/14-495-s-1ux-3dev-1tst-electron-uploader-update-tidepool-uploader-login-screen-footer)
+
+The Tidepool Uploader now supports direct uploading of supported Medtronic insulin pumps (523, 530G, 723). You'll need a Contour Next Link meter to make that happen.  
+Feature Requirements [Part 1](https://trello.com/c/8nJtBvT7/7-482-update-error-message-for-medtronic-direct-5-series), [Part 2](https://trello.com/c/hYZjKBPK/6-505-electron-uploader-encrypt-and-store-locally-the-users-medtronic-serial-number)
+
+The new Tidepool Uploader will automatically check for new updates.  
+[Feature Requirements](https://trello.com/c/iwNjYKJn/16-491-electron-uploader-auto-update-for-tidepool-uploader)
+
+We rounded off the Tidepool Uploader icon, because that's what the modern web design textbooks suggested. But we're keeping all the vowels in our name.  
+[Feature Requirements](https://trello.com/c/XpgO8bbO/5-new-icon-for-tidepool-uploader)
+
+Menu items link out where you expect them to.  
+[Feature Requirements](https://trello.com/c/JfZWcESh/13-uploader-20-help-menu)
+
+Support for importing your Medtronic data from CareLink will go away eventually, so we reordered the devices list a bit to set the stage.  
+[Feature Requirements](https://trello.com/c/UkEO5ymQ/3-478-electron-uploader-move-carelink-checkbox-to-bottom-of-list)
+
+We added a fun little chime when your upload completes, and a fun, but more somber tone if it fails.  
+[Feature Requirements](https://trello.com/c/faV0ToYq/4-electron-uploader-should-have-notification-sounds-earcons-for-upload-complete-upload-failed)
+
+The Mac Installer needed some love, so we splashed a bucket of Tidepool-inspired paint on it.  
+[Feature Requirements](https://trello.com/c/i5r0UVTT/40-uploader-20-mac-installer-branding)
+
+And we updated the metrics the Tidepool Uploader reports so we can better understand all of you fine people and how you're using our software.  
+[Feature Requirements](https://trello.com/c/cbseB9qW/12-489-xs-electron-uploader-kissmetrics)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.0.0)
+
+### 0.312.0 (Released 2017-09-01)
+We received a bug report including the phrase "Timestamps must be in order". We've applied the proper sorting method and fixed this bug.  
+[Feature Requirements](https://trello.com/c/tFZ5mrMN/1-uploaderbug-470-medtronic-direct-bugfixes)
+
+The Tidepool Uploader is no longer in beta. We're in the big time now, folks. Let's remove that "beta" label from here on out, shall we?  
+[Feature Requirements](https://trello.com/c/3fRwxot6/2-481-uploader-remove-beta-from-production-uploader)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v0.312.0)
+
+### 0.309.0 (Released 2017-08-04)
+We addressed a bug we identified that resulted from "no power" alerts and auto-suspend events from Medtronic pumps.  
+
+We also made some changes to address how the Uploader handles time changes during temporary basal rates.  
+[Feature Requirements](https://trello.com/c/bnEjgwgW/13-uploaderbug-medtronic-direct-upload-with-erics-pump-fails-platform-validation)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v0.309.0)
+
+### 0.307.0 (Released 2017-07-11)
+Before we tell the world that Tidepool officially supports direct uploading of Medtronic 523, 530G, and 723 pumps using a Contour Next Link meter, we need to solidify our work and finish testing. How did we get here? I'm glad you asked.  
+
+We need to make sure only supported pumps are uploaded through our direct uploading adventures. Sorry 522 and 722 folks.  
+[Feature Requirements](https://trello.com/c/CdWv2kUz/23-prevent-un-support-medtronic-pumps-from-being-uploaded-through-medtronic-direct)
+
+Seriously, we tried. The basal data coming off x22 pumps is not reliable enough for us.  
+[Feature Requirements](https://trello.com/c/bu8ZX4WZ/22-0ux-3dev-2tst-medtronic-522)
+
+We need to account for time change events accurately, because Daylight Saving is still a thing.  
+[Feature Requirements](https://trello.com/c/pGmiXf4s/16-ux0dev0tst3-uploader-test-medtronic-drivers-utc-bootstrapping)
+
+We need to show CGM data from 530G pumps.  
+[Feature Requirements](https://trello.com/c/vMtU8xkK/20-medtronic-cgm-data-uploader-dev-5-tst-2-ux-0)
+
+We need to show accurate and detailed basal data.  
+[Feature Requirements](https://trello.com/c/zlAnS0iw/12-uploader-medtronic-basals)
+
+We need to store and show device settings.  
+[Feature Requirements](https://trello.com/c/qsKqeuFh/18-uploader-dev-3-tst-1-ux-0-medtronic-device-settings)
+
+In case something goes wrong, we need to be able to save the raw binary data from the pump, affectionately called a "binary blob" for debugging and testing purposes.  
+[Feature Requirements](https://trello.com/c/1IFzNbHP/13-uploader-button-to-get-raw-binary-data-from-pump-in-debug-mode)
+
+The Tidepool Uploader needs to show specific instructions to make sure our direct uploading works as intended.  
+[Feature Requirements](https://trello.com/c/TiTc17UL/15-uploader-ui-enhancements-for-medtronic-direct-upload-dev-5-ux-1-tst-1)
+
+We need to show blood glucose values stored on the pump.  
+[Feature Requirements](https://trello.com/c/F4vTGbuQ/11-uploader-medtronic-smbg-values)
+
+We need to make sure the data the Uploader and the back end are on the same page.  
+[Feature Requirements](https://trello.com/c/HuNfebgZ/14-technical-investigation-for-medtronic-device-planning-ux0-dev2-tst0-platform-uploader)
+
+We need to make sure you could view bolus wizard calculations.  
+[Feature Requirements](https://trello.com/c/4Gn33urX/10-uploader-medtronic-calculator-data)
+
+We need to accurately handle manual boluses.  
+[Feature Requirements](https://trello.com/c/OAHqN8Ng/9-0ux-5dev-0tstuploader-medtronic-manual-boluses)
+
+We need to handle device events gracefully.  
+[Feature Requirements](https://trello.com/c/6b5oFTZl/8-uploader-medtronic-device-events)
+
+Node needs an update.  
+[Feature Requirements](https://trello.com/c/NWi3QK35/7-node-update-uploader)
+
+Our Medtronic driver needs to be accurate for inquiring developers.  
+[Feature Requirements](https://trello.com/c/qkp0Mfj6/21-uploader-medtronic-remaining-work-dev5-ux0-tst1)
+
+The data we upload using our Medtronic driver has to match the data generated by the CareLink driver. We can't say we have a better option if the data tells a different story.  
+[Feature Requirements](https://trello.com/c/T9jR2zH0/19-tool-to-compare-carelink-driver-output-with-medtronic-driver-output-uploader-ux0-dev5-tst2)
+
+And all of that needs to be verified through an extensive Alpha test.  
+[Feature Requirements](https://trello.com/c/oY4TZF73/17-l-medtronic-alpha-test-issue-resolution-card-uploader)
+
+Pretty cool, right?  
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v0.307.0)
+
+### 0.306.1 (Released 2017-06-10)
+Chrome version 59.0.3071.86 started throwing "Invalid Time Value" errors during Dexcom uploads. The reason behind this is incredibly technical, but we figured it out and fixed that bug. Check out the Feature Requirements below for a detailed explanation of what's what.  
+[Feature Requirements](https://trello.com/c/NZKjk2An/2-chrome-590307186-invalid-time-value-error-when-uploading-dexcom-receiver)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v0.306.1)
+
+### 0.306.0 (Released 2017-06-06)
+OmniPod uploads were running into problems if certain error codes were identified in the .ibf file. We've cleared the path, and fixed this bug so tubeless pumpers can upload in peace.  
+[Feature Requirements](https://trello.com/c/r7sDfxHz/3-uploaderbug-omnipod-records-with-checksum-errors-should-be-dropped)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v0.306.0)
 <hr>
 
 ## Tidepool Mobile  
@@ -388,3 +644,7 @@ Feature Requirements...(wait for it)
 [Part 1](https://trello.com/c/6w9gu1Ze/23-ios-tidepool-mobile-uploader-upload-in-batches-of-2000-instead-of-1000), [Part 2](https://trello.com/c/2IubSfH7/37-ios-tidepool-mobile-after-time-change-on-mobile-device-tidepool-notes-display-at-incorrect-place-on-the-timeline), [Part 3](https://trello.com/c/lsafiu38/26-ios-tidepool-mobile-use-7-tap-on-footer-on-login-screen-and-in-side-menu-to-access-debug-settings), [Part 4](https://trello.com/c/6bOOaSUY/32-ios-tidepool-mobile-uploader-when-user-taps-sync-button-on-initial-sync-the-title-incorrectly-changes-to-manual-sync), [Part 5](https://trello.com/c/VbnuPL3N/31-ios-tidepool-mobile-uploader-text-formatting-issue-in-manual-sync-help-text), [Part 6](https://trello.com/c/AI0NPm8w/34-ios-tidepool-mobile-uploader-show-a-stop-syncing-confirmation-alert-when-user-taps-stop-on-initial-manual-sync), [Part 7](https://trello.com/c/nR4PWzcg/36-ios-tidepool-mobile-simplify-debug-settings-ui), [Part 8](https://trello.com/c/HhQTYS10/35-ios-tidepool-mobile-uploader-instead-of-showing-finished-when-upload-is-finished-just-continue-to-show-x-of-y-days-with-100-prog), [Part 9](https://trello.com/c/CYk71cNo/22-ios-tidepool-mobile-integration-server-is-not-an-option-under-the-the-development-menu), [Part 10](https://trello.com/c/GvGni10O/30-ios-tidepool-mobile-uploader-implement-new-ui-spec-for-uploader-current-samples-and-manual-all-and-manual-last-two-weeks), [Part 11](https://trello.com/c/TG0DBp2w/21-ios-tidepool-mobile-uploader-use-separate-foreground-and-background-sessions-dont-invalidate-sessions), [Part 12](https://trello.com/c/fFWmd7oA/28-ios-tidepool-mobile-uploader-we-should-consider-taking-advantage-of-background-task-registration-to-get-more-time-to-continue-up), [Part 13](https://trello.com/c/DikLviaT/25-ios-tidepool-mobile-logging-appears-to-be-enabled-by-default-on-clean-install-we-should-only-enable-it-if-user-toggles-it-on-via), [Part 14](https://trello.com/c/K6JjrzGM/33-ios-tidepool-mobile-update-bugsee), [Part 15](https://trello.com/c/gRyj0mwi/20-ios-tidepool-mobile-uploader-when-observing-new-samples-in-background-if-we-have-persistent-pending-uploads-just-cancel-them-and), [Part 16](https://trello.com/c/g2ktMcYJ/24-ios-tidepool-mobile-uploader-fix-handling-of-deleted-samples-so-that-observing-reading-deleted-samples-doesnt-cause-the-reader-u), [Part 17](https://trello.com/c/OiEnzl7t/29-ios-tidepool-mobile-uploader-remove-the-phases-and-just-have-a-continuous-current-samples-uploader-and-support-for-manual-all-an), [Part 18](https://trello.com/c/AszRl3WW/27-ios-tidepool-mobile-uploader-improve-logging), [Part 19](https://trello.com/c/i9DvtpgK/38-tidepool-mobile-203-6-series-support) 
 
 [iOS Release](https://appsto.re/us/aXyl9.i)
+
+### App Store Update (Released 2017-06-01)
+We've updated the screenshots for the Tidepool Mobile app in the App Store to show data from our demo account, Jill Jellyfish. This helps us add a little context to the experience.  
+[Feature Requirements](https://trello.com/c/DyKCRV7W/14-new-ios-app-store-design-assets-for-tidepool-mobile)
