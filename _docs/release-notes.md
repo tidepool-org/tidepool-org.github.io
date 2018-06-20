@@ -48,7 +48,7 @@ We added a "Time in Auto mode" widget to replace the Basal:Bolus ratio widget fo
 Here's an interesting bug we discovered (and fixed): While in Auto mode, if you suspend and then resume your pump, that suspend event was displaying as an Auto mode exit. We have to do a little more work to improve how that is visualized, but making sure your data is not misrepresented is the important bit. Polish will surely follow.  
 [Feature Requirements](https://trello.com/c/UCwOXfD7/22-fix-auto-mode-suspends-so-that-they-occur-without-an-auto-mode-exit-as-indicated-from-pump-data)
 
-An external contributor updated some of our documentation, and because we're an easy-going open source project, we've merged that pull request.  
+An external contributor updated some of our documentation, and because we're an easy-going open source project, we've merged that pull request. Thanks [Mikael!](https://github.com/mrinnetmaki)  
 [Feature Requirements](https://trello.com/c/Ms9tymZg/15-document-email-verification-bypass-key-for-docker-setup-in-blip-repo)
 
 ### 1.10.9 (Released 2018-06-07)
