@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-13
+# Last Updated: 2018-06-19
 
 <hr>
 
@@ -23,6 +23,33 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.11.0 (Released 2018-06-19)
+If we're going through all the trouble to upload your Medtronic 630G, 640G, and 670G data, it's got to look good, too.  
+
+Auto mode is a great feature, but it needed a fresh design to stand out from Manual mode.  
+[Feature Requirements](https://trello.com/c/AV4gpns3/16-change-how-viz-renders-auto-mode-for-670g-support)
+
+When Auto mode is active during an upload, we'll include that schedule in your pump settings.  
+[Feature Requirements](https://trello.com/c/Ni2DGNEI/17-show-auto-mode-schedule-on-settings-view-when-is-active-at-time-of-upload)
+
+There are a lot of different annotations and designations for blood glucose readings coming off a 670G. It took some time to sort it all out, but we're good now.  
+[Feature Requirements](https://trello.com/c/X5TCJYAZ/18-tideline-handle-annotations-for-600-series-smbgs)
+
+Auto mode also means updating our basal labels on the Daily View.  
+[Feature Requirements](https://trello.com/c/h1QqftJ6/19-map-for-auto-mode-and-regular-mode)
+
+And adjusting the data we show in Basics to show Auto mode exits rather than every temp basal issued. We lost count at 1,000 when in Auto mode, so this seemed like a better solution. We will still show temp basal events in Manual mode, though.  
+[Feature Requirements](https://trello.com/c/XwEYulG5/20-basal-events-in-basics-view-for-670g)
+
+We added a "Time in Auto mode" widget to replace the Basal:Bolus ratio widget for 670G users. We hope you like it!  
+[Feature Requirements](https://trello.com/c/nvJocRRd/21-viz-for-670-add-time-in-and-out-of-auto-mode-agg-stat-and-limit-basalbolus-ratio-agg-stats-to-manual-mode-only)
+
+Here's an interesting bug we discovered (and fixed): While in Auto mode, if you suspend and then resume your pump, that suspend event was displaying as an Auto mode exit. We have to do a little more work to improve how that is visualized, but making sure your data is not misrepresented is the important bit. Polish will surely follow.  
+[Feature Requirements](https://trello.com/c/UCwOXfD7/22-fix-auto-mode-suspends-so-that-they-occur-without-an-auto-mode-exit-as-indicated-from-pump-data)
+
+An external contributor updated some of our documentation, and because we're an easy-going open source project, we've merged that pull request. Thanks [Mikael!](https://github.com/mrinnetmaki)  
+[Feature Requirements](https://trello.com/c/Ms9tymZg/15-document-email-verification-bypass-key-for-docker-setup-in-blip-repo)
 
 ### 1.10.9 (Released 2018-06-07)
 We found a bug that prevented a certain Tidepool Community Manager from logging into our demo accounts James and Jill Jellyfish (no relation). That's been fixed.  
