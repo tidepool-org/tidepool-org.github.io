@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-06-19
+# Last Updated: 2018-07-11
 
 <hr>
 
@@ -23,6 +23,24 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.11.2 (Released 2018-07-02)
+We received an external contribution [from @rspier](https://github.com/rspier) to fix some formatting when you use Chrome's Print functionality (not our PDF fun).  
+[Feature Requirements](https://trello.com/c/OKhvKFnN/2-display-date-range-when-using-browser-print-functionality)
+
+Turns out the Basal:Bolus ratio widget is still important to clinicians when looking at 670G data, so we added that back to the Basics view. Welcome back!  
+[Feature Requirements](https://trello.com/c/NFKNjxyT/3-add-basalbolus-ratio-to-basics-view-for-automated-basal-devices)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.2)
+
+### 1.11.1 (Released 2018-06-26)
+Once we started putting our 670G visualization through the paces, we noticed a few scenarios that caused the Time in Auto Mode widget to be off in the Weekly view. We're looking to squash as many bugs as we can find before releasing this to the world, including this one.  
+[Feature Requirements](https://trello.com/c/Jpi5YurW/24-weekly-view-aggregated-stats-calculations-are-off)
+
+Previously, there was no way to dismiss the prompt to download the Tidepool Uploader. A little X in the corner makes all the difference.  
+[Feature Requirements](https://trello.com/c/XstB6XTv/25-add-a-dismiss-option-to-the-tidepool-uploader-launch-popup)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.1)
 
 ### 1.11.0 (Released 2018-06-19)
 If we're going through all the trouble to upload your Medtronic 630G, 640G, and 670G data, it's got to look good, too.  
@@ -332,6 +350,16 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.6.4 (Released 2018-07-11)
+We noticed a bug that prevented all data from OneTouch Ultra 2 meters from being uploaded. Those readings can't hide from us! This has been fixed.  
+[Feature Requirements](https://trello.com/c/m1Q6G5UO/5-ultra-2-not-uploading-all-available-data-on-meter)
+
+For third party developers, and our own sanity, we added "cgm" device tags to upload records for pumps that integrate CGM data. (Waves to compatible Animas, Tandem, and Medtronic pumps!)  
+[Feature Requirements](https://trello.com/c/W9oys1cy/6-uploader-add-cgm-to-devicetags-for-the-relevant-insulin-pumps-eg-tandem-g4-and-x2)
+
+We also added a hotfix that addresses a frozen Uploader if the backend returns an error.  
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.6.4)
 
 ### 2.6.2 (Released 2018-06-13)
 We fixed some of our code that deals with identifying the right time for your data. If you really want to dig into our UTC Bootstrapping algorithm, send us an email and we'll talk your ear off about the challenges of device times.  
