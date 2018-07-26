@@ -363,7 +363,7 @@ If you already have the Tidepool Uploader installed on your computer, it will au
 ### 2.6.5 (Released 2018-07-24)
 It's another Bug Fix Bonanza™! This this round is devoted to supported Medtronic 5/7 pumps.  
 
-We fixed a bug for pumpers who use dual or square boluses without extending their bolus (100%/0%).  
+We fixed a bug for pumpers who use dual/square boluses without extending their bolus (100%/0%).  
 [Feature Requirements](https://trello.com/c/3zeww3MJ/14-error-details-expected-a-normal-bolus-but-found-type-4-or-5)
 
 We fixed a bug that inelegantly handled how we display scheduled basal rates after a 24-hour temp basals. Things are much more elegant now.  
