@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-07-11
+# Last Updated: 2018-07-25
 
 <hr>
 
@@ -23,6 +23,15 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.11.4 (Released 2018-07-19)
+For clinicians logged into Tidepool, we've added an upload link in the header that launches the Tidepool Uploader (if it's installed). Sometimes little things like that make all the difference.  
+[Feature Requirements](https://trello.com/c/W6P8MTyq/11-upload-links-on-careteam-accounts)
+
+For our friends in Auto Mode, your bolus tooltips will show "Target: Auto" to make it clear that Auto Mode has the wheel.  
+[Feature Requirements](https://trello.com/c/krrF6CmW/12-when-in-auto-mode-boluses-that-include-bg-data-list-target-null-in-the-tooltip)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.4) 
 
 ### 1.11.2 (Released 2018-07-02)
 We received an external contribution [from @rspier](https://github.com/rspier) to fix some formatting when you use Chrome's Print functionality (not our PDF fun).  
@@ -350,6 +359,26 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.6.5 (Released 2018-07-24)
+It's another Bug Fix Bonanza™! This this round is devoted to supported Medtronic 5/7 pumps.  
+
+We fixed a bug for pumpers who use dual/square boluses without extending their bolus (100%/0%).  
+[Feature Requirements](https://trello.com/c/3zeww3MJ/14-error-details-expected-a-normal-bolus-but-found-type-4-or-5)
+
+We fixed a bug that inelegantly handled how we display scheduled basal rates after a 24-hour temp basals. Things are much more elegant now.  
+[Feature Requirements](https://trello.com/c/KToTSpZx/15-after-a-24-hour-temp-basal-resuming-scheduled-basal-sometimes-missing-in-5-7-series-pump-history)
+
+We used to have problems with temp basals that were set to 0%. That's been fixed.  
+[Feature Requirements](https://trello.com/c/RVSAh1aT/16-uploader-medronic-direct-no-rate-for-temp-basal-uploading-data-to-platform-failed)
+
+Turns out CGM time change records can go "missing" if the pump has been switched off for a long time. We now handle this more gracefully.  
+[Feature Requirements](https://trello.com/c/ow0JdtX9/17-missing-cgm-time-change-records-for-5-7-series)
+
+And more dependency updates! Trust us, these are important.  
+[Feature Requirements](https://trello.com/c/juzkA0SF/18-uploader-another-round-of-dependency-updates)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.6.5)
 
 ### 2.6.4 (Released 2018-07-11)
 We noticed a bug that prevented all data from OneTouch Ultra 2 meters from being uploaded. Those readings can't hide from us! This has been fixed.  
