@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-07-25
+# Last Updated: 2018-08-09
 
 <hr>
 
@@ -24,6 +24,24 @@ Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of 
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
+### 1.11.7 (Released 2018-07-31)
+In preparation for Medtronic 630G, 640G, and 670G support, we resolved a bug that incorrectly rounded delivered dosage data.  
+[Feature Requirements](https://trello.com/c/9ET8Bmh5/26-setting-6-series-bolus-increment-to-025-causes-loss-of-precision-due-to-rounding)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.7)
+
+### 1.11.6 (Released 2018-07-31)
+As part of our preparation for Medtronic 630G, 640G, and 670G support, we resolved a bug that incorrectly displayed some blood glucose readings as calibrations.  
+[Feature Requirements](https://trello.com/c/u8Fid7Hi/23-600-series-bug-remove-calibration-yes-annotation)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.6)
+
+### 1.11.5 (Released 2018-07-30)
+A bug that showed too many decimal places in our print view came back, so we fixed it again.  
+[Feature Requirements](https://trello.com/c/4vRWbVp3/20-daily-print-view-bg-tick-formatting-regression)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.5)
+
 ### 1.11.4 (Released 2018-07-19)
 For clinicians logged into Tidepool, we've added an upload link in the header that launches the Tidepool Uploader (if it's installed). Sometimes little things like that make all the difference.  
 [Feature Requirements](https://trello.com/c/W6P8MTyq/11-upload-links-on-careteam-accounts)
@@ -31,7 +49,7 @@ For clinicians logged into Tidepool, we've added an upload link in the header th
 For our friends in Auto Mode, your bolus tooltips will show "Target: Auto" to make it clear that Auto Mode has the wheel.  
 [Feature Requirements](https://trello.com/c/krrF6CmW/12-when-in-auto-mode-boluses-that-include-bg-data-list-target-null-in-the-tooltip)
 
-[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.4) 
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.4)
 
 ### 1.11.2 (Released 2018-07-02)
 We received an external contribution [from @rspier](https://github.com/rspier) to fix some formatting when you use Chrome's Print functionality (not our PDF fun).  
@@ -359,6 +377,115 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.7.3 (Released 2018-08-06)
+A few of our external beta tests identified some new bugs once 2.7.2 went live. This is why we test.  
+
+If the first basal event found in the pump history was a temp basal start event without a proper scheduled basal start event, things went wrong. We fixed this bug.  
+[Feature Requirements](https://trello.com/c/7hNQG2qR/34-600-series-bug-dont-create-temp-basals-when-missing-suppressed-basal-info)
+
+If the first basal event found in the pump history was a suspend event, things went wrong. We fixed this bug, too.  
+[Feature Requirements](https://trello.com/c/FQ2o9TgH/35-600-series-bug-throw-away-any-isolated-initial-suspends)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.3)
+
+
+### 2.7.2 (Released 2018-08-01)
+At last, Tidepool fully supports Medtronic MiniMed 630G, 640G, and 670G. As you can imagine, a lot of work went into this one. How much work, you ask? (Deep breath)  
+
+The Tidepool Uploader needed to convert 670G micro boluses in auto mode to basal rates.  
+[Feature Requirements](https://trello.com/c/SmmJ2c2W/2-update-uploader-to-support-auto-mode-for-670g)
+
+And handles low glucose suspend events properly.  
+[Feature Requirements](https://trello.com/c/pPZVg7BE/11-6-series-lgs)
+
+A lot of work went into the messaging and error handling around our ad-hoc pairing functionality.  
+[Feature Requirements](https://trello.com/c/6ESCkbTM/5-600-series-bug-throw-an-error-when-attempting-to-use-ad-hoc-pairing-with-a-linked-meter)
+
+Medtronic 630G, 640G, and 670G also benefits from our "delta upload" functionality. This means after the first upload, future uploads go by much quicker since we're only capturing new data.  
+[Feature Requirements](https://trello.com/c/K4dHbrSj/9-s-new-card-6-series-delta-upload)
+
+We ensured the raw data coming off 670G is preserved.  
+[Feature Requirements](https://trello.com/c/WZbBxkXA/7-670g-add-raw-microbolus-data-to-payload-field-of-basal-data-type)
+
+Including the entire basal history.  
+[Feature Requirements](https://trello.com/c/YM1TDo7Q/14-498-medtronic-6-history-message-basals-ux0-dev3-tst5)
+
+Even when the basal schedule is...a lot.  
+[Feature Requirements](https://trello.com/c/RWhAGJze/15-large-basal-schedules-should-not-cause-upload-failure)
+
+The manual bolus history? We're getting all of that.  
+[Feature Requirements](https://trello.com/c/asHiqHmq/18-502-medtronic-6-history-message-manual-bolus-ux0-dev3-tst3)
+
+Calculated bolus history, too.  
+[Feature Requirements](https://trello.com/c/pdOnbBwT/20-501-medtronic-6-history-message-calculator-bolus-ux0-dev5-tst3)
+
+And all those recorded and reported blood glucose readings? Yup.  
+[Feature Requirements](https://trello.com/c/BHVmZoHh/19-500-medtronic-6-history-message-smbg-values-ux0-dev3-tst3)
+
+Can't forget about reservoir changes and prime event history, can we?  
+[Feature Requirements](https://trello.com/c/YwljcNPd/21-uploader-6-series-rewind-prime-device-events)
+
+CGM data? You're coming too.  
+[Feature Requirements](https://trello.com/c/HNi2st5n/29-497-medtronic-6-history-message-cgm-data-ux0-dev3-tst3)
+
+No matter what time zone you live in, our UTC bootstrapping algorithm will ensure your data is in sync.  
+[Feature Requirements](https://trello.com/c/vwaKLzuT/17-test-medtronic-6-utc-bootstrapping)
+
+Our time check feature also helps with that.  
+[Feature Requirements](https://trello.com/c/0bEUjkmz/25-xs-new-card-6-series-time-check)
+
+New images and UI components were added to the Uploader for a paired and unpaired Contour Next Link 2.4 meter.  
+[Feature Requirements](https://trello.com/c/9LBpSPxH/4-new-images-for-6-series-ui)
+
+This includes a proper option to select in the "Choose Devices" section.  
+[Feature Requirements](https://trello.com/c/BF1URAvH/31-494-s-uploader-medtronic-6-driver-copy-for-choose-devices-screen)
+
+All of those data points need to be displayed correctly on the Basics view.  
+[Feature Requirements](https://trello.com/c/JgH7y7VY/26-6-series-basics-page)
+
+Device settings also are properly displayed.  
+[Feature Requirements](https://trello.com/c/JkZGdYaS/28-6-series-device-settings)
+
+Including all the different basal schedule profiles.  
+[Feature Requirements](https://trello.com/c/CwJHioPO/32-504-medtronic-6-1b-implement-basal-profiles-ux0-dev3-tst1)
+
+Over the course of internal and beta testing we documented and resolved a handful of bugs. Ready for those?  
+
+We documented and resolved a bug that showed a previously scheduled basal extending into Auto Mode time if Auto Mode started with no insulin delivery.  
+[Feature Requirements](https://trello.com/c/sYxXIylr/3-if-auto-mode-starts-with-no-microbolus-delivery-data-is-incorrect)
+
+We also documented and resolved a bug that displayed temp basals during an upload as a scheduled basal.  
+[Feature Requirements](https://trello.com/c/fk1vqCBz/6-uploader-600-series-when-a-temp-basal-starts-before-an-upload-data-is-uploaded-incorrectly)
+
+We documented and resolved a bug that displayed basal schedule changes during a temp basal period incorrectly.  
+[Feature Requirements](https://trello.com/c/WZbBxkXA/7-670g-add-raw-microbolus-data-to-payload-field-of-basal-data-type)
+
+We documented and resolved a bug that noted carb entries for a bolus were not being clearly identified with their respective bolus.  
+[Feature Requirements](https://trello.com/c/hZSvQjMZ/10-daily-view-carb-circle-misaligned-with-related-bolus-bar)
+
+We documented and resolved a bug that showed all blood glucose readings as linked even if they were manually entered.  
+[Feature Requirements](https://trello.com/c/PTvtwFk1/12-on-the-630g-all-bg-readings-show-up-as-linked-even-when-manually-entered)
+
+That one also impacted data displayed on Basics, but we fixed that, too.  
+[Feature Requirements](https://trello.com/c/jnkv0yVy/24-multiple-bg-readings-showing-in-the-basics-view-for-each-actual-bg-reading)
+
+We documented and resolved a bug that incorrectly visualized suspended basal events.  
+[Feature Requirements](https://trello.com/c/T5x6YSN7/13-6-series-bug-basal-suspend-gaps-missing-from-daily-view)
+
+We documented and resolved a bug that prevented a successful upload during an extended bolus.  
+[Feature Requirements](https://trello.com/c/scIIYbAi/16-600-series-bug-cant-upload-while-an-extended-bolus-is-in-progress)
+
+We documented and resolved a bug that displayed the wrong upload date in device settings.  
+[Feature Requirements](https://trello.com/c/3rHnY5nM/23-wrong-upload-date-on-6-series-device-settings)
+
+We documented and resolved a bug that dealt with unconfirmed blood glucose readings. It's tricky, but we worked through the different annotation scenarios to make sense of it all.  
+[Feature Requirements](https://trello.com/c/1NJlI2cx/27-600-series-bug-document-that-pump-history-and-carelink-discard-unconfirmed-smbgs-and-that-two-smbgs-within-a-short-window-trunca)
+
+We documented and resolved a bug that mixed up linked and manual blood glucose readings.  
+[Feature Requirements](https://trello.com/c/lATExj5x/30-670g-importer-linked-and-manual-bg-readings-are-mixed-up)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.2)
 
 ### 2.6.5 (Released 2018-07-24)
 It's another Bug Fix Bonanza™! This this round is devoted to supported Medtronic 5/7 pumps.  
