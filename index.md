@@ -10,7 +10,7 @@ This is Tidepool's developer microsite. If you are looking for our company web s
 
 ## About Tidepool
 
-Tidepool is building a cloud-based platform and applications that help reduce the burden of managing Type 1 diabetes. We are a nonprofit organization doing everything in the open.
+Tidepool is an open source, not-for-profit company focused on liberating data from diabetes devices, supporting researchers, and providing great, free software to people with diabetes and their care teams. We are building a cloud-based platform and applications that help reduce the burden of managing diabetes.
 
 ## About this Developer Microsite
 
