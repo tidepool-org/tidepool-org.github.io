@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-08-09
+# Last Updated: 2018-08-13
 
 <hr>
 
@@ -23,6 +23,12 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.11.8 (Released 2018-08-09)
+Care team members and clinicians can now set the site change source for accounts they are viewing if no preference has been selected, for the duration of their session.  
+[Feature Requirements](https://trello.com/c/DVZk4lg8/41-new-card-allow-care-team-members-to-assign-infusion-site-change-rule)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.8)
 
 ### 1.11.7 (Released 2018-07-31)
 In preparation for Medtronic 630G, 640G, and 670G support, we resolved a bug that incorrectly rounded delivered dosage data.  
@@ -378,6 +384,12 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
+### 2.7.4 (Released 2018-08-10)
+The Tidepool Uploader now automatically generates a raw data file called a Binary Blob when an error occurs during an upload from FreeStyle Libre and all supported Medtronic pumps and store them in a secure location for our engineers to access when it's time to squash some bugs. Between this and Rollbar support we added last November, turnaround times from us on feature fixes should improve tremendously.  
+[Feature Requirements](https://trello.com/c/DMgzvGOL/39-store-upload-blobs)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.4)
+
 ### 2.7.3 (Released 2018-08-06)
 A few of our external beta tests identified some new bugs once 2.7.2 went live. This is why we test.  
 
@@ -388,7 +400,6 @@ If the first basal event found in the pump history was a suspend event, things w
 [Feature Requirements](https://trello.com/c/FQ2o9TgH/35-600-series-bug-throw-away-any-isolated-initial-suspends)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.3)
-
 
 ### 2.7.2 (Released 2018-08-01)
 At last, Tidepool fully supports Medtronic MiniMed 630G, 640G, and 670G. As you can imagine, a lot of work went into this one. How much work, you ask? (Deep breath)  
