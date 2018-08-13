@@ -385,7 +385,7 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
 ### 2.7.4 (Released 2018-08-10)
-The Tidepool Uploader now automatically generates a raw data file called a Binary Blob when an error occurs during an upload from FreeStyle Libre and all supported Medtronic pumps and store them in a secure location for our engineers to access when it's time to squash some bugs. Between this and Rollbar support we added last November, turnaround times from us on feature fixes should improve tremendously.  
+The Tidepool Uploader now saves not only processed data, but also the raw binary data retrieved from FreeStyle Libre and all supported Medtronic pumps. The data is stored in a secure location for our engineers to access when it's time to squash some bugs or if re-processing is required. Between this and Rollbar support we added last November, turnaround times from us on bug fixes should improve tremendously.  
 [Feature Requirements](https://trello.com/c/DMgzvGOL/39-store-upload-blobs)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.4)
