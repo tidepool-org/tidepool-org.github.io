@@ -417,7 +417,7 @@ Even when the basal schedule is...a lot.
 The manual bolus history? We're getting all of that.  
 [Feature Requirements](https://trello.com/c/asHiqHmq/18-502-medtronic-6-history-message-manual-bolus-ux0-dev3-tst3)
 
-Calculated bolus history, too.  
+Bolus calculator history, too.  
 [Feature Requirements](https://trello.com/c/pdOnbBwT/20-501-medtronic-6-history-message-calculator-bolus-ux0-dev5-tst3)
 
 And all those recorded and reported blood glucose readings? Yup.  
@@ -458,7 +458,7 @@ We documented and resolved a bug that showed a previously scheduled basal extend
 We also documented and resolved a bug that displayed temp basals during an upload as a scheduled basal.  
 [Feature Requirements](https://trello.com/c/fk1vqCBz/6-uploader-600-series-when-a-temp-basal-starts-before-an-upload-data-is-uploaded-incorrectly)
 
-We documented and resolved a bug that displayed basal schedule changes during a temp basal period incorrectly.  
+To ensure we don't lose any raw data, we took extra measures to capture all of the microbolus data from 670G pumps.  
 [Feature Requirements](https://trello.com/c/WZbBxkXA/7-670g-add-raw-microbolus-data-to-payload-field-of-basal-data-type)
 
 We documented and resolved a bug that noted carb entries for a bolus were not being clearly identified with their respective bolus.  
