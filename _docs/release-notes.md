@@ -414,7 +414,7 @@ HID errors will now fail more gracefully. Admittedly, this is an awkward concept
 We fixed a bug that caused an error if an upload only included the second part of a dual bolus. Glad that's settled.  
 [Feature Requirements](https://trello.com/c/9mr5tbHX/8-5-7-series-error-details-expected-a-square-bolus-but-found-type-4)
 
-And. we fixed a bug that occurred when a 24-hour temporary basal rate was followed by a basal suspend.  
+And, we fixed a bug that occurred when a 24-hour temporary basal rate was followed by a basal suspend.  
 [Feature Requirements](https://trello.com/c/dtJAGcvz/9-5-7-series-if-a-24-hour-temp-basal-is-followed-by-a-suspend-the-duration-of-the-temp-basal-is-incorrect)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.5)
