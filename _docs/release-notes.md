@@ -11,18 +11,39 @@ Because we love transparency, along with a description of what's new, each updat
 
 Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)  
 
-* [Jump to Tidepool for Web Updates](#tidepool-for-web)  
+* [Jump to Tidepool Web Updates](#tidepool-web)  
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-08-13
+# Last Updated: 2018-09-06
 
 <hr>
 
-## Tidepool for Web  
+## Tidepool Web  
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.12.1 (Released 2018-09-04)
+We identified and resolved a bug that showed unnecessary scrollbars on our warning page in browsers that are not named Google Chrome.  
+[Feature Requirements](https://trello.com/c/YHTZsl3m/3-scrollbars-in-browser-warning-page-on-safari)
+
+We also identified and resolved a bug that displayed our fun loading animation for accounts with no data.  
+[Feature Requirements](https://trello.com/c/9GOEnw99/4-loading-dots-briefly-showing-over-the-upload-data-screen)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.1)
+
+### 1.12.0 (Released 2018-08-28)
+Our friends from Diabeloop submitted PRs to translate Tidepool Web into French. Le diabète, après tout, ne connaît pas de frontières.  
+[Feature Requirements](https://trello.com/c/wJgM1E2H/48-tidepool-web-internationalization)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.0)
+
+### 1.11.9 (Released 2018-08-22)
+We found a bug that incorrectly reported basal suspends for Medtronic 600-series pumps. And promptly fixed it.  
+[Feature Requirements](https://trello.com/c/uzlypSjy/46-tidepool-web-basics-page-shows-incorrect-suspend-count)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.11.9)
 
 ### 1.11.8 (Released 2018-08-09)
 Care team members and clinicians can now set the site change source for accounts they are viewing if no preference has been selected, for the duration of their session.  
@@ -383,6 +404,20 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.7.5 (Released 2018-09-06)
+It's another bug bash bonanza!  
+
+HID errors will now fail more gracefully. Admittedly, this is an awkward concept to wrap your head around, but this will help us figure out what is really going on.  
+[Feature Requirements](https://trello.com/c/i95g40KF/7-uncaught-error-cannot-write-to-hid-device)
+
+We fixed a bug that caused an error if an upload only included the second part of a dual bolus. Glad that's settled.  
+[Feature Requirements](https://trello.com/c/9mr5tbHX/8-5-7-series-error-details-expected-a-square-bolus-but-found-type-4)
+
+And, we fixed a bug that occurred when a 24-hour temporary basal rate was followed by a basal suspend.  
+[Feature Requirements](https://trello.com/c/dtJAGcvz/9-5-7-series-if-a-24-hour-temp-basal-is-followed-by-a-suspend-the-duration-of-the-temp-basal-is-incorrect)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.5)
 
 ### 2.7.4 (Released 2018-08-10)
 The Tidepool Uploader now saves not only processed data, but also the raw binary data retrieved from FreeStyle Libre and all supported Medtronic pumps. The data is stored in a secure location for our engineers to access when it's time to squash some bugs or if re-processing is required. Between this and Rollbar support we added last November, turnaround times from us on bug fixes should improve tremendously.  
