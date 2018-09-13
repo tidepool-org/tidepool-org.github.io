@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-09-06
+# Last Updated: 2018-09-13
 
 <hr>
 
@@ -23,6 +23,21 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.12.3 (Released 2018-09-12)
+We added timestamps to CGM data in your Daily View. With so many dots to keep track of, this should help keep things organized.  
+[Feature Requirements](https://trello.com/c/QWz76ymx/16-s-data-viz-daily-view-cgm-add-timestamp-in-hover)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.3)
+
+### 1.12.2 (Released 2018-09-11)
+Our new Content Security Policy caused issues for people trying to access Tidepool on Safari. Sorry about that one, that's been fixed.  
+[Feature Requirements](https://trello.com/c/GbuHSNpr/13-csp-error-in-safari)
+
+While we are working on an update to Tidepool Mobile, we noticed a bug that caused Tidepool Web to crash. It's nothing you would have encountered since you are running a test build of Tidepool Mobile, but we fixed this nonetheless.  
+[Feature Requirements](https://trello.com/c/VNKOkCOY/14-uncaught-typeerror-when-navigating-tidepool-web-after-uploading-via-mobile-bld-211-522)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.2)
 
 ### 1.12.1 (Released 2018-09-04)
 We identified and resolved a bug that showed unnecessary scrollbars on our warning page in browsers that are not named Google Chrome.  
@@ -404,6 +419,15 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.7.6 (Released 2018-09-13)
+We fixed a bug in our blob storage service that tried to send an empty data field to our database. Why send an empty box when you can just save on postage and send nothing at all?  
+[Feature Requirements](https://trello.com/c/0IAOAEXl/19-uploader-shouldnt-send-clientprivate-when-theres-no-content)
+
+We linked Rollbar with our support ticketing system, which is great! But it wasn't always linking the email address that generated a Rollbar error, which was not great! But now we fixed that and now we'll be able to see usernames with Rollbar errors, which will help us troubleshoot future problems, which is great!  
+[Feature Requirements](https://trello.com/c/NAUHEvHf/18-rollbar-should-always-record-username)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.6)
 
 ### 2.7.5 (Released 2018-09-06)
 It's another bug bash bonanza!  
