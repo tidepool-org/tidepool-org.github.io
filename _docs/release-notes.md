@@ -20,7 +20,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 <hr>
 
 ## Tidepool Web  
-Visit [https://app.tidepool.org](https://app.tidepol.org) to see the results of these updates.  
+Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
@@ -31,10 +31,10 @@ We added timestamps to CGM data in your Daily View. With so many dots to keep tr
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.3)
 
 ### 1.12.2 (Released 2018-09-11)
-Our new Content Security Policy caused issues for people trying to access Tidepool on Safari. Sorry about that one, that's been fixed.  
+Our new Content Security Policy caused issues for people trying to create a Tidepool account on Safari. Sorry about that one, that's been fixed. (You still need to use Chrome to view the data.)  
 [Feature Requirements](https://trello.com/c/GbuHSNpr/13-csp-error-in-safari)
 
-While we are working on an update to Tidepool Mobile, we noticed a bug that caused Tidepool Web to crash. It's nothing you would have encountered since you are running a test build of Tidepool Mobile, but we fixed this nonetheless.  
+While we are working on an update to Tidepool Mobile, we noticed a bug that caused Tidepool Web to crash. It's nothing you would have encountered unless you are running a test build of Tidepool Mobile, but we fixed this nonetheless.  
 [Feature Requirements](https://trello.com/c/VNKOkCOY/14-uncaught-typeerror-when-navigating-tidepool-web-after-uploading-via-mobile-bld-211-522)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.2)
