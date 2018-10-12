@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-09-13
+# Last Updated: 2018-10-11
 
 <hr>
 
@@ -23,6 +23,12 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.12.4 (Released 2018-10-03)
+While testing an update to Tidepool Mobile, we noticed an error that occurred when attempting to mouse over a time change icon. And this, my friends, is why we have a rigorous testing process.    
+[Feature Requirements](https://trello.com/c/5stilew8/2-uncaught-typeerror-in-timechange)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.4)
 
 ### 1.12.3 (Released 2018-09-12)
 We added timestamps to CGM data in your Daily View. With so many dots to keep track of, this should help keep things organized.  
@@ -419,6 +425,12 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.7.7 (Released 2018-10-11)
+Attention folks running Tandem's new Basal-IQ feature, Tidepool Uploader now supports your fancy new automatic basal suspend events. We're also able to upload Dexcom G6 data coming off a t:slim X2. Your Friendly Neighborhood Tidepool Community Manager is particularly excited about this one.  
+[Feature Requirements](https://trello.com/c/fNigcnTf/7-tandem-predictive-low-glucose-suspend)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.7.7)
 
 ### 2.7.6 (Released 2018-09-13)
 We fixed a bug in our blob storage service that tried to send an empty data field to our database. Why send an empty box when you can just save on postage and send nothing at all?  
