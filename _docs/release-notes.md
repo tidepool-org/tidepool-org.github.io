@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-10-11
+# Last Updated: 2018-10-18
 
 <hr>
 
@@ -425,6 +425,15 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.8.0 (Released 2018-10-18)
+We found that initial uploads for Medtronic 630G, 640G, and 670G were taking a bit longer than we would like, especially for folks uploading in a clinic. So we added a 4-week filter to for Medtronic 630G, 640G, and 670G uploads. This should move things along nicely.  
+[Feature Requirements](https://trello.com/c/DTDsGtkK/11-add-4-weeks-filter-to-tidepool-uploader-for-medtronic-600-series-uploads)
+
+Here's the thing: Sometimes you don't notice those requests to install or approve drivers from a new piece of software. It happens. The problem is, if those drivers for Tidepool Uploader aren't installed some of your devices won't upload. That's no fun. Now Tidepool Uploader on macOS will fall back to user-space drivers we wrote that will support Animas pumps, and Ultra2, Ultra Mini, or VerioIQ meters if we detect the original drivers were not installed. Pretty cool, huh?  
+[Feature Requirements](https://trello.com/c/nabqaof0/10-devices-apple-high-sierra-kernel-extension-issues)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.8.0)
 
 ### 2.7.7 (Released 2018-10-11)
 Attention folks running Tandem's new Basal-IQ feature, Tidepool Uploader now supports your fancy new automatic basal suspend events. We're also able to upload Dexcom G6 data coming off a t:slim X2. Your Friendly Neighborhood Tidepool Community Manager is particularly excited about this one.  
