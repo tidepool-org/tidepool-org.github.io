@@ -427,7 +427,7 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
 ### 2.8.0 (Released 2018-10-18)
-We found that initial uploads for Medtronic 630G, 640G, and 670G were taking a bit longer than we would like, especially for our folks uploading in a clinic. So we added a 4-week filter to for Medtronic 630G, 640G, and 670G uploads. This should move things along nicely.  
+We found that initial uploads for Medtronic 630G, 640G, and 670G were taking a bit longer than we would like, especially for folks uploading in a clinic. So we added a 4-week filter to for Medtronic 630G, 640G, and 670G uploads. This should move things along nicely.  
 [Feature Requirements](https://trello.com/c/DTDsGtkK/11-add-4-weeks-filter-to-tidepool-uploader-for-medtronic-600-series-uploads)
 
 Here's the thing: Sometimes you don't notice those requests to install or approve drivers from a new piece of software. It happens. The problem is, if those drivers for Tidepool Uploader aren't installed some of your devices won't upload. That's no fun. Now Tidepool Uploader on macOS will fall back to user-space drivers we wrote that will support Animas pumps, and Ultra2, Ultra Mini, or VerioIQ meters if we detect the original drivers were not installed. Pretty cool, huh?  
