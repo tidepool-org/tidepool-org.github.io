@@ -25,7 +25,7 @@ Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
 ### 1.12.5 (Released 2018-10-25)
-Blood glucose values imported from Apple Health that were over 400 (shown as HIGH BG in Tidepool Web) and under 40 (shown as LOW BG) generated a message that "Tidepool is stuck and isn't doing what you want it to do". With this fix, we unstuck Tidepool and it should do what you want it to do now.  
+Blood glucose values imported from Apple Health that were shown as HIGH BG or LOW BG in Tidepool Web generated a message that "Tidepool is stuck and isn't doing what you want it to do". With this fix, we unstuck Tidepool and it should do what you want it to do now.  
 [Feature Requirements](https://trello.com/c/pQv4sTKV/22-uncaught-typeerror-on-high-bg-annotations-in-data-imported-through-tidepool-mobile)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.5)
