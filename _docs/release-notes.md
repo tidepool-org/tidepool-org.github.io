@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-10-18
+# Last Updated: 2018-10-25
 
 <hr>
 
@@ -23,6 +23,12 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.12.5 (Released 2018-10-25)
+Blood glucose values imported from Apple Health that were shown as HIGH BG or LOW BG in Tidepool Web generated a message that "Tidepool is stuck and isn't doing what you want it to do". With this fix, we unstuck Tidepool and it should do what you want it to do now.  
+[Feature Requirements](https://trello.com/c/pQv4sTKV/22-uncaught-typeerror-on-high-bg-annotations-in-data-imported-through-tidepool-mobile)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.5)
 
 ### 1.12.4 (Released 2018-10-03)
 While testing an update to Tidepool Mobile, we noticed an error that occurred when attempting to mouse over a time change icon. And this, my friends, is why we have a rigorous testing process.    
@@ -425,6 +431,15 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.8.3 (Released 2018-10-25)
+We identified a bug that prevented users attempting to upload Verio and Verio Flex meters on macOS Mojave. The fix? On Mojave, there's an extra space in a driver path that we were looking for...seriously. This bug is squashed.  
+[Feature Requirements](https://trello.com/c/VsEy6yN2/25-verio-verio-flex-not-uploading-on-macos-mojave)
+
+Tidepool Uploader is now bringing in additional pump settings for supported insulin pumps. Now we can get to work on displaying those additional settings in Tidepool Web. Stay tuned!  
+[Feature Requirements](https://trello.com/c/7hyUrl24/24-additional-pump-settings)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.8.3)
 
 ### 2.8.0 (Released 2018-10-18)
 We found that initial uploads for Medtronic 630G, 640G, and 670G were taking a bit longer than we would like, especially for folks uploading in a clinic. So we added a 4-week filter to for Medtronic 630G, 640G, and 670G uploads. This should move things along nicely.  
