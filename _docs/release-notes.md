@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-10-25
+# Last Updated: 2018-11-09
 
 <hr>
 
@@ -431,6 +431,12 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.8.4 (Released 2018-11-01)
+Older Medtronic pumps with a whole lot of CGM data (32 pages, to be precise) would only upload the most recent page of data for a delta upload (reminder: delta uploads are uploads that only consist of new data). This bug has been fixed, and now Tidepool Uploader will capture all CGM data on older Medtronic pumps since the last upload.  
+[Feature Requirements](https://trello.com/c/yRKhiyqw/2-5-7-series-only-most-recent-cgm-data-with-delta-upload-if-more-than-32-pages-of-cgm-data-available)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.8.4)
 
 ### 2.8.3 (Released 2018-10-25)
 We identified a bug that prevented users attempting to upload Verio and Verio Flex meters on macOS Mojave. The fix? On Mojave, there's an extra space in a driver path that we were looking for...seriously. This bug is squashed.  
