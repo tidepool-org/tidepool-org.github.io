@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-11-09
+# Last Updated: 2018-11-13
 
 <hr>
 
@@ -23,6 +23,12 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.12.6 (Released 2018-11-13)
+We added a handy plugin called Beacon to Tidepool Web to provide faster access to our support articles, guides, and walkthroughs. With Beacon, you can also send an email to our support team or even chat live with us if you have questions without leaving the page. Our goal is to get you answers to your questions faster so you can get back to exploring your data. Enjoy!  
+[Feature Requirements](https://trello.com/c/GILzFQMb/6-add-helpscout-beacon-to-apptidepoolorg)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.6) 
 
 ### 1.12.5 (Released 2018-10-25)
 Blood glucose values imported from Apple Health that were shown as HIGH BG or LOW BG in Tidepool Web generated a message that "Tidepool is stuck and isn't doing what you want it to do". With this fix, we unstuck Tidepool and it should do what you want it to do now.  
