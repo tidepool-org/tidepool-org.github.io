@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-11-13
+# Last Updated: 2018-11-26
 
 <hr>
 
@@ -28,7 +28,7 @@ Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/
 We added a handy plugin called Beacon to Tidepool Web to provide faster access to our support articles, guides, and walkthroughs. With Beacon, you can also send an email to our support team or even chat live with us if you have questions without leaving the page. Our goal is to get you answers to your questions faster so you can get back to exploring your data. Enjoy!  
 [Feature Requirements](https://trello.com/c/GILzFQMb/6-add-helpscout-beacon-to-apptidepoolorg)
 
-[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.6) 
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.12.6)
 
 ### 1.12.5 (Released 2018-10-25)
 Blood glucose values imported from Apple Health that were shown as HIGH BG or LOW BG in Tidepool Web generated a message that "Tidepool is stuck and isn't doing what you want it to do". With this fix, we unstuck Tidepool and it should do what you want it to do now.  
@@ -437,6 +437,15 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.8.6 (Released 2018-11-26)
+We've added a silent option for the Windows installer allowing Tidepool Uploader to be installed from the command line. IT staff at clinics using Tidepool will really appreciate this one.  
+[Feature Requirements](https://trello.com/c/aFhdUDcq/16-windows-installer-for-uploader-should-install-usb-driver-silently)
+
+We changed how Tidepool Uploader handles the "matching bolus wizard for bolus event not found" scenario. Uploads for Medtronic 600-series pumps should be a bit more graceful now.  
+[Feature Requirements](https://trello.com/c/bZMPsQYV/17-600-series-upload-error-matching-bolus-wizard-for-bolus-event-not-found)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.8.6)
 
 ### 2.8.4 (Released 2018-11-01)
 Older Medtronic pumps with a whole lot of CGM data (32 pages, to be precise) would only upload the most recent page of data for a delta upload (reminder: delta uploads are uploads that only consist of new data). This bug has been fixed, and now Tidepool Uploader will capture all CGM data on older Medtronic pumps since the last upload.  
