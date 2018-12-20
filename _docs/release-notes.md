@@ -444,7 +444,7 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
-### 2.9.0 (Released 2018-12-17
+### 2.9.0 (Released 2018-12-17)
 After we finally figured out the exact series of incantations required by Microsoft to grant us the right permissions, Tidepool Uploader now supports Verio and Verio Flex meters on Windows.  
 [Feature Requirements](https://trello.com/c/QvV3uNlH/31-uploader-verio-verio-flex-on-windows)
 
