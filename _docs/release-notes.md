@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-11-26
+# Last Updated: 2018-12-19
 
 <hr>
 
@@ -23,6 +23,12 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.13.0 (Released 2018-12-19)
+Adding support for Basal-IQ data brought to light the fact that we do not differentiate between basal rates that are manually and automatically suspended. We added a friendly indicator to denote the times basal rates were automatically suspended.  
+[Feature Requirements](https://trello.com/c/wZk0cMNU/35-distinguish-between-auto-and-manual-suspend-for-plgs-like-basal-iq)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.13.0)
 
 ### 1.12.6 (Released 2018-11-13)
 We added a handy plugin called Beacon to Tidepool Web to provide faster access to our support articles, guides, and walkthroughs. With Beacon, you can also send an email to our support team or even chat live with us if you have questions without leaving the page. Our goal is to get you answers to your questions faster so you can get back to exploring your data. Enjoy!  
@@ -437,6 +443,18 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.9.0 (Released 2018-12-17
+After we finally figured out the exact series of incantations required by Microsoft to grant us the right permissions, Tidepool Uploader now supports Verio and Verio Flex meters on Windows.  
+[Feature Requirements](https://trello.com/c/QvV3uNlH/31-uploader-verio-verio-flex-on-windows)
+
+Tidepool Uploader used to get upset if it tried to read the Active Time Insulin setting on a Medtronic pump that didn't have the bolus wizard enabled. This bug has been resolved, and Tidepool Uploader is much happier now.  
+[Feature Requirements](https://trello.com/c/oMvCEXJV/32-dont-read-active-insulin-time-pre-bolus-wizard-medtronic-5-7-series)
+
+Tidepool Uploader also used to get upset when it encountered corrupted data on Tandem pumps. We've updated the driver to avoid corrupted data, paving the way for more successful uploads.  
+[Feature Requirements](https://trello.com/c/WsbPV97L/33-tandem-driver-gets-stuck-when-packets-are-corrupted)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.9.0)
 
 ### 2.8.6 (Released 2018-11-26)
 We've added a silent option for the Windows installer allowing Tidepool Uploader to be installed from the command line. IT staff at clinics using Tidepool will really appreciate this one.  
@@ -988,13 +1006,20 @@ OmniPod uploads were running into problems if certain error codes were identifie
 ## Tidepool Mobile  
 Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
 
-### 2.0.3 (Released 2018-04-17)  
+### Android - 3.0 (2018-12-04)
+Tidepool Mobile has arrived on Android. See your data, search your notes, and prepare for more meaningful updates now that our Android app is built in React Native.  
+Feature Requirements...there were quite a few  
+[Part 1](https://trello.com/c/bKIgj0ZR/2-tidepool-mobile-3x-cgm-chart-y-axis-does-not-respect-the-mmol-l-units-setting-in-a-consistent-way), [Part 2](https://trello.com/c/zekkuXNp/1-rn-metrics-m), [Part 3](https://trello.com/c/RoxQnQL4/3-rn-bld-25300-app-crashes-the-first-time-it-is-launched-from-play-store-subsequent-launches-work-properly), [Part 4](https://trello.com/c/y7ry0u76/5-rn-ios-date-picker-does-not-come-up-after-selecting-edit-date), [Part 5](https://trello.com/c/SJ8S4Vm7/4-rn-android-app-data-is-not-deleted-when-deleting-the-app), [Part 6](https://trello.com/c/X10lZVXW/6-rn-3025700-date-and-time-does-not-dynamically-refresh-after-editing-the-time-of-a-note), [Part 7](https://trello.com/c/0tJXhKmi/8-default-first-character-in-password-field-is-capitalized-on-some-devices), [Part 8](https://trello.com/c/0sarb6Th/10-changing-the-date-of-a-note-causes-tidepool-mobile-to-crash), [Part 9](https://trello.com/c/W4VKns4V/9-note-flag-does-not-dynamically-update-after-editing-the-note-time), [Part 10](https://trello.com/c/c32gFG1U/11-rn-moving-notes-forward-in-time-is-causing-the-app-to-crash), [Part 11](https://trello.com/c/G4k9AhyN/7-rn-extended-typing-slows-and-drops-keystrokes-when-adding-notes-on-the-blackberry-keyone-android), [Part 12](https://trello.com/c/qL8gh8rl/13-rn-add-code-to-detect-day-changes-and-refresh-relative-dates-accordingly), [Part 13](https://trello.com/c/MwECDRZm/12-cant-log-out-or-switch-profile-on-mobile-without-adding-a-note), [Part 14](https://trello.com/c/6P4xk9wf/14-rn-when-user-has-no-network-and-is-already-logged-in-attempting-to-add-a-note-should-give-user-a-not-connected-to-network-error)
+
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
+
+### iOS - 2.0.3 (Released 2018-04-17)  
 Dexcom uploading has improved, and we’ve updated some behind the scenes components to improve performance and (if we need it) troubleshooting bugs.  
 Feature Requirements...(wait for it)  
 [Part 1](https://trello.com/c/6w9gu1Ze/23-ios-tidepool-mobile-uploader-upload-in-batches-of-2000-instead-of-1000), [Part 2](https://trello.com/c/2IubSfH7/37-ios-tidepool-mobile-after-time-change-on-mobile-device-tidepool-notes-display-at-incorrect-place-on-the-timeline), [Part 3](https://trello.com/c/lsafiu38/26-ios-tidepool-mobile-use-7-tap-on-footer-on-login-screen-and-in-side-menu-to-access-debug-settings), [Part 4](https://trello.com/c/6bOOaSUY/32-ios-tidepool-mobile-uploader-when-user-taps-sync-button-on-initial-sync-the-title-incorrectly-changes-to-manual-sync), [Part 5](https://trello.com/c/VbnuPL3N/31-ios-tidepool-mobile-uploader-text-formatting-issue-in-manual-sync-help-text), [Part 6](https://trello.com/c/AI0NPm8w/34-ios-tidepool-mobile-uploader-show-a-stop-syncing-confirmation-alert-when-user-taps-stop-on-initial-manual-sync), [Part 7](https://trello.com/c/nR4PWzcg/36-ios-tidepool-mobile-simplify-debug-settings-ui), [Part 8](https://trello.com/c/HhQTYS10/35-ios-tidepool-mobile-uploader-instead-of-showing-finished-when-upload-is-finished-just-continue-to-show-x-of-y-days-with-100-prog), [Part 9](https://trello.com/c/CYk71cNo/22-ios-tidepool-mobile-integration-server-is-not-an-option-under-the-the-development-menu), [Part 10](https://trello.com/c/GvGni10O/30-ios-tidepool-mobile-uploader-implement-new-ui-spec-for-uploader-current-samples-and-manual-all-and-manual-last-two-weeks), [Part 11](https://trello.com/c/TG0DBp2w/21-ios-tidepool-mobile-uploader-use-separate-foreground-and-background-sessions-dont-invalidate-sessions), [Part 12](https://trello.com/c/fFWmd7oA/28-ios-tidepool-mobile-uploader-we-should-consider-taking-advantage-of-background-task-registration-to-get-more-time-to-continue-up), [Part 13](https://trello.com/c/DikLviaT/25-ios-tidepool-mobile-logging-appears-to-be-enabled-by-default-on-clean-install-we-should-only-enable-it-if-user-toggles-it-on-via), [Part 14](https://trello.com/c/K6JjrzGM/33-ios-tidepool-mobile-update-bugsee), [Part 15](https://trello.com/c/gRyj0mwi/20-ios-tidepool-mobile-uploader-when-observing-new-samples-in-background-if-we-have-persistent-pending-uploads-just-cancel-them-and), [Part 16](https://trello.com/c/g2ktMcYJ/24-ios-tidepool-mobile-uploader-fix-handling-of-deleted-samples-so-that-observing-reading-deleted-samples-doesnt-cause-the-reader-u), [Part 17](https://trello.com/c/OiEnzl7t/29-ios-tidepool-mobile-uploader-remove-the-phases-and-just-have-a-continuous-current-samples-uploader-and-support-for-manual-all-an), [Part 18](https://trello.com/c/AszRl3WW/27-ios-tidepool-mobile-uploader-improve-logging), [Part 19](https://trello.com/c/i9DvtpgK/38-tidepool-mobile-203-6-series-support) 
 
 [iOS Release](https://appsto.re/us/aXyl9.i)
 
-### App Store Update (Released 2017-06-01)
+### iOS - App Store Update (Released 2017-06-01)
 We've updated the screenshots for the Tidepool Mobile app in the App Store to show data from our demo account, Jill Jellyfish. This helps us add a little context to the experience.  
 [Feature Requirements](https://trello.com/c/DyKCRV7W/14-new-ios-app-store-design-assets-for-tidepool-mobile)
