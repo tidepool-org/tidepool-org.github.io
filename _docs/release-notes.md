@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-12-19
+# Last Updated: 2018-12-21
 
 <hr>
 
@@ -443,6 +443,12 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.9.1 (Released 2018-12-21)
+Coming in hot! We fixed a bug with older Medtronic pumps that incorrectly displayed ISF higher than 256 in bolus tooltips in the Daily View.  
+[Feature Requirements](https://trello.com/c/mcr0cwa0/39-isf-s-way-off-in-device-settings)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.9.1)
 
 ### 2.9.0 (Released 2018-12-17)
 After we finally figured out the exact series of incantations required by Microsoft to grant us the right permissions, Tidepool Uploader now supports Verio and Verio Flex meters on Windows.  
