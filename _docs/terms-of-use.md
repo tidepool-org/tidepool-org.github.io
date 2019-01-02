@@ -21,38 +21,38 @@ Some highlights of these Terms are as follows:
 
 To learn more, please review the following:
 
-1. PwD User Information Ownership  
-  1.1 Your PwD User Rights  
-  1.2 License to Access and Use Information  
-  1.3 Information Security  
-  1.4 Control and Sharing
-2. Care Team Member, Researcher, and Clinician Accounts
-3. Acceptable Use of Tidepool Apps  
-  3.1 Use of Health Information  
-  3.2 Other Uses  
-  3.3 Responsible Disclosure Policy  
-4. Content Licensing and Intellectual Property Rights  
-  4.1 Creative Commons License  
-  4.2 Trademarks and Trade Dress  
-  4.3 Your Information  
-  4.4 Hosted Software  
-5. Availability of Tidepool Apps
-6. Linked Sites and Third Parties
-7. Consent to Communication
-8. Copyright Infringement
-9. Disclaimer of Warranties
-10. Limitation of Liability and Indemnity; One Year to Bring Claims
-11. Arbitration
-12. Changes to the Terms
-13. Changes to the Tidepool Apps
-14. General
-15. Contact Us
+1. [PwD User Information Ownership](#1-pwd-user-information-ownership)  
+  1.1 [Your PwD User Rights](#1.1)  
+  1.2 [License to Access and Use Information](#1.2)  
+  1.3 [Information Security](#1.3)  
+  1.4 [Control and Sharing](#1.4)
+2. [Care Team Member, Researcher, and Clinician Accounts](#2-care-team-member-researcher-and-clinician-accounts)
+3. [Acceptable Use of Tidepool Apps](#3-acceptable-use-of-tidepool-apps)  
+  3.1 [Use of Health Information](#3.1)  
+  3.2 [Other Uses](#3.2)  
+  3.3 [Responsible Disclosure Policy](#3.3)  
+4. [Content Licensing and Intellectual Property Rights](#4-content-licensing-and-intellectual-property-rights)  
+  4.1 [Creative Commons License](#4.1)  
+  4.2 [Trademarks and Trade Dress](#4.2)  
+  4.3 [Your Information](#4.3)  
+  4.4 [Hosted Software](#4.4)  
+5. [Availability of Tidepool Apps](#5-availability-of-tidepool-apps)
+6. [Linked Sites and Third Parties](#6-linked-sites-and-third-parties)
+7. [Consent to Communication](#7-consent-to-communication)
+8. [Copyright Infringement](#8-copyright-infringement)
+9. [Disclaimer of Warranties](#9-disclaimer-of-warranties)
+10. [Limitation of Liability and Indemnity; One Year to Bring Claims](#10-limitation-of-liability-and-indemnity-one-year-to-bring-claims)
+11. [Arbitration](#11-arbitration)
+12. [Changes to the Terms](#12-changes-to-the-terms)
+13. [Changes to the Tidepool Apps](#13-changes-to-the-tidepool-apps)
+14. [General](#14-general)
+15. [Contact Us](#15-contact-us)
 
 ### **1. PwD User Information Ownership**
 
 When a PwD User creates an account with Tidepool, or claims an account created on his or her behalf by a Clinician, etc., the PwD User is the legal owner of the data, notes, files, and other information stored and managed using the Tidepool Apps, including without limitation personally identifiable health information (“Information”).  Care Team Members or Clinicians may provide Information to a PwD User’s account with the PwD User’s permission; this Information is owned by the PwD User. These Terms and our [Privacy Policy](https://developer.tidepool.org/privacy-policy/) shall govern the use of the Information.
 
-1.1 Your PwD User Rights
+<a name="1.1"></a>1.1 Your PwD User Rights
 
 A. As a PwD User, you always retain ownership of the Information in your account, and only you can grant and revoke permission to share it.
 
@@ -70,16 +70,16 @@ F. Clinicians are solely responsible to you for the professional health care and
 
 G. Researchers are solely responsible to you for any responsibility owed to you in connection with any research study in which you participate. Tidepool is not responsible for quality or appropriateness of the methods or manner in which any research study is conducted, or whether research studies are conducted in accordance with applicable laws. Tidepool does not evaluate or endorse Researchers or the research studies they perform, and Tidepool does not supervise, monitor, or control those Researchers’ conduct of those research studies. If you have agreed to participate in a research study, you will do so pursuant to the terms and conditions of any consent you have given to that Researcher.
 
-1.2 License to Access and Use Information  
+<a name="1.2"></a>1.2 License to Access and Use Information  
 
 A. If you choose to grant access to your Information to a Care Team Member, Tidepool, Researchers, Clinicians, third-party applications or third-party diabetes device makers, you hereby grant to such party a non-exclusive, limited right to access and use the applicable Information solely for the specified purpose, including any reuse or re-sharing permissions.
 
 B. To facilitate your use of the Tidepool Apps, you hereby grant to Tidepool a non-exclusive, royalty-free license to use, store, reproduce and display any Information you store or manage through the Tidepool Apps solely as reasonably necessary to operate the Tidepool Apps at your direction and on your behalf, and subject to these Terms and our [Privacy Policy](https://developer.tidepool.org/privacy-policy/).
 
-1.3 Information Security  
+<a name="1.3"></a>1.3 Information Security  
 The security and privacy of your Information is important. Tidepool uses reasonable administrative, physical and technical safeguards to protect the security, confidentiality and integrity of your Information. For example, data that you upload from your diabetes devices is transmitted and stored using industry-standard encryption, as is any personal information or metadata you share with Tidepool. All information and data is encrypted both at rest and during transport. TIDEPOOL SHALL NOT BE RESPONSIBLE OR LIABLE FOR UNAUTHORIZED ACCESS, HACKING, OR OTHER SECURITY INTRUSIONS OR FAILURE TO STORE OR THE THEFT, DELETION, CORRUPTION, DESTRUCTION, DAMAGE, OR LOSS OF ANY DATA OR INFORMATION. 
 
-1.4 Control and Sharing  
+<a name="1.4"></a>1.4 Control and Sharing  
 As described in the [Privacy Policy](https://developer.tidepool.org/privacy-policy/), PwD Users control the Information in their accounts and set permissions for sharing. Through features in the Tidepool Apps, you as a PwD User will always be able to view and change the access rights of your Care Team Members and change your sharing preferences such as sharing with Clinicians, Researchers, Tidepool, third-party applications and third-party device makers.
 
 ### **2. Care Team Member, Researcher, and Clinician Accounts**
@@ -90,7 +90,7 @@ Care Team Members, Clinicians, and Researchers can create accounts with Tidepool
 
 We trust you to use the Tidepool Apps responsibly, and you agree not to misuse them. You must use the Tidepool Apps only for lawful purposes, and you agree to comply with all applicable laws, rules, and regulations in using the Tidepool Apps. You must also respect the privacy and Information of others who use Tidepool Apps and comply with our [Privacy Policy](https://developer.tidepool.org/privacy-policy/). 
 
-3.1 Use of Health Information  
+<a name="3.1"></a>3.1 Use of Health Information  
 We endeavor to operate the Tidepool Apps so that everything we show you is accurate and complete. However, we cannot guarantee that the Tidepool Apps do not have errors or bugs. Even if there are no errors or bugs, it is possible to draw inappropriate conclusions from Information that you see. TIDEPOOL DOES NOT WARRANT AND SHALL NOT BE RESPONSIBLE OR LIABLE FOR THE ACCURACY OR RELIABILITY OF THE INFORMATION ON THE TIDEPOOL APPS. YOU ACCEPT FULL RESPONSIBILITY FOR ANY DECISIONS YOU MAKE REGARDING MEDICAL TREATMENT, THERAPY, OR OTHERWISE.
 
 The Tidepool Apps are informational and management aids only, designed to facilitate the interpretation and exchange of medical and other information, and are not offered or provided for the purpose of diagnosing, treating or prescribing for any illness or injury. Neither the Tidepool Apps nor any service provided by Tidepool is a substitute for the use of professional evaluation and decision-making by appropriately licensed and qualified physicians and other healthcare professionals in making diagnoses and/or treatment decisions. The Tidepool Apps and Tidepool’s services manage and display medical information provided by Users, and Tidepool does not select and cannot assure the accuracy, completeness or currency of any such information. Tidepool does not endorse drugs or other products or services, diagnose any injury, illness, disease or other health condition, or recommend any treatment, therapy or health care provider.
@@ -103,7 +103,7 @@ Tidepool does not assume any responsibility for any aspect of medical services o
 
 If you notice problems or issues with your Information, please double-check it from its source. If you believe there are problems or inaccuracies in the display of your Information in the Tidepool Apps, please let us know by contacting us at [support@tidepool.org](mailto:support@tidepool.org).
 
-3.2 Other Uses  
+<a name="3.2"></a>3.2 Other Uses  
 In addition, here are things you cannot do or attempt to do with Tidepool Apps:
 *   Violate the terms and conditions of the [Privacy Policy](https://developer.tidepool.org/privacy-policy/).
 *   Violate the law or the privacy of others.
@@ -125,23 +125,23 @@ In addition, unless you comply with our Responsible Disclosure Policy (described
 
 Unauthorized access of or tampering with Tidepool’s systems or network security that does not comply with our Responsible Disclosure Policy may result in civil or criminal liability. 
 
-3.3 Responsible Disclosure Policy  
+<a name="3.3"></a>3.3 Responsible Disclosure Policy  
 If you believe you have found a security vulnerability in any of Tidepool’s Apps, Tidepool’s source code or Tidepool’s other systems or network security, we encourage you to let us know right away by submitting a report to [security@tidepool.org](mailto:security@tidepool.org). We will investigate all legitimate reports and do our best to quickly fix the problem.
 
 If you give us reasonable time to respond to your report before making any information public, and make a good faith effort to avoid privacy violations, destruction of data, and interruption or degradation of our service during your research, we will not bring any lawsuit against you or ask law enforcement to investigate you. In addition, to show our appreciation, at our discretion, we may provide a monetary bounty for the reporting of certain security bugs. Bounties are awarded at Tidepool’s sole discretion and are only paid to individuals. Only one bounty may be paid per issue reported. If we provide a bounty, the amount to be awarded will be awarded based on the bug’s severity and creativity, and will be at Tidepool’s sole discretion.
 
 ### **4. Content Licensing and Intellectual Property Rights**
 
-4.1 Creative Commons License  
+<a name="4.1"></a>4.1 Creative Commons License  
 The Tidepool Apps, including all contents, such as text, images, audio, and user interface designs used to generate the applications (collectively, “Tidepool Content”), are generally made available for public sharing and reuse through the [Creative Commons Attribution Share-Alike 3.0 Unported](https://creativecommons.org/licenses/by-sa/3.0/legalcode) license (“Creative Commons License”), or any later version thereof. Some of the Tidepool Content may be acquired from sources that prohibit further use of their content without advance permission. Where possible, the Tidepool App will display a notice with the applicable license relevant to that content. You agree to abide by such licenses. Some Tidepool Content may indicate that the author considers his or her work proprietary and requires prior permission for any use of the work. In such cases, you should contact the author or author’s agent for permission to use the content. The software source code for the Tidepool Apps is made available separately under an open source license. Please see [https://github.com/tidepool-org](https://github.com/tidepool-org) for more information.
 
-4.2 Trademarks and Trade Dress  
+<a name="4.2"></a>4.2 Trademarks and Trade Dress  
 The rights in the trademarks, logos, service marks, and trade dress (collectively “Trademarks”) of Tidepool are not licensed under the Creative Commons License. If you wish to use any of our Trademarks, or if you have any other questions about complying with our licensing terms, you should email [legal@tidepool.org](mailto:legal@tidepool.org). Some Tidepool Content may contain Trademarks of other parties. Except for a few limited circumstances, Trademarks cannot be used without advance written permission of the owner of the Trademark.
 
-4.3 Your Information  
+<a name="4.3"></a>4.3 Your Information  
 We take the intellectual property rights of others seriously and ask you to do the same. You agree that you own or have the necessary rights in and to any and all Information you upload or post to the Tidepool Apps. Not owning or having the necessary rights is a violation of these Terms. 
 
-4.4 Hosted Software  
+<a name="4.4"></a>4.4 Hosted Software  
 We make our applications available both in hosted form - where we run it on Tidepool-managed servers - and also in source code form, where you (or someone else) can download the source code from GitHub ([www.github.com/tidepool-org](http://www.github.com/tidepool-org)), build it, and run it locally or on your own servers. These Terms apply only to the hosted version of the Tidepool Apps, or to Tidepool-compiled, and installable versions of Tidepool Apps.
 
 ### **5. Availability of Tidepool Apps**
