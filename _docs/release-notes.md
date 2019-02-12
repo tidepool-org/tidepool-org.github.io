@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2018-12-21
+# Last Updated: 2019-02-12
 
 <hr>
 
@@ -23,6 +23,30 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.15.0 (Released 2019-02-11)
+We've added the Weekly View to our Print View option. Now you'll get 30 days of blood glucose data in addition to the Basics, Daily, and Device Settings included in the PDF printout. Enjoy!  
+[Feature Requirements](https://trello.com/c/1H0rCVys/8-1150-print-view-weekly)
+
+Automated suspend events (see, Basal-IQ) with no duration information caused Tidepool Web to display an error on the Daily View. That's been fixed now.  
+[Feature Requirements](https://trello.com/c/5arkE8Ra/7-1150web-suspend-without-duration-errors-on-tidepool-web)
+
+For accounts with very little data, Tidepool Web would throw an error message and stop rendering data. Sorry about that, folks. This has been fixed.  
+[Feature Requirements](https://trello.com/c/pEdbpu6t/9-1150-data-indexing-array-error-on-web-on-accounts-w-very-little-data)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.15.0)
+
+### 1.14.1 (Released 2019-01-31)
+Coming in hot! Our handy Beacon helper was blocking important elements - like the "Sign up" button - on smaller phones, so we decided to hide it from the mobile experience.  
+[Feature Requirements](https://trello.com/c/8LDAJNLx/30-beacon-help-icon-overlaps-key-ui-components-for-mobile-signup-workflow)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.14.1)
+
+### 1.14.0 (Released 2019-01-09)
+If you upload insulin data via Tidepool Mobile and happen to have previously uploaded Medtronic 523 or 723 pump data, we'll automatically hide your Medtronic pump data from any direct Tidepool Uploader uploads during or after September 2017 (when Apple Health was first introduced). You're data is still there, but we figure it's best to avoid duplicate data.  
+[Feature Requirements](https://trello.com/c/M7DAflId/5-blip-when-insulin-healthkit-uploads-begin-hide-medtronic-direct-uploads-after-insulin-healthkit-introduction-began-september-201)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.14.0)
 
 ### 1.13.0 (Released 2018-12-19)
 Adding support for Basal-IQ data brought to light the fact that we do not differentiate between basal rates that are manually and automatically suspended. We added a friendly indicator to denote the times basal rates were automatically suspended.  
@@ -443,6 +467,12 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.10.1 (Released 2019-01-30)
+You may think dependency updates are not exciting, but without this work, all the fun things we have planned for the future aren't possible. Trust me, this is exciting stuff.  
+[Feature Requirements](https://trello.com/c/2DYR2Xlx/14-update-dependencies-including-electron-v3)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.10.1)
 
 ### 2.9.1 (Released 2018-12-21)
 Coming in hot! We fixed a bug with older Medtronic pumps that incorrectly displayed ISF higher than 256 in bolus tooltips in the Daily View.  
@@ -1011,6 +1041,13 @@ OmniPod uploads were running into problems if certain error codes were identifie
 
 ## Tidepool Mobile  
 Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
+
+### iOS - 2.1.9 (2019-01-16)
+Tidepool Mobile on iOS now supports insulin, carbohydrate, blood glucose, workouts, and biological sex data from Apple Health. We're really proud of this one.  
+Feature Requirements...deep breath!
+[Part 1](https://trello.com/c/lnkOTQTQ/24-tidepool-mobile-216-was-in-testflight-those-cards-are-also-included-in-this-app-store-release), [Part 2](https://trello.com/c/uZ32zjqU/23-218-biological-sex-values-should-be-lowercase), [Part 3](https://trello.com/c/UnhnMZkE/22-218-default-logging-off-for-release), [Part 4](https://trello.com/c/KUzBN2Db/21-219-display-carbs-from-platform-which-are-not-associated-with-bolus-calculator-ie-wizard-event-in-tidepool-mobile), [Part 5](https://trello.com/c/9OdPJi0b/19-ios-gap-in-bg-data-just-prior-to-sync-when-updating-existing-tidepool-mobile-app), [Part 6](https://trello.com/c/KCHyLZsC/20-update-cgm-whitelisting-to-accommodate-international-version-of-dexcom), [Part 7](https://trello.com/c/QZLiSUQI/16-216-default-logging-on-for-trial), [Part 8](https://trello.com/c/dIbTS3CS/15-216-cbg-and-smbg-readings-70-79-are-being-displayed-in-mobile-216-as-low-readings-in-red), [Part 9](https://trello.com/c/xoYvv9R8/18-216-bugsee-issue-sync-ui-left-at-blank-progress), [Part 10](https://trello.com/c/uQjkcYAB/17-add-date-printout-in-log-to-help-with-debugging-logs)
+
+[iOS Release](https://appsto.re/us/aXyl9.i)
 
 ### Android - 3.0 (2018-12-04)
 Tidepool Mobile has arrived on Android. See your data, search your notes, and prepare for more meaningful updates now that our Android app is built in React Native.  
