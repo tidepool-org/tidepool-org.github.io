@@ -28,7 +28,7 @@ Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/
 There was a data paging bug that was triggered in instances where a large gap of time without data is followed by a data point that is diabetes-specific (like a data point) rather than device-related (like an insulin pump event). In such cases, data that occurs before the gap would not be segmented and loaded (we call this paging), but instead would be fetched and processed all at once. Depending on how much data exists before the gap, the browser will either slow or crash. Which is a bummer, so we fixed that.  
 [Feature Requirements](https://trello.com/c/6tfqWKVM/6-v1170-some-user-accounts-processing-all-fetched-data-at-once)
 
-Carb events not associated with a bolus are now displayed in Tidepool Web. Here's looking at you, people entering carbs as Dexcom events or folks uploading carb data via Apple Health.  
+Carb events uploaded from Apple Health that are not associated with a bolus are now displayed in Tidepool Web.  
 [Feature Requirements](https://trello.com/c/0WUNaQS6/5-v1170-display-carbs-from-platform-which-are-not-associated-with-bolus-calculator-ie-wizard-event-in-tidepool-web)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.17.0)
@@ -519,7 +519,7 @@ Insulin on board (IOB) for Omnipod uploads was not shown when either the meal or
 [Feature Requirements](https://trello.com/c/tWxKUIcy/17-v2110-omnipod-iob-possibly-miscalculated)
 
 We also addressed instances where device settings on Medtronic 5/7 series pumps were wonky and unexpected. Wonky is a technical term, btw.  
-[Feature Requirements](https://trello.com/c/tWxKUIcy/17-v2110-omnipod-iob-possibly-miscalculated)
+[Feature Requirements](https://trello.com/c/lCuz9PZ5/18-v2110-medtronic-5-7-series-could-not-find-bolus-wizard-settings)
 
 For Tandem pumps that haven't been uploaded in a while, uploads would freeze at 16%. Now that that's been fixed, we'd like to welcome back your lovely t:slim data.  
 [Feature Requirements](https://trello.com/c/i9Dhg0VO/19-v2110-tandem-16-upload-failure)
