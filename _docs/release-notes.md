@@ -40,7 +40,7 @@ Coming in hot! We noticed this after releasing v1.16.0: when logged in as a clin
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.16.1)
 
 ### 1.16.0 (Released 2019-02-28)
-This is a big one, folks. Tidepool Web now shows a bunch of new aggregated statistics including more detailed time in range calculations, basal/bolus breakdowns, sensor usage, standard deviation, coefficient of variation, and a Glucose Management Indicator (GMI). It's quite lovely, and a hefty design and engineering effort. Here's what went down.  
+This is a big one, folks. Tidepool Web now shows a bunch of new aggregated statistics including more detailed time-in-range calculations, basal/bolus breakdowns, sensor usage, standard deviation, coefficient of variation, and a Glucose Management Indicator (GMI). It's quite lovely, and a hefty design and engineering effort. Here's what went down.  
 
 Here's the bulk of the work, adding standardized aggregated statistics to each view in Tidepool Web.  
 [Feature Requirements](https://trello.com/c/suWzyusJ/31-v1160-standardize-aggregated-agg-stats-widgets-data-viz-general)
