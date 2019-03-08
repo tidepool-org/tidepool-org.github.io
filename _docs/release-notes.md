@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2019-02-12
+# Last Updated: 2019-03-07
 
 <hr>
 
@@ -23,6 +23,50 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.17.0 (Released 2019-03-05)
+There was a data paging bug that was triggered in instances where a large gap of time without data is followed by a data point that is diabetes-specific (like a data point) rather than device-related (like an insulin pump event). In such cases, data that occurs before the gap would not be segmented and loaded (we call this paging), but instead would be fetched and processed all at once. Depending on how much data exists before the gap, the browser will either slow or crash. Which is a bummer, so we fixed that.  
+[Feature Requirements](https://trello.com/c/6tfqWKVM/6-v1170-some-user-accounts-processing-all-fetched-data-at-once)
+
+Carb events uploaded from Apple Health or coming in from the Dexcom API that are not associated with a bolus are now displayed in Tidepool Web. We'll get to independent carb events from Tidepool Uploader soon.  
+[Feature Requirements](https://trello.com/c/0WUNaQS6/5-v1170-display-carbs-from-platform-which-are-not-associated-with-bolus-calculator-ie-wizard-event-in-tidepool-web)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.17.0)
+
+### 1.16.1 (Released 2019-03-01)
+Coming in hot! We noticed this after releasing v1.16.0: when logged in as a clinician, the scrollbar in the patient list disappeared. I'm told by our engineers this was a 2-line fix. Sounds simple enough.  
+[Feature Requirements](https://trello.com/c/EMApNn9D/2-regression-scrollbar-missing-from-vca-patients-list)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.16.1)
+
+### 1.16.0 (Released 2019-02-28)
+This is a big one, folks. Tidepool Web now shows a bunch of new aggregated statistics including more detailed time-in-range calculations, basal/bolus breakdowns, sensor usage, standard deviation, coefficient of variation, and a Glucose Management Indicator (GMI). It's quite lovely, and a hefty design and engineering effort. Here's what went down.  
+
+Here's the bulk of the work, adding standardized aggregated statistics to each view in Tidepool Web.  
+[Feature Requirements](https://trello.com/c/suWzyusJ/31-v1160-standardize-aggregated-agg-stats-widgets-data-viz-general)
+
+During testing, we noticed a bunch of bugs that got resolved along the way including...this one that showed 7 days of data across 8 calendar days. Math is hard.  
+[Feature Requirements](https://trello.com/c/eChXb9fM/30-v1160-trends-view-is-showing-7-days-of-data-across-8-calendar-days)
+
+And Daylight Saving Time anomalies were detected and resolved, too.  
+[Feature Requirements](https://trello.com/c/ys6jgrZG/29-v1160-dst-anomalies-on-trends-view)
+
+Tooltips in the Trends view were not behaving as intended, but we got them back in line.  
+[Feature Requirements](https://trello.com/c/odgzZl39/28-v1160-trends-tooltips-display-behind-the-new-agg-stats)
+
+Initial data loading in the Trends view didn't always include all the appropriate CGM data. That got fixed, too.  
+[Feature Requirements](https://trello.com/c/ok6BjAPE/27-v1160-immediately-after-initial-load-cgm-data-not-accessible-in-trends-view)
+
+While we were in the code, we fixed some of the abbreviations for unit measurements.  
+[Feature Requirements](https://trello.com/c/LobK0FUb/32-v1160-units-abbreviations-should-be-capitalized-on-daily-view-chart-headers)
+
+We noticed user-entered data was not being included in the Average Daily Insulin widget, but we caught that before everything was published.  
+[Feature Requirements](https://trello.com/c/8w4zfRPq/34-v1160-regression-user-entered-data-for-the-new-avg-daily-insulin-widget-does-not-persist)
+
+And, Tidepool Web has a new font, just like our marketing site. The coordination is clutch.  
+[Feature Requirements](https://trello.com/c/nCSk7Bn6/33-v1160-swap-font-families-in-apptidepool-from-open-sans-to-basis)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.16.0)
 
 ### 1.15.0 (Released 2019-02-11)
 We've added the Weekly View to our Print View option. Now you'll get 30 days of blood glucose data in addition to the Basics, Daily, and Device Settings included in the PDF printout. Enjoy!  
@@ -467,6 +511,23 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.11.0 (Released 2019-02-20)
+It's another bug bash bonanza!
+
+Insulin on board (IOB) for Omnipod uploads was not shown when either the meal or correction IOB was zero. That's been fixed.  
+[Feature Requirements](https://trello.com/c/tWxKUIcy/17-v2110-omnipod-iob-possibly-miscalculated)
+
+We also addressed instances where device settings on Medtronic 5/7 series pumps were wonky and unexpected. Wonky is a technical term, btw.  
+[Feature Requirements](https://trello.com/c/lCuz9PZ5/18-v2110-medtronic-5-7-series-could-not-find-bolus-wizard-settings)
+
+For Tandem pumps that haven't been uploaded in a while, uploads would freeze at 16%. Now that that's been fixed, we'd like to welcome back your lovely t:slim data.  
+[Feature Requirements](https://trello.com/c/i9Dhg0VO/19-v2110-tandem-16-upload-failure)
+
+Sometimes we match up automated suspend events with the wrong automated resume event, which caused all sorts of problems. If you want to get technical, this is called a "negative duration"...anyway, that's fixed, too.  
+[Feature Requirements](https://trello.com/c/GI0fUhFD/20-v2110-negative-duration-for-automated-suspend-resume)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.11.0)
 
 ### 2.10.1 (Released 2019-01-30)
 You may think dependency updates are not exciting, but without this work, all the fun things we have planned for the future aren't possible. Trust me, this is exciting stuff.  
