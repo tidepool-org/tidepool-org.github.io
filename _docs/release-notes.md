@@ -515,7 +515,7 @@ If you already have the Tidepool Uploader installed on your computer, it will au
 ### 2.11.0 (Released 2019-02-20)
 It's another bug bash bonanza!
 
-Insulin on board (IOB) for Omnipod uploads was miscalculated when either the meal or correction IOB was zero. That's been fixed.  
+Insulin on board (IOB) for Omnipod uploads was not shown when either the meal or correction IOB was zero. That's been fixed.  
 [Feature Requirements](https://trello.com/c/tWxKUIcy/17-v2110-omnipod-iob-possibly-miscalculated)
 
 We also addressed instances where device settings on Medtronic 5/7 series pumps were wonky and unexpected. Wonky is a technical term, btw.  
