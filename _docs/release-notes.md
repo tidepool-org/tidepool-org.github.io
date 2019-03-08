@@ -28,7 +28,7 @@ Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/
 There was a data paging bug that was triggered in instances where a large gap of time without data is followed by a data point that is diabetes-specific (like a data point) rather than device-related (like an insulin pump event). In such cases, data that occurs before the gap would not be segmented and loaded (we call this paging), but instead would be fetched and processed all at once. Depending on how much data exists before the gap, the browser will either slow or crash. Which is a bummer, so we fixed that.  
 [Feature Requirements](https://trello.com/c/6tfqWKVM/6-v1170-some-user-accounts-processing-all-fetched-data-at-once)
 
-Carb events uploaded from Apple Health that are not associated with a bolus are now displayed in Tidepool Web.  
+Carb events uploaded from Apple Health or coming in from the Dexcom API that are not associated with a bolus are now displayed in Tidepool Web. We'll get to independent carb events from Tidepool Uploader soon.  
 [Feature Requirements](https://trello.com/c/0WUNaQS6/5-v1170-display-carbs-from-platform-which-are-not-associated-with-bolus-calculator-ie-wizard-event-in-tidepool-web)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.17.0)
