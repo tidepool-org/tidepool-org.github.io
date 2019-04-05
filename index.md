@@ -38,9 +38,9 @@ The intended audience for this microsite is software developers, but others may 
 * Project Management references, including:
   * Our [Product Priorities](https://trello.com/b/JTCsoGjd/current-quarter-product-priorities) board on Trello organizes and defines the work identified in our [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board.
   * Our past three months of completed tasks:
+    * [April 2019](https://trello.com/b/QuNFk1OX/done-2019-04)
     * [March 2019](https://trello.com/b/aH0HN4kh/done-2019-03)
     * [February 2019](https://trello.com/b/Kxa0Uerr/done-2019-02)
-    * [January 2019](https://trello.com/b/RIUnm4pR/done-2019-01)
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
 * Our [Release Notes](release-notes).
 
