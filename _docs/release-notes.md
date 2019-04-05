@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2019-03-07
+# Last Updated: 2019-04-04
 
 <hr>
 
@@ -23,6 +23,15 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.18.0 (Released 2019-03-28)
+Accounts with extremely wide variability made our standard deviation widget unhappy, causing Tidepool Web to crash. We've crunched the numbers and resolved this bug.  
+[Feature Requirements](https://trello.com/c/YcHZj4dI/27-tidepool-web-crashes-when-rendering-sd-stat-widget-when-sd-mean)
+
+For accounts with default blood glucose targets, we noticed the 70 and 54 on the y-axis in the Trends view were displayed on top of each other. This only happened in certain scenarios, but it's sill not a good look so we fixed this bug.  
+[Feature Requirements](https://trello.com/c/EnbpV4VY/28-on-int-prod-with-default-target-bg-range-the-trends-y-axis-displays-70-and-54-on-top-of-one-another-for-t-slim-animas-omnipod-an)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.18.0)
 
 ### 1.17.0 (Released 2019-03-05)
 There was a data paging bug that was triggered in instances where a large gap of time without data is followed by a data point that is diabetes-specific (like a data point) rather than device-related (like an insulin pump event). In such cases, data that occurs before the gap would not be segmented and loaded (we call this paging), but instead would be fetched and processed all at once. Depending on how much data exists before the gap, the browser will either slow or crash. Which is a bummer, so we fixed that.  
@@ -511,6 +520,18 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.12.0
+Any day we can add support for new devices is a good day. We'd like to welcome Roche's Accu-Chek Aviva Connect and Guide blood glucose meters to the fun. You can now upload your blood glucose data from those meters using the latest version of Tidepool Uploader.  
+[Feature Requirements](https://trello.com/c/LJRUheVG/12-v2120-roche-accu-chek-meters)
+
+LZO is a lossless data compression algorithm that we use to help move your data from Medtronic 600-series pumps to your Tidepool account quickly. Open source advocates may have noticed we were previously using a library with a GPL-licensed implementation. Now we're running an LGPL-based implementation of LZO.  
+[Feature Requirements](https://trello.com/c/IMEQd5Pm/10-v2120-find-use-non-gpl-lzo-library-for-uploader)
+
+We noticed an issue with Tandem t:slim X2 pumps with CGM data when regular readings that occurred every five minutes and Backfill values were overlapping and they weren't getting deduplicated because their timestamps were not identical. Thankfully, this has now been fixed.  
+[Feature Requirements](https://trello.com/c/KOMs7WP2/11-v2120-tandem-x2-importing-duplicate-cgm-values)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.12.0)
 
 ### 2.11.0 (Released 2019-02-20)
 It's another bug bash bonanza!
@@ -1103,14 +1124,78 @@ OmniPod uploads were running into problems if certain error codes were identifie
 ## Tidepool Mobile  
 Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
 
-### iOS - 2.1.9 (2019-01-16)
+### Android - 3.0.2 (Released 2019-04-04)
+We addressed how you interact with notes in Tidepool Mobile. Specifically:  
+Care team members should not be able to delete notes created by the person with diabetes.  
+[Feature Requirements](https://trello.com/c/YZldb9Cd/4-rn-care-team-members-should-not-be-able-to-delete-notes-created-by-the-pwd)
+
+Users should be able to delete notes that a care team member adds to their account.  
+[Feature Requirements](https://trello.com/c/vi4RT6lC/3-rn-pwd-users-should-be-able-to-delete-a-note-that-a-care-team-member-adds-to-their-account)
+
+And, care team members should only be able to delete notes they create.  
+[Feature Requirements](https://trello.com/c/gFnvvn1z/2-rn-care-team-members-should-be-able-to-delete-notes-they-created)
+
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin))
+
+### iOS - 2.1.11 (Released 2019-03-27)
+We've updated how Tidepool Mobile translates HealthKit data to match our data model. It's nothing you'll notice unless you look under the hood, but our backend engineers are much happier now - which is always nice.  
+[Feature Requirements](https://trello.com/c/93DcT6hS/22-ios-rn-tidepool-mobile-should-use-service-for-origintype-field-rather-than-manual)
+
+We noticed a bug that prevented workouts data from uploading properly, and buttoned that one up so future uploads would not cause an error.  
+[Feature Requirements](https://trello.com/c/u5hPQeer/23-ios-crashes-during-sync-to-health-from-a-new-workout-type)
+
+[iOS Release](https://appsto.re/us/aXyl9.i)
+
+### Android 3.0.1 (Released 2019-03-26)
+We've updated the SDK that supports Tidepool Mobile to Expo 31. Yay!  
+[Feature Requirements](https://trello.com/c/2r3yD8Rf/18-rn-expo-31)
+
+As our Android and iOS versions of Tidepool Mobile take on similar version numbers, we need to easily identify which platform is being used in our reporting tools. We're good now.  
+[Feature Requirements](https://trello.com/c/Pqfmwqtv/19-rn-differentiate-android-and-ios-in-kissmetrics)
+
+Our initial Android release asked for a lot of permissions that were unnecessary. We've reduced those requests significantly to ensure we stay in our lane.  
+[Feature Requirements](https://trello.com/c/52mBPh19/20-rn-reduce-android-permissions-requests)
+
+Android phones trying to view data from DIY Loop were not happy, and often crashed. Not wanting to leave anyone out of the fun, we've fixed this bug.  
+[Feature Requirements](https://trello.com/c/j9lzOsIJ/21-rn-note-visualization-fails-in-301-37300)
+
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
+
+### iOS - 2.1.10 (Released 2019-02-16)
+Now that Tidepool Mobile can support biological sex, we've finished the work to allow this data from Apple Health to update your profile if it wasn't previously set.  
+[Feature Requirements](https://trello.com/c/76bqo44s/35-add-biologicalsex-from-healthkit-to-tidepool)
+
+CGM data from International versions of Dexcom Mobile were not being registered as CGM data...which was odd. And now that's fixed.  
+[Feature Requirements](https://trello.com/c/l5aiZR6Y/36-ios-cbg-whitelisting-changed-so-it-will-catch-any-sourcename-that-includes-dexcom)
+
+We fixed some spacing issues that occurred when a carb entry was masking a low blood glucose data point.  
+[Feature Requirements](https://trello.com/c/1nYsQ3lq/37-ios-219-fix-padding-spacing-so-that-carbs-dont-cover-low-bgs)
+
+Blood glucose data will now display in mmol/L if you've set that as your display unit preference. If you were a fan of dividing by 18.01559 in your head, that's cool. We hope this will make things easier for everyone else.  
+[Feature Requirements](https://trello.com/c/MZ2iLbeW/38-ios-add-mmol-l-support)
+
+If you changed your default blood glucose targets in Tidepool Web, you should expect to see those same targets in Tidepool Mobile. We noticed a bug that indicated this wasn't the case. Now that's actually happened.  
+[Feature Requirements](https://trello.com/c/WjbeaNWn/39-ios-217-vis-bg-thresholds-not-adhering-to-user-customized-settings)
+
+The combination of smaller screens and longer notes caused some jittering when notes were being typed out. We've fixed this bug.  
+[Feature Requirements](https://trello.com/c/heSUQMwJ/40-ios-219-adding-comments-to-notes-on-tm217-results-in-jitter-effect-on-smaller-screens-longer-comments)
+
+Keeping current, Tidepool Mobile now runs on Swift 4.2.  
+[Feature Requirements](https://trello.com/c/Zl4i0oES/42-ios-219-update-for-swift-42)
+
+Investigating recent crash reports from the App Store has led us to a few small fixes that should improve things for our users. Thanks for sending those reports in everyone!  
+[Feature Requirements](https://trello.com/c/LjUr7Mqs/41-ios-219-582-app-store-crash-reports)
+
+[iOS Release](https://appsto.re/us/aXyl9.i)
+
+### iOS - 2.1.9 (Released 2019-01-16)
 Tidepool Mobile on iOS now supports insulin, carbohydrate, blood glucose, workouts, and biological sex data from Apple Health. We're really proud of this one.  
 Feature Requirements...deep breath!
 [Part 1](https://trello.com/c/lnkOTQTQ/24-tidepool-mobile-216-was-in-testflight-those-cards-are-also-included-in-this-app-store-release), [Part 2](https://trello.com/c/uZ32zjqU/23-218-biological-sex-values-should-be-lowercase), [Part 3](https://trello.com/c/UnhnMZkE/22-218-default-logging-off-for-release), [Part 4](https://trello.com/c/KUzBN2Db/21-219-display-carbs-from-platform-which-are-not-associated-with-bolus-calculator-ie-wizard-event-in-tidepool-mobile), [Part 5](https://trello.com/c/9OdPJi0b/19-ios-gap-in-bg-data-just-prior-to-sync-when-updating-existing-tidepool-mobile-app), [Part 6](https://trello.com/c/KCHyLZsC/20-update-cgm-whitelisting-to-accommodate-international-version-of-dexcom), [Part 7](https://trello.com/c/QZLiSUQI/16-216-default-logging-on-for-trial), [Part 8](https://trello.com/c/dIbTS3CS/15-216-cbg-and-smbg-readings-70-79-are-being-displayed-in-mobile-216-as-low-readings-in-red), [Part 9](https://trello.com/c/xoYvv9R8/18-216-bugsee-issue-sync-ui-left-at-blank-progress), [Part 10](https://trello.com/c/uQjkcYAB/17-add-date-printout-in-log-to-help-with-debugging-logs)
 
 [iOS Release](https://appsto.re/us/aXyl9.i)
 
-### Android - 3.0 (2018-12-04)
+### Android - 3.0 (Released 2018-12-04)
 Tidepool Mobile has arrived on Android. See your data, search your notes, and prepare for more meaningful updates now that our Android app is built in React Native.  
 Feature Requirements...there were quite a few  
 [Part 1](https://trello.com/c/bKIgj0ZR/2-tidepool-mobile-3x-cgm-chart-y-axis-does-not-respect-the-mmol-l-units-setting-in-a-consistent-way), [Part 2](https://trello.com/c/zekkuXNp/1-rn-metrics-m), [Part 3](https://trello.com/c/RoxQnQL4/3-rn-bld-25300-app-crashes-the-first-time-it-is-launched-from-play-store-subsequent-launches-work-properly), [Part 4](https://trello.com/c/y7ry0u76/5-rn-ios-date-picker-does-not-come-up-after-selecting-edit-date), [Part 5](https://trello.com/c/SJ8S4Vm7/4-rn-android-app-data-is-not-deleted-when-deleting-the-app), [Part 6](https://trello.com/c/X10lZVXW/6-rn-3025700-date-and-time-does-not-dynamically-refresh-after-editing-the-time-of-a-note), [Part 7](https://trello.com/c/0tJXhKmi/8-default-first-character-in-password-field-is-capitalized-on-some-devices), [Part 8](https://trello.com/c/0sarb6Th/10-changing-the-date-of-a-note-causes-tidepool-mobile-to-crash), [Part 9](https://trello.com/c/W4VKns4V/9-note-flag-does-not-dynamically-update-after-editing-the-note-time), [Part 10](https://trello.com/c/c32gFG1U/11-rn-moving-notes-forward-in-time-is-causing-the-app-to-crash), [Part 11](https://trello.com/c/G4k9AhyN/7-rn-extended-typing-slows-and-drops-keystrokes-when-adding-notes-on-the-blackberry-keyone-android), [Part 12](https://trello.com/c/qL8gh8rl/13-rn-add-code-to-detect-day-changes-and-refresh-relative-dates-accordingly), [Part 13](https://trello.com/c/MwECDRZm/12-cant-log-out-or-switch-profile-on-mobile-without-adding-a-note), [Part 14](https://trello.com/c/6P4xk9wf/14-rn-when-user-has-no-network-and-is-already-logged-in-attempting-to-add-a-note-should-give-user-a-not-connected-to-network-error)
