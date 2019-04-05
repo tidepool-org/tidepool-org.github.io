@@ -28,7 +28,7 @@ Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/
 Accounts with extremely wide variability made our standard deviation widget unhappy, causing Tidepool Web to crash. We've crunched the numbers and resolved this bug.  
 [Feature Requirements](https://trello.com/c/YcHZj4dI/27-tidepool-web-crashes-when-rendering-sd-stat-widget-when-sd-mean)
 
-For accounts with default blood glucose targets, we noticed the 70 and 54 on the y-axis in the Trends view were displayed on top of each other. This only happened in certain scenarios, but it's sill not a good look so we fixed this bug.  
+For accounts with default blood glucose targets, we noticed the 70 and 54 on the y-axis in the Trends view were displayed on top of each other. This only happened in certain scenarios, but it's still not a good look so we fixed this bug.  
 [Feature Requirements](https://trello.com/c/EnbpV4VY/28-on-int-prod-with-default-target-bg-range-the-trends-y-axis-displays-70-and-54-on-top-of-one-another-for-t-slim-animas-omnipod-an)
 
 [Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.18.0)
