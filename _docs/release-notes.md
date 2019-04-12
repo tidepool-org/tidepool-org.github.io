@@ -521,7 +521,7 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
-### 2.12.0
+### 2.12.0 (Released 2019-03-13)
 Any day we can add support for new devices is a good day. We'd like to welcome Roche's Accu-Chek Aviva Connect and Guide blood glucose meters to the fun. You can now upload your blood glucose data from those meters using the latest version of Tidepool Uploader.  
 [Feature Requirements](https://trello.com/c/LJRUheVG/12-v2120-roche-accu-chek-meters)
 
