@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2019-04-04
+# Last Updated: 2019-04-19
 
 <hr>
 
@@ -23,6 +23,15 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.19.0 (Released 2019-04-15)
+Some users wearing Medtronic 530G were not seeing their device settings. That's our bad. This has been fixed.  
+[Feature Requirements](https://trello.com/c/xNVdNQ1W/23-medtronic-pumps-not-showing-device-settings-530g)
+
+A few users experienced a crash when trying to access their profile page. Turns out this was a result of people attempting to support a nonprofit organization that was removed from the Big Data Donation Project list. Shoutout to fans of the Diabetes Hands Foundation. This bug has been fixed.  
+[Feature Requirements](https://trello.com/c/1JmHhwKi/22-profile-page-crashing-post-removal-of-bdd-target)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.19.0)
 
 ### 1.18.0 (Released 2019-03-28)
 Accounts with extremely wide variability made our standard deviation widget unhappy, causing Tidepool Web to crash. We've crunched the numbers and resolved this bug.  
@@ -520,6 +529,30 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.13.0 (Released 2019-04-17)
+This is fun. We've added a friendly pop up dialog that reminds users uploading Medtronic 600-series devices to accept the requested ad-hoc connection attempt on the pump itself.  
+[Feature Requirements](https://trello.com/c/s7Oo8h3O/29-600-series-feature-add-ui-to-remind-user-to-accept-ad-hoc-connection-on-the-pump)
+
+We improved our driver for Medtronic 600-series pumps ensuring pump history records stay intact between changes.  
+[Feature Requirements](https://trello.com/c/WoixEsvg/28-600-series-driver-does-not-handle-changes-in-pump-history-correctly)
+
+Tidepool Uploader now properly captures carbs that are entered in a bolus calculator without insulin delivery. Like if you're treating a low.  
+[Feature Requirements](https://trello.com/c/dZsluC3F/30-bug-carbs-not-visualized-for-calculator-bolus-that-includes-carbs-but-no-insulin-delivery)
+
+We improved unit tests for supported Medtronic 500/700-series pumps to make sure we're checking the full range of settings every time we work on a new version of Tidepool Uploader.  
+[Feature Requirements](https://trello.com/c/eHfq035X/32-add-comprehensive-data-parsing-unit-tests-for-medtronic-5-7-series-devices)
+
+While we're at it, we improved unit tests for supported Medtronic 600-series pumps, too.  
+[Feature Requirements](https://trello.com/c/SGVkYfHa/31-uploader-add-comprehensive-data-parsing-unit-tests-for-medtronic-6-series-devices)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.13.0)
+
+### 2.12.1 (Released 2019-04-17)
+Coming in hot, we fixed a bug that caused some TrueMetrix meter uploads to fail. Sorry about that one!  
+[Feature Requirements](https://trello.com/c/vHqdHJVc/26-truemetrix-error-checksums-not-matching)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.12.1)
 
 ### 2.12.0 (Released 2019-03-13)
 Any day we can add support for new devices is a good day. We'd like to welcome Roche's Accu-Chek Aviva Connect and Guide blood glucose meters to the fun. You can now upload your blood glucose data from those meters using the latest version of Tidepool Uploader.  
