@@ -2449,10 +2449,6 @@ body { -webkit-tap-highlight-color: none; }
 
 /*		Default Layout: 992px. */
 
-body {
-	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
-}
-
 
 
 /*		Tablet Layout: 768px. */
