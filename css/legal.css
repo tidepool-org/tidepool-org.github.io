@@ -308,7 +308,7 @@ body {
 }
 
 #subsidiary .aside {
-	width: 300px;
+	width: 320px;
 	float: left;
 	margin: 0 20px 0 0;
 }
@@ -2448,7 +2448,10 @@ body { -webkit-tap-highlight-color: none; }
 
 
 /*		Default Layout: 992px. */
-
+/* 
+body {	
+	-webkit-text-size-adjust: none; 	
+}	 */
 
 
 /*		Tablet Layout: 768px. */
@@ -2551,7 +2554,7 @@ body { -webkit-tap-highlight-color: none; }
 	}
 
 	.global-width {
-		width: 708px;
+		width: 780px;
 	}
 
 	#promo_blocks-home {
@@ -2618,7 +2621,7 @@ body { -webkit-tap-highlight-color: none; }
 @media only screen and (max-width: 767px) {
 
 	.global-width {
-		width: 300px;
+		width: 320px;
 	}
 
 	#promo_blocks-home {
@@ -2727,7 +2730,7 @@ body { -webkit-tap-highlight-color: none; }
 	}
 
 	.mc_embed_signup {
-		width: 300px;
+		width: 320px;
 	}
 
 	#main {
