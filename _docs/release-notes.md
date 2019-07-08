@@ -650,7 +650,7 @@ And now we're rolling out more test environments to improve our development proc
 We created a script that automatically submits a notification to Anti-virus vendors like McAffe and Kaspersky when new versions of Tidepool Uploader are released.  
 [Feature Requirements](https://trello.com/c/Wv9TE21v/55-update-script-to-whitelist-with-kaspersky-and-mcafee-automatically)
 
-We now store Omnipod IBF files in our "blog" service, which helps tremendously when we are troubleshooting reported bugs from our users. (We already do this for Medtronic uploads.)  
+We now store Omnipod IBF files in our "blob" service, which helps tremendously when we are troubleshooting reported bugs from our users. (We already do this for Medtronic uploads.)  
 [Feature Requirements](https://trello.com/c/4QWiAbBj/56-store-omnipod-ibfs-using-blob-service)
 
 We used to record date and time change events from the Libre scanner as two separate time change events, when we want to have concurrent date and time change events appear as a single time change event in Tidepool Web. So we fixed that bug.  
