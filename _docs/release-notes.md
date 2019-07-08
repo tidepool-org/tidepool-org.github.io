@@ -647,7 +647,7 @@ Continuing the user experience improvement train, the design of our Mac Installe
 And now we're rolling out more test environments to improve our development process, development builds of Tidepool Uploader need to access them.  
 [Feature Requirements](https://trello.com/c/2wTVDU61/54-uploader-add-qa1-environment-to-uploader-server-list)
 
-We created a script that automatically submits a notification to Anti-virus vendors like McAffe and Kaspersky when new versions of Tidepool Uploader are released.  
+We created a script that automatically submits a notification to antivirus vendors like McAfee and Kaspersky when new versions of Tidepool Uploader are released.  
 [Feature Requirements](https://trello.com/c/Wv9TE21v/55-update-script-to-whitelist-with-kaspersky-and-mcafee-automatically)
 
 We now store Omnipod IBF files in our "blob" service, which helps tremendously when we are troubleshooting reported bugs from our users. (We already do this for Medtronic uploads.)  
