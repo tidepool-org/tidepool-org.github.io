@@ -1298,7 +1298,7 @@ And addressed a design issue that prevented users from opening a note created as
 [iOS Release](https://appsto.re/us/aXyl9.i)
 
 ### Android - 3.0.5 (Released 2019-06-13)
-Technically this work also supports our eventual iOS update to a React Native code base soe both Android and iOS versions of Tidepool Mobile will be using the same code base. This update continues to iterate upon the tooltips that display for fresh installs. We'll get to updating the current iOS release with these tooltips soon.  
+Technically this work also supports our eventual iOS update to a React Native code base so both Android and iOS versions of Tidepool Mobile will be using the same code base. This update continues to iterate upon the tooltips that display for fresh installs. We'll get to updating the current iOS release with these tooltips soon.  
 [Feature Requirements](https://trello.com/c/fLxUlrsx/15-rn-add-the-add-note-prompt-back-into-tidepool-mobile)
 
 [Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
