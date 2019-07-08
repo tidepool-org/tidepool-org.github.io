@@ -15,7 +15,7 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 * [Jump to Tidepool Uploader Updates](#tidepool-uploader)  
 * [Jump to Tidepool Mobile Updates](#tidepool-mobile)  
 
-# Last Updated: 2019-04-19
+# Last Updated: 2019-07-05
 
 <hr>
 
@@ -23,6 +23,83 @@ Questions? Contact us at [support@tidepool.org](mailto:support@tidepool.org)
 Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of these updates.  
 
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
+
+### 1.23.0 (Released 2019-07-05)
+We're starting off July with a bugfix bonanza. First, we cleaned up some spacing and formatting when you edit your profile.  
+[Feature Requirements](https://tidepool.atlassian.net/browse/WEB-35)
+
+And if you enter text without spaces in your profile, we fixed a bug that caused spacing to expand beyond the page width.  
+[Feature Requirements](https://tidepool.atlassian.net/browse/WEB-36)
+
+Last, we resolved a bug that caused high CPU usage, even when there's no data in the account.  
+[Feature Requirements](https://tidepool.atlassian.net/browse/WEB-37)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.23.0)
+
+### 1.22.1 (Released 2019-06-24)
+Another casualty of the update from "Weekly" to "BG Log", the average BG statistic in our print view stopped showing up. But it's back now. Sorry about that.  
+[Feature Requirements](https://trello.com/c/i2k5qiZX/32-avg-bg-value-missing-from-print-view-pdf)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.22.1)
+
+### 1.22.0 (Released 2019-06-18)
+Now that our summer interns are up and running, we can address a bunch of bugs and smaller updates. Here's a fresh batch.  
+
+Spacing of text in user profiles appears off when they try to edit their information. This bug has been squashed.  
+[Feature Requirements](https://trello.com/c/T8eld2pY/22-spacing-of-text-in-user-profile-when-trying-to-edit-information-is-off)
+
+Accounts with over 53 characters in their name were causing our print view to break. Yes, that's a highly specific number, but we've resolved this bug.  
+[Feature Requirements](https://trello.com/c/vkFPC0yL/23-inability-to-render-print-view-for-account-names-over-certain-character-count)
+
+If there's no blood glucose meter data in an account, users would see an error when switching from the Basics to BG Log view. This bug has been resolved.  
+[Feature Requirements](https://trello.com/c/bsnBhR7g/24-page-reload-when-switching-to-basics-from-empty-bg-log-view)
+
+If a user's first site change or cannula prime was outside the reporting window for the Basics view, the time stamp on that event would display as "NaN". We've fixed this bug.  
+[Feature Requirements](https://trello.com/c/8y1XNWwZ/25-nan-on-cannula-prime-or-site-changes)
+
+We got a bug report from a few users who were using an app on their iPhone that was writing blood glucose values of "0" to Apple Health, which in turn caused problems with Tidepool Web. This has been addressed.  
+[Feature Requirements](https://trello.com/c/3u361BoE/26-web-fails-to-load-data-views-due-to-nonpositive-integer)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.22.0)
+
+### 1.21.0 (Released 2019-06-06)
+Previously, if you wanted to share your Tidepool account with someone and accidentally added an extra space to the end of the email address, Tidepool Web would get upset. We've resolved this bug and extra spaces should no longer be an issue.  
+[Feature Requirements](https://trello.com/c/r3GiIwuA/5-strip-out-extra-spaces-in-share-email-fields)
+
+A user uploading 670G data notified us that their Time in Auto Mode data was not displaying in the Basics and Daily views. Turns out they had a different device model than our code was expecting, so we've updated some things to get that Auto Mode data showing again.  
+[Feature Requirements](https://trello.com/c/KDHf69KK/6-time-in-auto-stat-not-showing-for-medtronic-670g-devices-with-devicemodel-1782)
+
+For users creating accounts on their phone, the completed signup page now includes links to Tidepool Mobile to remind you that Tidepool Mobile is a thing.  
+[Feature Requirements](https://trello.com/c/hZi8zF50/7-add-links-to-tidepool-mobile-apps-on-browser-recommendation-page)
+
+As we continue to work on improvements on things behind the scenes, we have to ensure our old code and platform continue to work as they currently do if anything in development goes wrong.  
+[Feature Requirements](https://trello.com/c/2JUwzDOg/29-fall-back-to-host-path-for-api-requests-when-apihost-variable-not-provided)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.21.0)
+
+### 1.20.2 (Released 2019-05-13)
+Remember when we changed the "Weekly" view to "BG Log"? Turns out we reintroduced a bug that caused the Trends view to get upset. We've fixed that bug.  
+[Feature Requirements](https://trello.com/c/35ylrPLC/14-2-week-filter-on-trends-view-throws-js-error)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.20.1)
+
+### 1.20.1 (Released 2019-05-08)
+Tidepool Web used to get mad when a clinician logged in and had a patient with a blank name. Thankfully, this bug is now resolved.  
+[Feature Requirements](https://trello.com/c/B9XpWkdc/5-clinician-account-not-loading-no-clear-cause)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.20.1)
+
+### 1.20.0 (Released 2019-04-24)
+Giving some love to our Print View, we've updated the printed widgets to reflect our new aggregated statistics.  
+[Feature Requirements](https://trello.com/c/zCsP7dCr/45-use-new-agg-stats-calculations-in-tidepool-webs-print-views)
+
+And we now print carbs that are not associated with a bolus wizard event.  
+[Feature Requirements](https://trello.com/c/doJpZONa/47-print-carbs-on-platform-that-are-not-associated-with-bolus-wizard-events)
+
+Finally, we've renamed the "Weekly" view to "BG Log", which seems much more appropriate considering the intended use.  
+[Feature Requirements](https://trello.com/c/ju5mApHk/46-rename-weekly-to-bg-log)
+
+[Code Update](https://github.com/tidepool-org/blip/releases/tag/v1.20.0)
 
 ### 1.19.0 (Released 2019-04-15)
 Some users wearing Medtronic 530G were not seeing their device settings. That's our bad. This has been fixed.  
@@ -529,6 +606,60 @@ One of our updates froze the Device Settings page for Tandem users. We thawed th
 Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download the latest version of the Tidepool Uploader.  
 
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
+
+### 2.17.0 (Released 2019-06-25)
+Tidepool Uploader now supports the Omnipod DASH PDM. Woohoo! Whether you're uploading the original PDM or the DASH PDM, you'll still select "Insulet Omnipod" as your device and we'll take care of the rest.  
+[Feature Requirements](https://trello.com/c/M1wDdLw5/34-new-omnipod-dash)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.17.0)
+
+### 2.16.1 (Released 2019-06-18)
+Some users who ran the auto-update feature to get to version 2.16.0 were encountering some errors. This hotfix should resolve them.  
+[Feature Requirements](https://trello.com/c/HUo8qe0u/27-deployment-details-2019-06-18-uploader-v2161)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.16.1)
+
+### 2.16.0 (Released 2019-06-13)
+We've updated our code signing certificates for the Windows version of Tidepool Uploader.  
+[Feature Requirements](https://trello.com/c/Uv8NwRg4/14-update-code-signing-certificates)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.16.0)
+
+### 2.15.0 (Released 2019-06-10)
+We've updated some of the text box formatting to clean things up. Our designers are much happier now.  
+[Feature Requirements](https://trello.com/c/qaC4V5bY/10-uploader-ui-bug-text-boxes-should-be-bigger)
+
+Speaking of design, we've updated some additional error messages to properly convey what happens when Uploader is unable to make a connection, and we've rolled out a new font for Uploader to be consistent with how we do things on Tidepool Web and our marketing site, tidepool.org.  
+[Feature Requirements](https://trello.com/c/wpXYglCD/9-electron-uploader-shows-misleading-error-message)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.15.0)
+
+### 2.14.0 (Released 2019-04-26)
+Often requested by our users, we now display scan events from the FreeStyle Libre in Tidepool Web. Now you can see when you're scanning that sensor, and what the value was for each scan.  
+[Feature Requirements](https://trello.com/c/O9i3tqCA/60-uploader-upload-libre-scan-records-as-smbg-record)
+
+We updated the error message that displays when a clinician tries to create a Tidepool account with an email address already associated with an existing Tidepool account. Little things like that are important.  
+[Feature Requirements](https://trello.com/c/7HVJ9gUH/52-bug-uploader-not-handling-the-user-already-exists-error)
+
+Continuing the user experience improvement train, the design of our Mac Installer has improved to be more explicit about the "drag this app into that folder" bit.  
+[Feature Requirements](https://trello.com/c/LpB6l0Sd/53-improve-usability-of-mac-dmg-installer)
+
+And now we're rolling out more test environments to improve our development process, development builds of Tidepool Uploader need to access them.  
+[Feature Requirements](https://trello.com/c/2wTVDU61/54-uploader-add-qa1-environment-to-uploader-server-list)
+
+We created a script that automatically submits a notification to antivirus vendors like McAfee and Kaspersky when new versions of Tidepool Uploader are released.  
+[Feature Requirements](https://trello.com/c/Wv9TE21v/55-update-script-to-whitelist-with-kaspersky-and-mcafee-automatically)
+
+We now store Omnipod IBF files in our "blob" service, which helps tremendously when we are troubleshooting reported bugs from our users. (We already do this for Medtronic uploads.)  
+[Feature Requirements](https://trello.com/c/4QWiAbBj/56-store-omnipod-ibfs-using-blob-service)
+
+We used to record date and time change events from the Libre scanner as two separate time change events, when we want to have concurrent date and time change events appear as a single time change event in Tidepool Web. So we fixed that bug.  
+[Feature Requirements](https://trello.com/c/gei6SOfn/57-uploader-libre-datetime-changes-are-stored-as-two-separate-time-change-events)
+
+More on the Libre front, Tidepool Uploader used to display an unfriendly error when there was no data on a Libre scanner to upload. We've resolved that bug and now show a much more friendly error message.  
+[Feature Requirements](https://trello.com/c/JZASCL2P/58-uploader-typeerror-when-there-are-no-records-on-a-libre)
+
+[Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.14.0)
 
 ### 2.13.0 (Released 2019-04-17)
 This is fun. We've added a friendly pop up dialog that reminds users uploading Medtronic 600-series devices to accept the requested ad-hoc connection attempt on the pump itself.  
@@ -1157,6 +1288,48 @@ OmniPod uploads were running into problems if certain error codes were identifie
 ## Tidepool Mobile  
 Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.  
 
+### iOS - 2.1.12 (Released 2019-07-02)
+We added a tooltip to prompt new Tidepool Mobile users to make a note after they've synced their data.  
+[Feature Requirements](https://tidepool.atlassian.net/browse/MOBILE-9)
+
+And addressed a design issue that prevented users from opening a note created as a result of that first time tooltip prompt.  
+[Feature Requirements](https://tidepool.atlassian.net/browse/MOBILE-10)
+
+[iOS Release](https://appsto.re/us/aXyl9.i)
+
+### Android - 3.0.5 (Released 2019-06-13)
+Technically this work also supports our eventual iOS update to a React Native code base so both Android and iOS versions of Tidepool Mobile will be using the same code base. This update continues to iterate upon the tooltips that display for fresh installs. We'll get to updating the current iOS release with these tooltips soon.  
+[Feature Requirements](https://trello.com/c/fLxUlrsx/15-rn-add-the-add-note-prompt-back-into-tidepool-mobile)
+
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
+
+### Android - 3.0.4 (Released 2019-05-29)
+We now display a tooltip on fresh installs that instruct you to make a note, then tap that note to open it if you want to see your data on your phone.  
+[Feature Requirements](https://trello.com/c/iIXjbmDN/25-first-time-tips-not-shown-after-fresh-install-of-tidepool-mobile-on-android)
+
+Our app icons have been updated. Yay!  
+[Feature Requirements](https://trello.com/c/CHpF4Pbf/26-need-new-app-icons)
+
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
+
+### Android - 3.0.3 (Released 2019-05-10)
+We disabled some auto-update features for some of our code dependencies, which sounds complicated, but ultimately means we are ensuring we have full control over all the code that goes into Tidepool Mobile.  
+[Feature Requirements](https://trello.com/c/sYiATRO0/7-disable-auto-update-of-js-bundles-for-android)
+
+Meanwhile, we updated some other code dependencies to ensure our app stays available on Google Play.  
+[Feature Requirements](https://trello.com/c/QBYgqqim/10-rn-remove-unused-branchio-support-to-avoid-google-play-rejection-update-to-latest-expo-32-update-other-dependencies)
+
+We resolved a bug that, in some very specific scenarios, made some carb entries difficult to read.  
+[Feature Requirements](https://trello.com/c/pip9oZHn/8-rn-android-mobile-some-carb-circles-are-not-opaque-causing-carb-values-to-be-difficult-to-read)
+
+Carb entries from Apple Health that are not associated with a bolus event are now visible in Tidepool Mobile on Android.  
+[Feature Requirements](https://trello.com/c/28zioEkU/9-rn-display-carbs-from-platform-which-are-not-associated-with-bolus-wizard-event-in-tidepool-mobile)
+
+We increased the wait time for API calls to return from 10 to 30 seconds.  
+[Feature Requirements](https://trello.com/c/twaRMxnP/11-rn-mobile-timeout-waiting-for-api-calls)
+
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
+
 ### Android - 3.0.2 (Released 2019-04-04)
 We addressed how you interact with notes in Tidepool Mobile. Specifically:  
 Care team members should not be able to delete notes created by the person with diabetes.  
@@ -1168,7 +1341,7 @@ Users should be able to delete notes that a care team member adds to their accou
 And, care team members should only be able to delete notes they create.  
 [Feature Requirements](https://trello.com/c/gFnvvn1z/2-rn-care-team-members-should-be-able-to-delete-notes-they-created)
 
-[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin))
+[Android Release](https://play.google.com/store/apps/details?id=io.tidepool.urchin)
 
 ### iOS - 2.1.11 (Released 2019-03-27)
 We've updated how Tidepool Mobile translates HealthKit data to match our data model. It's nothing you'll notice unless you look under the hood, but our backend engineers are much happier now - which is always nice.  
