@@ -608,7 +608,7 @@ Visit [https://tidepool.org/uploader](https://tidepool.org/uploader) to download
 If you already have the Tidepool Uploader installed on your computer, it will automatically update to the latest version.  
 
 ### 2.17.0 (Released 2019-06-25)
-Tidepool Uploader now supports the Omnipod DASH PDM. Woohoo! Whether you're uploading the original PDM or the DASH PDM, you'll still select "Insulet Omnipod" as your device we'll take care of the rest.  
+Tidepool Uploader now supports the Omnipod DASH PDM. Woohoo! Whether you're uploading the original PDM or the DASH PDM, you'll still select "Insulet Omnipod" as your device and we'll take care of the rest.  
 [Feature Requirements](https://trello.com/c/M1wDdLw5/34-new-omnipod-dash)
 
 [Code Update](https://github.com/tidepool-org/chrome-uploader/releases/tag/v2.17.0)
