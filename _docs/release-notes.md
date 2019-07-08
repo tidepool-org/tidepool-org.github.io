@@ -25,7 +25,7 @@ Visit [https://app.tidepool.org](https://app.tidepool.org) to see the results of
 Don't have a Tidepool account? Visit [tidepool.org/signup](https://tidepool.org/signup) to create your free Tidepool account.  
 
 ### 1.23.0 (Released 2019-07-05)
-We're starting off July with a bugfix bonanza. First, we cleaned up some spacing and formating when you edit your profile.  
+We're starting off July with a bugfix bonanza. First, we cleaned up some spacing and formatting when you edit your profile.  
 [Feature Requirements](https://tidepool.atlassian.net/browse/WEB-35)
 
 And if you enter text without spaces in your profile, we fixed a bug that caused spacing to expand beyond the page width.  
