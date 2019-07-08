@@ -1290,7 +1290,7 @@ Visit https://tidepool.org/mobile to learn more about Tidepool Mobile.
 
 ### iOS - 2.1.12 (Released 2019-07-02)
 We added a tooltip to prompt new Tidepool Mobile users to make a note after they've synced their data.  
-[Feature Requirements](https://tidepool.atlassian.net/browse/MOBILE-9?jql=project%20%3D%20%22MOBILE%22%20AND%20fixVersion%20%3D%20%22iOS%202.1.12%22)
+[Feature Requirements](https://tidepool.atlassian.net/browse/MOBILE-9)
 
 And addressed a design issue that prevented users from opening a note created as a result of that first time tooltip prompt.  
 [Feature Requirements](https://tidepool.atlassian.net/browse/MOBILE-10?jql=project%20%3D%20%22MOBILE%22%20AND%20fixVersion%20%3D%20%22iOS%202.1.12%22)
