@@ -37,6 +37,7 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [mortonfox](https://github.com/mortonfox) | [Agreed in tideline#304](https://github.com/tidepool-org/tideline/pull/304#issuecomment-283496808)
 [jebeck](https://github.com/jebeck) | Agreed via email on 2017-07-20
 [jweismann](https://github.com/jweismann) | [Agreed in chrome-uploader#738](https://github.com/tidepool-org/chrome-uploader/pull/738#issuecomment-459540676)
+[nitsch](https://github.com/nitsch) | [Agreed in chrome-uploader#1037](hhttps://github.com/tidepool-org/uploader/pull/1037#issuecomment-577858851)
 
 ## Committers
 
