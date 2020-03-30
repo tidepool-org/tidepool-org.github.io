@@ -72,7 +72,7 @@ We are aware that until this is done that there are token session handling issue
 
 ## Communication
 
-We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](http://public-chat.tidepool.org/). We are very grateful to community members who have been so generous with their time supporting other members.
+We are currently using Slack for communication with the open source community. Join us at [tidepoolorg.slack.com](https://tidepoolorg.slack.com/join/shared_invite/zt-d1v06u5u-qG_JrzJqWE2Lvw~Y9zrAug). We are very grateful to community members who have been so generous with their time supporting other members.
 
 Feel free to drop a note to [info@tidepool.org](mailto:info@tidepool.org), and it will find the right recipient quickly.
 
