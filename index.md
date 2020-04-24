@@ -17,11 +17,11 @@ Tidepool is an open source, not-for-profit company focused on liberating data fr
 The intended audience for this microsite is software developers, but others may also find it valuable. Here are some useful links:
 
 * All of our [source code on GitHub](https://github.com/tidepool-org). Some of the more commonly requested repos are:
-  * [Tidepool Uploader](https://github.com/tidepool-org/chrome-uploader)
-    * [Dexcom device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/dexcom)
-    * [Medtronic device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/medtronic)
-    * [OmniPod device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/insulet)
-    * [Tandem device driver](https://github.com/tidepool-org/chrome-uploader/tree/master/lib/drivers/tandem)
+  * [Tidepool Uploader](https://github.com/tidepool-org/uploader)
+    * [Dexcom device driver](https://github.com/tidepool-org/uploader/tree/master/lib/drivers/dexcom)
+    * [Medtronic device driver](https://github.com/tidepool-org/uploader/tree/master/lib/drivers/medtronic)
+    * [OmniPod device driver](https://github.com/tidepool-org/uploader/tree/master/lib/drivers/insulet)
+    * [Tandem device driver](https://github.com/tidepool-org/uploader/tree/master/lib/drivers/tandem)
   * [Visualization Library](https://github.com/tidepool-org/viz)
   * [Tidepool Mobile for iOS](https://github.com/tidepool-org/mobile-ios)
 
@@ -32,7 +32,7 @@ The intended audience for this microsite is software developers, but others may 
 * All of our technical documentation (a work in progress!):
   * [General docs](http://developer.tidepool.org/docs/) that don't belong to a specific app/repository, plus:
     * Tidepool for web (codenamed 'Blip') [docs](http://developer.tidepool.org/blip/) and [developer guide](http://developer.tidepool.org/blip/docs/StartHere.html)
-    * Tidepool Uploader (Electron application) [docs](http://developer.tidepool.org/chrome-uploader/) and [developer guide](http://developer.tidepool.org/chrome-uploader/docs/StartHere.html)
+    * Tidepool Uploader (Electron application) [docs](http://developer.tidepool.org/uploader/) and [developer guide](http://developer.tidepool.org/uploader/docs/StartHere.html)
     * The @tidepool/viz data visualization library [docs](http://developer.tidepool.org/viz/) and [developer guide](http://developer.tidepool.org/viz/docs/StartHere.html)
   * [Tidepool data model documentation](http://developer.tidepool.org/data-model/)
 * Project Management references, including:
@@ -58,7 +58,7 @@ If you think you think you'd like to contribute designs, code, or or anything el
 
 Depending on what kind of work you are trying to do, you may wish to engage with our source code in different ways:
 
-* **Tidepool Uploader**: If you'd like to help add device support to the Tidepool Uploader, check out the [Tidepool Uploader](https://github.com/tidepool-org/chrome-uploader) repository. (You can also install the production [Tidepool Uploader from our GitHub Releases](https://github.com/tidepool-org/chrome-uploader/releases)).
+* **Tidepool Uploader**: If you'd like to help add device support to the Tidepool Uploader, check out the [Tidepool Uploader](https://github.com/tidepool-org/uploader) repository. (You can also install the production [Tidepool Uploader from our GitHub Releases](https://github.com/tidepool-org/uploader/releases)).
 * **Tidepool for web**: You may wish to build Tidepool for web (codename 'Blip'), locally but still run against our hosted back-end services. If so, check out the README in the [blip](https://github.com/tidepool-org/blip) repository. (Of course you can also just run the production Tidepool for web at [app.tidepool.org](https://app.tidepool.org)).
 * **Tidepool Platform**: If you want to run the entire platform locally, check out [the instructions in our `development` repository](https://github.com/tidepool-org/development). This will get you running our environment locally using Docker.
 * **Your Applications**: You may wish create your own application that accesses our hosted back-end services (the Tidepool Platform). If it's a web app, you may wish to look at Tidepool for web. If it's a mobile app, check out Tidepool Mobile in the [Nutshell](https://github.com/tidepool-org/nutshell-ios) or [Urchin for Android](https://github.com/tidepool-org/urchin-android) or [Urchin for iOS](https://github.com/tidepool-org/urchin). Note that Blip Notes and Nutshell are being retired. Both will be replaced by [Tidepool Mobile](https://github.com/tidepool-org/mobile).
