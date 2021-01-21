@@ -39,6 +39,7 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [jweismann](https://github.com/jweismann) | [Agreed in chrome-uploader#738](https://github.com/tidepool-org/chrome-uploader/pull/738#issuecomment-459540676)
 [nitsch](https://github.com/nitsch) | [Agreed in chrome-uploader#1037](https://github.com/tidepool-org/uploader/pull/1037#issuecomment-577858851)
 [jehernandezrodriguez](https://github.com/jehernandezrodriguez) | [Agreed in blip#699](https://github.com/tidepool-org/blip/pull/699#issuecomment-610141707)
+[simonarnell](https://github.com/simonarnell) | Agreed via email to legal@tidepool.org on 2021-01-21
 
 ## Committers
 
@@ -52,6 +53,6 @@ Chris McGee (krystophv) | Engineering (*)
 Clint Beacock (cbwebdevelopment) | Engineering (*)
 Darin Krauss (darinkrauss) | Engineering (*)
 Gerrit Niezen (gniezen) | Engineering (*)
-Jamie Bate (jh-bate) | Engineering (*)
-Lennart Goedhart (pazaan) | Engineering (*)
+Todd Kazakov (toddkazakov) | Engineering (*)
+Adin Hodovic (adinhodovic) | Engineering (*)
 
