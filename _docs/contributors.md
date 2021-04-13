@@ -41,6 +41,7 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [jehernandezrodriguez](https://github.com/jehernandezrodriguez) | [Agreed in blip#699](https://github.com/tidepool-org/blip/pull/699#issuecomment-610141707)
 [simonarnell](https://github.com/simonarnell) | Agreed via email to legal@tidepool.org on 2021-01-21
 [MariannaKrzewinska](https://github.com/MariannaKrzewinska) | [Agreed in uploader#1364](https://github.com/tidepool-org/uploader/issues/1364)
+[adriweb](https://github.com/adriweb) | [Agreed in webmtp#2](https://github.com/tidepool-org/webmtp/pull/2)
 
 ## Committers
 
