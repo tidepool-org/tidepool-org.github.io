@@ -36,13 +36,14 @@ The intended audience for this microsite is software developers, but others may 
     * The @tidepool/viz data visualization library [docs](http://developer.tidepool.org/viz/) and [developer guide](http://developer.tidepool.org/viz/docs/StartHere.html)
   * [Tidepool data model documentation](http://developer.tidepool.org/data-model/)
 * Project Management references, including:
-  * Our [Product Priorities](https://trello.com/b/JTCsoGjd/current-quarter-product-priorities) board on Trello organizes and defines the work identified in our [Work In Progress](https://trello.com/b/sLQWlC52/work-in-progress) board.
+  * What we're working in in our [Current Sprint](https://tidepool.atlassian.net/issues/?filter=10097).
+  * What we'll be taking on in [Upcoming Sprints](https://tidepool.atlassian.net/issues/?filter=10098).
   * Our past three months of completed tasks:
-    * [June 2019](https://trello.com/b/dHPXovMN/done-2019-06)
-    * [May 2019](https://trello.com/b/asCBRkf0/done-2019-05)
-    * [April 2019](https://trello.com/b/QuNFk1OX/done-2019-04)
+    * [August 2021](https://tidepool.atlassian.net/browse/UPLOAD-637?filter=10473)
+    * [September 2021](https://tidepool.atlassian.net/issues/?filter=10474)
+    * [October 2021](https://tidepool.atlassian.net/browse/UPLOAD-666?filter=10475)
 * Our [Terms of Use](terms-of-use) and [Privacy Policy](privacy-policy), maintained here on GitHub.
-* Our [Release Notes](release-notes).
+* Our [Release Notes](https://release.tidepool.org).
 
 ## A Note about Contributing to Tidepool's Source Code
 
