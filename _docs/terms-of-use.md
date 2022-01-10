@@ -4,7 +4,7 @@ title: Tidepool Terms of Use
 published: true
 ---
 # Tidepool Terms of Use
-Effective Date: May 22, 2018, Version 2.1
+Effective Date: Jan 10, 2022, Version 2.2
 
 These Terms of Use (“Terms”) form a legally binding contract between you and Tidepool Project (“Tidepool,” “us,” or “we”) governing your access to and use of our software applications, such as Tidepool for web, Tidepool for mobile, and the Tidepool Uploader, together with any other applications developed and/or distributed by Tidepool (the “Tidepool Apps”), including storage and retrieval of data by the Tidepool Apps on or through our hosted cloud platform (the “Tidepool Platform”), so please read them carefully before using any Tidepool Apps. We provide you with access to and use of the Tidepool Apps subject to your compliance with these Terms. By using the Tidepool Apps, you agree to be bound by these Terms, as well as our [Privacy Policy](https://developer.tidepool.org/privacy-policy/), which is incorporated into these Terms.
 
@@ -26,7 +26,7 @@ To learn more, please review the following:
   1.2 [License to Access and Use Information](#1.2)  
   1.3 [Information Security](#1.3)  
   1.4 [Control and Sharing](#1.4)
-2. [Care Team Member, Researcher, and Clinician Accounts](#2-care-team-member-researcher-and-clinician-accounts)
+2. [Care Team Member, Researcher, Clinician, and Clinic Accounts](#2-care-team-member-researcher-clinician-and-clinic-accounts)
 3. [Acceptable Use of Tidepool Apps](#3-acceptable-use-of-tidepool-apps)  
   3.1 [Use of Health Information](#3.1)  
   3.2 [Other Uses](#3.2)  
@@ -58,21 +58,21 @@ A. As a PwD User, you always retain ownership of the Information in your account
 
 B. Tidepool will never grant any third party access to your Information without your permission, except in limited circumstances (such as when specifically required by law) and only in accordance with our [Privacy Policy](https://developer.tidepool.org/privacy-policy/).
 
-C. Tidepool, Care Team Members, Clinicians, Researchers, third-party applications, and third-party diabetes device makers are not granted any right to use or access your Information, except with your permission and in accordance with our [Privacy Policy](https://developer.tidepool.org/privacy-policy/).
+C. Tidepool, Care Team Members, Clinicians, Researchers, Clinics, third-party applications, and third-party diabetes device makers are not granted any right to use or access your Information, except with your permission and in accordance with our [Privacy Policy](https://developer.tidepool.org/privacy-policy/).
 
-D. You can export your Information at any time, and you can request that your Information be deleted at any time by requesting that Tidepool delete your account. But please note that Information that you have chosen to provide to Researchers, Clinicians, third-party applications, and third-party diabetes device makers may have been copied and/or retained by those third parties.
+D. You can export your Information at any time, and you can request that your Information be deleted at any time by requesting that Tidepool delete your account. But please note that Information that you have chosen to provide to Researchers, Clinicians, Clinics, third-party applications, and third-party diabetes device makers may have been copied and/or retained by those third parties.
 
-E. A Clinician such as your doctor or other health care provider, or a Researcher conducting a study in which you participate, may establish a Tidepool account to store Information about you in Tidepool. That Clinician or Researcher may invite you to open a Tidepool account. If you accept that invitation, you will become a PwD User. You will have control over the account and the Information associated with that account, and these Terms of Use will apply to you. The Clinician or Researcher who invited you to open the account will be a member of your Care Team. You may remove the Clinician or Researcher from your Care Team at any time.
+E. A Clinician such as your doctor or other health care provider, or a Researcher conducting a study in which you participate, may establish a Tidepool account to store Information about you in Tidepool. That Clinician or Researcher may invite you to open a Tidepool account. If you accept that invitation, you will become a PwD User. You will have control over the account and the Information associated with that account, and these Terms of Use will apply to you. The Clinician or Researcher who invited you to open the account or their Clinic will be a member of your Care Team. You may remove the Clinician, Researcher, or Clinic from your Care Team at any time.
 
 If a Clinician or Researcher who uses Tidepool to store information about you does not invite you to open an account, or if you decide not to accept the Clinician’s or Researcher’s invitation, then you will not have control of the information in the account, and you will not be a PwD User with rights under these Terms of Use.
 
-F. Clinicians are solely responsible to you for the professional health care and any other services that they may provide to you.  Tidepool is not responsible for the quality or availability of the services that a Clinician may or may not provide to you, or whether those services are provided in accordance with applicable laws.  Tidepool does not select Clinicians or supervise, monitor, or control the services they provide, and is not responsible for your choice of any Clinician from whom you choose to receive professional health care or other services.
+F. Clinicians are solely responsible to you for the professional health care and any other services that they may provide to you. Tidepool is not responsible for the quality or availability of the services that a Clinician or Clinic may or may not provide to you, or whether those services are provided in accordance with applicable laws. Tidepool does not select Clinicians or Clinics, nor supervise, monitor, or control the services they provide, and is not responsible for your choice of any Clinician or Clinic from whom you choose to receive professional health care or other services.
 
 G. Researchers are solely responsible to you for any responsibility owed to you in connection with any research study in which you participate. Tidepool is not responsible for quality or appropriateness of the methods or manner in which any research study is conducted, or whether research studies are conducted in accordance with applicable laws. Tidepool does not evaluate or endorse Researchers or the research studies they perform, and Tidepool does not supervise, monitor, or control those Researchers’ conduct of those research studies. If you have agreed to participate in a research study, you will do so pursuant to the terms and conditions of any consent you have given to that Researcher.
 
 <a name="1.2"></a>1.2 License to Access and Use Information  
 
-A. If you choose to grant access to your Information to a Care Team Member, Tidepool, Researchers, Clinicians, third-party applications or third-party diabetes device makers, you hereby grant to such party a non-exclusive, limited right to access and use the applicable Information solely for the specified purpose, including any reuse or re-sharing permissions.
+A. If you choose to grant access to your Information to a Care Team Member, Tidepool, Researchers, Clinicians, Clinics, third-party applications or third-party diabetes device makers, you hereby grant to such party a non-exclusive, limited right to access and use the applicable Information solely for the specified purpose, including any reuse or re-sharing permissions.
 
 B. To facilitate your use of the Tidepool Apps, you hereby grant to Tidepool a non-exclusive, royalty-free license to use, store, reproduce and display any Information you store or manage through the Tidepool Apps solely as reasonably necessary to operate the Tidepool Apps at your direction and on your behalf, and subject to these Terms and our [Privacy Policy](https://developer.tidepool.org/privacy-policy/).
 
@@ -80,11 +80,11 @@ B. To facilitate your use of the Tidepool Apps, you hereby grant to Tidepool a n
 The security and privacy of your Information is important. Tidepool uses reasonable administrative, physical and technical safeguards to protect the security, confidentiality and integrity of your Information. For example, data that you upload from your diabetes devices is transmitted and stored using industry-standard encryption, as is any personal information or metadata you share with Tidepool. All information and data is encrypted both at rest and during transport. TIDEPOOL SHALL NOT BE RESPONSIBLE OR LIABLE FOR UNAUTHORIZED ACCESS, HACKING, OR OTHER SECURITY INTRUSIONS OR FAILURE TO STORE OR THE THEFT, DELETION, CORRUPTION, DESTRUCTION, DAMAGE, OR LOSS OF ANY DATA OR INFORMATION. 
 
 <a name="1.4"></a>1.4 Control and Sharing  
-As described in the [Privacy Policy](https://developer.tidepool.org/privacy-policy/), PwD Users control the Information in their accounts and set permissions for sharing. Through features in the Tidepool Apps, you as a PwD User will always be able to view and change the access rights of your Care Team Members and change your sharing preferences such as sharing with Clinicians, Researchers, Tidepool, third-party applications and third-party device makers.
+As described in the [Privacy Policy](https://developer.tidepool.org/privacy-policy/), PwD Users control the Information in their accounts and set permissions for sharing. Through features in the Tidepool Apps, you as a PwD User will always be able to view and change the access rights of your Care Team Members and change your sharing preferences such as sharing with Clinicians, Researchers, Clinics, Tidepool, third-party applications and third-party device makers.
 
-### **2. Care Team Member, Researcher, and Clinician Accounts**
+### **2. Care Team Member, Researcher, Clinician, and Clinic Accounts**
 
-Care Team Members, Clinicians, and Researchers can create accounts with Tidepool and become Users of Tidepool Apps.   Clinicians and Researchers who create their own accounts control the Information in their accounts and can set or change permissions for sharing.  Researchers may create accounts with Information for research purposes; the Researcher owns the Information in the Researcher’s account. A Clinician, such as a doctor or other health care provider, or a Researcher conducting a study, may establish an account to store information about a patient or study participant in the Tidepool Apps and/or Tidepool Platform. That Clinician or Researcher may invite the patient or study participant to open a Tidepool account. If the individual accepts that invitation, he or she will become a PwD User and will have control of all the data associated with that account. The Clinician or Researcher who invited the PwD User to open the account will be a member of the PwD User’s Care Team. The PwD User may remove the Clinician or Researcher from his or her Care Team at any time.
+Care Team Members, Clinicians, and Researchers can create accounts with Tidepool and become Users of Tidepool Apps. Clinicians and Researchers who create their own accounts or Clinic accounts control the Information in their accounts and can set or change permissions for sharing.  Researchers may create accounts with Information for research purposes; the Researcher owns the Information in the Researcher’s account. A Clinician, such as a doctor or other health care provider, or a Researcher conducting a study, may establish an account to store information about a patient or study participant in the Tidepool Apps and/or Tidepool Platform. That Clinician or Researcher may invite the patient or study participant to open a Tidepool account. If the individual accepts that invitation, he or she will become a PwD User and will have control of all the data associated with that account. The Clinician or Researcher who invited the PwD User to open the account or their Clinic will be a member of the PwD User’s Care Team. The PwD User may remove the Clinician, Researcher, or Clinic from his or her Care Team at any time.
 
 ### **3. Acceptable Use of Tidepool Apps**
 
@@ -160,7 +160,7 @@ You consent to receive electronically any communications related to your use of 
 
 ### **8. Copyright Infringement**
 
-If you believe that any content on any Tidepool Apps infringes upon any copyright which you own or control, you may send a written notice to Tidepool’s Copyright Agent at [legal@tidepool.org](mailto:legal@tidepool.org). The written notice must satisfy the requirements set forth in the Online Copyright Infringement Liability Limitation Act of the Digital Millennium Copyright Act (17 U.S.C. § 512).    It is our policy in appropriate circumstances to disable and/or terminate the accounts of users who are repeat infringers.
+If you believe that any content on any Tidepool Apps infringes upon any copyright which you own or control, you may send a written notice to Tidepool’s Copyright Agent at [legal@tidepool.org](mailto:legal@tidepool.org). The written notice must satisfy the requirements set forth in the Online Copyright Infringement Liability Limitation Act of the Digital Millennium Copyright Act (17 U.S.C. § 512). It is our policy in appropriate circumstances to disable and/or terminate the accounts of users who are repeat infringers.
 
 ### **9. Disclaimer of Warranties**
 
@@ -176,7 +176,7 @@ Regardless of any statute or law to the contrary, you agree that any claim or ca
 
 ### **11. Arbitration**
 
-Any controversy or claim arising out of or relating to these Terms, the breach thereof or its subject matter shall be settled by binding arbitration in accordance with the consumer commercial arbitration rules of the American Arbitration Association. The decision of the arbitrator shall be final and unappealable. The arbitration shall be conducted in the City and County of San Francisco, California in the United States of America, and judgment on the arbitration award may be entered in any court having jurisdiction thereof. Notwithstanding anything to the contrary herein, Tidepool, any PwD User, any Care Team Member, any Clinician, any Researcher, or any other party to the arbitration may at any time seek injunctions or other forms of equitable relief from any court of competent jurisdiction.
+Any controversy or claim arising out of or relating to these Terms, the breach thereof or its subject matter shall be settled by binding arbitration in accordance with the consumer commercial arbitration rules of the American Arbitration Association. The decision of the arbitrator shall be final and unappealable. The arbitration shall be conducted in the City and County of San Francisco, California in the United States of America, and judgment on the arbitration award may be entered in any court having jurisdiction thereof. Notwithstanding anything to the contrary herein, Tidepool, any PwD User, any Care Team Member, any Clinician, any Clinic, any Researcher, or any other party to the arbitration may at any time seek injunctions or other forms of equitable relief from any court of competent jurisdiction.
 
 ### **12. Changes to the Terms**
 
@@ -184,7 +184,7 @@ We may modify, amend or change the terms, conditions or provisions of these Term
 
 ### **13. Changes to the Tidepool Apps**
 
-We reserve the right to modify, refine, add or remove features, impose limits on the service or size of storage available to you, or suspend the Tidepool Apps, with or without prior notice to you and without liability to anyone, including you or any third party. In the unlikely event of discontinuance, we will endeavor to notify you to allow you to export your Information. We may impose or you may experience limits on your use of the Tidepool Apps. If you disagree with any changes to the Tidepool Apps, you agree that your only recourse will be to stop using the Tidepool Apps. You may export your Information or request that you Information be deleted before doing so. Continuing to access the Tidepool Apps after any modifications will indicate that you agree with the changes and are satisfied with the Tidepool Apps as modified.
+We reserve the right to modify, refine, add or remove features, impose limits on the service or size of storage available to you, or suspend the Tidepool Apps, with or without prior notice to you and without liability to anyone, including you or any third party. In the unlikely event of discontinuance, we will endeavor to notify you to allow you to export your Information. We may impose or you may experience limits on your use of the Tidepool Apps. If you disagree with any changes to the Tidepool Apps, you agree that your only recourse will be to stop using the Tidepool Apps. You may export your Information or request that your Information be deleted before doing so. Continuing to access the Tidepool Apps after any modifications will indicate that you agree with the changes and are satisfied with the Tidepool Apps as modified.
 
 ### **14. General**
 
