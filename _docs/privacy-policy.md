@@ -5,15 +5,15 @@ published: true
 ---
 
 # Tidepool Privacy Policy
-Effective Date: January 1, 2020, Version 2.2
+Effective Date: January 10, 2022, Version 2.3
 
-Since Tidepool was founded in 2013, we've advocated that you own your own data, that you should be able to access it whenever and however you want, and that you should be able to share it however you see fit. In 2018, we feel more strongly about these tenets than ever. As Tidepool has grown, we've added new features that make it easier for clinicians and researchers to make accounts that store data on behalf of their patients and study participants. Please read our Privacy Policy to understand how you can control and manage your data and the choices you have. It describes the types of information we collect from PwD, Care Team Members, Clinicians, Researchers and casual site visitors, how we use it, how we protect it, and how we restrict its disclosure. This Privacy Policy is intended to comply with all applicable laws and regulations, including but not limited to the General Data Protection Regulation (“GDPR”) of the European Union.
+Since Tidepool was founded in 2013, we've advocated that you own your own data, that you should be able to access it whenever and however you want, and that you should be able to share it however you see fit. In 2022, we feel more strongly about these tenets than ever. Our goal is to make Tidepool a great place for collaboration with you and your care team. To support this, we've updated how Clinicians and Researchers have access to information that you share. We've added details explaining when Clinicians or Researchers that are part of a Clinic might see your information. We've also added new Share features that make it easier for you to share your data with Clinicians and Researchers that are part of a Clinic. Please read our Privacy Policy to understand how you can control and manage your data and the choices you have. It describes the types of information we collect from PwD, Care Team Members, Clinicians, Researchers, Clinics, and casual site visitors, how we use it, how we protect it, and how we restrict its disclosure. This Privacy Policy is intended to comply with all applicable laws and regulations, including but not limited to the General Data Protection Regulation (“GDPR”) of the European Union.
 
 You may use the Tidepool website without sharing any of your personal information with us. However, if you choose to use Tidepool’s services, it will become necessary for Tidepool to create an account for you and collect and process information about you. If you use any of the Tidepool Apps, we will need to process and use the personal information you and members of your Care Team provide in order to provide the services of the Tidepool Apps. The Tidepool Apps will not function without that information.
 
-The privacy and security of your information is important to us. This privacy policy (“Privacy Policy”) describes how Tidepool Project (“Tidepool,” “us,” or “we”) collects, uses, processes, and discloses information in connection with our software applications, such as Tidepool for web, Tidepool for mobile, and the Tidepool Uploader, together with any other applications developed and/or distributed by Tidepool (the “Tidepool Apps”), including storage and retrieval of information by the Tidepool Apps on or through our hosted cloud platform (the “Tidepool Platform”). We collect information from the people who use the Tidepool Apps to help manage their diabetes (“PwD Users,” the person with diabetes or the parent/guardian of one), from the people with whom the PwD User chooses to share that information (“Care Team Members”), from doctors, healthcare professionals, and other clinicians who may use the Tidepool Apps to review information for people under their care (“Clinicians”) and from researchers who collect information from study participants for research purposes through the Tidepool Apps or Tidepool Platform (“Researchers”). PwD Users, Care Team Members, Clinicians and Researchers may collectively be referred to herein as “Users” (or singularly, a “User”).
+The privacy and security of your information is important to us. This privacy policy (“Privacy Policy”) describes how Tidepool Project (“Tidepool,” “us,” or “we”) collects, uses, processes, and discloses information in connection with our software applications, such as Tidepool for web, Tidepool for mobile, and the Tidepool Uploader, together with any other applications developed and/or distributed by Tidepool (the “Tidepool Apps”), including storage and retrieval of information by the Tidepool Apps on or through our hosted cloud platform (the “Tidepool Platform”). We collect information from the people who use the Tidepool Apps to help manage their diabetes (“PwD Users,” the person with diabetes or the parent/guardian of one), from the people with whom the PwD User chooses to share that information (“Care Team Members”), from doctors, healthcare professionals, and other clinicians who may use the Tidepool Apps to review information for people under their care (“Clinicians”) and from researchers who collect information from study participants for research purposes through the Tidepool Apps or Tidepool Platform (“Researchers”). PwD Users, Care Team Members, Clinicians, and Researchers may collectively be referred to herein as “Users” (or singularly, a “User”).
 
-By using the Tidepool Apps, you agree to be bound by this Privacy Policy, as well as our Terms of Use, which are incorporated herein by reference. Please read this entire Privacy Policy and the Terms of Use. If you don’t agree with the terms of this Privacy Policy or the Terms of Use, please don’t use the Tidepool Apps or other applications that access your Tidepool account. This Privacy Policy applies to Tidepool’s treatment of “personal information,” which is information that directly or indirectly uniquely identifies a PwD User, Care Team Member, Clinician or Researcher by reference to an identifier such as a name, identification number, location data, online identifier, or another factor specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that individual. This Privacy Policy therefore applies to health and other personal information, and the information, notes, and files PwD Users, any of a PwD User’s Care Team Members, or Clinicians or Researchers upload, store, and manage using the Tidepool Apps. This Privacy Policy does not apply to the practices of companies that Tidepool does not own or control, or to individuals who Tidepool does not employ or manage. 
+By using the Tidepool Apps, you agree to be bound by this Privacy Policy, as well as our Terms of Use, which are incorporated herein by reference. Please read this entire Privacy Policy and the Terms of Use. If you don’t agree with the terms of this Privacy Policy or the Terms of Use, please don’t use the Tidepool Apps or other applications that access your Tidepool account. This Privacy Policy applies to Tidepool’s treatment of “personal information,” which is information that directly or indirectly uniquely identifies a PwD User, Care Team Member, Clinician, or Researcher by reference to an identifier such as a name, identification number, location data, online identifier, or another factor specific to the physical, physiological, genetic, mental, economic, cultural, or social identity of that individual. This Privacy Policy therefore applies to health and other personal information, and the information, notes, and files PwD Users, any of a PwD User’s Care Team Members, or Clinicians, or Researchers upload, store, and manage using the Tidepool Apps. This Privacy Policy does not apply to the practices of companies that Tidepool does not own or control, or to individuals who Tidepool does not employ or manage. 
 
 BY USING ANY OF THE TIDEPOOL APPS YOU AGREE TO THE COLLECTION, USE, AND DISCLOSURE OF INFORMATION IN ACCORDANCE WITH THIS PRIVACY POLICY. IF YOU ARE A RESIDENT OF THE EUROPEAN UNION, WE WILL OBTAIN YOUR EXPLICIT CONSENT TO COLLECT AND PROCESS YOUR INFORMATION.
 
@@ -26,18 +26,18 @@ As this Privacy Policy explains, Tidepool is responsible for determining the pur
 	Telephone: 650-353-2352
 	E-Mail: info@tidepool.org
 
-Tidepool’s Privacy Official serves as our data protection officer.  Any PwD User, Care Team Member, Clinician or Researcher, or any other data subject, may contact the Privacy Official directly with questions, complaints, or suggestions concerning privacy or data protection, at the following address:
+Tidepool’s Privacy Official serves as our data protection officer.  Any PwD User, Care Team Member, Clinician, or Researcher, or any other data subject, may contact the Privacy Official directly with questions, complaints, or suggestions concerning privacy or data protection, at the following address:
 
 	Howard Look
 	Tidepool Project
 	555 Bryant St., #429
 	Palo Alto, CA 94301
 	Telephone:  650.353.2352
-	E-Mail:  privacy@tidepool.org
+	E-Mail: privacy@tidepool.org
 
 As our services expand, we will evaluate our policies and practices and occasionally implement changes and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we will endeavor to notify you (for example, by email to the email address in your Tidepool account) prior to the changes becoming effective. We will post all revised or new Privacy Policies on the Tidepool website at [www.tidepool.org/legal](http://www.tidepool.org/legal), and indicate the date it was last revised.
 
-Tidepool may treat the information of PwD Users, Care Team Members, Clinicians and Researchers differently. For this reason, this Privacy Policy has separate sections with information specific to PwD Users, to Care Team Members, to Clinicians and to Researchers, and a section that applies to everyone. To learn more, please review the following:  
+Tidepool may treat the information of PwD Users, Care Team Members, Clinicians, Researchers, and Clinics differently. For this reason, this Privacy Policy has separate sections with information specific to PwD Users, to Care Team Members, to Clinicians, to Researchers, to Clinics, and a section that applies to everyone. To learn more, please review the following:  
 
 1. [Information for PwD Users - Frequently Asked Questions for PwD Users](#1-information-for-pwd-users)  
   1.1 [What PwD User information does Tidepool collect and for what purposes?](#1.1)  
@@ -65,15 +65,15 @@ Tidepool may treat the information of PwD Users, Care Team Members, Clinicians a
   &nbsp;&nbsp;2.2.1 [Change Your Information](#2.2.1)  
   &nbsp;&nbsp;2.2.2 [Cancel Your Account](#2.2.2)  
   &nbsp;&nbsp;2.2.3 [Email Communications](#2.2.3)  
-3. [Information for Clinicians and Researchers - Frequently Asked Questions for Clinicians and Researchers](#3-information-for-clinicians-and-researchers)  
-  3.1 [What information does Tidepool collect from Clinicians and Researchers and for what purposes?](#3.1)  
+3. [Information for Clinicians, Clinics, and Researchers - Frequently Asked Questions for Clinicians, Clinics, and Researchers](#3-information-for-clinicians-clinics-and-researchers)  
+  3.1 [What information does Tidepool collect from Clinicians, Clinics, and Researchers, and for what purposes?](#3.1)  
   &nbsp;&nbsp;3.1.1 [Registration and Contact Information](#3.1.1)  
   &nbsp;&nbsp;3.1.2 [Other Information You Provide to Us; Custodial Accounts](#3.1.2)  
   &nbsp;&nbsp;3.1.3 [Other Information that You Collect from Patients or Study Subjects](#3.1.3)  
   &nbsp;&nbsp;3.1.4 [Business Associate Agreement](#3.1.4)  
-  3.2 [What choices do Clinicians and Researchers have?](#3.2)  
+  3.2 [What choices do Clinicians, Clinics, and Researchers have?](#3.2)  
   &nbsp;&nbsp;3.2.1 [Change Your Information](#3.2.1)  
-  &nbsp;&nbsp;3.2.2 [Chancel Your Account](#3.2.2)  
+  &nbsp;&nbsp;3.2.2 [Cancel Your Account](#3.2.2)  
   &nbsp;&nbsp;3.2.3 [Email Communications](#3.2.3)  
 4. [Information for Everyone - Frequently Asked Questions for Everyone](#4-information-for-everyone)  
   4.1 [Are there any territorial restrictions for using Tidepool Apps?](#4.1)  
@@ -139,10 +139,10 @@ You may be asked to participate in academic, clinical, commercial or other resea
 Under the [Terms of Use](https://developer.tidepool.org/terms-of-use/), PwD Users own the health and other personal information, data, notes, and files that PwD Users upload, store, and manage using the Tidepool Apps or that are added by their Care Team Members. This means that you as a PwD User decide who has access to the information in your Tidepool account. You also have full control to edit permissions of Care Team Members, alter some types of information, export your information, or cancel your account and delete the information in that account from Tidepool's systems. 
 
 <a name="1.2.1"></a>**1.2.1 Care Team Access** 
-You can grant access to your Tidepool account to health care professionals, family, friends, or anyone else, creating what we call a Care Team. The Care Team Members to whom you provide access will be able to view and comment on the health and other information in your account. Only if you grant them permission will Care Team Members be able to upload information to your account or, if applicable, edit information in your account. PwD Users own all content in their Tidepool accounts added or altered by their Care Team Members. 
+You can grant access to your Tidepool account to health care professionals, clinics, family, friends, or anyone else, creating what we call a Care Team. The Care Team Members to whom you provide access will be able to view and comment on the health and other information in your account. Only if you grant them permission will Care Team Members be able to upload information to your account or, if applicable, edit information in your account. PwD Users own all content in their Tidepool accounts added or altered by their Care Team Members. 
 
 <a name="1.2.2"></a>**1.2.2 Custodial Accounts** 
-A Clinician such as your doctor or other health care provider, or a Researcher conducting a study in which you participate, may establish an account to store information about you in Tidepool. That Clinician or Researcher may invite you to open a Tidepool account. If you accept that invitation, you will become a PwD User and will have control of all the information associated with that account, which will be your Tidepool account. When you open the account, the Clinician or Researcher who invited you to open the account will automatically be a member of your Care Team. You may remove the Clinician or Researcher from your Care Team at any time.
+A Clinician such as your doctor or other health care provider, or a Researcher conducting a study in which you participate, may establish an account to store information about you in Tidepool. That Clinician or Researcher may invite you to open a Tidepool account. If you accept that invitation, you will become a PwD User and will have control of all the information associated with that account, which will be your Tidepool account. When you open the account, the Clinician or Researcher who invited you to open the account or their Clinic will automatically be a member of your Care Team. You may remove the Clinician, Researcher, or Clinic from your Care Team at any time.
 
 If your Clinician or a Researcher told you to expect such an invitation and you did not receive it, please contact that Clinician or Researcher and ask them to verify your email address and re-send the invitation.
 
@@ -167,9 +167,9 @@ You will not be directly identifiable based on the information you choose to don
     *   Included: device event and data timestamps
     *   May be included: Brand and model of the device (some device makers preclude this).
     *   Not included: device serial number
-*   For blood glucose monitors:
+*   For blood glucose meters:
     *   Included: blood glucose readings
-*   For continuous glucose meters (“CGM”):
+*   For continuous glucose monitors (“CGM”):
     *   Included: estimated glucose, events tracked by the CGM, including meals, insulin, calibration, exercise
 *   For insulin pumps:
     *   Included: all pump settings, including bolus calculator parameters, basal rates, basal rate profiles, insulin to carb ratios, and insulin sensitivity factors as well as all events tracked by the pump, including meals, insulin dosed,temp basals and suspends events, and BG inputs. Note that some of the terms above may have slightly varying language on your device.
@@ -190,13 +190,13 @@ You can change the contact information you provided when you registered by going
 You can cancel your account at any time. Upon cancellation, we will cease all use of your data and delete your account information and data. Please visit [support.tidepool.org](http://support.tidepool.org) to learn how to cancel your account. 
 
 <a name="1.2.7"></a>**1.2.7 Other Rights You May Have Under HIPAA** 
-Tidepool may enter into relationships with a number of institutions or health care providers, such as Clinicians, Researchers, or others, for whom Tidepool will act as a “business associate” under the federal Privacy and Security Rules issued under the Health Information Portability and Accountability Act (“HIPAA”). If you are a patient of one of these institutions or other providers, or are participating in a research study conducted by one of these organizations, Tidepool may have obligations to that institution or other provider under HIPAA and Tidepool’s business associate contract with the institution or other provider that affect the information about you that the institution or provider stores in the Tidepool platform. These “business associate” relationships will not affect information in your Tidepool account. 
+Tidepool may enter into relationships with a number of institutions or health care providers, such as Clinicians, Researchers, Clinics, or others, for whom Tidepool will act as a “business associate” under the federal Privacy and Security Rules issued under the Health Information Portability and Accountability Act (“HIPAA”). If you are a patient of one of these institutions or other providers, or are participating in a research study conducted by one of these organizations, Tidepool may have obligations to that institution or other provider under HIPAA and Tidepool’s business associate contract with the institution or other provider that affect the information about you that the institution or provider stores in the Tidepool platform. These “business associate” relationships will not affect information in your Tidepool account. 
 
 <a name="1.2.8"></a>**1.2.8 Email Communications** 
 You can choose to stop receiving marketing or informational emails from us by clicking the “unsubscribe” link at the bottom of any such email. We may from time to time send you certain communications such as regarding your account, the Tidepool App or the Tidepool Platform and you will not be able to opt out of those communications (e.g., communications regarding updates to our Terms of Use or this Privacy Policy).
 
 <a name="1.3"></a>**1.3 How do I invite members to join my Care Team or invite others to use Tidepool Apps?** 
-If you would like to invite someone to become a member of your care team, we’ll ask you for the person’s email address for the sole purpose of sending an invitation. To do so, please select “Share” from within the Tidepool for web application. 
+If you would like to invite someone to become a member of your care team, we’ll ask you for the person’s email address for the sole purpose of sending an invitation. To do so, please select “Share” from within the Tidepool for web application. If you would like to invite a Clinic, we'll ask you for the Clinic Share Code for the sole purpose of sending an invitation. To do so, please seelect "Share" from within the Tidepool for web application.
 
 <a name="1.4"></a>**1.4 What about the practices of third-party applications that PwD Users can connect to Tidepool Apps or the Tidepool Platform?** 
 Our Privacy Policy applies solely to information collected by and through the Tidepool Apps. You may be able to connect this information to third-party applications from the Tidepool Apps, or by connecting your Tidepool account from within a third-party application, or you may choose to share your device data with a device maker. Please be aware that Tidepool doesn’t control and isn’t responsible for the privacy and security practices of the third party services you choose to connect with or those of your device makers. However, all third-party developers that connect to the Tidepool Platform will be required to certify that their privacy policy is consistent with the terms of this Privacy Policy. For example, third-party applications will need to agree to not disclose your personal information without your consent. We encourage you to become familiar with their information practices before choosing to share any personal information or data with them. 
@@ -204,7 +204,7 @@ Our Privacy Policy applies solely to information collected by and through the Ti
 <a name="1.5"></a>**1.5 Who else has access to my information?** 
 You can see who your information is shared with by logging into your Tidepool account and selecting the "Share" link.
 
-Some Clinicians or Researchers who you include on your Care Team may participate in other information sharing agreements, and may share some or all of your health information as part of those agreements. For example, your Clinician may participate in the T1D Exchange Registry, QI Collaborative, or other similar information sharing registry, which provides information collection and research services for a network of clinical sites. Please check with your health care provider, clinic, Clinician or Researcher to ask how they may be sharing your health information.
+Some Clinicians, Researchers, or Clinics who you include on your Care Team may participate in other information sharing agreements, and may share some or all of your health information as part of those agreements. For example, your Clinician may participate in the T1D Exchange Registry, QI Collaborative, or other similar information sharing registry, which provides information collection and research services for a network of clinical sites. Please check with your health care provider, Clinic, Clinician, or Researcher to ask how they may be sharing your health information.
 
 ## **2\. Information for Care Team Members**
 
@@ -239,19 +239,19 @@ You can also cancel your account at any time. Upon cancellation, we will delete 
 <a name="2.2.3"></a>**2.2.3 Email Communications** 
 You can choose to stop receiving marketing or informational emails from us by clicking the “unsubscribe” link at the bottom of any such email. We may from time to time send you certain communications such as regarding your account, the Tidepool App or the Tidepool Platform and you will not be able to opt out of those communications (e.g., communications regarding updates to our Terms of Use or this Privacy Policy).
 
-## **3\. Information for Clinicians and Researchers**
+## **3\. Information for Clinicians, Clinics, and Researchers**
 
 As a Clinician or Researcher, you will be able to create accounts and collect information on behalf of people that you provide care for, or people that are participating in a research study that you are conducting. These accounts are called Custodial Accounts. You can optionally provide an email address that will cause an account invitation to be sent to an individual, allowing that person to sign up for and claim the Tidepool account, and become a PwD User. When you create a Custodial Account, you have control over that account and information at the outset. Once the account is claimed by a PwD User, that PwD User takes over control and ownership of the information and account, and you become a member of that PwD User’s Care Team.
 
-### **Frequently Asked Questions for Clinicians and Researchers**
+### **Frequently Asked Questions for Clinicians, Clinics, and Researchers**
 
-*   What information does Tidepool collect from Clinicians and Researchers and for what purposes?
-*   What choices do Clinicians and Researchers have?
+*   What information does Tidepool collect from Clinicians, Clinics, and Researchers and for what purposes?
+*   What choices do Clinicians, Clinics, and Researchers have?
 
-<a name="3.1"></a>**3.1 What information does Tidepool collect from Clinicians and Researchers and for what purposes?** 
+<a name="3.1"></a>**3.1 What information does Tidepool collect from Clinicians, Clinics, and Researchers and for what purposes?** 
 
 <a name="3.1.1"></a>**3.1.1 Registration and Contact Information** 
-To register for a Tidepool account as a Clinician or Researcher, you must provide an email address and create a password. You use your email address and password to log in to the account. We also collect other contact information, such as your name, your clinic or institution name, address, phone number, and certain information that does not itself directly identify you, such as your IP address or your role within your organization. An IP address is a number assigned to you by your Internet service provider so you can access the Internet. Although we do receive IP addresses, we do not use them to identify you personally or disclose them to others.
+To register for a Tidepool account as a Clinician or Researcher, you must provide an email address and create a password. You use your email address and password to log in to the account. We also collect other information about you and your Clinic, such as your name, your clinic or institution name, address, phone number, and certain information that does not itself directly identify you, such as your IP address or your role within your organization. An IP address is a number assigned to you by your Internet service provider so you can access the Internet. Although we do receive IP addresses, we do not use them to identify you personally or disclose them to others.
 
 We may use this information to: deliver, administer and improve the Tidepool Apps; provide customer service; improve and personalize your experience; better understand your needs and interests; fulfill requests you make; deliver special announcements and updates about the Tidepool Apps; and contact you about any of the above as well as any changes to or notifications regarding your account. 
 
@@ -270,7 +270,7 @@ Through the course of providing care or conducting a research study, you may col
 <a name="3.1.4"></a>**3.1.4 Business Associate Agreement** 
 If Tidepool will be acting as your business associate under the federal Privacy and Security Rules issued under the Health Information Portability and Accountability Act (“HIPAA”), our obligations regarding the privacy and security of the personal information you store in Tidepool will be governed by a separate written business associate agreement between us. Tidepool will not be subject to any business associate agreement unless it is executed on Tidepool’s behalf by an authorized person. 
 
-<a name="3.2"></a>**3.2 What choices do Clinicians and Researchers have?** 
+<a name="3.2"></a>**3.2 What choices do Clinicians, Clinics, and Researchers have?** 
 A PwD User owns all content you generate on that PwD User’s accounts and you have no control over that information, except in the course of editing comments you have made as long as the PwD User permits such changes. However, you can delete or change your personal information. 
 
 <a name="3.2.1"></a>**3.2.1 Change Your Information** 
@@ -314,7 +314,7 @@ Other than the sharing you have authorized, we will only disclose your personal 
 
 *   We may disclose information about you to help complete a transaction for you or to our agents or service providers performing functions on our behalf.
 *   We may also disclose your information in the event of a purchase, transfer or sale of services or assets (e.g., in the event that some or all of our assets are acquired by another party, customer information may be one of the transferred assets).
-*   If Tidepool believes you’ve misused or abused the Tidepool Apps or the personal information of any PwD User, Care Team Member, Clinician or Researcher, or attempted to interfere with or harm the Tidepool Apps, we will investigate and cooperate with appropriate law enforcement, including, if necessary or appropriate, by disclosing your name, registration information or IP address and any other relevant information, to protect our rights or property, or those of our PwD Users, Care Team Members, Clinicians, Researchers and others. We will cooperate fully with any legal process or criminal investigation into the misuse or abuse of the Tidepool Apps.
+*   If Tidepool believes you’ve misused or abused the Tidepool Apps or the personal information of any PwD User, Care Team Member, Clinician, Researcher, or Clinic or attempted to interfere with or harm the Tidepool Apps, we will investigate and cooperate with appropriate law enforcement, including, if necessary or appropriate, by disclosing your name, registration information or IP address and any other relevant information, to protect our rights or property, or those of our PwD Users, Care Team Members, Clinicians, Researchers, Clinics, and others. We will cooperate fully with any legal process or criminal investigation into the misuse or abuse of the Tidepool Apps.
 *   We may disclose your information or data to comply with the law, applicable regulations, governmental and quasi-governmental requests, court orders or subpoenas, to enforce our Terms of Use or other agreements, or to protect our rights, property or safety or the rights, property or safety of our users or others (e.g., to a consumer reporting agency for fraud protection, etc.). Where your personal information and data has been requested by any governmental entity or other third party pursuant to subpoena or similar legal process, we will attempt to notify you as quickly as practicable before providing any such information, unless we are legally prohibited from doing so or we believe in good faith that disclosure is or may be necessary to protect life, avoid serious physical injury or property loss or damage, or to prevent or investigate an ongoing crime.
 
 Tidepool may disclose anonymous or statistical information about the use of the Tidepool Apps at any time without restriction. 
@@ -359,7 +359,7 @@ To be informed about the information that Tidepool collects about you, and how w
 
 To have access to information about you. All the information about you in your Tidepool account is available to you at any time and upon request. If you cancel your account, that information will be deleted, but we will provide you with a reasonable opportunity to obtain a copy of that information, free of charge, before it is deleted.
 
-To correct any personal information that you believe is incorrect or incomplete. You can use the Tidepool Apps at any time to correct or complete any information about you. If you correct or add to information that has been provided by a Care Team Member or a Clinician or Researcher, that person will be able to see the changes you have made.
+To correct any personal information that you believe is incorrect or incomplete. You can use the Tidepool Apps at any time to correct or complete any information about you. If you correct or add to information that has been provided by a Care Team Member or a Clinician or Researcher, that person or persons that are a part of a Clinic will be able to see the changes you have made.
 
 To have your information deleted. If you wish to delete your personal information from Tidepool’s systems, you may at any time cancel your account.
 
@@ -371,7 +371,7 @@ To object to the use or processing of your information. You may cancel your acco
 
 If you feel that Tidepool is not abiding by the terms of this Privacy Policy, please contact Tidepool Privacy Official at the contact information provided above. 
 
-If a Clinician or Researcher uses Tidepool to store information about you and you do not own the account, and as you will not have control of the information associated with that account, you will need to contact the Clinician or Researcher, if you wish to access, correct, update or request removal of any of your information or if would like more information on the privacy practices concerning your personal information.  
+If a Clinician, Clinic, or Researcher uses Tidepool to store information about you and you do not own the account, and as you will not have control of the information associated with that account, you will need to contact the Clinician, Clinic, or Researcher, if you wish to access, correct, update or request removal of any of your information or if would like more information on the privacy practices concerning your personal information.  
 
 If any request remains unresolved, you also have the right to complain to your national data protection authority for your EU Member State where you are resident.
 
