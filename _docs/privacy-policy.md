@@ -5,7 +5,7 @@ published: true
 ---
 
 # Tidepool Privacy Policy
-Effective Date: January 10, 2022, Version 2.3
+Effective Date: March 11, 2022, Version 2.4
 
 Since Tidepool was founded in 2013, we've advocated that you own your own data, that you should be able to access it whenever and however you want, and that you should be able to share it however you see fit. In 2022, we feel more strongly about these tenets than ever. Our goal is to make Tidepool a great place for collaboration with you and your care team. To support this, we've updated how Clinicians and Researchers have access to information that you share. We've added details explaining when Clinicians or Researchers that are part of a Clinic might see your information. We've also added new Share features that make it easier for you to share your data with Clinicians and Researchers that are part of a Clinic. Please read our Privacy Policy to understand how you can control and manage your data and the choices you have. It describes the types of information we collect from PwD, Care Team Members, Clinicians, Researchers, Clinics, and casual site visitors, how we use it, how we protect it, and how we restrict its disclosure. This Privacy Policy is intended to comply with all applicable laws and regulations, including but not limited to the General Data Protection Regulation (“GDPR”) of the European Union.
 
@@ -56,7 +56,8 @@ Tidepool may treat the information of PwD Users, Care Team Members, Clinicians, 
   &nbsp;&nbsp;1.2.8 [Email Communications](#1.2.8)  
   1.3 [How do I invite members to join my Care Team or invite others to use Tidepool Apps?](#1.3)  
   1.4 [What about the practices of third-party applications that PwD Users can connect to Tidepool Apps or the Tidepool Platform?](#1.4)  
-  1.5 [Who else has access to my information?](#1.5)
+  1.5 [Who else has access to my information?](#1.5)  
+  1.6 [Clinician users converting to a Clinic account](#1.6)
 2. [Information for Care Team Members - Frequently Asked Questions for Care Team Members](#2-information-for-care-team-members)  
   2.1 [What information does Tidepool collect from Care Team Members and for what purposes?](#2.1)  
   &nbsp;&nbsp;2.1.1 [Registration and Contact Information](#2.1.1)   
@@ -205,6 +206,9 @@ Our Privacy Policy applies solely to information collected by and through the Ti
 You can see who your information is shared with by logging into your Tidepool account and selecting the "Share" link.
 
 Some Clinicians, Researchers, or Clinics who you include on your Care Team may participate in other information sharing agreements, and may share some or all of your health information as part of those agreements. For example, your Clinician may participate in the T1D Exchange Registry, QI Collaborative, or other similar information sharing registry, which provides information collection and research services for a network of clinical sites. Please check with your health care provider, Clinic, Clinician, or Researcher to ask how they may be sharing your health information.
+
+<a name="1.6"></a>**1.6 Clinician users converting to a Clinic account**
+In some instances, a Clinician user you are sharing with may convert to a new Clinic account or merge into an existing Clinic account. If this happens, we will notify you of this conversion. Your sharing relationship will convert to the new Clinic account. You can stop sharing your data with that Clinic account at any time.
 
 ## **2\. Information for Care Team Members**
 
