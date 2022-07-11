@@ -68,7 +68,7 @@ body, input, textarea {
 	color: #333;
 	font-size: 16px;
 	line-height: 1.6;
-	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family: Helvetica, Arial, sans-serif;
 }
 
 /* Headings
@@ -148,7 +148,6 @@ blockquote em, blockquote i, blockquote cite {
 }
 
 pre {
-	font: 11px Monaco, monospace;
 	line-height: 18px;
 	margin-bottom: 18px;
 }
@@ -487,8 +486,7 @@ p, ul, ol, dd, pre {
 }
 
 pre, code {
-	font: 14px Monaco, monospace;
-	color: #99aaaa;
+	color: #000000;
 	line-height: 22px;
 }
 
@@ -855,15 +853,15 @@ ul.sf-menu li li li.sfHover ul {
 }
 
 .entry-content h1 {
-	font-size: 40px;
-	color: #333333;
+	font-size: 24px;
+	color: #000000;
 	margin: 0 0 1em;
 	line-height: 1.2em;
 }
 
 .entry-content h2 {
-	font-size: 30px;
-	color: #2843C7;
+	font-size: 24px;
+	color: #000000;
 	margin: 0 0 1em;
 	line-height: 1.2em;
 }
@@ -871,14 +869,14 @@ ul.sf-menu li li li.sfHover ul {
 .entry-content h3 {
 	font-size: 24px;
 	font-style: italic;
-	color: #DA25A7;
+	color: #000000;
 	margin: 0 0 1em;
 	line-height: 1.2em;
 }
 
 .entry-content h4 {
-	color: #A1A3A6;
-	font-size: 18px;
+	color: #000000;
+	font-size: 24px;
 	margin: 0 0 0.5em;
 }
 
@@ -1618,7 +1616,7 @@ li.content-column {
 	#menu-item-258 a {
 		background: url('../images/icon-twitter.svg') no-repeat;
 	}
-	
+
 	#menu-item-260 a {
 		background: url('../images/icon-facebook.svg') no-repeat;
 	}
