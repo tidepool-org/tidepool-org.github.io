@@ -49,11 +49,11 @@ These are the people who have commit rights to at least some of Tidepool's repos
 Name (username) | Area
 ---- | ----
 Howard Look (HowardLook) | CEO
-Brandon Arbiter (brandonarbiter) | Product
+Brandon Arbiter (brandonarbiter) | VP, Business Development
+Tapani Otala (tjotala) | VP, Engineering
+Alex Diana (Roukoswarf) | Engineering (*)
 Chris McGee (krystophv) | Engineering (*)
 Clint Beacock (cbwebdevelopment) | Engineering (*)
-Darin Krauss (darinkrauss) | Engineering (*)
 Gerrit Niezen (gniezen) | Engineering (*)
+Jimmy Phan (lostlevels) | Engineering (*)
 Todd Kazakov (toddkazakov) | Engineering (*)
-Adin Hodovic (adinhodovic) | Engineering (*)
-
