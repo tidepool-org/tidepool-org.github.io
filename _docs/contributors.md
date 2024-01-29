@@ -26,7 +26,7 @@ Below are the GitHub usernames of people who have agreed to Tidepool VCLA via Gi
 [amargherio](https://github.com/amargherio) | [Agreed in user-api#42](https://github.com/tidepool-org/user-api/pull/42)
 [anderspitman](https://github.com/anderspitman) | [Agreed in blip#121](https://github.com/tidepool-org/blip/pull/121)
 [trhodeos](https://github.com/trhodeos) | [Agreed in tideline#48](https://github.com/tidepool-org/tideline/pull/48)
-[yrrebnarg](https://github.com/yrrebnarg) | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
+yrrebnarg | [Agreed in in-d-gestion#26](https://github.com/tidepool-org/in-d-gestion/issues/26)
 [ursooperduper](https://github.com/ursooperduper) | [Agreed in blip#182](https://github.com/tidepool-org/blip/pull/182)
 [dduugg](https://github.com/dduugg) | [Agreed in tideline#201](https://github.com/tidepool-org/tideline/pull/201)
 [dandv](https://github.com/dandv) | [Agreed in tidepool-org.github.io#52](https://github.com/tidepool-org/tidepool-org.github.io/pull/52)
