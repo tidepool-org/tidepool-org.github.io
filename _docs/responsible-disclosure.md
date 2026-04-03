@@ -1,6 +1,6 @@
 ---
 layout: legal
-title: Tidepool Privacy Policy
+title: Tidepool Responsible Disclosure Policy
 published: true
 ---
 
