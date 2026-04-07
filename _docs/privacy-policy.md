@@ -20,11 +20,12 @@ By using the Tidepool Apps, you agree to be bound by this Privacy Policy, as wel
 As this Privacy Policy explains, Tidepool is responsible for determining the purposes and means for the handling and processing of personal information subject to this Privacy Policy. Tidepool is the “controller” of that information as set forth under applicable data protection law.  
 
 Tidepool’s Privacy Official serves as our data protection officer. Any PwD User, Care Team Member, Clinician, or Researcher, or any other data subject, may contact the Privacy Official directly with questions, complaints, or suggestions concerning privacy or data protection, at the following address:  
-	Tidepool Project  
-	555 Bryant St., #429  
-	Palo Alto, CA 94301  
-	Telephone:  650.353.2352  
-	E-Mail: [privacy@tidepool.org](mailto:privacy@tidepool.org)  
+
+Tidepool Project  
+555 Bryant St., #429  
+Palo Alto, CA 94301  
+Telephone:  650-353-2352  
+E-Mail: [privacy@tidepool.org](mailto:privacy@tidepool.org)  
 
 As our services expand, we will evaluate our policies and practices and occasionally implement changes and refinements. If we make a change to this Privacy Policy that we determine, in our sole discretion, is material, we may notify you (for example, by email to the email address in your Tidepool account) prior to the changes becoming effective in accordance with applicable law. We will post all revised or new Privacy Policies on the Tidepool website at [www.tidepool.org/legal](www.tidepool.org/legal), and indicate the date it was last revised.
 
@@ -350,5 +351,5 @@ If any request remains unresolved, you also have the right to complain to your n
 
 Tidepool does not use your personal information for automated decision-making, as defined in the GDPR. Tidepool will not make any decision solely by automated means without human involvement, including profiling, that will produce legal effects upon a user, or that will have a similarly significant effect upon a user. The Tidepool apps may through automated means evaluate diabetes device and other data related to your health condition, and offer treatment recommendations to you and your treating physician. As is provided by the Terms of Use, Tidepool’s recommendations are not substitutes for the evaluation of your health care needs by a qualified physician or for the diagnosis and treatment decisions for you that your physician will make. Tidepool does not choose any treatment plan for you or decide the health care services users will receive. If the user authorizes it, all personal information the user has in Tidepool will be available to the user’s physician, so that physician may use that information to make medical treatment decisions independently.
 
-<a name="4.12"></a>**4.14 Legal Basis for Collection, Use, and Processing of Information**
+<a name="4.12"></a>**4.12 Legal Basis for Collection, Use, and Processing of Information**
 In accordance with the GDPR, the primary legal basis for our collection and processing of your information is your consent for us to do so. Your consent will be recorded when you register to use the Tidepool Apps. You may withdraw your consent at any time by canceling your account, and the information in that account about you will be deleted. However, we may need to retain a portion of your information for a reasonable period of time for legitimate purposes that are reasonably necessary for the proper management and administration of Tidepool’s business and the satisfaction of our legal obligations to third parties. Unless otherwise stated in this Privacy Policy, we may also process your information pursuant to our legitimate interests to administer the Tidepool Apps or to protect our legal rights, interests, or the interests of others.
