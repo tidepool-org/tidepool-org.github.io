@@ -1,6 +1,6 @@
 ---
 layout: homepage
-title: Tidepool Project
+title: Tidepool Developer Portal
 published: true
 ---
 
