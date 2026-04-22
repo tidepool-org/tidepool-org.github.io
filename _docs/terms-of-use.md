@@ -6,7 +6,7 @@ published: true
 # Tidepool Terms of Use
 Last modified: April 6, 2026
 
-Effective Date: April 20, 2026, Version 3.0
+Effective Date: April 22, 2026, Version 3.0
 
 These terms are entered into by and  between you and Tidepool Project (“Tidepool,” “us,” or “we”).  The following terms and conditions, together with any documents they expressly incorporate by reference (collectively, these “Terms of Use”), govern your access to and use of our software applications, such as Tidepool for web, Tidepool for mobile, and the Tidepool Uploader, together with any other applications developed and/or distributed by Tidepool (the “Tidepool Apps”), including storage and retrieval of data by the Tidepool Apps on or through our hosted cloud platform (the “Tidepool Platform”).
 
