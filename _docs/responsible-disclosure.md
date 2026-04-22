@@ -5,7 +5,7 @@ published: true
 ---
 
 # Tidepool Responsible Disclosure Policy
-Last Updated: April 20, 2026
+Last Updated: April 8, 2026
 
 This Responsible Disclosure Policy provides information regarding how Tidepool Project (“Tidepool,” “us,” or “we”) works with security researchers to identify and responsibly disclose potential vulnerabilities.  
 
