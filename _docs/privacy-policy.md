@@ -5,7 +5,7 @@ published: true
 ---
 
 # Tidepool Privacy Policy
-Effective Date: April 20, 2026, Version 3.0
+Effective Date: April 22, 2026, Version 3.0
 
 Since Tidepool was founded in 2013, we’ve advocated that you should own your own data, that you should be able to access it whenever and however you want, and that you should be able to share it however you see fit. Today, we feel more strongly about these tenets than ever. Our goal is to make Tidepool a great place for collaboration with you and your care team.  
 
