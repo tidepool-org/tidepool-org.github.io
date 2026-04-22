@@ -7,7 +7,7 @@ published: true
 # Tidepool Cookie Policy
 Last Updated: April 8, 2026
 
-Tidepool Project ("Tidepool," "us," or "we"), we believe you should own your data and be able to control how it's used. This Cookie Policy explains how we use cookies and similar tracking technologies in our software applications, including Tidepool for web, Tidepool for mobile, and the Tidepool Uploader (collectively, the "Tidepool Apps"), as well as Tidepool’s website. Every time you visit our website, you will be prompted to accept or refuse cookies. This policy should be read alongside our Privacy Policy and Terms of Use.
+At Tidepool Project ("Tidepool," "us," or "we"), we believe you should own your data and be able to control how it's used. This Cookie Policy explains how we use cookies and similar tracking technologies in our software applications, including Tidepool for web, Tidepool for mobile, and the Tidepool Uploader (collectively, the "Tidepool Apps"), as well as Tidepool’s website. Every time you visit our website, you will be prompted to accept or refuse cookies. This policy should be read alongside our Privacy Policy and Terms of Use.
 ## What Are Cookies?
 Cookies are small files stored on your device (computer, smartphone, or tablet) when you visit our website or use our applications. They help us recognize your device and remember certain information about your preferences or actions.  
 *  **First-party cookies** are cookies set by Tidepool. Only we can read them.
