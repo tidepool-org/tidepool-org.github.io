@@ -18,8 +18,8 @@ The intended audience for this microsite is software developers, but others may 
 * Our [source code and developer documentation](https://github.com/tidepool-org) is on GitHub. The top-level repos are:
   * [Tidepool Platform](https://github.com/tidepool-org/platform)
   * [Tidepool Web](https://github.com/tidepool-org/blip)
-    * [Documentation](https://developer.tidepool.org/blip/)
-    * [Developer guide](https://developer.tidepool.org/blip/docs/StartHere.html)
+    * [Documentation](https://github.com/tidepool-org/blip/)
+    * [Developer guide](https://github.com/tidepool-org/blip/tree/develop/docs/StartHere.md)
     * [Data visualization library](https://github.com/tidepool-org/viz)
     * [Timeline visualization library](https://github.com/tidepool-org/tideline)
   * [Tidepool Uploader](https://github.com/tidepool-org/uploader)
