@@ -25,7 +25,7 @@ The intended audience for this microsite is software developers, but others may 
   * [Tidepool Uploader](https://github.com/tidepool-org/uploader)
     * [Documentation](https://developer.tidepool.org/uploader/)
     * [Developer guide](https://developer.tidepool.org/uploader/docs/)
-    * [Diabetes device drivers](https://github.com/tidepool-org/uploader/tree/master/lib/drivers)
+    * [Diabetes device drivers](https://github.com/tidepool-org/uploader/tree/develop/lib/drivers)
   * [Tidepool Loop](https://github.com/tidepool-org/LoopWorkspaceApex)
   * [Tidepool Mobile](https://github.com/tidepool-org/mobile)
 * Our [Terms of Use](terms-of-use)
