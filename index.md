@@ -32,7 +32,7 @@ The intended audience for this microsite is software developers, but others may 
 * Our [Privacy Policy](privacy-policy)
 * Our [Cookie Policy](cookie-policy)
 * Our [Responsible Disclosure Policy](responsible-disclosure)
-* Our [Release Notes](https://release.tidepool.org).
+* Our [Release Notes](https://release.tidepool.org)
 
 ## Contributing to Tidepool's Source Code
 
