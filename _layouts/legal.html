@@ -1,30 +1,28 @@
 <!DOCTYPE html>
-<html>
-<!-- This html and css was ripped off / adapted from the Tidepool website at tidepool.org -->
+<html lang="en">
 <head>
-  <meta charset=utf-8 />
-  <title> {% if page.title %} {{ page.title }} | {% endif %} Tidepool Project </title>
-  <link rel="stylesheet" href="/css/legal.css" />
+  <meta charset="utf-8">
+  <title>{% if page.title %} {{ page.title }} | {% endif %} Tidepool Project</title>
+  <link rel="shortcut icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/css/legal.css">
 </head>
 <body class="page page-template-default">
-
-<div id="wrapper" class="hfeed"><a id="top"></a>
-      <div id="main" role="main">
-        <div id="main-inner" class="clearfix global-width">
-          <div id="container">
-            <div id="content" class="clearfix">
-              <div class="post page type-page hentry clearfix">
-                <div class="entry-content">
-<div class="full-width">
-    {{ content }}
-</div></div>
+  <div id="wrapper" class="hfeed"><a id="top"></a>
+    <div id="main" role="main">
+      <div id="main-inner" class="clearfix global-width">
+        <div id="container">
+          <div id="content" class="clearfix">
+            <div class="post page type-page hentry clearfix">
+              <div class="entry-content">
+                <div class="full-width">
+                  {{ content }}
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-</div> <!-- wrapper #hfeed -->
+  </div>
 </body>
 </html>
